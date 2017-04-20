@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+const spawn = require('child_process').spawn;
+const path = require('path');
+const os = require("os");
+const fs = require("fs");
+const N3 = require('n3');
+const Validator = require('../lib/Validator');
+
+console.log(process.argv.join(' '));
