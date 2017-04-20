@@ -1,0 +1,11 @@
+@prefix rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms#> .
+@prefix : <http://example.com/constraints#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dbc: <http://dbpedia.org/resource/Category:> .
+@base <http://example.com/constraints#> .
+
+
+
+:MarkTwain <http://purl.org/dc/elements/1.1/type> dbc:1835_births.

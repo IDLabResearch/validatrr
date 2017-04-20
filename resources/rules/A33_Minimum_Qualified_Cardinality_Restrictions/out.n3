@@ -1,0 +1,227 @@
+#Processed by EYE rel. v17.0216.2023 josd
+#eye data.ttl constraint.ttl rule.n3 ../reasoning/rdfsResource.n3 --query ../query.n3
+
+PREFIX rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms#>
+PREFIX : <http://example.com/constraints#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX math: <http://www.w3.org/2000/10/swap/math#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX func: <http://www.w3.org/2007/rif-builtin-function#>
+PREFIX pred: <http://www.w3.org/2007/rif-builtin-predicate#>
+PREFIX prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>
+PREFIX string: <http://www.w3.org/2000/10/swap/string#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
+
+[] a r:Proof, r:Conjunction;
+  r:component <#lemma1>;
+  r:component <#lemma2>;
+  r:component <#lemma3>;
+  r:component <#lemma4>;
+  r:component <#lemma5>;
+  r:component <#lemma6>;
+  r:component <#lemma7>;
+  r:gives {
+    _:sk_1 a :constraintViolation.
+    _:sk_1 a rdfs:Resource.
+    _:sk_1 :violatedConstraint :example_constraint_A_33.
+    _:sk_1 :class :Publication.
+    _:sk_1 :instance :HarryPotter.
+    _:sk_1 :objectClass :Person.
+    _:sk_1 :property :author.
+  }.
+
+<#lemma1> a r:Inference; 
+  r:gives {
+    _:sk_1 a :constraintViolation.
+  }; 
+  r:evidence (
+    <#lemma8>
+    <#lemma8>
+  );
+  r:rule <#lemma9>.
+
+<#lemma2> a r:Inference; 
+  r:gives {
+    _:sk_1 a rdfs:Resource.
+  }; 
+  r:evidence (
+    <#lemma8>
+    <#lemma10>
+  );
+  r:rule <#lemma9>.
+
+<#lemma3> a r:Inference; 
+  r:gives {
+    _:sk_1 :violatedConstraint :example_constraint_A_33.
+  }; 
+  r:evidence (
+    <#lemma8>
+    <#lemma8>
+  );
+  r:rule <#lemma9>.
+
+<#lemma4> a r:Inference; 
+  r:gives {
+    _:sk_1 :class :Publication.
+  }; 
+  r:evidence (
+    <#lemma8>
+    <#lemma8>
+  );
+  r:rule <#lemma9>.
+
+<#lemma5> a r:Inference; 
+  r:gives {
+    _:sk_1 :instance :HarryPotter.
+  }; 
+  r:evidence (
+    <#lemma8>
+    <#lemma8>
+  );
+  r:rule <#lemma9>.
+
+<#lemma6> a r:Inference; 
+  r:gives {
+    _:sk_1 :objectClass :Person.
+  }; 
+  r:evidence (
+    <#lemma8>
+    <#lemma8>
+  );
+  r:rule <#lemma9>.
+
+<#lemma7> a r:Inference; 
+  r:gives {
+    _:sk_1 :property :author.
+  }; 
+  r:evidence (
+    <#lemma8>
+    <#lemma8>
+  );
+  r:rule <#lemma9>.
+
+<#lemma8> a r:Inference; 
+  r:gives {
+    _:sk_1 a :constraintViolation.
+    _:sk_1 :violatedConstraint :example_constraint_A_33.
+    _:sk_1 :class :Publication.
+    _:sk_1 :instance :HarryPotter.
+    _:sk_1 :objectClass :Person.
+    _:sk_1 :property :author.
+  }; 
+  r:evidence (
+    <#lemma11>
+    <#lemma12>
+    <#lemma13>
+    <#lemma14>
+    <#lemma15>
+    <#lemma16>
+    <#lemma17>
+    <#lemma18>
+    [ a r:Fact; r:gives {((<file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A33_Minimum_Qualified_Cardinality_Restrictions/data.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A33_Minimum_Qualified_Cardinality_Restrictions/constraint.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A33_Minimum_Qualified_Cardinality_Restrictions/rule.n3> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/reasoning/rdfsResource.n3>) 1) e:findall (1 {:HarryPotter :author _:sk_0.
+      _:sk_0 a :Person} ())}]
+    [ a r:Fact; r:gives {() e:length 0}]
+    [ a r:Fact; r:gives {0 math:lessThan 1}]
+  );
+  r:rule <#lemma19>.
+
+<#lemma9> a r:Extraction; 
+  r:gives {
+    {?x_0_1 a :constraintViolation.
+      ?x_0_1 ?x_1_1 ?x_2_1} => {?x_0_1 ?x_1_1 ?x_2_1}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/query.n3>].
+
+<#lemma10> a r:Inference; 
+  r:gives {
+    _:sk_1 a rdfs:Resource.
+  }; 
+  r:evidence (
+    [ a r:Fact; r:gives true]
+  );
+  r:rule <#lemma20>.
+
+<#lemma11> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_33 a rdfcv:SimpleConstraint.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A33_Minimum_Qualified_Cardinality_Restrictions/constraint.ttl>].
+
+<#lemma12> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_33 :constraintType :MinimumQualifiedCardinalityRestrictions.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A33_Minimum_Qualified_Cardinality_Restrictions/constraint.ttl>].
+
+<#lemma13> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_33 rdfcv:constrainingElement :minimum-cardinality.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A33_Minimum_Qualified_Cardinality_Restrictions/constraint.ttl>].
+
+<#lemma14> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_33 rdfcv:contextClass :Publication.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A33_Minimum_Qualified_Cardinality_Restrictions/constraint.ttl>].
+
+<#lemma15> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_33 rdfcv:leftProperties :author.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A33_Minimum_Qualified_Cardinality_Restrictions/constraint.ttl>].
+
+<#lemma16> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_33 rdfcv:classes :Person.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A33_Minimum_Qualified_Cardinality_Restrictions/constraint.ttl>].
+
+<#lemma17> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_33 rdfcv:constrainingValue 1 .
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A33_Minimum_Qualified_Cardinality_Restrictions/constraint.ttl>].
+
+<#lemma18> a r:Extraction; 
+  r:gives {
+    :HarryPotter a :Publication.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A33_Minimum_Qualified_Cardinality_Restrictions/data.ttl>].
+
+<#lemma19> a r:Extraction; 
+  r:gives {
+    {?x_0_2 a rdfcv:SimpleConstraint.
+      ?x_0_2 :constraintType :MinimumQualifiedCardinalityRestrictions.
+      ?x_0_2 rdfcv:constrainingElement :minimum-cardinality.
+      ?x_0_2 rdfcv:contextClass ?x_1_2.
+      ?x_0_2 rdfcv:leftProperties ?x_2_2.
+      ?x_0_2 rdfcv:classes ?x_3_2.
+      ?x_0_2 rdfcv:constrainingValue ?x_4_2.
+      ?x_5_2 a ?x_1_2.
+      ?x_6_2 e:findall (1 {?x_5_2 ?x_2_2 ?x_7_2.
+        ?x_7_2 a ?x_3_2} ?x_8_2).
+      ?x_8_2 e:length ?x_9_2.
+      ?x_9_2 math:lessThan ?x_4_2} => {_:x_10_2 a :constraintViolation.
+      _:x_10_2 :violatedConstraint ?x_0_2.
+      _:x_10_2 :class ?x_1_2.
+      _:x_10_2 :instance ?x_5_2.
+      _:x_10_2 :objectClass ?x_3_2.
+      _:x_10_2 :property ?x_2_2}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A33_Minimum_Qualified_Cardinality_Restrictions/rule.n3>].
+
+<#lemma20> a r:Extraction; 
+  r:gives {
+    {?x_0_3 a rdfs:Resource} <= true.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/reasoning/rdfsResource.n3>].
+
+#2017-02-18T23:34:24.259Z in=13 out=7 ent=13 step=16 brake=4 inf=88152 sec=0.084 inf/sec=1049429
+#ENDS
+

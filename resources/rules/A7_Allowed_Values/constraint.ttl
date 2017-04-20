@@ -1,0 +1,14 @@
+@prefix rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms#> .
+@prefix : <http://example.com/constraints#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@base <http://example.com/constraints#> .
+
+
+:example_constraint_A_7 a rdfcv:SimpleConstraint ;
+  :constraintType :AllowedValues ;
+  rdfcv:constrainingElement :allowed-values ;
+  rdfcv:contextClass  :Computer-Science-Book;
+  rdfcv:leftProperties :subject; 
+  rdfcv:classes (:Computer-Science :Informatics).

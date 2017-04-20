@@ -1,0 +1,190 @@
+#Processed by EYE rel. v17.0131.1345 josd
+#eye data.ttl constraint.ttl rule.n3 --query ../query.n3
+
+PREFIX rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms#>
+PREFIX : <http://example.com/constraints#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
+
+[] a r:Proof, r:Conjunction;
+  r:component <#lemma1>;
+  r:component <#lemma2>;
+  r:component <#lemma3>;
+  r:component <#lemma4>;
+  r:component <#lemma5>;
+  r:component <#lemma6>;
+  r:gives {
+    _:sk_0 a :constraintViolation.
+    _:sk_0 :violatedConstraint :example_constraint_A_1.
+    _:sk_0 :subject :Tom_Sawyer.
+    _:sk_0 :onProperty :isbn.
+    _:sk_0 :object "1234".
+    _:sk_0 :object "5678".
+  }.
+
+<#lemma1> a r:Inference; 
+  r:gives {
+    _:sk_0 a :constraintViolation.
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma7>
+  );
+  r:rule <#lemma8>.
+
+<#lemma2> a r:Inference; 
+  r:gives {
+    _:sk_0 :violatedConstraint :example_constraint_A_1.
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma7>
+  );
+  r:rule <#lemma8>.
+
+<#lemma3> a r:Inference; 
+  r:gives {
+    _:sk_0 :subject :Tom_Sawyer.
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma7>
+  );
+  r:rule <#lemma8>.
+
+<#lemma4> a r:Inference; 
+  r:gives {
+    _:sk_0 :onProperty :isbn.
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma7>
+  );
+  r:rule <#lemma8>.
+
+<#lemma5> a r:Inference; 
+  r:gives {
+    _:sk_0 :object "1234".
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma7>
+  );
+  r:rule <#lemma8>.
+
+<#lemma6> a r:Inference; 
+  r:gives {
+    _:sk_0 :object "5678".
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma7>
+  );
+  r:rule <#lemma8>.
+
+<#lemma7> a r:Inference; 
+  r:gives {
+    _:sk_0 a :constraintViolation.
+    _:sk_0 :violatedConstraint :example_constraint_A_1.
+    _:sk_0 :subject :Tom_Sawyer.
+    _:sk_0 :onProperty :isbn.
+    _:sk_0 :object "1234".
+    _:sk_0 :object "5678".
+  }; 
+  r:evidence (
+    <#lemma9>
+    <#lemma10>
+    <#lemma11>
+    <#lemma12>
+    <#lemma13>
+    <#lemma14>
+    [ a r:Fact; r:gives {:isbn list:in (:isbn)}]
+    <#lemma15>
+    <#lemma16>
+    [ a r:Fact; r:gives {"1234" log:notEqualTo "5678"}]
+  );
+  r:rule <#lemma17>.
+
+<#lemma8> a r:Extraction; 
+  r:gives {
+    {?x_0_1 a :constraintViolation.
+      ?x_0_1 ?x_1_1 ?x_2_1} => {?x_0_1 ?x_1_1 ?x_2_1}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/query.n3>].
+
+<#lemma9> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_1 a rdfcv:SimpleConstraint.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A1_Functional_Properties/constraint.ttl>].
+
+<#lemma10> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_1 :constraintType :FunctionalProperties.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A1_Functional_Properties/constraint.ttl>].
+
+<#lemma11> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_1 rdfcv:constrainingElement :functional-properties.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A1_Functional_Properties/constraint.ttl>].
+
+<#lemma12> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_1 rdfcv:leftProperties (:isbn).
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A1_Functional_Properties/constraint.ttl>].
+
+<#lemma13> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_1 rdfcv:contextClass :Book.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A1_Functional_Properties/constraint.ttl>].
+
+<#lemma14> a r:Extraction; 
+  r:gives {
+    :Tom_Sawyer a :Book.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A1_Functional_Properties/data.ttl>].
+
+<#lemma15> a r:Extraction; 
+  r:gives {
+    :Tom_Sawyer :isbn "1234".
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A1_Functional_Properties/data.ttl>].
+
+<#lemma16> a r:Extraction; 
+  r:gives {
+    :Tom_Sawyer :isbn "5678".
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A1_Functional_Properties/data.ttl>].
+
+<#lemma17> a r:Extraction; 
+  r:gives {
+    {?x_0_2 a rdfcv:SimpleConstraint.
+      ?x_0_2 :constraintType :FunctionalProperties.
+      ?x_0_2 rdfcv:constrainingElement :functional-properties.
+      ?x_0_2 rdfcv:leftProperties ?x_1_2.
+      ?x_0_2 rdfcv:contextClass ?x_2_2.
+      ?x_3_2 a ?x_2_2.
+      ?x_4_2 list:in ?x_1_2.
+      ?x_3_2 ?x_4_2 ?x_5_2.
+      ?x_3_2 ?x_4_2 ?x_6_2.
+      ?x_5_2 log:notEqualTo ?x_6_2} => {_:x_7_2 a :constraintViolation.
+      _:x_7_2 :violatedConstraint ?x_0_2.
+      _:x_7_2 :subject ?x_3_2.
+      _:x_7_2 :onProperty ?x_4_2.
+      _:x_7_2 :object ?x_5_2.
+      _:x_7_2 :object ?x_6_2}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A1_Functional_Properties/rule.n3>].
+
+#2017-02-08T13:33:20.377Z in=11 out=6 ent=12 step=16 brake=2 inf=70668 sec=0.079 inf/sec=894532
+#ENDS
+

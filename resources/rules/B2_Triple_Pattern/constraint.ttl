@@ -1,0 +1,18 @@
+@prefix rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms#> .
+@prefix : <http://example.com/constraints#> .
+@prefix math: <http://www.w3.org/2000/10/swap/math#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dbc: <http://dbpedia.org/resource/Category:> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@base <http://example.com/constraints#> .
+
+
+:example_constraint_B_2 a rdfcv:SimpleConstraint ;
+  :constraintType :TriplePattern ;
+  dcterms:title "B.2 Triple Pattern" ;
+  rdfcv:constrainingElement :triple-pattern ;
+  rdfcv:leftProperties dc:subject ;
+  rdfcv:classes dbc:Possible_cut-and-paste_moves .

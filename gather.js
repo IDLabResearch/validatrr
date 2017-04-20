@@ -3,8 +3,8 @@ const path = require('path');
 const os = require("os");
 const fs = require("fs");
 
-let resourcePath = path.resolve(__dirname, '..', 'constraint-rules', 'examples', 'reasoning', 'rdfsResource.n3');
-let subclassPath = path.resolve(__dirname, '..', 'constraint-rules', 'examples', 'reasoning', 'rdfsSubClassOf.n3');
+let resourcePath = path.resolve(__dirname, 'resources', 'rules', 'reasoning', 'rdfsResource.n3');
+let subclassPath = path.resolve(__dirname, 'resources', 'rules', 'reasoning', 'rdfsSubClassOf.n3');
 
 let files = [{
   type: 'n3',
@@ -13,7 +13,7 @@ let files = [{
   type: 'n3',
   path: subclassPath
 }];
-let rulePath = path.resolve(__dirname, '..', 'constraint-rules', 'examples');
+let rulePath = path.resolve(__dirname, 'resources', 'rules');
 let rules = fs.readdirSync(rulePath);
 rules.forEach(function (file) {
   if (file.match(/^[AB]/)) {

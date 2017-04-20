@@ -1,0 +1,200 @@
+#Processed by EYE rel. v17.0216.2023 josd
+#eye data.ttl constraint.ttl rule.n3 --query ../query.n3
+
+PREFIX rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms#>
+PREFIX : <http://example.com/constraints#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX math: <http://www.w3.org/2000/10/swap/math#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX func: <http://www.w3.org/2007/rif-builtin-function#>
+PREFIX pred: <http://www.w3.org/2007/rif-builtin-predicate#>
+PREFIX prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>
+PREFIX string: <http://www.w3.org/2000/10/swap/string#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
+
+[] a r:Proof, r:Conjunction;
+  r:component <#lemma1>;
+  r:component <#lemma2>;
+  r:component <#lemma3>;
+  r:component <#lemma4>;
+  r:component <#lemma5>;
+  r:component <#lemma6>;
+  r:gives {
+    _:sk_1 a :constraintViolation.
+    _:sk_1 :violatedConstraint :example_constraint_A_35.
+    _:sk_1 :class :Child.
+    _:sk_1 :instance :Max.
+    _:sk_1 :objectClass :Parent.
+    _:sk_1 :property :childOf.
+  }.
+
+<#lemma1> a r:Inference; 
+  r:gives {
+    _:sk_1 a :constraintViolation.
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma7>
+  );
+  r:rule <#lemma8>.
+
+<#lemma2> a r:Inference; 
+  r:gives {
+    _:sk_1 :violatedConstraint :example_constraint_A_35.
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma7>
+  );
+  r:rule <#lemma8>.
+
+<#lemma3> a r:Inference; 
+  r:gives {
+    _:sk_1 :class :Child.
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma7>
+  );
+  r:rule <#lemma8>.
+
+<#lemma4> a r:Inference; 
+  r:gives {
+    _:sk_1 :instance :Max.
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma7>
+  );
+  r:rule <#lemma8>.
+
+<#lemma5> a r:Inference; 
+  r:gives {
+    _:sk_1 :objectClass :Parent.
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma7>
+  );
+  r:rule <#lemma8>.
+
+<#lemma6> a r:Inference; 
+  r:gives {
+    _:sk_1 :property :childOf.
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma7>
+  );
+  r:rule <#lemma8>.
+
+<#lemma7> a r:Inference; 
+  r:gives {
+    _:sk_1 a :constraintViolation.
+    _:sk_1 :violatedConstraint :example_constraint_A_35.
+    _:sk_1 :class :Child.
+    _:sk_1 :instance :Max.
+    _:sk_1 :objectClass :Parent.
+    _:sk_1 :property :childOf.
+  }; 
+  r:evidence (
+    <#lemma9>
+    <#lemma10>
+    <#lemma11>
+    <#lemma12>
+    <#lemma13>
+    <#lemma14>
+    <#lemma15>
+    <#lemma16>
+    [ a r:Fact; r:gives {((<file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A35_Maximum_Qualified_Cardinality_Restrictions/data.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A35_Maximum_Qualified_Cardinality_Restrictions/constraint.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A35_Maximum_Qualified_Cardinality_Restrictions/rule.n3>) 1) e:findall (:Parent {:Max :childOf _:sk_0.
+      _:sk_0 a :Parent} (:Parent :Parent :Parent))}]
+    [ a r:Fact; r:gives {(:Parent :Parent :Parent) e:length 3}]
+    [ a r:Fact; r:gives {3 math:greaterThan 2}]
+  );
+  r:rule <#lemma17>.
+
+<#lemma8> a r:Extraction; 
+  r:gives {
+    {?x_0_1 a :constraintViolation.
+      ?x_0_1 ?x_1_1 ?x_2_1} => {?x_0_1 ?x_1_1 ?x_2_1}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/query.n3>].
+
+<#lemma9> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_35 a rdfcv:SimpleConstraint.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A35_Maximum_Qualified_Cardinality_Restrictions/constraint.ttl>].
+
+<#lemma10> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_35 :constraintType :MaximumQualifiedCardinalityRestrictions.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A35_Maximum_Qualified_Cardinality_Restrictions/constraint.ttl>].
+
+<#lemma11> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_35 rdfcv:constrainingElement :maximum-cardinality.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A35_Maximum_Qualified_Cardinality_Restrictions/constraint.ttl>].
+
+<#lemma12> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_35 rdfcv:contextClass :Child.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A35_Maximum_Qualified_Cardinality_Restrictions/constraint.ttl>].
+
+<#lemma13> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_35 rdfcv:leftProperties :childOf.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A35_Maximum_Qualified_Cardinality_Restrictions/constraint.ttl>].
+
+<#lemma14> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_35 rdfcv:classes :Parent.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A35_Maximum_Qualified_Cardinality_Restrictions/constraint.ttl>].
+
+<#lemma15> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_35 rdfcv:constrainingValue 2 .
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A35_Maximum_Qualified_Cardinality_Restrictions/constraint.ttl>].
+
+<#lemma16> a r:Extraction; 
+  r:gives {
+    :Max a :Child.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A35_Maximum_Qualified_Cardinality_Restrictions/data.ttl>].
+
+<#lemma17> a r:Extraction; 
+  r:gives {
+    {?x_0_2 a rdfcv:SimpleConstraint.
+      ?x_0_2 :constraintType :MaximumQualifiedCardinalityRestrictions.
+      ?x_0_2 rdfcv:constrainingElement :maximum-cardinality.
+      ?x_0_2 rdfcv:contextClass ?x_1_2.
+      ?x_0_2 rdfcv:leftProperties ?x_2_2.
+      ?x_0_2 rdfcv:classes ?x_3_2.
+      ?x_0_2 rdfcv:constrainingValue ?x_4_2.
+      ?x_5_2 a ?x_1_2.
+      ?x_6_2 e:findall (?x_3_2 {?x_5_2 ?x_2_2 ?x_7_2.
+        ?x_7_2 a ?x_3_2} ?x_8_2).
+      ?x_8_2 e:length ?x_9_2.
+      ?x_9_2 math:greaterThan ?x_4_2} => {_:x_10_2 a :constraintViolation.
+      _:x_10_2 :violatedConstraint ?x_0_2.
+      _:x_10_2 :class ?x_1_2.
+      _:x_10_2 :instance ?x_5_2.
+      _:x_10_2 :objectClass ?x_3_2.
+      _:x_10_2 :property ?x_2_2}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A35_Maximum_Qualified_Cardinality_Restrictions/rule.n3>].
+
+#2017-02-19T12:19:54.871Z in=17 out=6 ent=12 step=14 brake=4 inf=81605 sec=0.056 inf/sec=1457232
+#ENDS
+

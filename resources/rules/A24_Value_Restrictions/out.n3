@@ -1,0 +1,186 @@
+#Processed by EYE rel. v17.0208.1332 josd
+#eye data.ttl constraint.ttl rule.n3 --query ../query.n3
+
+PREFIX rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms#>
+PREFIX : <http://example.com/constraints#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX math: <http://www.w3.org/2000/10/swap/math#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX func: <http://www.w3.org/2007/rif-builtin-function#>
+PREFIX pred: <http://www.w3.org/2007/rif-builtin-predicate#>
+PREFIX prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>
+PREFIX string: <http://www.w3.org/2000/10/swap/string#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
+
+[] a r:Proof, r:Conjunction;
+  r:component <#lemma1>;
+  r:component <#lemma2>;
+  r:component <#lemma3>;
+  r:component <#lemma4>;
+  r:component <#lemma5>;
+  r:component <#lemma6>;
+  r:gives {
+    _:sk_0 a :constraintViolation.
+    _:sk_0 :violatedConstraint :example_constraint_A_24.
+    _:sk_0 :class :Computer-Science-Book.
+    _:sk_0 :instance :LearnYouaHaskellforGreatGood.
+    _:sk_0 :property :subject.
+    _:sk_0 :missingValue :Computer-Science.
+  }.
+
+<#lemma1> a r:Inference; 
+  r:gives {
+    _:sk_0 a :constraintViolation.
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma7>
+  );
+  r:rule <#lemma8>.
+
+<#lemma2> a r:Inference; 
+  r:gives {
+    _:sk_0 :violatedConstraint :example_constraint_A_24.
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma7>
+  );
+  r:rule <#lemma8>.
+
+<#lemma3> a r:Inference; 
+  r:gives {
+    _:sk_0 :class :Computer-Science-Book.
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma7>
+  );
+  r:rule <#lemma8>.
+
+<#lemma4> a r:Inference; 
+  r:gives {
+    _:sk_0 :instance :LearnYouaHaskellforGreatGood.
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma7>
+  );
+  r:rule <#lemma8>.
+
+<#lemma5> a r:Inference; 
+  r:gives {
+    _:sk_0 :property :subject.
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma7>
+  );
+  r:rule <#lemma8>.
+
+<#lemma6> a r:Inference; 
+  r:gives {
+    _:sk_0 :missingValue :Computer-Science.
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma7>
+  );
+  r:rule <#lemma8>.
+
+<#lemma7> a r:Inference; 
+  r:gives {
+    _:sk_0 a :constraintViolation.
+    _:sk_0 :violatedConstraint :example_constraint_A_24.
+    _:sk_0 :class :Computer-Science-Book.
+    _:sk_0 :instance :LearnYouaHaskellforGreatGood.
+    _:sk_0 :property :subject.
+    _:sk_0 :missingValue :Computer-Science.
+  }; 
+  r:evidence (
+    <#lemma9>
+    <#lemma10>
+    <#lemma11>
+    <#lemma12>
+    <#lemma13>
+    <#lemma14>
+    <#lemma15>
+    [ a r:Fact; r:gives {((<file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A24_Value_Restrictions/data.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A24_Value_Restrictions/constraint.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A24_Value_Restrictions/rule.n3>) 1) e:findall (1 {:LearnYouaHaskellforGreatGood :subject :Computer-Science} ())}]
+  );
+  r:rule <#lemma16>.
+
+<#lemma8> a r:Extraction; 
+  r:gives {
+    {?x_0_1 a :constraintViolation.
+      ?x_0_1 ?x_1_1 ?x_2_1} => {?x_0_1 ?x_1_1 ?x_2_1}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/query.n3>].
+
+<#lemma9> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_24 a rdfcv:SimpleConstraint.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A24_Value_Restrictions/constraint.ttl>].
+
+<#lemma10> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_24 :constraintType :ValueRestrictions.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A24_Value_Restrictions/constraint.ttl>].
+
+<#lemma11> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_24 rdfcv:constrainingElement :value_restriction.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A24_Value_Restrictions/constraint.ttl>].
+
+<#lemma12> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_24 rdfcv:contextClass :Computer-Science-Book.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A24_Value_Restrictions/constraint.ttl>].
+
+<#lemma13> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_24 rdfcv:leftProperties :subject.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A24_Value_Restrictions/constraint.ttl>].
+
+<#lemma14> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_24 rdfcv:classes :Computer-Science.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A24_Value_Restrictions/constraint.ttl>].
+
+<#lemma15> a r:Extraction; 
+  r:gives {
+    :LearnYouaHaskellforGreatGood a :Computer-Science-Book.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A24_Value_Restrictions/data.ttl>].
+
+<#lemma16> a r:Extraction; 
+  r:gives {
+    {?x_0_2 a rdfcv:SimpleConstraint.
+      ?x_0_2 :constraintType :ValueRestrictions.
+      ?x_0_2 rdfcv:constrainingElement :value_restriction.
+      ?x_0_2 rdfcv:contextClass ?x_1_2.
+      ?x_0_2 rdfcv:leftProperties ?x_2_2.
+      ?x_0_2 rdfcv:classes ?x_3_2.
+      ?x_4_2 a ?x_1_2.
+      ?x_5_2 e:findall (1 {?x_4_2 ?x_2_2 ?x_3_2} ())} => {_:x_6_2 a :constraintViolation.
+      _:x_6_2 :violatedConstraint ?x_0_2.
+      _:x_6_2 :class ?x_1_2.
+      _:x_6_2 :instance ?x_4_2.
+      _:x_6_2 :property ?x_2_2.
+      _:x_6_2 :missingValue ?x_3_2}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A24_Value_Restrictions/rule.n3>].
+
+#2017-02-14T13:43:21.276Z in=11 out=6 ent=12 step=14 brake=4 inf=73345 sec=0.049 inf/sec=1496837
+#ENDS
+

@@ -1,0 +1,34 @@
+@prefix rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms#> .
+@prefix : <http://example.com/constraints#> .
+@prefix math: <http://www.w3.org/2000/10/swap/math#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@base <http://example.com/constraints#> .
+
+:example_constraint_A_28 a rdfcv:SimpleConstraint ;
+  :constraintType :LanguageTagCardinality ; 
+  dcterms:title "A.28 Language Tag Cardinality" ;
+  rdfcv:constrainingElement :language_tag_exact_cardinality ;
+  rdfcv:contextClass  :Book ;
+  rdfcv:leftProperties :title ;
+  rdfcv:constrainingValue "en" ;
+  rdfcv:constrainingValue 1 .
+
+:example_constraint_A_28a a rdfcv:SimpleConstraint ;
+  :constraintType :LanguageTagCardinality ; 
+  dcterms:title "A.28 Language Tag Cardinality" ;
+  rdfcv:constrainingElement :language_tag_min_cardinality ;
+  rdfcv:contextClass  :Book ;
+  rdfcv:leftProperties :title ;
+  rdfcv:constrainingValue "en" ;
+  rdfcv:constrainingValue 3 .
+
+:example_constraint_A_28b a rdfcv:SimpleConstraint ;
+  :constraintType :LanguageTagCardinality ; 
+  dcterms:title "A.28 Language Tag Cardinality" ;
+  rdfcv:constrainingElement :language_tag_max_cardinality ;
+  rdfcv:contextClass  :Book ;
+  rdfcv:leftProperties :title ;
+  rdfcv:constrainingValue "en" ;
+  rdfcv:constrainingValue 1 .

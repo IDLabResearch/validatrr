@@ -1,0 +1,175 @@
+#Processed by EYE rel. v17.0216.2023 josd
+#eye data.ttl constraint.ttl rule.n3 --query ../query.n3
+
+PREFIX rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms#>
+PREFIX : <http://example.com/constraints#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbc: <http://dbpedia.org/resource/Category:>
+PREFIX math: <http://www.w3.org/2000/10/swap/math#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX func: <http://www.w3.org/2007/rif-builtin-function#>
+PREFIX pred: <http://www.w3.org/2007/rif-builtin-predicate#>
+PREFIX prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>
+PREFIX string: <http://www.w3.org/2000/10/swap/string#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
+
+[] a r:Proof, r:Conjunction;
+  r:component <#lemma1>;
+  r:component <#lemma2>;
+  r:component <#lemma3>;
+  r:component <#lemma4>;
+  r:component <#lemma5>;
+  r:gives {
+    _:sk_2 a :constraintViolation.
+    _:sk_2 :violatedConstraint :example_constraint_B_1.
+    _:sk_2 :instance :MarkTwain.
+    _:sk_2 :property <http://purl.org/dc/elements/1.1/type>.
+    _:sk_2 :missingProperty <http://dbpedia.org/ontology/birthDate>.
+  }.
+
+<#lemma1> a r:Inference; 
+  r:gives {
+    _:sk_2 a :constraintViolation.
+  }; 
+  r:evidence (
+    <#lemma6>
+    <#lemma6>
+  );
+  r:rule <#lemma7>.
+
+<#lemma2> a r:Inference; 
+  r:gives {
+    _:sk_2 :violatedConstraint :example_constraint_B_1.
+  }; 
+  r:evidence (
+    <#lemma6>
+    <#lemma6>
+  );
+  r:rule <#lemma7>.
+
+<#lemma3> a r:Inference; 
+  r:gives {
+    _:sk_2 :instance :MarkTwain.
+  }; 
+  r:evidence (
+    <#lemma6>
+    <#lemma6>
+  );
+  r:rule <#lemma7>.
+
+<#lemma4> a r:Inference; 
+  r:gives {
+    _:sk_2 :property <http://purl.org/dc/elements/1.1/type>.
+  }; 
+  r:evidence (
+    <#lemma6>
+    <#lemma6>
+  );
+  r:rule <#lemma7>.
+
+<#lemma5> a r:Inference; 
+  r:gives {
+    _:sk_2 :missingProperty <http://dbpedia.org/ontology/birthDate>.
+  }; 
+  r:evidence (
+    <#lemma6>
+    <#lemma6>
+  );
+  r:rule <#lemma7>.
+
+<#lemma6> a r:Inference; 
+  r:gives {
+    _:sk_2 a :constraintViolation.
+    _:sk_2 :violatedConstraint :example_constraint_B_1.
+    _:sk_2 :instance :MarkTwain.
+    _:sk_2 :property <http://purl.org/dc/elements/1.1/type>.
+    _:sk_2 :missingProperty <http://dbpedia.org/ontology/birthDate>.
+  }; 
+  r:evidence (
+    <#lemma8>
+    <#lemma9>
+    <#lemma10>
+    <#lemma11>
+    <#lemma12>
+    <#lemma13>
+    <#lemma14>
+    [ a r:Fact; r:gives {((<file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/B1_PVT_Pattern/data.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/B1_PVT_Pattern/constraint.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/B1_PVT_Pattern/rule.n3>) 1) e:findall (_:sk_0 {:MarkTwain <http://dbpedia.org/ontology/birthDate> _:sk_1} ())}]
+  );
+  r:rule <#lemma15>.
+
+<#lemma7> a r:Extraction; 
+  r:gives {
+    {?x_0_1 a :constraintViolation.
+      ?x_0_1 ?x_1_1 ?x_2_1} => {?x_0_1 ?x_1_1 ?x_2_1}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/query.n3>].
+
+<#lemma8> a r:Extraction; 
+  r:gives {
+    :example_constraint_B_1 a rdfcv:SimpleConstraint.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/B1_PVT_Pattern/constraint.ttl>].
+
+<#lemma9> a r:Extraction; 
+  r:gives {
+    :example_constraint_B_1 :constraintType :PVTPattern.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/B1_PVT_Pattern/constraint.ttl>].
+
+<#lemma10> a r:Extraction; 
+  r:gives {
+    :example_constraint_B_1 rdfcv:constrainingElement :pvt-pattern.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/B1_PVT_Pattern/constraint.ttl>].
+
+<#lemma11> a r:Extraction; 
+  r:gives {
+    :example_constraint_B_1 rdfcv:leftProperties <http://purl.org/dc/elements/1.1/type>.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/B1_PVT_Pattern/constraint.ttl>].
+
+<#lemma12> a r:Extraction; 
+  r:gives {
+    :example_constraint_B_1 rdfcv:rightProperties <http://dbpedia.org/ontology/birthDate>.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/B1_PVT_Pattern/constraint.ttl>].
+
+<#lemma13> a r:Extraction; 
+  r:gives {
+    :example_constraint_B_1 rdfcv:classes <http://dbpedia.org/resource/Category:1835_births>.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/B1_PVT_Pattern/constraint.ttl>].
+
+<#lemma14> a r:Extraction; 
+  r:gives {
+    :MarkTwain <http://purl.org/dc/elements/1.1/type> <http://dbpedia.org/resource/Category:1835_births>.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/B1_PVT_Pattern/data.ttl>].
+
+<#lemma15> a r:Extraction; 
+  r:gives {
+    {?x_0_2 a rdfcv:SimpleConstraint.
+      ?x_0_2 :constraintType :PVTPattern.
+      ?x_0_2 rdfcv:constrainingElement :pvt-pattern.
+      ?x_0_2 rdfcv:leftProperties ?x_1_2.
+      ?x_0_2 rdfcv:rightProperties ?x_2_2.
+      ?x_0_2 rdfcv:classes ?x_3_2.
+      ?x_4_2 ?x_1_2 ?x_3_2.
+      ?x_5_2 e:findall (?x_6_2 {?x_4_2 ?x_2_2 ?x_7_2} ())} => {_:x_8_2 a :constraintViolation.
+      _:x_8_2 :violatedConstraint ?x_0_2.
+      _:x_8_2 :instance ?x_4_2.
+      _:x_8_2 :property ?x_1_2.
+      _:x_8_2 :object ?x_7_2.
+      _:x_8_2 :missingProperty ?x_2_2}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/B1_PVT_Pattern/rule.n3>].
+
+#2017-02-19T16:34:00.927Z in=10 out=5 ent=10 step=12 brake=4 inf=72145 sec=0.073 inf/sec=988288
+#ENDS
+

@@ -1,0 +1,33 @@
+@prefix rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms#> .
+@prefix : <http://example.com/constraints#> .
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#> .
+@prefix log: <http://www.w3.org/2000/10/swap/log#> .
+@base <http://example.com/constraints#> .
+
+
+
+{
+?constraint a rdfcv:SimpleConstraint ;
+  :constraintType :EquivalentProperties ;
+  rdfcv:constrainingElement :equivalent-properties ;
+  rdfcv:leftProperties ?list.
+?p list:in ?list.
+?s ?p ?o.
+?q list:in ?list.
+_:x e:findall (1 {?s ?q ?o} () )
+}
+=>
+{
+_:x a :constraintViolation;
+    :violatedConstraint ?constraint;
+    :positive ?p;
+    :negative ?q;
+    :subject ?s;
+    :object ?o
+}.
+
+
+
