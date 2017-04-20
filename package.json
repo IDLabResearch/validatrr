@@ -1,0 +1,28 @@
+{
+  "name": "n3unit",
+  "version": "0.1.0",
+  "description": "RDF Validation by reasoning, using N3 and EYE",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "keywords": [
+    "RDF",
+    "Validation",
+    "N3",
+    "EYE"
+  ],
+  "author": "bjdmeest",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^3.19.0"
+  },
+  "dependencies": {
+    "async": "latest",
+    "colors": "^1.1.2",
+    "fs-extra": "^2.1.2",
+    "n3": "^0.10.0",
+    "request": "latest",
+    "tmp": "0.0.31"
+  }
+}

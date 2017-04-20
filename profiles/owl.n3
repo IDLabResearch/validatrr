@@ -1,0 +1,174 @@
+@prefix rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms#> .
+@prefix : <http://example.com/constraints#> .
+@prefix math: <http://www.w3.org/2000/10/swap/math#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+#A.2
+{
+  ?a a owl:InverseFunctionalProperty .
+} => {
+_:A2_owl a rdfcv:SimpleConstraint ;
+  :constraintType :InverseFunctionalProperties ;
+  dcterms:title "A.2 Inverse-Functional Properties" ;
+  rdfcv:constrainingElement :inverse-functional-properties ;
+  rdfcv:leftProperties ( ?a ) ;
+  rdfcv:contextClass  rdfs:Resource .
+}.
+
+#A.14
+{
+  ?a rdfs:range ?class .
+} => {
+_:A14_owl a rdfcv:SimpleConstraint ;
+  :constraintType :PropertyRange ;
+  dcterms:title "A.14 Property Ranges" ;
+  rdfcv:constrainingElement :property-range ;
+  rdfcv:leftProperties ?a ;
+  rdfcv:classes ?class .
+}.
+
+#A.23
+{
+  ?p
+	a owl:DatatypeProperty;
+    rdfs:range ?r .
+} => {
+_:A23_owl a rdfcv:SimpleConstraint ;
+  :constraintType :UniversalQuantification ;
+  dcterms:title "A.23 Universal Quantifications" ;
+  rdfcv:constrainingElement :universal_quantification ;
+  rdfcv:contextClass  :Publication ;
+  rdfcv:leftProperties :author ;
+  rdfcv:classes :Person .
+}.
+
+#A.32
+{
+  ?a a owl:Class ;
+  	rdfs:subClassOf [
+  	  a owl:Restriction;
+      owl:onProperty ?p;
+      owl:minCardinality ?c
+    ] .
+} => {
+_:A32_owl a rdfcv:SimpleConstraint ;
+  :constraintType :MinimumUnqualifiedCardinalityRestrictions ;
+  dcterms:title "A.32 Minimum Unqualified Cardinality Restrictions" ;
+  rdfcv:constrainingElement :minimum-cardinality ;
+  rdfcv:contextClass  ?a ;
+  rdfcv:leftProperties ?p ;
+  rdfcv:constrainingValue ?c .
+}.
+
+#A.33
+{
+  ?a a owl:Class ;
+  	rdfs:subClassOf [
+  	  a owl:Restriction;
+      owl:onProperty ?p;
+      owl:onClass ?class;
+      owl:minQualifiedCardinality ?c
+    ] .
+} => {
+_:A33_owl a rdfcv:SimpleConstraint ;
+  :constraintType :MinimumQualifiedCardinalityRestrictions ;
+  dcterms:title "A.33 Minimum Qualified Cardinality Restrictions" ;
+  rdfcv:constrainingElement :minimum-cardinality ;
+  rdfcv:contextClass ?a ;
+  rdfcv:leftProperties ?p ;
+  rdfcv:classes ?class;
+  rdfcv:constrainingValue ?c .
+}.
+
+#A.34
+{
+  ?a a owl:Class ;
+  	rdfs:subClassOf [
+  	  a owl:Restriction;
+      owl:onProperty ?p ;
+      owl:maxCardinality ?c
+    ] .
+} => {
+_:A34_owl a rdfcv:SimpleConstraint ;
+  :constraintType :MaximumUnqualifiedCardinalityRestrictions ;
+  dcterms:title "A.34 Maximum Unqualified Cardinality Restrictions" ;
+  rdfcv:constrainingElement :maximum-cardinality ;
+  rdfcv:contextClass ?a ;
+  rdfcv:leftProperties ?p ;
+  rdfcv:constrainingValue ?c .
+}.
+
+#A.35
+{
+  ?a a owl:Class ;
+  	rdfs:subClassOf [
+  	  a owl:Restriction;
+      owl:onProperty ?p ;
+      owl:onClass ?class ;
+      owl:maxQualifiedCardinality ?c
+    ] .
+} => {
+_:A35_owl a rdfcv:SimpleConstraint ;
+  :constraintType :MaximumQualifiedCardinalityRestrictions ;
+  dcterms:title "A.35 Maximummum Qualified Cardinality Restrictions" ;
+  rdfcv:constrainingElement :maximum-cardinality ;
+  rdfcv:contextClass ?a ;
+  rdfcv:leftProperties ?p ;
+  rdfcv:classes ?class ;
+  rdfcv:constrainingValue ?c .
+}.
+
+#A.36
+{
+  ?a a owl:Class ;
+	rdfs:subClassOf [
+        rdf:type owl:Restriction;
+        owl:onProperty ?p;
+        owl:cardinality ?c
+    ] .
+} => {
+_:A36_owl a rdfcv:SimpleConstraint ;
+  :constraintType :ExactUnqualifiedCardinalityRestrictions ;
+  dcterms:title "A.36 Exact Unqualified Cardinality Restrictions" ;
+  rdfcv:constrainingElement :exact-cardinality ;
+  rdfcv:contextClass  ?a ;
+  rdfcv:leftProperties ?p ;
+  rdfcv:constrainingValue ?c .
+}.
+
+#A.37
+{
+  ?a a owl:Class ;
+  	rdfs:subClassOf [
+  	  a owl:Restriction;
+      owl:onProperty ?p;
+      owl:onClass ?class;
+      owl:qualifiedCardinality ?c
+    ] .
+} => {
+_:A37_owl a rdfcv:SimpleConstraint ;
+  :constraintType :ExactQualifiedCardinalityRestrictions ;
+  dcterms:title "A.37 Exact Qualified Cardinality Restrictions" ;
+  rdfcv:constrainingElement :exact-cardinality ;
+  rdfcv:contextClass  ?a ;
+  rdfcv:leftProperties ?p ;
+  rdfcv:classes ?class ;
+  rdfcv:constrainingValue ?c .
+}.
+
+#A.70
+{
+  ?a a owl:AllDisjointClasses .
+  _:x e:findall (?member {?a owl:members ?member} ?members) .
+} => {
+_:A70_owl a rdfcv:SimpleConstraint ;
+  :constraintType :DisjointClasses ;
+  dcterms:title "A.70 Disjoint Classes" ;
+  rdfcv:constrainingElement :disjoint_classes ;
+  rdfcv:classes ?members .
+}.
