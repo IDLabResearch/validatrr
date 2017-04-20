@@ -1,0 +1,1000 @@
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry10> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry10> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry10> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry10> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "23-OCT-06" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry10> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry10> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70150" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry10> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110025806563> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry10> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry10> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "UNSPECIFIED UNIVERSE" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry10> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "* P.O. BOX 6026" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry10> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "GNIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry10> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry10> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "NGCHEMIANGEL SCHOOL - OREOR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry10> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110025806563" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry10> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "FACILITY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry10> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry10> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry10> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "12-FEB-07" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry11> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry11> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry11> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry11> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "23-OCT-06" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry11> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry11> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70150" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry11> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110025521932> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry11> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry11> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "UNSPECIFIED UNIVERSE" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry11> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "* P.O. BOX 6026" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry11> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "GNIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry11> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry11> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "NGERCHELONG SCHOOL - NGERMETENGEL" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry11> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110025521932" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry11> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "FACILITY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry11> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry11> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry11> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "12-FEB-07" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry12> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry12> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry12> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry12> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "23-OCT-06" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry12> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry12> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70150" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry12> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110025806616> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry12> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry12> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "UNSPECIFIED UNIVERSE" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry12> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "* P.O. BOX 6026" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry12> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "GNIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry12> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry12> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "NGEREMLENGUI ELEMENTARY SCHOOL" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry12> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110025806616" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry12> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "FACILITY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry12> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry12> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry12> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "12-FEB-07" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry13> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry13> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry13> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry13> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "23-DEC-03" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry13> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry13> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70150" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry13> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110016238098> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry13> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry13> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "WATER TREATMENT PLANT" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry13> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "* P.O. BOX 6026" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry13> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "SDWIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry13> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry13> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "NGERIKIIL RIVER" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry13> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110016238098" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry13> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "STATIONARY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry13> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry13> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry13> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "11-MAY-06" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry14> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry14> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry14> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry14> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "23-DEC-03" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry14> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry14> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70150" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry14> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110016238089> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry14> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry14> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "WATER TREATMENT PLANT" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry14> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "* P.O. BOX 6026" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry14> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "SDWIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry14> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry14> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "NGERIMEL" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry14> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110016238089" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry14> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "STATIONARY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry14> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry14> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry14> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "11-MAY-06" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry15> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry15> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry15> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry15> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "23-DEC-03" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry15> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry15> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70150" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry15> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110016238070> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry15> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry15> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "WATER TREATMENT PLANT" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry15> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "* P.O. BOX 6026" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry15> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "SDWIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry15> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry15> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "NGERIWALCH RIVER" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry15> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110016238070" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry15> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "STATIONARY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry15> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry15> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry15> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "11-MAY-06" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry15> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry16> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry16> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry16> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry16> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "23-OCT-06" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry16> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry16> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70150" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry16> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110025806670> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry16> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry16> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "UNSPECIFIED UNIVERSE" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry16> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "* P.O. BOX 6026" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry16> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "GNIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry16> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry16> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "NGERKEAI SCHOOL - OREOR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry16> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110025806670" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry16> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "FACILITY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry16> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry16> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry16> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "12-FEB-07" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry17> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry17> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry17> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry17> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "23-DEC-03" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry17> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry17> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70150" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry17> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110016238105> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry17> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry17> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "WATER TREATMENT PLANT" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry17> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "* P.O. BOX 6026" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry17> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "SDWIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry17> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry17> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "NGESIAS WELL" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry17> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110016238105" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry17> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "STATIONARY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry17> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry17> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry17> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "11-MAY-06" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry18> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry18> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry18> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry18> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "23-DEC-03" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry18> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry18> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70150" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry18> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110016238034> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry18> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry18> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "WATER TREATMENT PLANT" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry18> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "* P.O. BOX 6026" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry18> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "SDWIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry18> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry18> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "NGETERCHUR RIVER" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry18> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110016238034" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry18> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "STATIONARY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry18> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry18> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry18> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "11-MAY-06" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry19> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry19> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry19> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry19> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "24-OCT-06" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry19> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry19> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70150" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry19> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110026867148> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry19> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry19> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "UNSPECIFIED UNIVERSE" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry19> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "* P.O. BOX 6026" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry19> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "GNIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry19> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry19> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "NGIWAL SCHOOL - NGERMETENGEL" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry19> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110026867148" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry19> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "FACILITY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry19> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry19> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry19> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "12-FEB-07" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry19> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry1> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "AIMELIIK" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry1> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry1> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "AIMELIIK" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry1> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "30-OCT-02" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry1> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry1> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70002" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry1> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110013044286> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry1> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry1> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "COMMUNITY WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry1> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "MONGAMI WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry1> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "SDWIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry1> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry1> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "MONGAMI WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry1> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110013044286" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry1> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "STATIONARY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry1> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry1> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry1> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "09-JUN-05" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry20> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry20> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry20> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry20> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "30-OCT-02" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry20> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry20> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70150" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry20> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110012958406> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry20> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry20> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "COMMUNITY WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry20> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "* P.O. BOX 6026" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry20> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "SDWIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry20> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry20> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "NGKEKLAU WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry20> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110012958406" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry20> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "STATIONARY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry20> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry20> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry20> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "11-MAY-06" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry20> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry21> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry21> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry21> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry21> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "23-OCT-06" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry21> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry21> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70150" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry21> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110026084653> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry21> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry21> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "UNSPECIFIED UNIVERSE" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry21> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "* P.O. BOX 6026" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry21> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "GNIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry21> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry21> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "PALAU COMMUNITY COLLEGE - OREOR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry21> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110026084653" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry21> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "FACILITY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry21> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry21> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry21> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "12-FEB-07" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry21> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry22> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry22> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry22> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry22> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "23-OCT-06" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry22> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry22> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70150" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry22> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110025806723> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry22> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry22> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "UNSPECIFIED UNIVERSE" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry22> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "* P.O. BOX 6026" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry22> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "GNIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry22> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry22> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "PALAU HIGH SCHOOL - OREOR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry22> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110025806723" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry22> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "FACILITY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry22> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry22> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry22> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "12-FEB-07" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry22> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry23> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry23> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry23> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry23> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "23-OCT-06" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry23> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry23> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70150" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry23> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110026292759> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry23> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry23> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "UNSPECIFIED UNIVERSE" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry23> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "* P.O. BOX 6026" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry23> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "GNIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry23> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry23> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "PALAU MISSION ACADEMY - OREOR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry23> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110026292759" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry23> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "FACILITY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry23> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry23> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry23> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "12-FEB-07" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry23> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry24> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry24> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry24> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry24> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "23-OCT-06" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry24> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry24> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70150" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry24> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110026078777> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry24> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry24> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "UNSPECIFIED UNIVERSE" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry24> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "* P.O. BOX 6026" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry24> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "GNIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry24> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry24> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "PELELIU SCHOOL - BELILIOU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry24> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110026078777" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry24> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "FACILITY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry24> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry24> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry24> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "12-FEB-07" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry25> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry25> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry25> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry25> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "23-DEC-03" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry25> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry25> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70150" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry25> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110016238043> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry25> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry25> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "WATER TREATMENT PLANT" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry25> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "* P.O. BOX 6026" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry25> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "SDWIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry25> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry25> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "TILORCH RIVER" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry25> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110016238043" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry25> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "STATIONARY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry25> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry25> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry25> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "11-MAY-06" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry26> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry26> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry26> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry26> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "23-DEC-03" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry26> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry26> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70150" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry26> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110016238114> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry26> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry26> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "WATER TREATMENT PLANT" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry26> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "* P.O. BOX 6026" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry26> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "SDWIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry26> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry26> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "WELL WATER (SHALLOW WELL)" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry26> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110016238114" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry26> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "STATIONARY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry26> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry26> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry26> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "11-MAY-06" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry26> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry27> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "KOROR REPUBLIC OF PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry27> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry27> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry27> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "01-MAR-00" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry27> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry27> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110009309792> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry27> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry27> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "SUPERFUND" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry27> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "1 MILE SOUTH OF KOROR, PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry27> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "CERCLIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry27> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry27> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "PALAU CHEMICAL" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry27> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110009309792" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry27> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "POTENTIALLY CONTAMINATED SITE" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry27> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry27> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry27> <http://data-gov.tw.rpi.edu/vocab/p/996/supplemental_location> "1 MILE SOUTH OF KOROR, PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry27> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "02-JUL-09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry27> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry28> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "KOROR REPUBLIC OF PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry28> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry28> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry28> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "01-MAR-00" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry28> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry28> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110009309809> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry28> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry28> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "SUPERFUND" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry28> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "KOROR LANDFILL" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry28> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "CERCLIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry28> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry28> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "PALAU MUNICIPAL LANDFILL" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry28> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110009309809" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry28> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "POTENTIALLY CONTAMINATED SITE" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry28> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry28> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry28> <http://data-gov.tw.rpi.edu/vocab/p/996/supplemental_location> "KOROR LANDFILL" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry28> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "02-JUL-09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry28> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry29> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "MELEKEOK" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry29> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry29> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "MELEKEOK" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry29> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "30-OCT-02" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry29> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry29> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70212" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry29> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110013044133> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry29> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry29> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "COMMUNITY WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry29> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "MELEKEOK WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry29> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "SDWIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry29> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry29> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "MELEKEOK WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry29> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110013044133" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry29> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "STATIONARY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry29> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry29> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry29> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "09-JUN-05" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry29> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry2> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "AIRAI" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry2> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry2> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "AIRAI" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry2> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "24-OCT-06" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry2> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry2> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70004" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry2> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110026778994> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry2> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry2> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "UNSPECIFIED UNIVERSE" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry2> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "07 21 21 N 134 32 19 E" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry2> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "GNIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry2> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry2> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "AIRAI ELEMENTARY SCHOOL" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry2> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110026778994" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry2> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "FACILITY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry2> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry2> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry2> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "18-JAN-07" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry30> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "NGARCHELONG" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry30> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry30> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "NGARCHELONG" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry30> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "30-OCT-02" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry30> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry30> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70218" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry30> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110013043928> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry30> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry30> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "COMMUNITY WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry30> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "NGARCHELONG WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry30> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "SDWIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry30> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry30> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "NGARCHELONG WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry30> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110013043928" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry30> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "STATIONARY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry30> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry30> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry30> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "09-JUN-05" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry30> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry31> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "NGARDMAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry31> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry31> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "NGARDMAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry31> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "30-OCT-02" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry31> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry31> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70222" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry31> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110013044240> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry31> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry31> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "COMMUNITY WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry31> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "NGARDMAU WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry31> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "SDWIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry31> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry31> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "NGARDMAU WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry31> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110013044240" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry31> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "STATIONARY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry31> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry31> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry31> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "09-JUN-05" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry31> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry32> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "NGCHEANGEL" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry32> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry32> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "AIMELIIK" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry32> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "23-OCT-06" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry32> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry32> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70002" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry32> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110025806288> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry32> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry32> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "UNSPECIFIED UNIVERSE" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry32> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "LATITUDE: 8.07444  LONGITUDE: 134.71528" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry32> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "GNIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry32> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry32> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "JOHN FITZGERALD KENNEDY SCHOOL" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry32> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110025806288" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry32> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "FACILITY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry32> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry32> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry32> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "18-JAN-07" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry32> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry33> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "NGCHEMIANGEL" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry33> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry33> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "AIMELIIK" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry33> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "30-OCT-02" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry33> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry33> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70002" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry33> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110013044277> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry33> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry33> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "COMMUNITY WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry33> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "NGCHESAR WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry33> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "SDWIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry33> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry33> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "NGCHESAR WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry33> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110013044277" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry33> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "STATIONARY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry33> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry33> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry33> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "09-JUN-05" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry33> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry34> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "NGCHESAR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry34> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry34> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "NGCHESAR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry34> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "30-OCT-02" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry34> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry34> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70226" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry34> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110012958451> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry34> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry34> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "COMMUNITY WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry34> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "NGCHESAR WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry34> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "SDWIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry34> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry34> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "NGCHESAR WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry34> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110012958451" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry34> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "STATIONARY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry34> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry34> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry34> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "09-JUN-05" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry34> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry35> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "NGEBUKED" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry35> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry35> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "NGARAARD" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry35> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "30-OCT-02" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry35> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry35> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70214" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry35> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110013043964> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry35> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry35> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "COMMUNITY WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry35> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "NGEBUKED WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry35> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "SDWIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry35> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry35> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "NGEBUKED WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry35> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110013043964" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry35> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "STATIONARY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry35> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry35> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry35> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "09-JUN-05" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry35> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry36> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "NGERMETENGEL" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry36> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry36> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "NGEREMLENGUI" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry36> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "23-OCT-06" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry36> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry36> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70227" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry36> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110025806377> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry36> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry36> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "UNSPECIFIED UNIVERSE" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry36> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "LATITUDE: 7.62722  LONGITUDE: 134.64167" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry36> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "GNIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry36> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry36> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "BETHANIA SCHOOL" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry36> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110025806377" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry36> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "FACILITY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry36> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry36> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry36> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "18-JAN-07" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry36> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry37> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "NGERMETENGEL" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry37> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry37> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "NGEREMLENGUI" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry37> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "23-OCT-06" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry37> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry37> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70227" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry37> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110025806439> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry37> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry37> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "UNSPECIFIED UNIVERSE" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry37> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "LATITUD: 7.6727778  LONGITUD: 134.6375" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry37> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "GNIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry37> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry37> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "CHOL ELEMENTARY SCHOOL" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry37> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110025806439" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry37> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "FACILITY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry37> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry37> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry37> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "18-JAN-07" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry37> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry38> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "NGERMETENGEL" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry38> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry38> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "NGEREMLENGUI" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry38> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "30-OCT-02" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry38> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry38> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70227" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry38> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110012958503> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry38> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry38> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "COMMUNITY WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry38> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "NGERMETENGEL WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry38> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "SDWIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry38> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry38> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "NGERMETENGEL WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry38> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110012958503" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry38> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "STATIONARY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry38> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry38> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry38> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "09-JUN-05" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry38> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry39> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "NGERNGESANG" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry39> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry39> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "NGCHESAR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry39> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "30-OCT-02" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry39> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry39> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70226" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry39> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110013044160> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry39> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry39> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "COMMUNITY WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry39> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "NGERNGESANG WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry39> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "SDWIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry39> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry39> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "NGERNGESANG WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry39> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110013044160" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry39> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "STATIONARY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry39> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry39> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry39> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "09-JUN-05" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry39> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry3> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "ANGAUR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry3> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry3> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "ANGAUR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry3> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "30-OCT-02" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry3> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry3> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70010" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry3> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110013044393> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry3> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry3> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "COMMUNITY WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry3> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "ANGAUR WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry3> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "SDWIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry3> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry3> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "ANGAUR WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry3> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110013044393" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry3> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "STATIONARY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry3> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry3> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry3> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "09-JUN-05" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry40> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "NGIWAL" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry40> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry40> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "NGIWAL" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry40> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "30-OCT-02" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry40> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry40> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70228" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry40> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110013044035> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry40> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry40> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "COMMUNITY WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry40> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "NGIWAL WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry40> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "SDWIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry40> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry40> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "NGIWAL WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry40> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110013044035" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry40> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "STATIONARY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry40> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry40> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry40> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "09-JUN-05" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry40> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry41> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "OLLEI" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry41> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry41> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "NGARCHELONG" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry41> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "30-OCT-02" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry41> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry41> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70218" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry41> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110013043848> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry41> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry41> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "COMMUNITY WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry41> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "OLLEI WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry41> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "SDWIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry41> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry41> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "OLLEI WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry41> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110013043848" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry41> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "STATIONARY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry41> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry41> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry41> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "15-JUN-05" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry41> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry42> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "OREOR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry42> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry42> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "MELEKEOK" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry42> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "23-OCT-06" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry42> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry42> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70212" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry42> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110026292704> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry42> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry42> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "UNSPECIFIED UNIVERSE" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry42> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "07 29 55 N  134 37 51 E" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry42> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "GNIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry42> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry42> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "MELEKEOK ELEMENTARY SCHOOL" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry42> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110026292704" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry42> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "FACILITY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry42> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry42> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry42> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "18-JAN-07" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry42> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry43> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry43> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry43> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry43> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "01-MAR-00" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry43> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry43> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110009309818> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry43> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry43> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "SUPERFUND" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry43> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "MALALCAL PTC COMPOUND" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry43> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "CERCLIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry43> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry43> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "PALAU SHIPPING CONTAINER" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry43> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110009309818" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry43> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "POTENTIALLY CONTAMINATED SITE" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry43> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry43> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry43> <http://data-gov.tw.rpi.edu/vocab/p/996/supplemental_location> "MALALCAL PTC COMPOUND" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry43> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "02-JUL-09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry43> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry44> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry44> <http://data-gov.tw.rpi.edu/vocab/p/996/congressional_dist_num> "01" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry44> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry44> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry44> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "26-MAR-03" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry44> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry44> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110013804678> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry44> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry44> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "SUPERFUND NPL" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry44> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "PALAU,YAP,TRUK,PONAPE,KOSARE" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry44> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "CERCLIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry44> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry44> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "PCB WASTES" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry44> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110013804678" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry44> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "STATIONARY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry44> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry44> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry44> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "28-AUG-09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry44> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry45> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "PELELUI" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry45> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry45> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "PELELIU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry45> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "30-OCT-02" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry45> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry45> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70350" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry45> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110013044302> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry45> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry45> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "COMMUNITY WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry45> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "PELELUI WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry45> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "SDWIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry45> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry45> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "PELELUI WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry45> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110013044302" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry45> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "STATIONARY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry45> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry45> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry45> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "15-JUN-05" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry45> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry4> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "IMEONG" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry4> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry4> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "NGEREMLENGUI" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry4> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "30-OCT-02" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry4> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry4> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70227" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry4> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110013044268> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry4> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry4> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "COMMUNITY WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry4> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "IMOEONG WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry4> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "SDWIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry4> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry4> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "IMOEONG WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry4> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110013044268" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry4> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "STATIONARY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry4> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry4> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry4> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "09-JUN-05" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry5> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry5> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry5> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry5> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "23-DEC-03" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry5> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry5> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70150" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry5> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110016238052> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry5> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry5> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "WATER TREATMENT PLANT" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry5> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "* P.O. BOX 6026" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry5> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "SDWIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry5> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry5> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "BUBS RIVER" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry5> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110016238052" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry5> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "STATIONARY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry5> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry5> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry5> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "11-MAY-06" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry6> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry6> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry6> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry6> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "23-DEC-03" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry6> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry6> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70150" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry6> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110016238061> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry6> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry6> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "WATER TREATMENT PLANT" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry6> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "* P.O. BOX 6026" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry6> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "SDWIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry6> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry6> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "IKLONG RIVER" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry6> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110016238061" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry6> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "STATIONARY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry6> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry6> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry6> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "11-MAY-06" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry7> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry7> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry7> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry7> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "30-OCT-02" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry7> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry7> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70150" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry7> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110012958656> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry7> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry7> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "COMMUNITY WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry7> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "KORO-AIRAI PUBLIC WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry7> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "SDWIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry7> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry7> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "KORO-AIRAI PUBLIC WATER SYSTEM" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry7> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110012958656" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry7> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "STATIONARY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry7> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry7> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry7> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "09-JUN-05" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry8> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry8> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry8> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry8> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "24-OCT-06" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry8> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry8> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70150" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry8> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110026779038> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry8> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry8> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "UNSPECIFIED UNIVERSE" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry8> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "* P.O. BOX 6026" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry8> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "GNIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry8> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry8> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "NGARAARD ELEMENTARY SCHOOL - NGERMETENGEL" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry8> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110026779038" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry8> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "FACILITY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry8> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry8> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry8> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "12-FEB-07" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry9> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry9> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> "USA" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry9> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> "KOROR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry9> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> "23-OCT-06" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry9> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> "09" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry9> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> "70150" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry9> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://iaspub.epa.gov/enviro/fii_query_detail.disp_program_facility?p_registry_id=110025806493> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry9> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> "NAD83" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry9> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> "UNSPECIFIED UNIVERSE" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry9> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> "* P.O. BOX 6026" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry9> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> "GNIS" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry9> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> "96940" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry9> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> "NGATPANG ELEMENTARY SCHOOL - OREOR" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry9> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> "110025806493" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry9> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> "FACILITY" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry9> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> "PW" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry9> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> "PALAU" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry9> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> "12-FEB-07" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf#entry9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf> <http://purl.org/dc/terms/creator> <http://tw.rpi.edu> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf> <http://purl.org/dc/terms/date> "2010-04-15T17:27:44Z" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf> <http://purl.org/dc/terms/description> "generated by csv2rdf CSV2RDF (v1.1, 2009-01-28). http://data-gov.tw.rpi.edu/wiki/Source_Code_of_Data.gov_Wiki#Source_Code_of_Demos_and_Applications. " .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf> <http://purl.org/dc/terms/identifier> "/work/data-gov/data/input/data.gov/1008/STATE_SINGLE_PW.CSV" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00002.rdf> <http://purl.org/dc/terms/creator> <http://tw.rpi.edu> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00002.rdf> <http://purl.org/dc/terms/date> "2010-04-15T17:27:44Z" .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00002.rdf> <http://purl.org/dc/terms/description> "generated by csv2rdf CSV2RDF (v1.1, 2009-01-28). http://data-gov.tw.rpi.edu/wiki/Source_Code_of_Data.gov_Wiki#Source_Code_of_Demos_and_Applications. " .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00002.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<http://data-gov.tw.rpi.edu/raw/1008/data-1008-00002.rdf> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#complete_data> <http://data-gov.tw.rpi.edu/raw/1008/data-1008.nt.gz> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#link_data> <http://data-gov.tw.rpi.edu/raw/1008/link00001.rdf> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#number_of_entries> "45" .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#number_of_properties> "38" .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#number_of_triples> "866" .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#partial_data> <http://data-gov.tw.rpi.edu/raw/1008/data-1008-00001.rdf> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#partial_data> <http://data-gov.tw.rpi.edu/raw/1008/data-1008-00002.rdf> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/accuracy_value> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/city_name> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/collect_desc> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/congressional_dist_num> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/conveyor> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/country_name> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/county_name> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/create_date> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/federal_agency_name> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/federal_facility_code> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/huc_code> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/latitude83> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/location_address> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/location_description> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/longitude83> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/naics_code_descriptions> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/naics_codes> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/ref_point_desc> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/sic_code_descriptions> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/sic_codes> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/source_desc> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/state_code> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/state_name> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/supplemental_location> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/tribal_land_code> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/tribal_land_name> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/update_date> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#uses_property> <http://data-gov.tw.rpi.edu/vocab/p/996/us_mexico_border_ind> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://purl.org/dc/terms/type> "FRS" .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#Dataset> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://www.w3.org/2002/07/owl#sameAs> <http://data-gov.tw.rpi.edu/vocab/Dataset_1008> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> <http://xmlns.com/foaf/0.1/homepage> <http://data-gov.tw.rpi.edu/wiki/Dataset_1008> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf> <http://purl.org/dc/terms/creator> <http://tw.rpi.edu> .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf> <http://purl.org/dc/terms/date> "2010-04-15T17:27:44Z" .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf> <http://purl.org/dc/terms/description> "generated by csv2rdf CSV2RDF (v1.1, 2009-01-28). http://data-gov.tw.rpi.edu/wiki/Source_Code_of_Data.gov_Wiki#Source_Code_of_Demos_and_Applications. " .
+<http://data-gov.tw.rpi.edu/raw/1008/index.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<http://data-gov.tw.rpi.edu/raw/1008/link00001.rdf> <http://purl.org/dc/terms/creator> <http://tw.rpi.edu> .
+<http://data-gov.tw.rpi.edu/raw/1008/link00001.rdf> <http://purl.org/dc/terms/date> "2010-04-15T17:27:44Z" .
+<http://data-gov.tw.rpi.edu/raw/1008/link00001.rdf> <http://purl.org/dc/terms/description> "generated by csv2rdf CSV2RDF (v1.1, 2009-01-28). http://data-gov.tw.rpi.edu/wiki/Source_Code_of_Data.gov_Wiki#Source_Code_of_Demos_and_Applications. " .
+<http://data-gov.tw.rpi.edu/raw/1008/link00001.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<http://data-gov.tw.rpi.edu/raw/1008/link00001.rdf> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://data-gov.tw.rpi.edu/raw/1008/index.rdf#me> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/accuracy_value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/accuracy_value> <http://www.w3.org/2000/01/rdf-schema#label> "ACCURACY_VALUE" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/city_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/city_name> <http://www.w3.org/2000/01/rdf-schema#label> "CITY_NAME" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/collect_desc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/collect_desc> <http://www.w3.org/2000/01/rdf-schema#label> "COLLECT_DESC" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/congressional_dist_num> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/congressional_dist_num> <http://www.w3.org/2000/01/rdf-schema#label> "CONGRESSIONAL_DIST_NUM" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/conveyor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/conveyor> <http://www.w3.org/2000/01/rdf-schema#label> "CONVEYOR" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/country_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/country_name> <http://www.w3.org/2000/01/rdf-schema#label> "COUNTRY_NAME" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/county_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/county_name> <http://www.w3.org/2000/01/rdf-schema#label> "COUNTY_NAME" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/create_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/create_date> <http://www.w3.org/2000/01/rdf-schema#label> "CREATE_DATE" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/epa_region_code> <http://www.w3.org/2000/01/rdf-schema#label> "EPA_REGION_CODE" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/federal_agency_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/federal_agency_name> <http://www.w3.org/2000/01/rdf-schema#label> "FEDERAL_AGENCY_NAME" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/federal_facility_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/federal_facility_code> <http://www.w3.org/2000/01/rdf-schema#label> "FEDERAL_FACILITY_CODE" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/fips_code> <http://www.w3.org/2000/01/rdf-schema#label> "FIPS_CODE" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/frs_facility_detail_report_url> <http://www.w3.org/2000/01/rdf-schema#label> "FRS_FACILITY_DETAIL_REPORT_URL" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/hdatum_desc> <http://www.w3.org/2000/01/rdf-schema#label> "HDATUM_DESC" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/huc_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/huc_code> <http://www.w3.org/2000/01/rdf-schema#label> "HUC_CODE" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/interest_types> <http://www.w3.org/2000/01/rdf-schema#label> "INTEREST_TYPES" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/latitude83> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/latitude83> <http://www.w3.org/2000/01/rdf-schema#label> "LATITUDE83" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/location_address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/location_address> <http://www.w3.org/2000/01/rdf-schema#label> "LOCATION_ADDRESS" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/location_description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/location_description> <http://www.w3.org/2000/01/rdf-schema#label> "LOCATION_DESCRIPTION" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/longitude83> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/longitude83> <http://www.w3.org/2000/01/rdf-schema#label> "LONGITUDE83" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/naics_code_descriptions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/naics_code_descriptions> <http://www.w3.org/2000/01/rdf-schema#label> "NAICS_CODE_DESCRIPTIONS" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/naics_codes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/naics_codes> <http://www.w3.org/2000/01/rdf-schema#label> "NAICS_CODES" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/pgm_sys_acrnms> <http://www.w3.org/2000/01/rdf-schema#label> "PGM_SYS_ACRNMS" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/postal_code> <http://www.w3.org/2000/01/rdf-schema#label> "POSTAL_CODE" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/primary_name> <http://www.w3.org/2000/01/rdf-schema#label> "PRIMARY_NAME" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/ref_point_desc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/ref_point_desc> <http://www.w3.org/2000/01/rdf-schema#label> "REF_POINT_DESC" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/registry_id> <http://www.w3.org/2000/01/rdf-schema#label> "REGISTRY_ID" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/sic_code_descriptions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/sic_code_descriptions> <http://www.w3.org/2000/01/rdf-schema#label> "SIC_CODE_DESCRIPTIONS" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/sic_codes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/sic_codes> <http://www.w3.org/2000/01/rdf-schema#label> "SIC_CODES" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/site_type_name> <http://www.w3.org/2000/01/rdf-schema#label> "SITE_TYPE_NAME" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/source_desc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/source_desc> <http://www.w3.org/2000/01/rdf-schema#label> "SOURCE_DESC" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/state_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/state_code> <http://www.w3.org/2000/01/rdf-schema#label> "STATE_CODE" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/state_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/state_name> <http://www.w3.org/2000/01/rdf-schema#label> "STATE_NAME" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/supplemental_location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/supplemental_location> <http://www.w3.org/2000/01/rdf-schema#label> "SUPPLEMENTAL_LOCATION" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/tribal_land_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/tribal_land_code> <http://www.w3.org/2000/01/rdf-schema#label> "TRIBAL_LAND_CODE" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/tribal_land_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/tribal_land_name> <http://www.w3.org/2000/01/rdf-schema#label> "TRIBAL_LAND_NAME" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/update_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/update_date> <http://www.w3.org/2000/01/rdf-schema#label> "UPDATE_DATE" .
+<http://data-gov.tw.rpi.edu/vocab/p/996/us_mexico_border_ind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://data-gov.tw.rpi.edu/vocab/p/996/us_mexico_border_ind> <http://www.w3.org/2000/01/rdf-schema#label> "US_MEXICO_BORDER_IND" .
