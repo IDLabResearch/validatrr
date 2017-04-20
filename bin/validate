@@ -26,3 +26,15 @@ if (schemas) {
     return prefices[schema] ? prefices[schema] : schema
   });
 }
+
+let sourceData = fs.readFileSync(sourcePath, 'utf8');
+
+const startTime = new Date();
+validator.validate(sourceData, schemas, function (err, stdout, stderr) {
+  const endTime = new Date();
+  if (err) {
+    throw err;
+  }
+  fs.writeFileSync(outputPath, stdout, 'utf8');
+  console.log(`done in ${endTime.getTime() - startTime.getTime()}!`);
+});
