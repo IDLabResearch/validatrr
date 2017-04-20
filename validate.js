@@ -20,7 +20,7 @@ let sourcePath = path.resolve(__dirname, '..', 'dataset-downloader', 'output/100
 let sourceData = fs.readFileSync(sourcePath, 'utf8');
 
 const startTime = new Date();
-validator.validate(sourceData, function (err, stdout, stderr) {
+validator.validate(sourceData, ['http://purl.org/dc/terms/'], function (err, stdout, stderr) {
   const endTime = new Date();
   if (err) {
     throw err;
