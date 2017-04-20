@@ -1,0 +1,400 @@
+#Processed by EYE rel. v17.0208.1332 josd
+#eye data.ttl constraint.ttl rule.n3 ../reasoning/rdfsResource.n3 --query ../query.n3
+
+PREFIX rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms#>
+PREFIX : <http://example.com/constraints#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX math: <http://www.w3.org/2000/10/swap/math#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX func: <http://www.w3.org/2007/rif-builtin-function#>
+PREFIX pred: <http://www.w3.org/2007/rif-builtin-predicate#>
+PREFIX prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>
+PREFIX string: <http://www.w3.org/2000/10/swap/string#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
+
+[] a r:Proof, r:Conjunction;
+  r:component <#lemma1>;
+  r:component <#lemma2>;
+  r:component <#lemma3>;
+  r:component <#lemma4>;
+  r:component <#lemma5>;
+  r:component <#lemma6>;
+  r:component <#lemma7>;
+  r:component <#lemma8>;
+  r:component <#lemma9>;
+  r:component <#lemma10>;
+  r:component <#lemma11>;
+  r:component <#lemma12>;
+  r:component <#lemma13>;
+  r:component <#lemma14>;
+  r:gives {
+    _:sk_0 a :constraintViolation.
+    _:sk_0 a rdfs:Resource.
+    _:sk_0 :violatedConstraint :example_constraint_A_25.
+    _:sk_0 :class rdfs:Resource.
+    _:sk_0 :instance :something.
+    _:sk_0 :property dcterms:date.
+    _:sk_0 :subproperty dcterms:created.
+    _:sk_0 :value "2012-12-31T23:57:00"^^xsd:dateTime.
+    _:sk_2 a :constraintViolation.
+    _:sk_2 a rdfs:Resource.
+    _:sk_2 :violatedConstraint :example_constraint_A_25a.
+    _:sk_2 :class :Publication.
+    _:sk_2 :instance :HarryPotter.
+    _:sk_2 :subclasses (:Book :Journal-Article :Technical-Report).
+  }.
+
+<#lemma1> a r:Inference; 
+  r:gives {
+    _:sk_0 a :constraintViolation.
+  }; 
+  r:evidence (
+    <#lemma15>
+    <#lemma15>
+  );
+  r:rule <#lemma16>.
+
+<#lemma2> a r:Inference; 
+  r:gives {
+    _:sk_0 a rdfs:Resource.
+  }; 
+  r:evidence (
+    <#lemma15>
+    <#lemma17>
+  );
+  r:rule <#lemma16>.
+
+<#lemma3> a r:Inference; 
+  r:gives {
+    _:sk_0 :violatedConstraint :example_constraint_A_25.
+  }; 
+  r:evidence (
+    <#lemma15>
+    <#lemma15>
+  );
+  r:rule <#lemma16>.
+
+<#lemma4> a r:Inference; 
+  r:gives {
+    _:sk_0 :class rdfs:Resource.
+  }; 
+  r:evidence (
+    <#lemma15>
+    <#lemma15>
+  );
+  r:rule <#lemma16>.
+
+<#lemma5> a r:Inference; 
+  r:gives {
+    _:sk_0 :instance :something.
+  }; 
+  r:evidence (
+    <#lemma15>
+    <#lemma15>
+  );
+  r:rule <#lemma16>.
+
+<#lemma6> a r:Inference; 
+  r:gives {
+    _:sk_0 :property dcterms:date.
+  }; 
+  r:evidence (
+    <#lemma15>
+    <#lemma15>
+  );
+  r:rule <#lemma16>.
+
+<#lemma7> a r:Inference; 
+  r:gives {
+    _:sk_0 :subproperty dcterms:created.
+  }; 
+  r:evidence (
+    <#lemma15>
+    <#lemma15>
+  );
+  r:rule <#lemma16>.
+
+<#lemma8> a r:Inference; 
+  r:gives {
+    _:sk_0 :value "2012-12-31T23:57:00"^^xsd:dateTime.
+  }; 
+  r:evidence (
+    <#lemma15>
+    <#lemma15>
+  );
+  r:rule <#lemma16>.
+
+<#lemma9> a r:Inference; 
+  r:gives {
+    _:sk_2 a :constraintViolation.
+  }; 
+  r:evidence (
+    <#lemma18>
+    <#lemma18>
+  );
+  r:rule <#lemma16>.
+
+<#lemma10> a r:Inference; 
+  r:gives {
+    _:sk_2 a rdfs:Resource.
+  }; 
+  r:evidence (
+    <#lemma18>
+    <#lemma19>
+  );
+  r:rule <#lemma16>.
+
+<#lemma11> a r:Inference; 
+  r:gives {
+    _:sk_2 :violatedConstraint :example_constraint_A_25a.
+  }; 
+  r:evidence (
+    <#lemma18>
+    <#lemma18>
+  );
+  r:rule <#lemma16>.
+
+<#lemma12> a r:Inference; 
+  r:gives {
+    _:sk_2 :class :Publication.
+  }; 
+  r:evidence (
+    <#lemma18>
+    <#lemma18>
+  );
+  r:rule <#lemma16>.
+
+<#lemma13> a r:Inference; 
+  r:gives {
+    _:sk_2 :instance :HarryPotter.
+  }; 
+  r:evidence (
+    <#lemma18>
+    <#lemma18>
+  );
+  r:rule <#lemma16>.
+
+<#lemma14> a r:Inference; 
+  r:gives {
+    _:sk_2 :subclasses (:Book :Journal-Article :Technical-Report).
+  }; 
+  r:evidence (
+    <#lemma18>
+    <#lemma18>
+  );
+  r:rule <#lemma16>.
+
+<#lemma15> a r:Inference; 
+  r:gives {
+    _:sk_0 a :constraintViolation.
+    _:sk_0 :violatedConstraint :example_constraint_A_25.
+    _:sk_0 :class rdfs:Resource.
+    _:sk_0 :instance :something.
+    _:sk_0 :property dcterms:date.
+    _:sk_0 :subproperty dcterms:created.
+    _:sk_0 :value "2012-12-31T23:57:00"^^xsd:dateTime.
+  }; 
+  r:evidence (
+    <#lemma20>
+    <#lemma21>
+    <#lemma22>
+    <#lemma23>
+    <#lemma24>
+    <#lemma25>
+    <#lemma26>
+    <#lemma27>
+    <#lemma28>
+    [ a r:Fact; r:gives {dcterms:created list:in (dcterms:created dcterms:issued)}]
+  );
+  r:rule <#lemma29>.
+
+<#lemma16> a r:Extraction; 
+  r:gives {
+    {?x_0_1 a :constraintViolation.
+      ?x_0_1 ?x_1_1 ?x_2_1} => {?x_0_1 ?x_1_1 ?x_2_1}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/query.n3>].
+
+<#lemma17> a r:Inference; 
+  r:gives {
+    _:sk_0 a rdfs:Resource.
+  }; 
+  r:evidence (
+    [ a r:Fact; r:gives true]
+  );
+  r:rule <#lemma30>.
+
+<#lemma18> a r:Inference; 
+  r:gives {
+    _:sk_2 a :constraintViolation.
+    _:sk_2 :violatedConstraint :example_constraint_A_25a.
+    _:sk_2 :class :Publication.
+    _:sk_2 :instance :HarryPotter.
+    _:sk_2 :subclasses (:Book :Journal-Article :Technical-Report).
+  }; 
+  r:evidence (
+    <#lemma31>
+    <#lemma32>
+    <#lemma33>
+    <#lemma34>
+    <#lemma35>
+    <#lemma36>
+    [ a r:Fact; r:gives {((<file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A25_Use_Sub-Super_Relations_in_Validation/data.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A25_Use_Sub-Super_Relations_in_Validation/constraint.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A25_Use_Sub-Super_Relations_in_Validation/rule.n3> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/reasoning/rdfsResource.n3>) 1) e:findall (1 {_:sk_1 list:in (:Book :Journal-Article :Technical-Report).
+      :HarryPotter a _:sk_1} ())}]
+  );
+  r:rule <#lemma37>.
+
+<#lemma19> a r:Inference; 
+  r:gives {
+    _:sk_2 a rdfs:Resource.
+  }; 
+  r:evidence (
+    [ a r:Fact; r:gives true]
+  );
+  r:rule <#lemma30>.
+
+<#lemma20> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_25 a rdfcv:SimpleConstraint.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A25_Use_Sub-Super_Relations_in_Validation/constraint.ttl>].
+
+<#lemma21> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_25 :constraintType :UseSubSuperRelations.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A25_Use_Sub-Super_Relations_in_Validation/constraint.ttl>].
+
+<#lemma22> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_25 rdfcv:constrainingElement :use_sub-super_relations.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A25_Use_Sub-Super_Relations_in_Validation/constraint.ttl>].
+
+<#lemma23> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_25 rdfcv:contextClass rdfs:Resource.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A25_Use_Sub-Super_Relations_in_Validation/constraint.ttl>].
+
+<#lemma24> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_25 rdfcv:leftProperties dcterms:date.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A25_Use_Sub-Super_Relations_in_Validation/constraint.ttl>].
+
+<#lemma25> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_25 rdfcv:rightProperties (dcterms:created dcterms:issued).
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A25_Use_Sub-Super_Relations_in_Validation/constraint.ttl>].
+
+<#lemma26> a r:Inference; 
+  r:gives {
+    :something a rdfs:Resource.
+  }; 
+  r:evidence (
+    [ a r:Fact; r:gives true]
+  );
+  r:rule <#lemma30>.
+
+<#lemma27> a r:Extraction; 
+  r:gives {
+    :something dcterms:date "2012-12-31T23:57:00"^^xsd:dateTime.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A25_Use_Sub-Super_Relations_in_Validation/data.ttl>].
+
+<#lemma28> a r:Extraction; 
+  r:gives {
+    :something dcterms:created "2012-12-31T23:57:00"^^xsd:dateTime.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A25_Use_Sub-Super_Relations_in_Validation/data.ttl>].
+
+<#lemma29> a r:Extraction; 
+  r:gives {
+    {?x_0_2 a rdfcv:SimpleConstraint.
+      ?x_0_2 :constraintType :UseSubSuperRelations.
+      ?x_0_2 rdfcv:constrainingElement :use_sub-super_relations.
+      ?x_0_2 rdfcv:contextClass ?x_1_2.
+      ?x_0_2 rdfcv:leftProperties ?x_2_2.
+      ?x_0_2 rdfcv:rightProperties ?x_3_2.
+      ?x_4_2 a ?x_1_2.
+      ?x_4_2 ?x_2_2 ?x_5_2.
+      ?x_4_2 ?x_6_2 ?x_5_2.
+      ?x_6_2 list:in ?x_3_2} => {_:x_7_2 a :constraintViolation.
+      _:x_7_2 :violatedConstraint ?x_0_2.
+      _:x_7_2 :class ?x_1_2.
+      _:x_7_2 :instance ?x_4_2.
+      _:x_7_2 :property ?x_2_2.
+      _:x_7_2 :subproperty ?x_6_2.
+      _:x_7_2 :value ?x_5_2}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A25_Use_Sub-Super_Relations_in_Validation/rule.n3>].
+
+<#lemma30> a r:Extraction; 
+  r:gives {
+    {?x_0_3 a rdfs:Resource} <= true.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/reasoning/rdfsResource.n3>].
+
+<#lemma31> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_25a a rdfcv:SimpleConstraint.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A25_Use_Sub-Super_Relations_in_Validation/constraint.ttl>].
+
+<#lemma32> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_25a :constraintType :UseSubSuperRelations.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A25_Use_Sub-Super_Relations_in_Validation/constraint.ttl>].
+
+<#lemma33> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_25a rdfcv:constrainingElement :use_sub-super_relations.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A25_Use_Sub-Super_Relations_in_Validation/constraint.ttl>].
+
+<#lemma34> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_25a rdfcv:contextClass :Publication.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A25_Use_Sub-Super_Relations_in_Validation/constraint.ttl>].
+
+<#lemma35> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_25a rdfcv:classes (:Book :Journal-Article :Technical-Report).
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A25_Use_Sub-Super_Relations_in_Validation/constraint.ttl>].
+
+<#lemma36> a r:Extraction; 
+  r:gives {
+    :HarryPotter a :Publication.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A25_Use_Sub-Super_Relations_in_Validation/data.ttl>].
+
+<#lemma37> a r:Extraction; 
+  r:gives {
+    {?x_0_4 a rdfcv:SimpleConstraint.
+      ?x_0_4 :constraintType :UseSubSuperRelations.
+      ?x_0_4 rdfcv:constrainingElement :use_sub-super_relations.
+      ?x_0_4 rdfcv:contextClass ?x_1_4.
+      ?x_0_4 rdfcv:classes ?x_2_4.
+      ?x_3_4 a ?x_1_4.
+      ?x_4_4 e:findall (1 {?x_5_4 list:in ?x_2_4.
+        ?x_3_4 a ?x_5_4} ())} => {_:x_6_4 a :constraintViolation.
+      _:x_6_4 :violatedConstraint ?x_0_4.
+      _:x_6_4 :class ?x_1_4.
+      _:x_6_4 :instance ?x_3_4.
+      _:x_6_4 :subclasses ?x_2_4}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A25_Use_Sub-Super_Relations_in_Validation/rule.n3>].
+
+#2017-02-15T11:06:25.802Z in=20 out=14 ent=26 step=50 brake=4 inf=119606 sec=0.084 inf/sec=1423881
+#ENDS
+

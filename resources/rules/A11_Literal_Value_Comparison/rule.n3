@@ -1,0 +1,147 @@
+@prefix rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms#> .
+@prefix : <http://example.com/constraints#> .
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#> .
+@prefix log: <http://www.w3.org/2000/10/swap/log#> .
+@prefix func: <http://www.w3.org/2007/rif-builtin-function#> .
+@prefix pred: <http://www.w3.org/2007/rif-builtin-predicate#> .
+@prefix math: <http://www.w3.org/2000/10/swap/math#> .
+@base <http://example.com/constraints#> .
+
+
+
+
+
+{
+?constraint a rdfcv:SimpleConstraint ;
+  :constraintType :LiteralValueComparison ;
+  rdfcv:constrainingElement ?x ;
+  rdfcv:contextClass  ?c1 ;
+  rdfcv:leftProperties ?p1 ;
+  rdfcv:rightProperties ?p2 ;
+  rdfcv:classes ?DT .
+?x :constraintType :LiteralComparison.
+
+?s a ?c1.
+?s ?p1 ?v1.
+?s ?p2 ?v2.
+
+_:x e:findall (1 {?v1 ?x ?v2} ()).
+}
+=>
+{
+_:x a :constraintViolation;
+    :violatedConstraint ?constraint;
+    :onResource ?s;
+    :predicate1 ?p1;
+    :predicate2 ?p2;
+    :value1 ?v1;
+    :value2 ?v2;
+    :violation ?x
+}.
+
+
+
+{ ?x :constraintType :LiteralComparison. }
+<=
+{
+?x list:in 
+(
+math:equalTo 
+math:greaterThan 
+math:integerQuotient 
+math:lessThan 
+math:notEqualTo
+math:notGreaterThan 
+math:notLessThan 
+math:rounded 
+pred:literal-not-identical
+pred:numeric-equal 
+pred:numeric-less-than 
+pred:numeric-greater-than 
+pred:numeric-not-equal 
+pred:numeric-less-than-or-equal 
+pred:numeric-greater-than-or-equal
+pred:boolean-equal 
+pred:boolean-less-than 
+pred:boolean-greater-than 
+func:compare 
+func:substring 
+func:string-length 
+func:upper-case 
+func:lower-case 
+func:substring-before 
+func:substring-after 
+pred:contains 
+pred:starts-with 
+pred:ends-with 
+pred:matches 
+func:year-from-dateTime 
+func:month-from-dateTime 
+func:day-from-dateTime 
+func:hours-from-dateTime 
+func:minutes-from-dateTime 
+func:seconds-from-dateTime 
+func:year-from-date 
+func:month-from-date 
+func:day-from-date 
+func:hours-from-time 
+func:minutes-from-time 
+func:seconds-from-time 
+func:years-from-duration 
+func:months-from-duration 
+func:days-from-duration 
+func:hours-from-duration 
+func:minutes-from-duration 
+func:seconds-from-duration 
+func:timezone-from-dateTime 
+func:timezone-from-date 
+func:timezone-from-time 
+pred:dateTime-equal 
+pred:dateTime-less-than 
+pred:dateTime-greater-than 
+pred:date-equal 
+pred:date-less-than 
+pred:date-greater-than 
+pred:time-equal 
+pred:time-less-than 
+pred:time-greater-than 
+pred:duration-equal 
+pred:dayTimeDuration-less-than 
+pred:dayTimeDuration-greater-than 
+pred:yearMonthDuration-less-than 
+pred:yearMonthDuration-greater-than 
+pred:dateTime-not-equal 
+pred:dateTime-less-than-or-equal 
+pred:dateTime-greater-than-or-equal 
+pred:date-not-equal 
+pred:date-less-than-or-equal 
+pred:date-greater-than-or-equal 
+pred:time-not-equal 
+pred:time-less-than-or-equal 
+pred:time-greater-than-or-equal 
+pred:duration-not-equal 
+pred:dayTimeDuration-less-than-or-equal 
+pred:dayTimeDuration-greater-than-or-equal 
+pred:yearMonthDuration-less-than-or-equal 
+pred:yearMonthDuration-greater-than-or-equal 
+func:PlainLiteral-from-string-lang 
+func:string-from-PlainLiteral 
+func:lang-from-PlainLiteral 
+func:PlainLiteral-compare 
+func:PlainLiteral-length 
+pred:matches-language-range 
+pred:is-list 
+pred:list-contains 
+func:make-list 
+func:count 
+func:get 
+func:sublist 
+func:reverse 
+func:index-of 
+func:distinct-values 
+)
+}.
+

@@ -1,0 +1,253 @@
+#Processed by EYE rel. v17.0131.1345 josd
+#eye data.ttl constraint.ttl rule.n3 --query ../query.n3
+
+PREFIX rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms#>
+PREFIX : <http://example.com/constraints#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX math: <http://www.w3.org/2000/10/swap/math#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX func: <http://www.w3.org/2007/rif-builtin-function#>
+PREFIX pred: <http://www.w3.org/2007/rif-builtin-predicate#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
+
+[] a r:Proof, r:Conjunction;
+  r:component <#lemma1>;
+  r:component <#lemma2>;
+  r:component <#lemma3>;
+  r:component <#lemma4>;
+  r:component <#lemma5>;
+  r:component <#lemma6>;
+  r:component <#lemma7>;
+  r:component <#lemma8>;
+  r:gives {
+    _:sk_0 a :constraintViolation.
+    _:sk_0 :violatedConstraint :example_constraint_A_11.
+    _:sk_0 :onResource :Albert_Einstein.
+    _:sk_0 :predicate1 :birthDate.
+    _:sk_0 :predicate2 :deathDate.
+    _:sk_0 :value1 "1955-04-18"^^xsd:date.
+    _:sk_0 :value2 "1879-03-14"^^xsd:date.
+    _:sk_0 :violation math:lessThan.
+  }.
+
+<#lemma1> a r:Inference; 
+  r:gives {
+    _:sk_0 a :constraintViolation.
+  }; 
+  r:evidence (
+    <#lemma9>
+    <#lemma9>
+  );
+  r:rule <#lemma10>.
+
+<#lemma2> a r:Inference; 
+  r:gives {
+    _:sk_0 :violatedConstraint :example_constraint_A_11.
+  }; 
+  r:evidence (
+    <#lemma9>
+    <#lemma9>
+  );
+  r:rule <#lemma10>.
+
+<#lemma3> a r:Inference; 
+  r:gives {
+    _:sk_0 :onResource :Albert_Einstein.
+  }; 
+  r:evidence (
+    <#lemma9>
+    <#lemma9>
+  );
+  r:rule <#lemma10>.
+
+<#lemma4> a r:Inference; 
+  r:gives {
+    _:sk_0 :predicate1 :birthDate.
+  }; 
+  r:evidence (
+    <#lemma9>
+    <#lemma9>
+  );
+  r:rule <#lemma10>.
+
+<#lemma5> a r:Inference; 
+  r:gives {
+    _:sk_0 :predicate2 :deathDate.
+  }; 
+  r:evidence (
+    <#lemma9>
+    <#lemma9>
+  );
+  r:rule <#lemma10>.
+
+<#lemma6> a r:Inference; 
+  r:gives {
+    _:sk_0 :value1 "1955-04-18"^^xsd:date.
+  }; 
+  r:evidence (
+    <#lemma9>
+    <#lemma9>
+  );
+  r:rule <#lemma10>.
+
+<#lemma7> a r:Inference; 
+  r:gives {
+    _:sk_0 :value2 "1879-03-14"^^xsd:date.
+  }; 
+  r:evidence (
+    <#lemma9>
+    <#lemma9>
+  );
+  r:rule <#lemma10>.
+
+<#lemma8> a r:Inference; 
+  r:gives {
+    _:sk_0 :violation math:lessThan.
+  }; 
+  r:evidence (
+    <#lemma9>
+    <#lemma9>
+  );
+  r:rule <#lemma10>.
+
+<#lemma9> a r:Inference; 
+  r:gives {
+    _:sk_0 a :constraintViolation.
+    _:sk_0 :violatedConstraint :example_constraint_A_11.
+    _:sk_0 :onResource :Albert_Einstein.
+    _:sk_0 :predicate1 :birthDate.
+    _:sk_0 :predicate2 :deathDate.
+    _:sk_0 :value1 "1955-04-18"^^xsd:date.
+    _:sk_0 :value2 "1879-03-14"^^xsd:date.
+    _:sk_0 :violation math:lessThan.
+  }; 
+  r:evidence (
+    <#lemma11>
+    <#lemma12>
+    <#lemma13>
+    <#lemma14>
+    <#lemma15>
+    <#lemma16>
+    <#lemma17>
+    <#lemma18>
+    <#lemma19>
+    <#lemma20>
+    <#lemma21>
+    [ a r:Fact; r:gives {((<file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A11_Literal_Value_Comparison/data.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A11_Literal_Value_Comparison/constraint.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A11_Literal_Value_Comparison/rule.n3>) 1) e:findall (1 {"1955-04-18"^^xsd:date math:lessThan "1879-03-14"^^xsd:date} ())}]
+  );
+  r:rule <#lemma22>.
+
+<#lemma10> a r:Extraction; 
+  r:gives {
+    {?x_0_1 a :constraintViolation.
+      ?x_0_1 ?x_1_1 ?x_2_1} => {?x_0_1 ?x_1_1 ?x_2_1}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/query.n3>].
+
+<#lemma11> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_11 a rdfcv:SimpleConstraint.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A11_Literal_Value_Comparison/constraint.ttl>].
+
+<#lemma12> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_11 :constraintType :LiteralValueComparison.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A11_Literal_Value_Comparison/constraint.ttl>].
+
+<#lemma13> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_11 rdfcv:constrainingElement math:lessThan.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A11_Literal_Value_Comparison/constraint.ttl>].
+
+<#lemma14> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_11 rdfcv:contextClass :Person.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A11_Literal_Value_Comparison/constraint.ttl>].
+
+<#lemma15> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_11 rdfcv:leftProperties :birthDate.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A11_Literal_Value_Comparison/constraint.ttl>].
+
+<#lemma16> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_11 rdfcv:rightProperties :deathDate.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A11_Literal_Value_Comparison/constraint.ttl>].
+
+<#lemma17> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_11 rdfcv:classes xsd:date.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A11_Literal_Value_Comparison/constraint.ttl>].
+
+<#lemma18> a r:Inference; 
+  r:gives {
+    math:lessThan :constraintType :LiteralComparison.
+  }; 
+  r:evidence (
+    [ a r:Fact; r:gives {math:lessThan list:in (math:equalTo math:greaterThan math:integerQuotient math:lessThan math:notEqualTo math:notGreaterThan math:notLessThan math:rounded pred:literal-not-identical pred:numeric-equal pred:numeric-less-than pred:numeric-greater-than pred:numeric-not-equal pred:numeric-less-than-or-equal pred:numeric-greater-than-or-equal pred:boolean-equal pred:boolean-less-than pred:boolean-greater-than func:compare func:substring func:string-length func:upper-case func:lower-case func:substring-before func:substring-after pred:contains pred:starts-with pred:ends-with pred:matches func:year-from-dateTime func:month-from-dateTime func:day-from-dateTime func:hours-from-dateTime func:minutes-from-dateTime func:seconds-from-dateTime func:year-from-date func:month-from-date func:day-from-date func:hours-from-time func:minutes-from-time func:seconds-from-time func:years-from-duration func:months-from-duration func:days-from-duration func:hours-from-duration func:minutes-from-duration func:seconds-from-duration func:timezone-from-dateTime func:timezone-from-date func:timezone-from-time pred:dateTime-equal pred:dateTime-less-than pred:dateTime-greater-than pred:date-equal pred:date-less-than pred:date-greater-than pred:time-equal pred:time-less-than pred:time-greater-than pred:duration-equal pred:dayTimeDuration-less-than pred:dayTimeDuration-greater-than pred:yearMonthDuration-less-than pred:yearMonthDuration-greater-than pred:dateTime-not-equal pred:dateTime-less-than-or-equal pred:dateTime-greater-than-or-equal pred:date-not-equal pred:date-less-than-or-equal pred:date-greater-than-or-equal pred:time-not-equal pred:time-less-than-or-equal pred:time-greater-than-or-equal pred:duration-not-equal pred:dayTimeDuration-less-than-or-equal pred:dayTimeDuration-greater-than-or-equal pred:yearMonthDuration-less-than-or-equal pred:yearMonthDuration-greater-than-or-equal func:PlainLiteral-from-string-lang func:string-from-PlainLiteral func:lang-from-PlainLiteral func:PlainLiteral-compare func:PlainLiteral-length pred:matches-language-range pred:is-list pred:list-contains func:make-list func:count func:get func:sublist func:reverse func:index-of func:distinct-values)}]
+  );
+  r:rule <#lemma23>.
+
+<#lemma19> a r:Extraction; 
+  r:gives {
+    :Albert_Einstein a :Person.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A11_Literal_Value_Comparison/data.ttl>].
+
+<#lemma20> a r:Extraction; 
+  r:gives {
+    :Albert_Einstein :birthDate "1955-04-18"^^xsd:date.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A11_Literal_Value_Comparison/data.ttl>].
+
+<#lemma21> a r:Extraction; 
+  r:gives {
+    :Albert_Einstein :deathDate "1879-03-14"^^xsd:date.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A11_Literal_Value_Comparison/data.ttl>].
+
+<#lemma22> a r:Extraction; 
+  r:gives {
+    {?x_0_2 a rdfcv:SimpleConstraint.
+      ?x_0_2 :constraintType :LiteralValueComparison.
+      ?x_0_2 rdfcv:constrainingElement ?x_1_2.
+      ?x_0_2 rdfcv:contextClass ?x_2_2.
+      ?x_0_2 rdfcv:leftProperties ?x_3_2.
+      ?x_0_2 rdfcv:rightProperties ?x_4_2.
+      ?x_0_2 rdfcv:classes ?x_5_2.
+      ?x_1_2 :constraintType :LiteralComparison.
+      ?x_6_2 a ?x_2_2.
+      ?x_6_2 ?x_3_2 ?x_7_2.
+      ?x_6_2 ?x_4_2 ?x_8_2.
+      ?x_9_2 e:findall (1 {?x_7_2 ?x_1_2 ?x_8_2} ())} => {_:x_10_2 a :constraintViolation.
+      _:x_10_2 :violatedConstraint ?x_0_2.
+      _:x_10_2 :onResource ?x_6_2.
+      _:x_10_2 :predicate1 ?x_3_2.
+      _:x_10_2 :predicate2 ?x_4_2.
+      _:x_10_2 :value1 ?x_7_2.
+      _:x_10_2 :value2 ?x_8_2.
+      _:x_10_2 :violation ?x_1_2}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A11_Literal_Value_Comparison/rule.n3>].
+
+<#lemma23> a r:Extraction; 
+  r:gives {
+    {?x_0_3 :constraintType :LiteralComparison} <= {?x_0_3 list:in (math:equalTo math:greaterThan math:integerQuotient math:lessThan math:notEqualTo math:notGreaterThan math:notLessThan math:rounded pred:literal-not-identical pred:numeric-equal pred:numeric-less-than pred:numeric-greater-than pred:numeric-not-equal pred:numeric-less-than-or-equal pred:numeric-greater-than-or-equal pred:boolean-equal pred:boolean-less-than pred:boolean-greater-than func:compare func:substring func:string-length func:upper-case func:lower-case func:substring-before func:substring-after pred:contains pred:starts-with pred:ends-with pred:matches func:year-from-dateTime func:month-from-dateTime func:day-from-dateTime func:hours-from-dateTime func:minutes-from-dateTime func:seconds-from-dateTime func:year-from-date func:month-from-date func:day-from-date func:hours-from-time func:minutes-from-time func:seconds-from-time func:years-from-duration func:months-from-duration func:days-from-duration func:hours-from-duration func:minutes-from-duration func:seconds-from-duration func:timezone-from-dateTime func:timezone-from-date func:timezone-from-time pred:dateTime-equal pred:dateTime-less-than pred:dateTime-greater-than pred:date-equal pred:date-less-than pred:date-greater-than pred:time-equal pred:time-less-than pred:time-greater-than pred:duration-equal pred:dayTimeDuration-less-than pred:dayTimeDuration-greater-than pred:yearMonthDuration-less-than pred:yearMonthDuration-greater-than pred:dateTime-not-equal pred:dateTime-less-than-or-equal pred:dateTime-greater-than-or-equal pred:date-not-equal pred:date-less-than-or-equal pred:date-greater-than-or-equal pred:time-not-equal pred:time-less-than-or-equal pred:time-greater-than-or-equal pred:duration-not-equal pred:dayTimeDuration-less-than-or-equal pred:dayTimeDuration-greater-than-or-equal pred:yearMonthDuration-less-than-or-equal pred:yearMonthDuration-greater-than-or-equal func:PlainLiteral-from-string-lang func:string-from-PlainLiteral func:lang-from-PlainLiteral func:PlainLiteral-compare func:PlainLiteral-length pred:matches-language-range pred:is-list pred:list-contains func:make-list func:count func:get func:sublist func:reverse func:index-of func:distinct-values)}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A11_Literal_Value_Comparison/rule.n3>].
+
+#2017-02-08T13:51:03.332Z in=14 out=8 ent=16 step=18 brake=4 inf=162134 sec=0.105 inf/sec=1544133
+#ENDS
+

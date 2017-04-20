@@ -1,0 +1,17 @@
+@prefix rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms#> .
+@prefix : <http://example.com/constraints#> .
+@prefix math: <http://www.w3.org/2000/10/swap/math#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@base <http://example.com/constraints#> .
+
+
+:example_constraint_A_23 a rdfcv:SimpleConstraint ;
+  :constraintType :UniversalQuantification ; 
+  dcterms:title "A.23 Universal Quantifications" ;
+  rdfcv:constrainingElement :universal_quantification ;
+  rdfcv:contextClass  :Publication ;
+  rdfcv:leftProperties :author ;
+  rdfcv:classes :Person .
+

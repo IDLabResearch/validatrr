@@ -1,0 +1,166 @@
+#Processed by EYE rel. v17.0131.1345 josd
+#eye data.ttl constraint.ttl rule.n3 --query ../query.n3
+
+PREFIX rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms#>
+PREFIX : <http://example.com/constraints#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX math: <http://www.w3.org/2000/10/swap/math#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX func: <http://www.w3.org/2007/rif-builtin-function#>
+PREFIX pred: <http://www.w3.org/2007/rif-builtin-predicate#>
+PREFIX prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>
+PREFIX string: <http://www.w3.org/2000/10/swap/string#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
+
+[] a r:Proof, r:Conjunction;
+  r:component <#lemma1>;
+  r:component <#lemma2>;
+  r:component <#lemma3>;
+  r:component <#lemma4>;
+  r:component <#lemma5>;
+  r:gives {
+    _:sk_0 a :constraintViolation.
+    _:sk_0 :violatedConstraint :example_constraint_19.
+    _:sk_0 :class :Semantic-Web-Book.
+    _:sk_0 :instance :HarryPotter.
+    _:sk_0 :expected "Semantic-Web".
+  }.
+
+<#lemma1> a r:Inference; 
+  r:gives {
+    _:sk_0 a :constraintViolation.
+  }; 
+  r:evidence (
+    <#lemma6>
+    <#lemma6>
+  );
+  r:rule <#lemma7>.
+
+<#lemma2> a r:Inference; 
+  r:gives {
+    _:sk_0 :violatedConstraint :example_constraint_19.
+  }; 
+  r:evidence (
+    <#lemma6>
+    <#lemma6>
+  );
+  r:rule <#lemma7>.
+
+<#lemma3> a r:Inference; 
+  r:gives {
+    _:sk_0 :class :Semantic-Web-Book.
+  }; 
+  r:evidence (
+    <#lemma6>
+    <#lemma6>
+  );
+  r:rule <#lemma7>.
+
+<#lemma4> a r:Inference; 
+  r:gives {
+    _:sk_0 :instance :HarryPotter.
+  }; 
+  r:evidence (
+    <#lemma6>
+    <#lemma6>
+  );
+  r:rule <#lemma7>.
+
+<#lemma5> a r:Inference; 
+  r:gives {
+    _:sk_0 :expected "Semantic-Web".
+  }; 
+  r:evidence (
+    <#lemma6>
+    <#lemma6>
+  );
+  r:rule <#lemma7>.
+
+<#lemma6> a r:Inference; 
+  r:gives {
+    _:sk_0 a :constraintViolation.
+    _:sk_0 :violatedConstraint :example_constraint_19.
+    _:sk_0 :class :Semantic-Web-Book.
+    _:sk_0 :instance :HarryPotter.
+    _:sk_0 :expected "Semantic-Web".
+  }; 
+  r:evidence (
+    <#lemma8>
+    <#lemma9>
+    <#lemma10>
+    <#lemma11>
+    <#lemma12>
+    <#lemma13>
+    [ a r:Fact; r:gives {:HarryPotter log:uri "http://example.com/constraints#HarryPotter"}]
+    [ a r:Fact; r:gives {"http://example.com/constraints#HarryPotter" string:notMatches "Semantic-Web"}]
+  );
+  r:rule <#lemma14>.
+
+<#lemma7> a r:Extraction; 
+  r:gives {
+    {?x_0_1 a :constraintViolation.
+      ?x_0_1 ?x_1_1 ?x_2_1} => {?x_0_1 ?x_1_1 ?x_2_1}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/query.n3>].
+
+<#lemma8> a r:Extraction; 
+  r:gives {
+    :example_constraint_19 a rdfcv:SimpleConstraint.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A19_IRI_Pattern_Matching/constraint.ttl>].
+
+<#lemma9> a r:Extraction; 
+  r:gives {
+    :example_constraint_19 :constraintType :IRIPatternMatching.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A19_IRI_Pattern_Matching/constraint.ttl>].
+
+<#lemma10> a r:Extraction; 
+  r:gives {
+    :example_constraint_19 rdfcv:constrainingElement :IRI-pattern-matching.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A19_IRI_Pattern_Matching/constraint.ttl>].
+
+<#lemma11> a r:Extraction; 
+  r:gives {
+    :example_constraint_19 rdfcv:contextClass :Semantic-Web-Book.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A19_IRI_Pattern_Matching/constraint.ttl>].
+
+<#lemma12> a r:Extraction; 
+  r:gives {
+    :example_constraint_19 rdfcv:constrainingValue "Semantic-Web".
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A19_IRI_Pattern_Matching/constraint.ttl>].
+
+<#lemma13> a r:Extraction; 
+  r:gives {
+    :HarryPotter a :Semantic-Web-Book.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A19_IRI_Pattern_Matching/data.ttl>].
+
+<#lemma14> a r:Extraction; 
+  r:gives {
+    {?x_0_2 a rdfcv:SimpleConstraint.
+      ?x_0_2 :constraintType :IRIPatternMatching.
+      ?x_0_2 rdfcv:constrainingElement :IRI-pattern-matching.
+      ?x_0_2 rdfcv:contextClass ?x_1_2.
+      ?x_0_2 rdfcv:constrainingValue ?x_2_2.
+      ?x_3_2 a ?x_1_2.
+      ?x_3_2 log:uri ?x_4_2.
+      ?x_4_2 string:notMatches ?x_2_2} => {_:x_5_2 a :constraintViolation.
+      _:x_5_2 :violatedConstraint ?x_0_2.
+      _:x_5_2 :class ?x_1_2.
+      _:x_5_2 :instance ?x_3_2.
+      _:x_5_2 :expected ?x_2_2}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A19_IRI_Pattern_Matching/rule.n3>].
+
+#2017-02-08T17:08:19.772Z in=9 out=5 ent=10 step=12 brake=2 inf=70100 sec=0.075 inf/sec=934667
+#ENDS
+

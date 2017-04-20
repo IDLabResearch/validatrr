@@ -1,0 +1,211 @@
+#Processed by EYE rel. v17.0216.2023 josd
+#eye data.ttl constraint.ttl rule.n3 ../reasoning/rdfsResource.n3 --query ../query.n3
+
+PREFIX rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms#>
+PREFIX : <http://example.com/constraints#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX math: <http://www.w3.org/2000/10/swap/math#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX func: <http://www.w3.org/2007/rif-builtin-function#>
+PREFIX pred: <http://www.w3.org/2007/rif-builtin-predicate#>
+PREFIX prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>
+PREFIX string: <http://www.w3.org/2000/10/swap/string#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
+
+[] a r:Proof, r:Conjunction;
+  r:component <#lemma1>;
+  r:component <#lemma2>;
+  r:component <#lemma3>;
+  r:component <#lemma4>;
+  r:component <#lemma5>;
+  r:component <#lemma6>;
+  r:gives {
+    _:sk_1 a :constraintViolation.
+    _:sk_1 a rdfs:Resource.
+    _:sk_1 :violatedConstraint :example_constraint_A_32.
+    _:sk_1 :class :Computer-Science-Book.
+    _:sk_1 :instance :HarryPotter.
+    _:sk_1 :property :subject.
+  }.
+
+<#lemma1> a r:Inference; 
+  r:gives {
+    _:sk_1 a :constraintViolation.
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma7>
+  );
+  r:rule <#lemma8>.
+
+<#lemma2> a r:Inference; 
+  r:gives {
+    _:sk_1 a rdfs:Resource.
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma9>
+  );
+  r:rule <#lemma8>.
+
+<#lemma3> a r:Inference; 
+  r:gives {
+    _:sk_1 :violatedConstraint :example_constraint_A_32.
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma7>
+  );
+  r:rule <#lemma8>.
+
+<#lemma4> a r:Inference; 
+  r:gives {
+    _:sk_1 :class :Computer-Science-Book.
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma7>
+  );
+  r:rule <#lemma8>.
+
+<#lemma5> a r:Inference; 
+  r:gives {
+    _:sk_1 :instance :HarryPotter.
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma7>
+  );
+  r:rule <#lemma8>.
+
+<#lemma6> a r:Inference; 
+  r:gives {
+    _:sk_1 :property :subject.
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma7>
+  );
+  r:rule <#lemma8>.
+
+<#lemma7> a r:Inference; 
+  r:gives {
+    _:sk_1 a :constraintViolation.
+    _:sk_1 :violatedConstraint :example_constraint_A_32.
+    _:sk_1 :class :Computer-Science-Book.
+    _:sk_1 :instance :HarryPotter.
+    _:sk_1 :property :subject.
+  }; 
+  r:evidence (
+    <#lemma10>
+    <#lemma11>
+    <#lemma12>
+    <#lemma13>
+    <#lemma14>
+    <#lemma15>
+    <#lemma16>
+    <#lemma17>
+    [ a r:Fact; r:gives {((<file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A32_Minimum_Unqualified_Cardinality_Restrictions/data.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A32_Minimum_Unqualified_Cardinality_Restrictions/constraint.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A32_Minimum_Unqualified_Cardinality_Restrictions/rule.n3> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/reasoning/rdfsResource.n3>) 1) e:findall (1 {:HarryPotter :subject _:sk_0} ())}]
+    [ a r:Fact; r:gives {() e:length 0}]
+    [ a r:Fact; r:gives {0 math:lessThan 1}]
+  );
+  r:rule <#lemma18>.
+
+<#lemma8> a r:Extraction; 
+  r:gives {
+    {?x_0_1 a :constraintViolation.
+      ?x_0_1 ?x_1_1 ?x_2_1} => {?x_0_1 ?x_1_1 ?x_2_1}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/query.n3>].
+
+<#lemma9> a r:Inference; 
+  r:gives {
+    _:sk_1 a rdfs:Resource.
+  }; 
+  r:evidence (
+    [ a r:Fact; r:gives true]
+  );
+  r:rule <#lemma19>.
+
+<#lemma10> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_32 a rdfcv:SimpleConstraint.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A32_Minimum_Unqualified_Cardinality_Restrictions/constraint.ttl>].
+
+<#lemma11> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_32 :constraintType :MinimumUnqualifiedCardinalityRestrictions.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A32_Minimum_Unqualified_Cardinality_Restrictions/constraint.ttl>].
+
+<#lemma12> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_32 dcterms:title "A.32 Minimum Unqualified Cardinality Restrictions".
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A32_Minimum_Unqualified_Cardinality_Restrictions/constraint.ttl>].
+
+<#lemma13> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_32 rdfcv:constrainingElement :minimum-cardinality.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A32_Minimum_Unqualified_Cardinality_Restrictions/constraint.ttl>].
+
+<#lemma14> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_32 rdfcv:contextClass :Computer-Science-Book.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A32_Minimum_Unqualified_Cardinality_Restrictions/constraint.ttl>].
+
+<#lemma15> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_32 rdfcv:leftProperties :subject.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A32_Minimum_Unqualified_Cardinality_Restrictions/constraint.ttl>].
+
+<#lemma16> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_32 rdfcv:constrainingValue 1 .
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A32_Minimum_Unqualified_Cardinality_Restrictions/constraint.ttl>].
+
+<#lemma17> a r:Extraction; 
+  r:gives {
+    :HarryPotter a :Computer-Science-Book.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A32_Minimum_Unqualified_Cardinality_Restrictions/data.ttl>].
+
+<#lemma18> a r:Extraction; 
+  r:gives {
+    {?x_0_2 a rdfcv:SimpleConstraint.
+      ?x_0_2 :constraintType :MinimumUnqualifiedCardinalityRestrictions.
+      ?x_0_2 dcterms:title "A.32 Minimum Unqualified Cardinality Restrictions".
+      ?x_0_2 rdfcv:constrainingElement :minimum-cardinality.
+      ?x_0_2 rdfcv:contextClass ?x_1_2.
+      ?x_0_2 rdfcv:leftProperties ?x_2_2.
+      ?x_0_2 rdfcv:constrainingValue ?x_3_2.
+      ?x_4_2 a ?x_1_2.
+      ?x_5_2 e:findall (1 {?x_4_2 ?x_2_2 ?x_6_2} ?x_7_2).
+      ?x_7_2 e:length ?x_8_2.
+      ?x_8_2 math:lessThan ?x_3_2} => {_:x_9_2 a :constraintViolation.
+      _:x_9_2 :violatedConstraint ?x_0_2.
+      _:x_9_2 :class ?x_1_2.
+      _:x_9_2 :instance ?x_4_2.
+      _:x_9_2 :property ?x_2_2}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A32_Minimum_Unqualified_Cardinality_Restrictions/rule.n3>].
+
+<#lemma19> a r:Extraction; 
+  r:gives {
+    {?x_0_3 a rdfs:Resource} <= true.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/reasoning/rdfsResource.n3>].
+
+#2017-02-18T23:21:54.986Z in=11 out=6 ent=11 step=14 brake=4 inf=85243 sec=0.082 inf/sec=1039549
+#ENDS
+

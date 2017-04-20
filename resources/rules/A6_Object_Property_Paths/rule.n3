@@ -1,0 +1,50 @@
+@prefix rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms#> .
+@prefix : <http://example.com/constraints#> .
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#> .
+@prefix log: <http://www.w3.org/2000/10/swap/log#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@base <http://example.com/constraints#> .
+
+
+{
+?constraint a rdfcv:SimpleConstraint ;
+  :constraintType :ObjectPropertyPath ;
+  rdfcv:constrainingElement :object-property-path ;
+  rdfcv:leftProperties ?list ; 
+  rdfcv:rightProperties ?property.
+  ?list rdf:first ?first.
+  ?s ?first ?o. 
+  ?list rdf:rest ?rest.
+  (?o ?rest (?s ?first ?o) ) :propertyPath (?ol ?path).
+  _:x e:findall ( 1 {?s ?property ?ol.} ()).
+}
+=>
+{
+_:x a :constraintViolation;
+    :violatedConstraint ?constraint;
+    :path ?path;
+    :chainedproperty ?property.
+}.
+
+
+{
+ (?s  () ?path ) :propertyPath (?s ?path)
+}
+<={}.
+
+{
+ (?s  ?list ?path1 ) :propertyPath (?ol ?path)
+}
+<=
+{
+?list rdf:first ?first.
+?s ?first ?o.
+(?path1 (?first ?o)) list:append ?path2.
+?list rdf:rest ?rest.
+(?o ?rest ?path2) :propertyPath (?ol ?path)
+}.
+
+

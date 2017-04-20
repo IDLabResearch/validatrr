@@ -1,0 +1,158 @@
+#Processed by EYE rel. v17.0131.1345 josd
+#eye data.ttl constraint.ttl rule.n3 --query ../query.n3
+
+PREFIX rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms#>
+PREFIX : <http://example.com/constraints#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
+
+[] a r:Proof, r:Conjunction;
+  r:component <#lemma1>;
+  r:component <#lemma2>;
+  r:component <#lemma3>;
+  r:component <#lemma4>;
+  r:component <#lemma5>;
+  r:gives {
+    _:sk_0 a :constraintViolation.
+    _:sk_0 :violatedConstraint :example_constraint_A_9.
+    _:sk_0 :instance :Ben.
+    _:sk_0 :belongsTo :Person.
+    _:sk_0 :notBelongsTo :Human.
+  }.
+
+<#lemma1> a r:Inference; 
+  r:gives {
+    _:sk_0 a :constraintViolation.
+  }; 
+  r:evidence (
+    <#lemma6>
+    <#lemma6>
+  );
+  r:rule <#lemma7>.
+
+<#lemma2> a r:Inference; 
+  r:gives {
+    _:sk_0 :violatedConstraint :example_constraint_A_9.
+  }; 
+  r:evidence (
+    <#lemma6>
+    <#lemma6>
+  );
+  r:rule <#lemma7>.
+
+<#lemma3> a r:Inference; 
+  r:gives {
+    _:sk_0 :instance :Ben.
+  }; 
+  r:evidence (
+    <#lemma6>
+    <#lemma6>
+  );
+  r:rule <#lemma7>.
+
+<#lemma4> a r:Inference; 
+  r:gives {
+    _:sk_0 :belongsTo :Person.
+  }; 
+  r:evidence (
+    <#lemma6>
+    <#lemma6>
+  );
+  r:rule <#lemma7>.
+
+<#lemma5> a r:Inference; 
+  r:gives {
+    _:sk_0 :notBelongsTo :Human.
+  }; 
+  r:evidence (
+    <#lemma6>
+    <#lemma6>
+  );
+  r:rule <#lemma7>.
+
+<#lemma6> a r:Inference; 
+  r:gives {
+    _:sk_0 a :constraintViolation.
+    _:sk_0 :violatedConstraint :example_constraint_A_9.
+    _:sk_0 :instance :Ben.
+    _:sk_0 :belongsTo :Person.
+    _:sk_0 :notBelongsTo :Human.
+  }; 
+  r:evidence (
+    <#lemma8>
+    <#lemma9>
+    <#lemma10>
+    <#lemma11>
+    <#lemma12>
+    <#lemma13>
+    [ a r:Fact; r:gives {((<file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A9_Class_Equivalence/data.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A9_Class_Equivalence/constraint.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A9_Class_Equivalence/rule.n3>) 1) e:findall (1 {:Ben a :Human} ())}]
+  );
+  r:rule <#lemma14>.
+
+<#lemma7> a r:Extraction; 
+  r:gives {
+    {?x_0_1 a :constraintViolation.
+      ?x_0_1 ?x_1_1 ?x_2_1} => {?x_0_1 ?x_1_1 ?x_2_1}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/query.n3>].
+
+<#lemma8> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_9 a rdfcv:SimpleConstraint.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A9_Class_Equivalence/constraint.ttl>].
+
+<#lemma9> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_9 :constraintType :ClassEquivalence.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A9_Class_Equivalence/constraint.ttl>].
+
+<#lemma10> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_9 rdfcv:constrainingElement :equivalent-classes.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A9_Class_Equivalence/constraint.ttl>].
+
+<#lemma11> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_9 rdfcv:contextClass :Person.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A9_Class_Equivalence/constraint.ttl>].
+
+<#lemma12> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_9 rdfcv:classes :Human.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A9_Class_Equivalence/constraint.ttl>].
+
+<#lemma13> a r:Extraction; 
+  r:gives {
+    :Ben a :Person.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A9_Class_Equivalence/data.ttl>].
+
+<#lemma14> a r:Extraction; 
+  r:gives {
+    {?x_0_2 a rdfcv:SimpleConstraint.
+      ?x_0_2 :constraintType :ClassEquivalence.
+      ?x_0_2 rdfcv:constrainingElement :equivalent-classes.
+      ?x_0_2 rdfcv:contextClass ?x_1_2.
+      ?x_0_2 rdfcv:classes ?x_2_2.
+      ?x_3_2 a ?x_1_2.
+      ?x_4_2 e:findall (1 {?x_3_2 a ?x_2_2} ())} => {_:x_5_2 a :constraintViolation.
+      _:x_5_2 :violatedConstraint ?x_0_2.
+      _:x_5_2 :instance ?x_3_2.
+      _:x_5_2 :belongsTo ?x_1_2.
+      _:x_5_2 :notBelongsTo ?x_2_2}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A9_Class_Equivalence/rule.n3>].
+
+#2017-02-08T13:46:32.181Z in=10 out=5 ent=10 step=12 brake=4 inf=68459 sec=0.076 inf/sec=900776
+#ENDS
+

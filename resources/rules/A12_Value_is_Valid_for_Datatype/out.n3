@@ -1,0 +1,360 @@
+#Processed by EYE rel. v17.0131.1345 josd
+#eye data.ttl constraint.ttl rule.n3 --query ../query.n3
+
+PREFIX rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms#>
+PREFIX : <http://example.com/constraints#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX math: <http://www.w3.org/2000/10/swap/math#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX func: <http://www.w3.org/2007/rif-builtin-function#>
+PREFIX pred: <http://www.w3.org/2007/rif-builtin-predicate#>
+PREFIX prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>
+PREFIX string: <http://www.w3.org/2000/10/swap/string#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
+
+[] a r:Proof, r:Conjunction;
+  r:component <#lemma1>;
+  r:component <#lemma2>;
+  r:component <#lemma3>;
+  r:component <#lemma4>;
+  r:component <#lemma5>;
+  r:component <#lemma6>;
+  r:component <#lemma7>;
+  r:component <#lemma8>;
+  r:component <#lemma9>;
+  r:component <#lemma10>;
+  r:component <#lemma11>;
+  r:component <#lemma12>;
+  r:gives {
+    _:sk_0 a :constraintViolation.
+    _:sk_0 :violatedConstraint :Publication.
+    _:sk_0 :subject :Tom_Sawyer.
+    _:sk_0 :property :numberPages.
+    _:sk_0 :value -4.9 .
+    _:sk_0 :datatype xsd:nonNegativeInteger.
+    _:sk_1 a :constraintViolation.
+    _:sk_1 :violatedConstraint :Publication.
+    _:sk_1 :subject :Tom_Sawyer.
+    _:sk_1 :property :publishedAt.
+    _:sk_1 :value "u"^^xsd:date.
+    _:sk_1 :datatype xsd:date.
+  }.
+
+<#lemma1> a r:Inference; 
+  r:gives {
+    _:sk_0 a :constraintViolation.
+  }; 
+  r:evidence (
+    <#lemma13>
+    <#lemma13>
+  );
+  r:rule <#lemma14>.
+
+<#lemma2> a r:Inference; 
+  r:gives {
+    _:sk_0 :violatedConstraint :Publication.
+  }; 
+  r:evidence (
+    <#lemma13>
+    <#lemma13>
+  );
+  r:rule <#lemma14>.
+
+<#lemma3> a r:Inference; 
+  r:gives {
+    _:sk_0 :subject :Tom_Sawyer.
+  }; 
+  r:evidence (
+    <#lemma13>
+    <#lemma13>
+  );
+  r:rule <#lemma14>.
+
+<#lemma4> a r:Inference; 
+  r:gives {
+    _:sk_0 :property :numberPages.
+  }; 
+  r:evidence (
+    <#lemma13>
+    <#lemma13>
+  );
+  r:rule <#lemma14>.
+
+<#lemma5> a r:Inference; 
+  r:gives {
+    _:sk_0 :value -4.9 .
+  }; 
+  r:evidence (
+    <#lemma13>
+    <#lemma13>
+  );
+  r:rule <#lemma14>.
+
+<#lemma6> a r:Inference; 
+  r:gives {
+    _:sk_0 :datatype xsd:nonNegativeInteger.
+  }; 
+  r:evidence (
+    <#lemma13>
+    <#lemma13>
+  );
+  r:rule <#lemma14>.
+
+<#lemma7> a r:Inference; 
+  r:gives {
+    _:sk_1 a :constraintViolation.
+  }; 
+  r:evidence (
+    <#lemma15>
+    <#lemma15>
+  );
+  r:rule <#lemma14>.
+
+<#lemma8> a r:Inference; 
+  r:gives {
+    _:sk_1 :violatedConstraint :Publication.
+  }; 
+  r:evidence (
+    <#lemma15>
+    <#lemma15>
+  );
+  r:rule <#lemma14>.
+
+<#lemma9> a r:Inference; 
+  r:gives {
+    _:sk_1 :subject :Tom_Sawyer.
+  }; 
+  r:evidence (
+    <#lemma15>
+    <#lemma15>
+  );
+  r:rule <#lemma14>.
+
+<#lemma10> a r:Inference; 
+  r:gives {
+    _:sk_1 :property :publishedAt.
+  }; 
+  r:evidence (
+    <#lemma15>
+    <#lemma15>
+  );
+  r:rule <#lemma14>.
+
+<#lemma11> a r:Inference; 
+  r:gives {
+    _:sk_1 :value "u"^^xsd:date.
+  }; 
+  r:evidence (
+    <#lemma15>
+    <#lemma15>
+  );
+  r:rule <#lemma14>.
+
+<#lemma12> a r:Inference; 
+  r:gives {
+    _:sk_1 :datatype xsd:date.
+  }; 
+  r:evidence (
+    <#lemma15>
+    <#lemma15>
+  );
+  r:rule <#lemma14>.
+
+<#lemma13> a r:Inference; 
+  r:gives {
+    _:sk_0 a :constraintViolation.
+    _:sk_0 :violatedConstraint :Publication.
+    _:sk_0 :subject :Tom_Sawyer.
+    _:sk_0 :property :numberPages.
+    _:sk_0 :value -4.9 .
+    _:sk_0 :datatype xsd:nonNegativeInteger.
+  }; 
+  r:evidence (
+    <#lemma16>
+    <#lemma17>
+    <#lemma18>
+    <#lemma19>
+    <#lemma20>
+    <#lemma21>
+    <#lemma22>
+    <#lemma23>
+    <#lemma24>
+  );
+  r:rule <#lemma25>.
+
+<#lemma14> a r:Extraction; 
+  r:gives {
+    {?x_0_1 a :constraintViolation.
+      ?x_0_1 ?x_1_1 ?x_2_1} => {?x_0_1 ?x_1_1 ?x_2_1}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/query.n3>].
+
+<#lemma15> a r:Inference; 
+  r:gives {
+    _:sk_1 a :constraintViolation.
+    _:sk_1 :violatedConstraint :Publication.
+    _:sk_1 :subject :Tom_Sawyer.
+    _:sk_1 :property :publishedAt.
+    _:sk_1 :value "u"^^xsd:date.
+    _:sk_1 :datatype xsd:date.
+  }; 
+  r:evidence (
+    <#lemma26>
+    <#lemma27>
+    <#lemma28>
+    <#lemma29>
+    <#lemma30>
+    <#lemma31>
+    <#lemma22>
+    <#lemma32>
+    <#lemma33>
+  );
+  r:rule <#lemma25>.
+
+<#lemma16> a r:Extraction; 
+  r:gives {
+    :example_constraint_A12 a rdfcv:SimpleConstraint.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/constraint.ttl>].
+
+<#lemma17> a r:Extraction; 
+  r:gives {
+    :example_constraint_A12 :constraintType :ValueIsValidForDatatype.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/constraint.ttl>].
+
+<#lemma18> a r:Extraction; 
+  r:gives {
+    :example_constraint_A12 rdfcv:constrainingElement :value-is-valid-for-datatype.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/constraint.ttl>].
+
+<#lemma19> a r:Extraction; 
+  r:gives {
+    :example_constraint_A12 rdfcv:contextClass :Publication.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/constraint.ttl>].
+
+<#lemma20> a r:Extraction; 
+  r:gives {
+    :example_constraint_A12 rdfcv:leftProperties :numberPages.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/constraint.ttl>].
+
+<#lemma21> a r:Extraction; 
+  r:gives {
+    :example_constraint_A12 rdfcv:classes xsd:nonNegativeInteger.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/constraint.ttl>].
+
+<#lemma22> a r:Extraction; 
+  r:gives {
+    :Tom_Sawyer a :Publication.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/data.ttl>].
+
+<#lemma23> a r:Extraction; 
+  r:gives {
+    :Tom_Sawyer :numberPages -4.9 .
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/data.ttl>].
+
+<#lemma24> a r:Inference; 
+  r:gives {
+    -4.9 :clashesWith xsd:nonNegativeInteger.
+  }; 
+  r:evidence (
+    [ a r:Fact; r:gives {-4.9 math:lessThan 0}]
+  );
+  r:rule <#lemma34>.
+
+<#lemma25> a r:Extraction; 
+  r:gives {
+    {?x_0_2 a rdfcv:SimpleConstraint.
+      ?x_0_2 :constraintType :ValueIsValidForDatatype.
+      ?x_0_2 rdfcv:constrainingElement :value-is-valid-for-datatype.
+      ?x_0_2 rdfcv:contextClass ?x_1_2.
+      ?x_0_2 rdfcv:leftProperties ?x_2_2.
+      ?x_0_2 rdfcv:classes ?x_3_2.
+      ?x_4_2 a ?x_1_2.
+      ?x_4_2 ?x_2_2 ?x_5_2.
+      ?x_5_2 :clashesWith ?x_3_2} => {_:x_6_2 a :constraintViolation.
+      _:x_6_2 :violatedConstraint ?x_1_2.
+      _:x_6_2 :subject ?x_4_2.
+      _:x_6_2 :property ?x_2_2.
+      _:x_6_2 :value ?x_5_2.
+      _:x_6_2 :datatype ?x_3_2}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/rule.n3>].
+
+<#lemma26> a r:Extraction; 
+  r:gives {
+    :example_constraint_A12a a rdfcv:SimpleConstraint.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/constraint.ttl>].
+
+<#lemma27> a r:Extraction; 
+  r:gives {
+    :example_constraint_A12a :constraintType :ValueIsValidForDatatype.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/constraint.ttl>].
+
+<#lemma28> a r:Extraction; 
+  r:gives {
+    :example_constraint_A12a rdfcv:constrainingElement :value-is-valid-for-datatype.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/constraint.ttl>].
+
+<#lemma29> a r:Extraction; 
+  r:gives {
+    :example_constraint_A12a rdfcv:contextClass :Publication.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/constraint.ttl>].
+
+<#lemma30> a r:Extraction; 
+  r:gives {
+    :example_constraint_A12a rdfcv:leftProperties :publishedAt.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/constraint.ttl>].
+
+<#lemma31> a r:Extraction; 
+  r:gives {
+    :example_constraint_A12a rdfcv:classes xsd:date.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/constraint.ttl>].
+
+<#lemma32> a r:Extraction; 
+  r:gives {
+    :Tom_Sawyer :publishedAt "u"^^xsd:date.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/data.ttl>].
+
+<#lemma33> a r:Inference; 
+  r:gives {
+    "u"^^xsd:date :clashesWith xsd:date.
+  }; 
+  r:evidence (
+    [ a r:Fact; r:gives true]
+  );
+  r:rule <#lemma35>.
+
+<#lemma34> a r:Extraction; 
+  r:gives {
+    {?x_0_3 :clashesWith xsd:nonNegativeInteger} <= {?x_0_3 math:lessThan 0}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/rule.n3>].
+
+<#lemma35> a r:Extraction; 
+  r:gives {
+    {?x_0_4 :clashesWith xsd:date} <= true.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/rule.n3>].
+
+#2017-02-08T13:53:42.567Z in=25 out=12 ent=24 step=30 brake=2 inf=103703 sec=0.088 inf/sec=1178443
+#ENDS
+

@@ -1,0 +1,13 @@
+@prefix rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms#> .
+@prefix : <http://example.com/constraints#> .
+@base <http://example.com/constraints#> .
+
+
+:example_constraint_A_9 a rdfcv:SimpleConstraint ;
+  :constraintType :ClassEquivalence ;
+  dcterms:title "A.9 Class Equivalence" ;
+  rdfcv:constrainingElement :equivalent-classes ;
+  rdfcv:contextClass  :Person ;
+  rdfcv:classes :Human .

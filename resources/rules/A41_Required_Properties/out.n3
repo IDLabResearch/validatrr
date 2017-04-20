@@ -1,0 +1,193 @@
+#Processed by EYE rel. v17.0216.2023 josd
+#eye data.ttl constraint.ttl rule.n3 ../reasoning/rdfsResource.n3 --query ../query.n3
+
+PREFIX rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms#>
+PREFIX : <http://example.com/constraints#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX math: <http://www.w3.org/2000/10/swap/math#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX func: <http://www.w3.org/2007/rif-builtin-function#>
+PREFIX pred: <http://www.w3.org/2007/rif-builtin-predicate#>
+PREFIX prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>
+PREFIX string: <http://www.w3.org/2000/10/swap/string#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
+
+[] a r:Proof, r:Conjunction;
+  r:component <#lemma1>;
+  r:component <#lemma2>;
+  r:component <#lemma3>;
+  r:component <#lemma4>;
+  r:component <#lemma5>;
+  r:component <#lemma6>;
+  r:gives {
+    _:sk_1 a :constraintViolation.
+    _:sk_1 a rdfs:Resource.
+    _:sk_1 :violatedConstraint :example_constraint_A_41.
+    _:sk_1 :class :Publication.
+    _:sk_1 :instance :HarryPotter.
+    _:sk_1 :property :title.
+  }.
+
+<#lemma1> a r:Inference; 
+  r:gives {
+    _:sk_1 a :constraintViolation.
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma7>
+  );
+  r:rule <#lemma8>.
+
+<#lemma2> a r:Inference; 
+  r:gives {
+    _:sk_1 a rdfs:Resource.
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma9>
+  );
+  r:rule <#lemma8>.
+
+<#lemma3> a r:Inference; 
+  r:gives {
+    _:sk_1 :violatedConstraint :example_constraint_A_41.
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma7>
+  );
+  r:rule <#lemma8>.
+
+<#lemma4> a r:Inference; 
+  r:gives {
+    _:sk_1 :class :Publication.
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma7>
+  );
+  r:rule <#lemma8>.
+
+<#lemma5> a r:Inference; 
+  r:gives {
+    _:sk_1 :instance :HarryPotter.
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma7>
+  );
+  r:rule <#lemma8>.
+
+<#lemma6> a r:Inference; 
+  r:gives {
+    _:sk_1 :property :title.
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma7>
+  );
+  r:rule <#lemma8>.
+
+<#lemma7> a r:Inference; 
+  r:gives {
+    _:sk_1 a :constraintViolation.
+    _:sk_1 :violatedConstraint :example_constraint_A_41.
+    _:sk_1 :class :Publication.
+    _:sk_1 :instance :HarryPotter.
+    _:sk_1 :property :title.
+  }; 
+  r:evidence (
+    <#lemma10>
+    <#lemma11>
+    <#lemma12>
+    <#lemma13>
+    <#lemma14>
+    <#lemma15>
+    [ a r:Fact; r:gives {:title list:in (:title)}]
+    [ a r:Fact; r:gives {((<file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A41_Required_Properties/data.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A41_Required_Properties/constraint.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A41_Required_Properties/rule.n3> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/reasoning/rdfsResource.n3>) 1) e:findall (1 {:HarryPotter :title _:sk_0} ())}]
+  );
+  r:rule <#lemma16>.
+
+<#lemma8> a r:Extraction; 
+  r:gives {
+    {?x_0_1 a :constraintViolation.
+      ?x_0_1 ?x_1_1 ?x_2_1} => {?x_0_1 ?x_1_1 ?x_2_1}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/query.n3>].
+
+<#lemma9> a r:Inference; 
+  r:gives {
+    _:sk_1 a rdfs:Resource.
+  }; 
+  r:evidence (
+    [ a r:Fact; r:gives true]
+  );
+  r:rule <#lemma17>.
+
+<#lemma10> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_41 a rdfcv:SimpleConstraint.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A41_Required_Properties/constraint.ttl>].
+
+<#lemma11> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_41 :constraintType :RequiredProperties.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A41_Required_Properties/constraint.ttl>].
+
+<#lemma12> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_41 rdfcv:constrainingElement :required_properties.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A41_Required_Properties/constraint.ttl>].
+
+<#lemma13> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_41 rdfcv:contextClass :Publication.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A41_Required_Properties/constraint.ttl>].
+
+<#lemma14> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_41 rdfcv:leftProperties (:title).
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A41_Required_Properties/constraint.ttl>].
+
+<#lemma15> a r:Extraction; 
+  r:gives {
+    :HarryPotter a :Publication.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A41_Required_Properties/data.ttl>].
+
+<#lemma16> a r:Extraction; 
+  r:gives {
+    {?x_0_2 a rdfcv:SimpleConstraint.
+      ?x_0_2 :constraintType :RequiredProperties.
+      ?x_0_2 rdfcv:constrainingElement :required_properties.
+      ?x_0_2 rdfcv:contextClass ?x_1_2.
+      ?x_0_2 rdfcv:leftProperties ?x_2_2.
+      ?x_3_2 a ?x_1_2.
+      ?x_4_2 list:in ?x_2_2.
+      ?x_5_2 e:findall (1 {?x_3_2 ?x_4_2 ?x_6_2} ())} => {_:x_7_2 a :constraintViolation.
+      _:x_7_2 :violatedConstraint ?x_0_2.
+      _:x_7_2 :class ?x_1_2.
+      _:x_7_2 :instance ?x_3_2.
+      _:x_7_2 :property ?x_4_2}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A41_Required_Properties/rule.n3>].
+
+<#lemma17> a r:Extraction; 
+  r:gives {
+    {?x_0_3 a rdfs:Resource} <= true.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/reasoning/rdfsResource.n3>].
+
+#2017-02-18T23:05:17.800Z in=10 out=6 ent=11 step=14 brake=4 inf=78425 sec=0.085 inf/sec=922647
+#ENDS
+

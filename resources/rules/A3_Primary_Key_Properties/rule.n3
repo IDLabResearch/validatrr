@@ -1,0 +1,34 @@
+@prefix rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms#> .
+@prefix : <http://example.com/constraints#> .
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#> .
+@prefix log: <http://www.w3.org/2000/10/swap/log#> .
+@base <http://example.com/constraints#> .
+
+
+{
+?constraint a rdfcv:SimpleConstraint;
+  :constraintType :PrimaryKeyProperty ;
+  rdfcv:constrainingElement :primary-key;
+  rdfcv:leftProperties ?property ;
+  rdfcv:contextClass  ?class.
+  ?x1 a ?class.
+  ?x2 a ?class.
+  ?x1 ?property ?object.
+  ?x2 ?property ?object.
+  ?x1 log:notEqualTo ?x2
+}
+=>
+{
+_:x a :constraintViolation;
+    :violatedConstraint ?constraint;
+    :subject ?x1;
+    :subject ?x2;
+    :onProperty ?property;
+    :object ?object.
+}.
+
+
+

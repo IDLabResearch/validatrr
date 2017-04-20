@@ -1,0 +1,364 @@
+#Processed by EYE rel. v17.0131.1345 josd
+#eye data.ttl constraint.ttl rule.n3 --query ../query.n3
+
+PREFIX rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms#>
+PREFIX : <http://example.com/constraints#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX math: <http://www.w3.org/2000/10/swap/math#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX func: <http://www.w3.org/2007/rif-builtin-function#>
+PREFIX pred: <http://www.w3.org/2007/rif-builtin-predicate#>
+PREFIX prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>
+PREFIX string: <http://www.w3.org/2000/10/swap/string#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
+
+[] a r:Proof, r:Conjunction;
+  r:component <#lemma1>;
+  r:component <#lemma2>;
+  r:component <#lemma3>;
+  r:component <#lemma4>;
+  r:component <#lemma5>;
+  r:component <#lemma6>;
+  r:component <#lemma7>;
+  r:component <#lemma8>;
+  r:component <#lemma9>;
+  r:component <#lemma10>;
+  r:component <#lemma11>;
+  r:component <#lemma12>;
+  r:gives {
+    _:sk_0 a :constraintViolation.
+    _:sk_0 :violatedConstraint :example_constraint_A16.
+    _:sk_0 :constrainingElement xsd:minLength.
+    _:sk_0 :property :abstract.
+    _:sk_0 :object "a".
+    _:sk_0 :restriction 20 .
+    _:sk_1 a :constraintViolation.
+    _:sk_1 :violatedConstraint :example_constraint_A16a.
+    _:sk_1 :constrainingElement math:greaterThan.
+    _:sk_1 :property :number.
+    _:sk_1 :object 2 .
+    _:sk_1 :restriction 5 .
+  }.
+
+<#lemma1> a r:Inference; 
+  r:gives {
+    _:sk_0 a :constraintViolation.
+  }; 
+  r:evidence (
+    <#lemma13>
+    <#lemma13>
+  );
+  r:rule <#lemma14>.
+
+<#lemma2> a r:Inference; 
+  r:gives {
+    _:sk_0 :violatedConstraint :example_constraint_A16.
+  }; 
+  r:evidence (
+    <#lemma13>
+    <#lemma13>
+  );
+  r:rule <#lemma14>.
+
+<#lemma3> a r:Inference; 
+  r:gives {
+    _:sk_0 :constrainingElement xsd:minLength.
+  }; 
+  r:evidence (
+    <#lemma13>
+    <#lemma13>
+  );
+  r:rule <#lemma14>.
+
+<#lemma4> a r:Inference; 
+  r:gives {
+    _:sk_0 :property :abstract.
+  }; 
+  r:evidence (
+    <#lemma13>
+    <#lemma13>
+  );
+  r:rule <#lemma14>.
+
+<#lemma5> a r:Inference; 
+  r:gives {
+    _:sk_0 :object "a".
+  }; 
+  r:evidence (
+    <#lemma13>
+    <#lemma13>
+  );
+  r:rule <#lemma14>.
+
+<#lemma6> a r:Inference; 
+  r:gives {
+    _:sk_0 :restriction 20 .
+  }; 
+  r:evidence (
+    <#lemma13>
+    <#lemma13>
+  );
+  r:rule <#lemma14>.
+
+<#lemma7> a r:Inference; 
+  r:gives {
+    _:sk_1 a :constraintViolation.
+  }; 
+  r:evidence (
+    <#lemma15>
+    <#lemma15>
+  );
+  r:rule <#lemma14>.
+
+<#lemma8> a r:Inference; 
+  r:gives {
+    _:sk_1 :violatedConstraint :example_constraint_A16a.
+  }; 
+  r:evidence (
+    <#lemma15>
+    <#lemma15>
+  );
+  r:rule <#lemma14>.
+
+<#lemma9> a r:Inference; 
+  r:gives {
+    _:sk_1 :constrainingElement math:greaterThan.
+  }; 
+  r:evidence (
+    <#lemma15>
+    <#lemma15>
+  );
+  r:rule <#lemma14>.
+
+<#lemma10> a r:Inference; 
+  r:gives {
+    _:sk_1 :property :number.
+  }; 
+  r:evidence (
+    <#lemma15>
+    <#lemma15>
+  );
+  r:rule <#lemma14>.
+
+<#lemma11> a r:Inference; 
+  r:gives {
+    _:sk_1 :object 2 .
+  }; 
+  r:evidence (
+    <#lemma15>
+    <#lemma15>
+  );
+  r:rule <#lemma14>.
+
+<#lemma12> a r:Inference; 
+  r:gives {
+    _:sk_1 :restriction 5 .
+  }; 
+  r:evidence (
+    <#lemma15>
+    <#lemma15>
+  );
+  r:rule <#lemma14>.
+
+<#lemma13> a r:Inference; 
+  r:gives {
+    _:sk_0 a :constraintViolation.
+    _:sk_0 :violatedConstraint :example_constraint_A16.
+    _:sk_0 :constrainingElement xsd:minLength.
+    _:sk_0 :property :abstract.
+    _:sk_0 :object "a".
+    _:sk_0 :restriction 20 .
+  }; 
+  r:evidence (
+    <#lemma16>
+    <#lemma17>
+    <#lemma18>
+    <#lemma19>
+    <#lemma20>
+    <#lemma21>
+    <#lemma22>
+    <#lemma23>
+    <#lemma24>
+  );
+  r:rule <#lemma25>.
+
+<#lemma14> a r:Extraction; 
+  r:gives {
+    {?x_0_1 a :constraintViolation.
+      ?x_0_1 ?x_1_1 ?x_2_1} => {?x_0_1 ?x_1_1 ?x_2_1}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/query.n3>].
+
+<#lemma15> a r:Inference; 
+  r:gives {
+    _:sk_1 a :constraintViolation.
+    _:sk_1 :violatedConstraint :example_constraint_A16a.
+    _:sk_1 :constrainingElement math:greaterThan.
+    _:sk_1 :property :number.
+    _:sk_1 :object 2 .
+    _:sk_1 :restriction 5 .
+  }; 
+  r:evidence (
+    <#lemma26>
+    <#lemma27>
+    <#lemma28>
+    <#lemma29>
+    <#lemma30>
+    <#lemma31>
+    <#lemma22>
+    <#lemma32>
+    <#lemma33>
+  );
+  r:rule <#lemma25>.
+
+<#lemma16> a r:Extraction; 
+  r:gives {
+    :example_constraint_A16 a rdfcv:SimpleConstraint.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A16_Data_Property_Facets/constraint.ttl>].
+
+<#lemma17> a r:Extraction; 
+  r:gives {
+    :example_constraint_A16 rdfcv:constrainingElement xsd:minLength.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A16_Data_Property_Facets/constraint.ttl>].
+
+<#lemma18> a r:Extraction; 
+  r:gives {
+    :example_constraint_A16 :constraintType :DataPropertyFacets.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A16_Data_Property_Facets/constraint.ttl>].
+
+<#lemma19> a r:Extraction; 
+  r:gives {
+    :example_constraint_A16 rdfcv:contextClass :Study.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A16_Data_Property_Facets/constraint.ttl>].
+
+<#lemma20> a r:Extraction; 
+  r:gives {
+    :example_constraint_A16 rdfcv:leftProperties :abstract.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A16_Data_Property_Facets/constraint.ttl>].
+
+<#lemma21> a r:Extraction; 
+  r:gives {
+    :example_constraint_A16 rdfcv:constrainingValue 20 .
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A16_Data_Property_Facets/constraint.ttl>].
+
+<#lemma22> a r:Extraction; 
+  r:gives {
+    :myAwsomeResearch a :Study.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A16_Data_Property_Facets/data.ttl>].
+
+<#lemma23> a r:Extraction; 
+  r:gives {
+    :myAwsomeResearch :abstract "a".
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A16_Data_Property_Facets/data.ttl>].
+
+<#lemma24> a r:Inference; 
+  r:gives {
+    "a" :dataPropertyFacets (xsd:minLength 20).
+  }; 
+  r:evidence (
+    [ a r:Fact; r:gives {() prolog:cut true}]
+    [ a r:Fact; r:gives {("a") func:string-length 1}]
+    [ a r:Fact; r:gives {1 math:lessThan 20}]
+  );
+  r:rule <#lemma34>.
+
+<#lemma25> a r:Extraction; 
+  r:gives {
+    {?x_0_2 a rdfcv:SimpleConstraint.
+      ?x_0_2 rdfcv:constrainingElement ?x_1_2.
+      ?x_0_2 :constraintType :DataPropertyFacets.
+      ?x_0_2 rdfcv:contextClass ?x_2_2.
+      ?x_0_2 rdfcv:leftProperties ?x_3_2.
+      ?x_0_2 rdfcv:constrainingValue ?x_4_2.
+      ?x_5_2 a ?x_2_2.
+      ?x_5_2 ?x_3_2 ?x_6_2.
+      ?x_6_2 :dataPropertyFacets (?x_1_2 ?x_4_2)} => {_:x_7_2 a :constraintViolation.
+      _:x_7_2 :violatedConstraint ?x_0_2.
+      _:x_7_2 :constrainingElement ?x_1_2.
+      _:x_7_2 :property ?x_3_2.
+      _:x_7_2 :object ?x_6_2.
+      _:x_7_2 :restriction ?x_4_2}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A16_Data_Property_Facets/rule.n3>].
+
+<#lemma26> a r:Extraction; 
+  r:gives {
+    :example_constraint_A16a a rdfcv:SimpleConstraint.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A16_Data_Property_Facets/constraint.ttl>].
+
+<#lemma27> a r:Extraction; 
+  r:gives {
+    :example_constraint_A16a rdfcv:constrainingElement math:greaterThan.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A16_Data_Property_Facets/constraint.ttl>].
+
+<#lemma28> a r:Extraction; 
+  r:gives {
+    :example_constraint_A16a :constraintType :DataPropertyFacets.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A16_Data_Property_Facets/constraint.ttl>].
+
+<#lemma29> a r:Extraction; 
+  r:gives {
+    :example_constraint_A16a rdfcv:contextClass :Study.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A16_Data_Property_Facets/constraint.ttl>].
+
+<#lemma30> a r:Extraction; 
+  r:gives {
+    :example_constraint_A16a rdfcv:leftProperties :number.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A16_Data_Property_Facets/constraint.ttl>].
+
+<#lemma31> a r:Extraction; 
+  r:gives {
+    :example_constraint_A16a rdfcv:constrainingValue 5 .
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A16_Data_Property_Facets/constraint.ttl>].
+
+<#lemma32> a r:Extraction; 
+  r:gives {
+    :myAwsomeResearch :number 2 .
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A16_Data_Property_Facets/data.ttl>].
+
+<#lemma33> a r:Inference; 
+  r:gives {
+    2 :dataPropertyFacets (math:greaterThan 5).
+  }; 
+  r:evidence (
+    [ a r:Fact; r:gives true]
+  );
+  r:rule <#lemma35>.
+
+<#lemma34> a r:Extraction; 
+  r:gives {
+    {?x_0_3 :dataPropertyFacets (xsd:minLength ?x_2_3)} <= {() prolog:cut true.
+      (?x_0_3) func:string-length ?x_1_3.
+      ?x_1_3 math:lessThan ?x_2_3}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A16_Data_Property_Facets/rule.n3>].
+
+<#lemma35> a r:Extraction; 
+  r:gives {
+    {?x_0_4 :dataPropertyFacets (?x_1_4 ?x_2_4)} <= true.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A16_Data_Property_Facets/rule.n3>].
+
+#2017-02-08T14:00:03.575Z in=22 out=12 ent=24 step=28 brake=2 inf=101233 sec=0.088 inf/sec=1150375
+#ENDS
+

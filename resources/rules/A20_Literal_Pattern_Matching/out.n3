@@ -1,0 +1,218 @@
+#Processed by EYE rel. v17.0208.1332 josd
+#eye data.ttl constraint.ttl rule.n3 --query ../query.n3
+
+PREFIX rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms#>
+PREFIX : <http://example.com/constraints#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX math: <http://www.w3.org/2000/10/swap/math#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX func: <http://www.w3.org/2007/rif-builtin-function#>
+PREFIX pred: <http://www.w3.org/2007/rif-builtin-predicate#>
+PREFIX prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>
+PREFIX string: <http://www.w3.org/2000/10/swap/string#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
+
+[] a r:Proof, r:Conjunction;
+  r:component <#lemma1>;
+  r:component <#lemma2>;
+  r:component <#lemma3>;
+  r:component <#lemma4>;
+  r:component <#lemma5>;
+  r:component <#lemma6>;
+  r:component <#lemma7>;
+  r:gives {
+    _:sk_0 a :constraintViolation.
+    _:sk_0 :violatedConstraint :example_constraint_A20.
+    _:sk_0 :class :Book.
+    _:sk_0 :instance :HarryPotter.
+    _:sk_0 :property :isbn.
+    _:sk_0 :value "123456789X_ERROR".
+    _:sk_0 :expected "^\\d\\d\\d\\d\\d\\d\\d\\d\\d[\\d|X]$".
+  }.
+
+<#lemma1> a r:Inference; 
+  r:gives {
+    _:sk_0 a :constraintViolation.
+  }; 
+  r:evidence (
+    <#lemma8>
+    <#lemma8>
+  );
+  r:rule <#lemma9>.
+
+<#lemma2> a r:Inference; 
+  r:gives {
+    _:sk_0 :violatedConstraint :example_constraint_A20.
+  }; 
+  r:evidence (
+    <#lemma8>
+    <#lemma8>
+  );
+  r:rule <#lemma9>.
+
+<#lemma3> a r:Inference; 
+  r:gives {
+    _:sk_0 :class :Book.
+  }; 
+  r:evidence (
+    <#lemma8>
+    <#lemma8>
+  );
+  r:rule <#lemma9>.
+
+<#lemma4> a r:Inference; 
+  r:gives {
+    _:sk_0 :instance :HarryPotter.
+  }; 
+  r:evidence (
+    <#lemma8>
+    <#lemma8>
+  );
+  r:rule <#lemma9>.
+
+<#lemma5> a r:Inference; 
+  r:gives {
+    _:sk_0 :property :isbn.
+  }; 
+  r:evidence (
+    <#lemma8>
+    <#lemma8>
+  );
+  r:rule <#lemma9>.
+
+<#lemma6> a r:Inference; 
+  r:gives {
+    _:sk_0 :value "123456789X_ERROR".
+  }; 
+  r:evidence (
+    <#lemma8>
+    <#lemma8>
+  );
+  r:rule <#lemma9>.
+
+<#lemma7> a r:Inference; 
+  r:gives {
+    _:sk_0 :expected "^\\d\\d\\d\\d\\d\\d\\d\\d\\d[\\d|X]$".
+  }; 
+  r:evidence (
+    <#lemma8>
+    <#lemma8>
+  );
+  r:rule <#lemma9>.
+
+<#lemma8> a r:Inference; 
+  r:gives {
+    _:sk_0 a :constraintViolation.
+    _:sk_0 :violatedConstraint :example_constraint_A20.
+    _:sk_0 :class :Book.
+    _:sk_0 :instance :HarryPotter.
+    _:sk_0 :property :isbn.
+    _:sk_0 :value "123456789X_ERROR".
+    _:sk_0 :expected "^\\d\\d\\d\\d\\d\\d\\d\\d\\d[\\d|X]$".
+  }; 
+  r:evidence (
+    <#lemma10>
+    <#lemma11>
+    <#lemma12>
+    <#lemma13>
+    <#lemma14>
+    <#lemma15>
+    <#lemma16>
+    <#lemma17>
+    <#lemma18>
+    [ a r:Fact; r:gives {("123456789X_ERROR" xsd:string) log:dtlit "123456789X_ERROR"}]
+    [ a r:Fact; r:gives {"123456789X_ERROR" string:notMatches "^\\d\\d\\d\\d\\d\\d\\d\\d\\d[\\d|X]$"}]
+  );
+  r:rule <#lemma19>.
+
+<#lemma9> a r:Extraction; 
+  r:gives {
+    {?x_0_1 a :constraintViolation.
+      ?x_0_1 ?x_1_1 ?x_2_1} => {?x_0_1 ?x_1_1 ?x_2_1}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/query.n3>].
+
+<#lemma10> a r:Extraction; 
+  r:gives {
+    :example_constraint_A20 a rdfcv:SimpleConstraint.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A20_Literal_Pattern_Matching/constraint.ttl>].
+
+<#lemma11> a r:Extraction; 
+  r:gives {
+    :example_constraint_A20 :constraintType :LiteralPatternMatching.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A20_Literal_Pattern_Matching/constraint.ttl>].
+
+<#lemma12> a r:Extraction; 
+  r:gives {
+    :example_constraint_A20 rdfcv:constrainingElement :REGEX.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A20_Literal_Pattern_Matching/constraint.ttl>].
+
+<#lemma13> a r:Extraction; 
+  r:gives {
+    :example_constraint_A20 rdfcv:leftProperties :isbn.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A20_Literal_Pattern_Matching/constraint.ttl>].
+
+<#lemma14> a r:Extraction; 
+  r:gives {
+    :example_constraint_A20 rdfcv:contextClass :Book.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A20_Literal_Pattern_Matching/constraint.ttl>].
+
+<#lemma15> a r:Extraction; 
+  r:gives {
+    :example_constraint_A20 rdfcv:classes xsd:string.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A20_Literal_Pattern_Matching/constraint.ttl>].
+
+<#lemma16> a r:Extraction; 
+  r:gives {
+    :example_constraint_A20 rdfcv:constrainingValue "^\\d\\d\\d\\d\\d\\d\\d\\d\\d[\\d|X]$".
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A20_Literal_Pattern_Matching/constraint.ttl>].
+
+<#lemma17> a r:Extraction; 
+  r:gives {
+    :HarryPotter a :Book.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A20_Literal_Pattern_Matching/data.ttl>].
+
+<#lemma18> a r:Extraction; 
+  r:gives {
+    :HarryPotter :isbn "123456789X_ERROR".
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A20_Literal_Pattern_Matching/data.ttl>].
+
+<#lemma19> a r:Extraction; 
+  r:gives {
+    {?x_0_2 a rdfcv:SimpleConstraint.
+      ?x_0_2 :constraintType :LiteralPatternMatching.
+      ?x_0_2 rdfcv:constrainingElement :REGEX.
+      ?x_0_2 rdfcv:leftProperties ?x_1_2.
+      ?x_0_2 rdfcv:contextClass ?x_2_2.
+      ?x_0_2 rdfcv:classes ?x_3_2.
+      ?x_0_2 rdfcv:constrainingValue ?x_4_2.
+      ?x_5_2 a ?x_2_2.
+      ?x_5_2 ?x_1_2 ?x_6_2.
+      (?x_7_2 ?x_3_2) log:dtlit ?x_6_2.
+      ?x_6_2 string:notMatches ?x_4_2} => {_:x_8_2 a :constraintViolation.
+      _:x_8_2 :violatedConstraint ?x_0_2.
+      _:x_8_2 :class ?x_2_2.
+      _:x_8_2 :instance ?x_5_2.
+      _:x_8_2 :property ?x_1_2.
+      _:x_8_2 :value ?x_6_2.
+      _:x_8_2 :expected ?x_4_2}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A20_Literal_Pattern_Matching/rule.n3>].
+
+#2017-02-13T15:20:37.851Z in=12 out=7 ent=14 step=16 brake=2 inf=80503 sec=0.084 inf/sec=958369
+#ENDS
+
