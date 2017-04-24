@@ -14,5 +14,6 @@
   "rr": "http://www.w3.org/ns/r2rml#",
   "foaf": "http://xmlns.com/foaf/0.1/",
   "rml": "http://semweb.mmlab.be/ns/rml#",
-  "ql": "http://semweb.mmlab.be/ns/ql#"
+  "ql": "http://semweb.mmlab.be/ns/ql#",
+  "dcterms": "http://purl.org/dc/terms/"
 }
