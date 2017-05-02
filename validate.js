@@ -14,6 +14,14 @@ let validator = new Validator({
   extraFiles: [distPath, profilePath]
 });
 
+if (!argv.i) {
+  console.log('-i is required!');
+  process.exit(-1);
+}
+if (!argv.o) {
+  console.log('-o is required!');
+  process.exit(-1);
+}
 let sourcePath = argv.i;
 let outputPath = argv.o;
 let schemas = argv.s ? argv.s.split(',') : null;
@@ -28,7 +36,7 @@ if (schemas) {
 let sourceData = fs.readFileSync(sourcePath, 'utf8');
 
 const startTime = new Date();
-validator.validateStream(sourceData, schemas, function (err, child) {
+validator.validateStreamFile(sourcePath, schemas, function (err, child) {
   if (err) {
     throw err;
   }
