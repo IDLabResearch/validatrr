@@ -10,3 +10,11 @@
 
 {?x a :constraintViolation; ?p ?o; :violatedConstraint ?o2. ?o2 :constraintType ?o3} => {?x ?p ?o. ?x :violatedConstraint ?o3}.
 
+{
+  ?x a :constraintViolation.
+  _:x e:findall ( 1 {?x a :constraintViolation} ?list).
+  ?list e:length ?l
+} => {
+  :errorCount :count ?l
+}.
+
