@@ -28,11 +28,18 @@ if (schemas) {
 let sourceData = fs.readFileSync(sourcePath, 'utf8');
 
 const startTime = new Date();
-validator.validate(sourceData, schemas, function (err, stdout, stderr) {
-  const endTime = new Date();
+validator.validateStream(sourceData, schemas, function (err, child) {
   if (err) {
     throw err;
   }
-  fs.writeFileSync(outputPath, stdout, 'utf8');
-  console.log(`done in ${endTime.getTime() - startTime.getTime()}!`);
+  let outStream = fs.createWriteStream(outputPath, 'utf8');
+  child.stderr.pipe(process.stderr);
+  child.stdout.pipe(outStream);
+  child.on('close', function (code) {
+    if (code !== 0) {
+      throw new Error("Couldn't reason: code " + code);
+    }
+    const endTime = new Date();
+    console.log(`done in ${endTime.getTime() - startTime.getTime()}!`);
+  });
 });
