@@ -19,7 +19,7 @@ let outputPath = argv.o;
 let schemas = argv.s ? argv.s.split(',') : null;
 
 if (schemas) {
-  const prefices = JSON.parse(fs.readFileSync(path.resolve('resources', 'ontologies', 'prefix.json')));
+  const prefices = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'resources', 'ontologies', 'prefix.json')));
   schemas = schemas.map(function (schema) {
     return prefices[schema] ? prefices[schema] : schema
   });
