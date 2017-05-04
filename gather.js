@@ -25,7 +25,6 @@ rules.forEach(function (file) {
 });
 
 const eyePath = os.platform() === 'win32' ? "C:/Program Files/eye/bin/eye.cmd" : '/opt/eye/bin/eye.sh';
-const swiplPath = os.platform() === 'win32' ? "swipl" : '/usr/bin/swipl';
 
 let start = new Date();
 parse(files, 'pvm', path.resolve(__dirname, 'dist', 'n3unit-owl')).then(function (outPath) {
@@ -70,6 +69,7 @@ function parse(files, parseType, outPath) {
         parser.stdout.pipe(outStream);
       });
     }
+    parser.stderr.pipe(process.stderr);
     parser.on('close', function () {
       if (errLog.indexOf('** ERROR **') >= 0) {
         reject(errLog);
