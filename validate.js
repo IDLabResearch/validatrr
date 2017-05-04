@@ -9,10 +9,11 @@ let distPath = path.resolve(__dirname, 'dist', 'n3unit-owl.pvm');
 let queryPath = path.resolve(__dirname, 'resources', 'rules', 'query.n3');
 let profilePath = path.resolve(__dirname, 'profiles', profile + '.n3');
 
-let validator = new Validator({
+let validationOpts = {
   queryPath,
   extraFiles: [distPath, profilePath]
-});
+};
+
 
 if (!argv.i) {
   console.log('-i is required!');
@@ -21,6 +22,9 @@ if (!argv.i) {
 if (!argv.o) {
   console.log('-o is required!');
   process.exit(-1);
+}
+if (argv.ram) {
+  validationOpts.ram = argv.ram;
 }
 let sourcePath = argv.i;
 let outputPath = argv.o;
@@ -33,7 +37,7 @@ if (schemas) {
   });
 }
 
-let sourceData = fs.readFileSync(sourcePath, 'utf8');
+let validator = new Validator(validationOpts);
 
 const startTime = new Date();
 validator.validateStreamFile(sourcePath, schemas, function (err, child) {
