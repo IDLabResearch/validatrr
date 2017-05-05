@@ -15,15 +15,17 @@
   "author": "bjdmeest",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^3.19.0"
+    "chai": "^3.5.0",
+    "eslint": "^3.19.0",
+    "mocha": "^3.3.0"
   },
   "dependencies": {
-    "async": "^2.3.0",
+    "async": "^2.4.0",
     "colors": "^1.1.2",
     "fs-extra": "^2.1.2",
+    "minimist": "^1.2.0",
     "n3": "^0.10.0",
     "request": "^2.81.0",
-    "tmp": "0.0.31",
-    "minimist": "^1.2.0"
+    "tmp": "0.0.31"
   }
 }
