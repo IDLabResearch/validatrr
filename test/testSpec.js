@@ -42,7 +42,7 @@ function testProfile(profile, basePath, ontologyPath, cb) {
   writable.on('finish', function () {
     fs.readdir(basePath, function (err, files) {
       async.eachSeries(files, function (file, cb) {
-        console.log(`testing ${file}`);
+        console.log(`[${(new Date()).toISOString()}]\ttesting ${file}`);
         if (file.toLowerCase().indexOf('correct') >= 0) {
           validate(validator, path.resolve(basePath, file), ontologyURI, function (count) {
             expect(count).to.equal(0);
