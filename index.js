@@ -5,7 +5,7 @@ const fs = require("fs");
 const N3 = require('n3');
 
 let profile = 'owl';
-let distPath = path.resolve(__dirname, 'dist', 'n3unit-owl.pvm');
+let distPath = path.resolve(__dirname, 'dist', 'n3unit.pvm');
 let ontologyPath = path.resolve(__dirname, 'test', profile, 'ontology.ttl');
 let profilePath = path.resolve(__dirname, 'profiles', profile + '.n3');
 let dataPath = path.resolve(__dirname, 'test', profile, 'INVFUNC_Wrong.ttl');

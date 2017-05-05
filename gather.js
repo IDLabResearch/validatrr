@@ -27,7 +27,7 @@ rules.forEach(function (file) {
 const eyePath = os.platform() === 'win32' ? "C:/Program Files/eye/bin/eye.cmd" : '/opt/eye/bin/eye.sh';
 
 let start = new Date();
-parse(files, 'pvm', path.resolve(__dirname, 'dist', 'n3unit-owl')).then(function (outPath) {
+parse(files, 'pvm', path.resolve(__dirname, 'dist', 'n3unit')).then(function (outPath) {
   let end = new Date();
   let timing = end.getTime() - start.getTime();
   console.log(`it took ${timing}`);

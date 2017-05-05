@@ -5,7 +5,7 @@ const Validator = require('./lib/Validator');
 const argv = require('minimist')(process.argv.slice(2));
 
 let profile = 'owl';
-let distPath = path.resolve(__dirname, 'dist', 'n3unit-owl.pvm');
+let distPath = path.resolve(__dirname, 'dist', 'n3unit.pvm');
 let queryPath = path.resolve(__dirname, 'resources', 'rules', 'query.n3');
 let profilePath = path.resolve(__dirname, 'profiles', profile + '.n3');
 
