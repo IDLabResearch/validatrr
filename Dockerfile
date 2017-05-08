@@ -55,13 +55,19 @@ RUN set -ex \
   && mv yarn.js /usr/local/bin/yarn \
   && chmod +x /usr/local/bin/yarn
 
-# installing EYE
+# installing prolog
+RUN apt-get -y update && apt-get -y install libgmp-dev && apt-get -y install swi-prolog
+
+# install cturtle
+RUN sudo apt-get -y install flex
+RUN wget -O "cturtle.zip" "https://github.com/melgi/cturtle/archive/v1.0.5.zip"
+RUN unzip "cturtle.zip" -d "./"
+RUN rm "cturtle.zip"
+RUN cd "./cturtle-1.0.5" && make install
+
+# install eye
 RUN wget -O "eye.zip" "https://downloads.sourceforge.net/project/eulersharp/eulersharp/EYE-Summer16/eye.zip"
 RUN unzip "eye.zip" -d "./"
-RUN apt-get -y install libgmp-dev
-#RUN apt-add-repository ppa:swi-prolog/stable
-#RUN apt-get -y update
-RUN apt-get -y install swi-prolog
 RUN eye/install.sh
 
 # install the actual n3unit
