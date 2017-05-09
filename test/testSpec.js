@@ -27,7 +27,7 @@ describe("RDFUnit Validator", function () {
 
 function testProfile(profile, basePath, ontologyPath, cb) {
   let distPath = path.resolve(__dirname, '../dist', 'n3unit.pvm');
-  let queryPath = path.resolve(__dirname, '../resources', 'rules', 'query_byType.n3');
+  let queryPath = path.resolve(__dirname, '../resources', 'rules', 'query.n3');
   let profilePath = path.resolve(__dirname, '../profiles', profile + '.n3');
 
   let validationOpts = {
