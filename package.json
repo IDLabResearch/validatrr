@@ -4,7 +4,7 @@
   "description": "RDF Validation by reasoning, using N3 and EYE",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -R spec"
+    "test": "mocha -R spec --delay"
   },
   "keywords": [
     "RDF",

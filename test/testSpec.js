@@ -15,18 +15,19 @@ console.log('Running the tests');
 
 describe("RDFUnit Validator", function () {
   describe("OWL Profile", function () {
-    it('works for all cases', function (done) {
-      var profile = 'owl';
-      var basePath = path.resolve(__dirname, profile);
-      var ontologyPath = path.resolve(basePath, 'ontology.ttl');
-      testProfile(profile, basePath, ontologyPath, done);
+    var profile = 'owl';
+    var basePath = path.resolve(__dirname, profile);
+    var ontologyPath = path.resolve(basePath, 'ontology.ttl');
+    testProfile(profile, basePath, ontologyPath, function () {
+      run();
+      console.log('done!');
     });
   });
 });
 
 function testProfile(profile, basePath, ontologyPath, cb) {
   let distPath = path.resolve(__dirname, '../dist', 'n3unit.pvm');
-  let queryPath = path.resolve(__dirname, '../resources', 'rules', 'query.n3');
+  let queryPath = path.resolve(__dirname, '../resources', 'rules', 'query_byType.n3');
   let profilePath = path.resolve(__dirname, '../profiles', profile + '.n3');
 
   let validationOpts = {
@@ -36,32 +37,40 @@ function testProfile(profile, basePath, ontologyPath, cb) {
 
   let validator = new Validator(validationOpts);
 
-  var ontologyURI = 'http_example.com_ontology-test-' + profile;
-  var writable = fs.createWriteStream(path.resolve(__dirname, '../resources/ontologies', ontologyURI + '.ttl'));
+  var ontologyURI = 'http://example.com/ontology-test-' + profile;
+  var ontologypath = 'http_example.com_ontology-test-' + profile + '.ttl';
+  var writable = fs.createWriteStream(path.resolve(__dirname, '../resources/ontologies', ontologypath));
   fs.createReadStream(ontologyPath).pipe(writable);
   writable.on('finish', function () {
     fs.readdir(basePath, function (err, files) {
-      async.eachSeries(files, function (file, cb) {
+      async.eachSeries(files, function (file, eachCb) {
         console.log(`[${(new Date()).toISOString()}]\ttesting ${file}`);
         if (file.toLowerCase().indexOf('correct') >= 0) {
-          validate(validator, path.resolve(basePath, file), ontologyURI, function (count) {
-            expect(count).to.equal(0);
-            cb();
+          it(`${file} should be correct`, function (done) {
+            return validate(validator, path.resolve(basePath, file), ontologyURI, function (count) {
+              expect(count).to.equal(0);
+              done();
+              eachCb();
+            });
           });
         }
         if (file.toLowerCase().indexOf('wrong') >= 0) {
-          validate(validator, path.resolve(basePath, file), ontologyURI, function (count) {
-            expect(count).to.be.above(0);
-            cb();
+          it(`${file} should not be correct`, function (done) {
+            return validate(validator, path.resolve(basePath, file), ontologyURI, function (count) {
+              expect(count).to.be.above(0);
+              done();
+              eachCb();
+            });
           });
         }
+        return eachCb();
       }, cb);
     });
   });
 }
 
 function validate(validator, file, ontology, cb) {
-  validator.validateStreamFile(file, [ontology], function (err, child) {
+  validator.validateStreamFileByOntologies(file, [{uri: ontology}], function (err, child) {
     if (err) {
       throw err;
     }
