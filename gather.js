@@ -37,7 +37,7 @@ parse(files, 'pvm', path.resolve(__dirname, 'dist', 'n3unit')).then(function (ou
 function parse(files, parseType, outPath) {
   let errLog = '';
 
-  const args = ['--nope'];
+  const args = [];
   for (let i = 0; i < files.length; i++) {
     if (files[i].type === 'n3p') {
       args.push('--plugin');
