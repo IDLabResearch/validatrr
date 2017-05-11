@@ -32,6 +32,26 @@ _:A14_owl a rdfcv:SimpleConstraint ;
   rdfcv:classes ?class .
 }.
 
+#A.14b support for object property
+{  
+  ?a a owl:ObjectProperty .  ?s ?a ?o .  } 
+=> {   
+_:A14_owl a rdfcv:SimpleConstraint ;  
+  :constraintType :PropertyRange ;  
+  dcterms:title "A.14 Property Ranges" ;  
+  rdfcv:constrainingElement :property-range ;  
+  rdfcv:leftProperties ?a ;  
+  rdfcv:classes :NonLiteral . 
+} .
+
+#helper rule
+
+{?o a :NonLiteral .}
+<=
+{ ?o log:rawType ?t .  ?t log:notEqualTo rdfs:Literal .}.
+
+
+
 #A.23
 {
   ?p
@@ -172,3 +192,6 @@ _:A70_owl a rdfcv:SimpleConstraint ;
   rdfcv:constrainingElement :disjoint_classes ;
   rdfcv:classes ?members .
 }.
+
+
+
