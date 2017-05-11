@@ -12,7 +12,9 @@ node gather.js
 
 ## run
 
-`./bin/validate -i [inputfile] -o outputfile -s [comma-delimited schemas, e.g. 'skos,foaf']`
+`./bin/validate -i [inputfile] -o outputfile -s [comma-delimited schemas, e.g. 'skos,foaf'] --ram [amount of RAM, e.g. 2g, 512m] -r [reasoning profile, rdfs and/or owl]`
+
+`--ram` and `-r` are optional.
 
 > the prefices of the schemas are saved locally at `resources/ontologies/prefix.json`.
 > If a prefix isn't found, you can also enter the full URI

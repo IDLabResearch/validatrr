@@ -4,10 +4,12 @@ const fs = require("fs");
 const Validator = require('./lib/Validator');
 const argv = require('minimist')(process.argv.slice(2));
 
+let basePath = path.resolve(__dirname);
+
 let profile = 'owl';
-let distPath = path.resolve(__dirname, 'dist', 'n3unit.pvm');
-let queryPath = argv.count ? path.resolve(__dirname, 'resources', 'rules', 'query_count.n3') : path.resolve(__dirname, 'resources', 'rules', 'query.n3');
-let profilePath = path.resolve(__dirname, 'profiles', profile + '.n3');
+let distPath = path.resolve(basePath, 'dist', 'n3unit.pvm');
+let queryPath = argv.count ? path.resolve(basePath, 'resources', 'rules', 'query_count.n3') : path.resolve(basePath, 'resources', 'rules', 'query.n3');
+let profilePath = path.resolve(basePath, 'profiles', profile + '.n3');
 
 let validationOpts = {
   queryPath,
@@ -31,7 +33,7 @@ let outputPath = argv.o;
 let schemas = argv.s ? argv.s.split(',') : null;
 
 if (schemas) {
-  const prefices = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'resources', 'ontologies', 'prefix.json')));
+  const prefices = JSON.parse(fs.readFileSync(path.resolve(basePath, 'resources', 'ontologies', 'prefix.json')));
   schemas = schemas.map(function (schema) {
     return prefices[schema] ? prefices[schema] : schema
   });
@@ -40,7 +42,23 @@ if (schemas) {
 let validator = new Validator(validationOpts);
 
 const startTime = new Date();
-validator.validateStreamFile(sourcePath, schemas, function (err, child) {
+const extrafiles = [];
+if (argv.r) {
+  let profiles = argv.r.split(',');
+  if (profiles.indexOf('rdfs') >= 0) {
+    extrafiles.push({
+      path: path.resolve(basePath, 'resources/rules/reasoning/rdfs_rules.n3'),
+      type: 'n3'
+    });
+  }
+  if (profiles.indexOf('owl') >= 0) {
+    extrafiles.push({
+      path: path.resolve(basePath, 'resources/rules/reasoning/owl_rules.n3'),
+      type: 'n3'
+    });
+  }
+}
+validator.validateStreamFile(sourcePath, schemas, extrafiles, function (err, child) {
   if (err) {
     throw err;
   }

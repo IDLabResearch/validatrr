@@ -1,0 +1,110 @@
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+
+{?A a owl:AllDifferent. ?A owl:members ?L. ?X list:in ?L. ?Y list:in ?L. ?X log:notEqualTo ?Y. ?X owl:sameAs ?Y} => false.
+{?A a owl:AllDifferent. ?A owl:distinctMembers ?L. ?X list:in ?L. ?Y list:in ?L. ?X log:notEqualTo ?Y. ?X owl:sameAs ?Y} => false.
+
+{?X a owl:AllDisjointClasses. ?X owl:members ?L. ?C list:in ?L. ?D list:in ?L. ?C log:notEqualTo ?D. ?I a ?C. ?I a ?D} => false.
+
+{?X a owl:AllDisjointProperties. ?X owl:members ?L. ?P list:in ?L. ?Q list:in ?L. ?P log:notEqualTo ?Q. ?S ?P ?O. ?S ?Q ?O} => false.
+
+
+{?C owl:allValuesFrom ?Y. ?C owl:onProperty ?P. ?U a ?C. ?U ?P ?V} => {?V a ?Y}.
+{?C owl:allValuesFrom ?Y. ?C owl:onProperty ?P. ?D owl:allValuesFrom ?Z. ?D owl:onProperty ?P. ?Y rdfs:subClassOf ?Z} => {?C rdfs:subClassOf ?D}.
+{?C owl:allValuesFrom ?Y. ?C owl:onProperty ?P. ?D owl:allValuesFrom ?Y. ?D owl:onProperty ?Q. ?P rdfs:subPropertyOf ?Q} => {?D rdfs:subClassOf ?C}.
+
+{?P a owl:AsymmetricProperty. ?S ?P ?O. ?O ?P ?S} => false.
+
+{?C owl:complementOf ?D} => {?D owl:complementOf ?C}.
+{?C owl:complementOf ?D} => {?D owl:disjointWith ?C}.
+{?C owl:complementOf ?D. ?X a ?C. ?X a ?D} => false.
+
+{?A owl:differentFrom ?B} => {?B owl:differentFrom ?A}.
+
+{?A owl:disjointWith ?B. ?X a ?A. ?Y a ?B } => {?X owl:differentFrom ?Y}.
+{?A owl:disjointWith ?B. ?X a ?A. ?X a ?B} => false.
+
+{?C owl:disjointUnionOf ?L. ?A list:in ?L. ?B list:in ?L. ?A log:notEqualTo ?B} => {?A owl:disjointWith ?B. ?C owl:unionOf ?L}.
+
+{?A owl:distinctMembers ?L. ?X list:in ?L. ?Y list:in ?L. ?X log:notEqualTo ?Y} => {?X owl:differentFrom ?Y}.
+
+{?A owl:equivalentClass ?B. ?X a ?A} => {?X a ?B}.
+{?A owl:equivalentClass ?B. ?X a ?B} => {?X a ?A}.
+{?A owl:equivalentClass ?B} => {?B owl:equivalentClass ?A}.
+{?A owl:equivalentClass ?B. ?B owl:equivalentClass ?C} => {?A owl:equivalentClass ?C}.
+{?A owl:equivalentClass ?B} => {?A rdfs:subClassOf ?B. ?B rdfs:subClassOf ?A}.
+{?A rdfs:subClassOf ?B. ?B rdfs:subClassOf ?A} => {?A owl:equivalentClass ?B}.
+
+{?P owl:equivalentProperty ?Q. ?S ?P ?O} => {?S ?Q ?O}.
+{?P owl:equivalentProperty ?Q. ?S ?Q ?O} => {?S ?P ?O}.
+{?P owl:equivalentProperty ?Q} => {?Q owl:equivalentProperty ?P}.
+{?P owl:equivalentProperty ?Q. ?Q owl:equivalentProperty ?R} => {?P owl:equivalentProperty ?R}.
+{?P owl:equivalentProperty ?Q} => {?P rdfs:subPropertyOf ?Q. ?Q rdfs:subPropertyOf ?P}.
+{?P rdfs:subPropertyOf ?Q. ?Q rdfs:subPropertyOf ?P} => {?P owl:equivalentProperty ?Q}.
+
+{?P a owl:FunctionalProperty. ?S ?P ?X. ?S ?P ?Y} => {?X owl:sameAs ?Y}.
+{?P a owl:FunctionalProperty. ?S ?P ?X. ?S ?P ?Y. ?X owl:differentFrom ?Y} => false.
+
+{?C owl:hasKey ?L. ?X a ?C. ?Y a ?C. ?X log:notEqualTo ?Y. ?S e:findall (?P {?P list:in ?L. ?X ?P ?Z. ?Y ?P ?Z} ?L)} => {?X owl:sameAs ?Y}.
+
+{?C owl:hasValue ?V. ?C owl:onProperty ?P. ?U a ?C} => {?U ?P ?V}.
+{?C owl:hasValue ?V. ?C owl:onProperty ?P. ?U ?P ?V} => {?U a ?C}.   
+{?C owl:hasValue ?V. ?C owl:onProperty ?P. ?D owl:hasValue ?V. ?D owl:onProperty ?Q. ?P rdfs:subPropertyOf ?Q} => {?C rdfs:subClassOf ?D}.
+{?C owl:hasValue ?V. ?C owl:onProperty ?P. ?X ?P ?Y. ?X a ?C. ?V owl:differentFrom ?Y} => false.
+
+{?C owl:intersectionOf ?L. ?X a ?C. ?D list:in ?L} => {?X a ?D}.
+{?C owl:intersectionOf ?L. ?L rdf:first ?A. ?X a ?A. ?L rdf:rest ?B. ?S e:findall (?Y {?Y list:in ?B. ?X a ?Y} ?B)} => {?X a ?C}.
+{?C owl:intersectionOf ?L. ?D list:in ?L} => {?C rdfs:subClassOf ?D}.
+
+{?P a owl:InverseFunctionalProperty. ?X ?P ?O. ?Y ?P ?O} => {?X owl:sameAs ?Y}.
+{?P a owl:InverseFunctionalProperty. ?X ?P ?O. ?Y ?P ?O. ?X owl:differentFrom ?Y} => false.
+
+{?P owl:inverseOf ?Q. ?S ?P ?O} => {?O ?Q ?S}.
+{?P owl:inverseOf ?Q. ?S ?Q ?O} => {?O ?P ?S}.
+{?P owl:inverseOf ?Q} => {?Q owl:inverseOf ?P}.
+
+{?P a owl:IrreflexiveProperty. ?X ?P ?X} => false.
+
+{?C owl:maxCardinality 1. ?C owl:onProperty ?P. ?U a ?C. ?U ?P ?Y. ?U ?P ?Z} => {?Y owl:sameAs ?Z}.
+{?C owl:maxCardinality 0. ?C owl:onProperty ?P. ?X ?P ?Y. ?X a ?C} => false.
+{?C owl:maxCardinality 1. ?C owl:onProperty ?P. ?X ?P ?Y. ?X ?P ?Z. ?X a ?C. ?Z owl:differentFrom ?Y} => false.
+
+{?C owl:maxQualifiedCardinality 1. ?C owl:onProperty ?P. ?C owl:onClass ?D. ?U a ?C. ?U ?P ?Y. ?Y a ?D. ?U ?P ?Z. ?Z a ?D} => {?Y owl:sameAs ?Z}.
+{?C owl:maxQualifiedCardinality 1. ?C owl:onProperty ?P. ?C owl:onClass owl:Thing. ?U a ?C. ?U ?P ?Y. ?U ?P ?Z} => {?Y owl:sameAs ?Z}. 
+{?C owl:maxQualifiedCardinality 0. ?C owl:onProperty ?P. ?C owl:onClass ?C. ?U a ?C. ?U ?P ?Y. ?Y a ?C} => false.
+{?C owl:maxQualifiedCardinality 0. ?C owl:onProperty ?P. ?C owl:onClass owl:Thing. ?U a ?C. ?U ?P ?Y} => false.
+
+{?X owl:sourceIndividual ?I1. ?X owl:assertionProperty ?P. ?X owl:targetIndividual ?I2. ?I1 ?P ?I2} => false.
+{?X owl:sourceIndividual ?I. ?X owl:assertionProperty ?P. ?X owl:targetValue ?LT. ?I ?P ?LT} => false.
+
+{?X a owl:Nothing} => false.
+
+{?C owl:oneOf ?L. ?X list:in ?L} => {?X a ?C}.
+
+{?P owl:propertyChainAxiom ?L. ?L e:propertyChainExtension (?S ?O)} => {?S ?P ?O}.
+
+{?P owl:propertyDisjointWith ?Q. ?X ?P ?Y. ?X ?Q ?Y} => false.
+
+{?X owl:sameAs ?Y} => {?Y owl:sameAs ?X}.
+{?X owl:sameAs ?Y. ?Y owl:sameAs ?Z} => {?X owl:sameAs ?Z}.
+{?X owl:sameAs ?Y. ?X owl:differentFrom ?Y} => false.
+
+{?X owl:sameAs ?Y. ?X ?P ?O} => {?Y ?P ?O}.
+{?X owl:sameAs ?Y. ?S ?X ?O} => {?S ?Y ?O}.
+{?X owl:sameAs ?Y. ?S ?P ?X} => {?S ?P ?Y}.
+
+{?C owl:someValuesFrom ?Y. ?C owl:onProperty ?P. ?U ?P ?V. ?V a ?Y} => {?U a ?C}.
+{?C owl:someValuesFrom owl:Thing. ?C owl:onProperty ?P. ?U ?P ?V} => {?U a ?C}.
+{?C owl:someValuesFrom ?Y. ?C owl:onProperty ?P. ?D owl:someValuesFrom ?Z. ?D owl:onProperty ?P. ?Y rdfs:subClassOf ?Z} => {?C rdfs:subClassOf ?D}.
+{?C owl:someValuesFrom ?Y. ?C owl:onProperty ?P. ?D owl:someValuesFrom ?Y. ?D owl:onProperty ?Q. ?P rdfs:subPropertyOf ?Q} => {?C rdfs:subClassOf ?D}.
+
+{?P a owl:SymmetricProperty. ?S ?P ?O} => {?O ?P ?S}.
+
+{?P a owl:TransitiveProperty. ?S ?P ?X. ?X ?P ?O.} => {?S ?P ?O}.
+
+{?C owl:unionOf ?L. ?D list:in ?L. ?X a ?D} => {?X a ?C}.
+{?C owl:unionOf ?L. ?D list:in ?L} => {?D rdfs:subClassOf ?C}.

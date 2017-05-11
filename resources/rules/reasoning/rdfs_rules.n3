@@ -1,0 +1,17 @@
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+
+{?P rdfs:domain ?C. ?X ?P ?Y} => {?X a ?C}. 
+
+{?P rdfs:range ?C. ?X ?P ?Y} => {?Y a ?C}.
+
+{?C rdfs:subClassOf ?D. ?X a ?C} => {?X a ?D}.
+{?C rdfs:subClassOf ?D. ?D rdfs:subClassOf ?E} => {?C rdfs:subClassOf ?E}.
+{?C rdfs:subClassOf ?D. ?P rdfs:domain ?C} => {?P rdfs:domain ?D}.
+{?C rdfs:subClassOf ?D. ?P rdfs:range ?C} => {?P rdfs:range ?D}.
+
+{?P rdfs:subPropertyOf ?Q. ?S ?P ?O} => {?S ?Q ?O}.
+{?P rdfs:subPropertyOf ?Q. ?Q rdfs:subPropertyOf ?R} => {?P rdfs:subPropertyOf ?R}.
+{?P rdfs:subPropertyOf ?Q. ?Q rdfs:domain ?C} => {?P rdfs:domain ?C}.
+{?P rdfs:subPropertyOf ?Q. ?Q rdfs:range ?C} => {?P rdfs:range ?C}.
