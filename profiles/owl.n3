@@ -35,7 +35,7 @@ _:A14_owl a rdfcv:SimpleConstraint ;
 
 #A.14b support for object property
 {  
-  ?a a owl:ObjectProperty .  ?s ?a ?o .  } 
+  ?a a owl:ObjectProperty .  } 
 => {   
 _:A14_owl a rdfcv:SimpleConstraint ;  
   :constraintType :PropertyRange ;  
