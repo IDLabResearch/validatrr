@@ -35,7 +35,7 @@ let schemas = argv.s ? argv.s.split(',') : null;
 if (schemas) {
   const prefices = JSON.parse(fs.readFileSync(path.resolve(basePath, 'resources', 'ontologies', 'prefix.json')));
   schemas = schemas.map(function (schema) {
-    return prefices[schema] ? prefices[schema] : schema
+    return prefices[schema] ? {uri: prefices[schema]} : {prefix: schema}
   });
 }
 
@@ -58,7 +58,7 @@ if (argv.r) {
     });
   }
 }
-validator.validateStreamFile(sourcePath, schemas, extrafiles, function (err, child) {
+validator.validateStreamFileByOntologies(sourcePath, schemas, extrafiles, function (err, child) {
   if (err) {
     throw err;
   }
