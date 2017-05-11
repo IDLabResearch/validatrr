@@ -7,6 +7,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
 @prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix log: <http://www.w3.org/2000/10/swap/log#> .
 
 #A.2
 {
