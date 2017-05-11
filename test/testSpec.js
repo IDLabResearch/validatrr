@@ -70,7 +70,7 @@ function testProfile(profile, basePath, ontologyPath, cb) {
 }
 
 function validate(validator, file, ontology, cb) {
-  validator.validateStreamFileByOntologies(file, [{uri: ontology}], function (err, child) {
+  validator.validateStreamFileByOntologies(file, [{uri: ontology}], [], function (err, child) {
     if (err) {
       throw err;
     }
