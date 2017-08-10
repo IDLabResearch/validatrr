@@ -4,7 +4,9 @@
   "description": "RDF Validation by reasoning, using N3 and EYE",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -R spec --delay"
+    "start": "node ./bin/www",
+    "test": "mocha -R spec --delay",
+    "forever": "forever ./bin/www"
   },
   "keywords": [
     "RDF",
@@ -23,8 +25,11 @@
     "async": "^2.5.0",
     "body-parser": "^1.17.2",
     "colors": "^1.1.2",
+    "commander": "^2.11.0",
     "cookie-parser": "^1.4.3",
+    "debug": "^3.0.0",
     "express": "^4.15.4",
+    "forever": "^0.15.3",
     "fs-extra": "^2.1.2",
     "minimist": "^1.2.0",
     "morgan": "^1.8.2",
