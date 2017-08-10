@@ -1,0 +1,61 @@
+#Processed by EYE-Spring16.0628.0910 josd
+#eye --nope --no-qvars /RMLUnit/resources/ontologies/http_www.w3.org_ns_r2rml_.ttl /RMLUnit/resources/ontologies/http_xmlns.com_foaf_0.1_.ttl /RMLUnit/resources/ontologies/http_semweb.mmlab.be_ns_rml_.ttl /RMLUnit/resources/ontologies/http_www.w3.org_2001_XMLSchema_.ttl /RMLUnit/resources/ontologies/http_vocab.org_transit_terms_.ttl /RMLUnit/resources/ontologies/http_purl.org_tio_ns_.ttl /RMLUnit/tmp/tmp-26CI5cMZruhcxo /RMLUnit/resources/extraRules.n3 /RMLUnit/resources/logCodes.ttl --query /RMLUnit/resources/rule.n3
+
+PREFIX var: <http://eulersharp.sourceforge.net/.well-known/genid/VFKmIqiJSLmJccTD30UyJpRqWoQ#>
+PREFIX vaem: <http://www.linkedmodel.org/schema/vaem#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://www.w3.org/ns/r2rml#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX vann: <http://purl.org/vocab/vann/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX cc: <http://creativecommons.org/ns#>
+PREFIX wot: <http://xmlns.com/wot/0.1/>
+PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
+PREFIX ql: <http://semweb.mmlab.be/ns/ql#>
+PREFIX rml: <http://semweb.mmlab.be/ns/rml#>
+PREFIX msg0: <http://web.resource.org/cc/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX gr: <http://purl.org/goodrelations/v1#>
+PREFIX ex: <http://www.example.com/>
+PREFIX transit: <http://vocab.org/transit/terms/>
+PREFIX ns1: <http://www.ournicecode.org#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rutp: <http://rdfunit.aksw.org/data/patterns#>
+PREFIX rlog: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#>
+PREFIX oslc: <http://open-services.net/ns/core#>
+PREFIX rutg: <http://rdfunit.aksw.org/data/generators#>
+PREFIX dsp: <http://dublincore.org/dc-dsp#>
+PREFIX schema: <http://schema.org/>
+PREFIX rut: <http://rdfunit.aksw.org/ns/core#>
+PREFIX rutr: <http://rdfunit.aksw.org/data/results#>
+PREFIX spin: <http://spinrdf.org/spin#>
+PREFIX rutt: <http://rdfunit.aksw.org/data/tests#>
+PREFIX ruts: <http://rdfunit.aksw.org/data/testsuite#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX string: <http://www.w3.org/2000/10/swap/string#>
+PREFIX cs: <http://vocab.org/changeset/schema#>
+
+var:sk_2 a rlog:Entry.
+var:sk_18 a rlog:Entry.
+var:sk_2 rlog:logLevel rlog:ERROR.
+var:sk_18 rlog:logLevel rlog:ERROR.
+var:sk_2 rlog:hasCode ns1:duplicateLanguageCode.
+var:sk_18 rlog:hasCode ns1:duplicateLanguageCode.
+var:sk_2 rlog:message "A language code is used twice.".
+var:sk_18 rlog:message "A language code is used twice.".
+var:sk_2 rlog:resource var:sk_10.
+var:sk_18 rlog:resource var:sk_26.
+var:sk_10 rdf:subject <http://example.com/#OM1>.
+var:sk_26 rdf:subject <http://example.com/#OM2>.
+
+#ENDS 0.382 [sec] IO=2029/23 TC=349 TP=1715 BC=0 BP=0 PM=0 CM=0 FM=0 AM=0
+

@@ -23,7 +23,7 @@ router.post('/validate', function (req, res, next) {
       if (writeErr) {
         throw writeErr;
       }
-      validator.validate(req.body.mapping, function (err, ttl) {
+      validator.validate(req.body.mapping, null, function (err, ttl) {
         if (err) {
           return fs.writeFile(logName + '_output.ttl', err.message, function (writeErr) {
             if (writeErr) {

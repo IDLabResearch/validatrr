@@ -12,7 +12,7 @@ fs.readFile(path.resolve(__dirname, '../resources/rml/rules/1_no-rdf-type/input-
     throw err;
   }
   const t0 = new Date();
-  validator.validate(ttl, function (err, out) {
+  validator.validate(ttl, null, function (err, out) {
     if (err) {
       throw err;
     }

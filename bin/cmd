@@ -16,7 +16,7 @@ fs.readFile(path.resolve(__dirname, inputFile), 'utf8', function (err, ttl) {
     throw err;
   }
   const t0 = new Date();
-  validator.validate(ttl, function (err, out) {
+  validator.validate(ttl, null, function (err, out) {
     if (err) {
       throw err;
     }

@@ -19,7 +19,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "eslint": "^3.19.0",
-    "mocha": "^3.4.2"
+    "mocha": "^3.5.0"
   },
   "dependencies": {
     "async": "^2.5.0",
@@ -34,9 +34,9 @@
     "minimist": "^1.2.0",
     "morgan": "^1.8.2",
     "n3": "^0.10.0",
-    "rdf-ext": "^1.0.0",
+    "rdf-ext": "^0.3.0",
     "rdf-parser-rdfxml": "^0.3.1",
-    "rdf-serializer-ntriples": "^1.0.0",
+    "rdf-serializer-ntriples": "^0.3.0",
     "request": "^2.81.0",
     "tmp": "0.0.31"
   }

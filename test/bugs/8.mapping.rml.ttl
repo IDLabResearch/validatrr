@@ -1,0 +1,31 @@
+<http://ex.com/triplesMap/TriplesMap_0> a <http://www.w3.org/ns/r2rml#TriplesMap> ;
+	<http://www.w3.org/ns/r2rml#subjectMap> <http://ex.com/subjectMap/SubMap_0> ;
+	<http://www.w3.org/ns/r2rml#predicateObjectMap> <http://ex.com/preObjMap/PredObjMap_33> , <http://ex.com/preObjMap/RefPredObjMap_33> , <http://ex.com/preObjMap/RefPredObjMap_cn_0> ;
+	<http://semweb.mmlab.be/ns/rml#logicalSource> <http://ex.com/logicalSource/LogicalSource_0> .
+
+<http://ex.com/subjectMap/SubMap_0> a <http://www.w3.org/ns/r2rml#SubjectMap> ;
+	<http://www.w3.org/ns/r2rml#termType> <http://www.w3.org/ns/r2rml#IRI> .
+
+<http://ex.com/preObjMap/PredObjMap_33> a <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
+	<http://www.w3.org/ns/r2rml#objectMap> <http://ex.com/objectMap/ObjMap_33> ;
+	<http://www.w3.org/ns/r2rml#predicateMap> <http://ex.com/predicateMap/PreMap_32> .
+
+<http://ex.com/objectMap/ObjMap_33> <http://www.w3.org/ns/r2rml#termType> <http://www.w3.org/ns/r2rml#Literal> ;
+	<http://www.w3.org/ns/r2rml#datatype> <http://www.w3.org/2001/XMLSchema#double> .
+
+<http://ex.com/predicateMap/PreMap_32> a <http://www.w3.org/ns/r2rml#PredicateMap> ;
+	<http://www.w3.org/ns/r2rml#constant> <http://vocab.org/transit/terms/route> .
+
+<http://ex.com/preObjMap/RefPredObjMap_33> a <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
+	<http://www.w3.org/ns/r2rml#predicateMap> <http://ex.com/predicateMap/PreMap_32> .
+
+<http://ex.com/logicalSource/LogicalSource_0> a <http://semweb.mmlab.be/ns/rml#LogicalSource> .
+
+<http://ex.com/preObjMap/RefPredObjMap_cn_0> a <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
+	<http://www.w3.org/ns/r2rml#objectMap> <http://ex.com/objectMap/Class_cn_0> ;
+	<http://www.w3.org/ns/r2rml#predicateMap> <http://ex.com/predicateMap/PreMap_ce_0> .
+
+<http://ex.com/objectMap/Class_cn_0> <http://www.w3.org/ns/r2rml#constant> <http://vocab.org/transit/terms/Stop> .
+
+<http://ex.com/predicateMap/PreMap_ce_0> a <http://www.w3.org/ns/r2rml#PredicateMap> ;
+	<http://www.w3.org/ns/r2rml#constant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> .

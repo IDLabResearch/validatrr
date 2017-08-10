@@ -4,3 +4,4 @@ node_modules/
 !/tmp/.gitkeep
 /log/*
 !/log/.gitkeep
+out-*.ttl
