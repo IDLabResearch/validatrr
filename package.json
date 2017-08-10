@@ -21,9 +21,13 @@
   },
   "dependencies": {
     "async": "^2.5.0",
+    "body-parser": "^1.17.2",
     "colors": "^1.1.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.4",
     "fs-extra": "^2.1.2",
     "minimist": "^1.2.0",
+    "morgan": "^1.8.2",
     "n3": "^0.10.0",
     "rdf-ext": "^1.0.0",
     "rdf-parser-rdfxml": "^0.3.1",

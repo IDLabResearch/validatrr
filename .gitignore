@@ -1,2 +1,6 @@
 .idea/
 node_modules/
+/tmp/*
+!/tmp/.gitkeep
+/log/*
+!/log/.gitkeep
