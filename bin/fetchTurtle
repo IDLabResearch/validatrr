@@ -1,0 +1,45 @@
+#!/usr/bin/env node
+/**
+ * Created by bjdmeest on 8/02/2016.
+ */
+const TtlFetcher = require('../lib/TtlFetcher'),
+  fs = require('fs'),
+  program = require('commander');
+
+
+const fetcher = new TtlFetcher();
+
+program
+  .version('0.1.0')
+  .option('-p, --prefix <prefix>', 'convert by prefix')
+  .option('-u, --url <url>', 'convert by url')
+  .option('-o, --output <outFile>', 'outputFile (if not set, the output will be put to the console')
+  .parse(process.argv);
+
+if (program.prefix && program.url) {
+  throw new Error('Cannot convert a prefix AND a Url, maybe just input the url?');
+}
+
+if (program.prefix) {
+  fetcher.fetchByPrefix(program.prefix, handleOutput);
+}
+
+if (program.url) {
+  fetcher.fetchByUrl(program.url, handleOutput);
+}
+
+function handleOutput(err, ttl) {
+  if (err) {
+    throw err;
+  }
+  if (program.output) {
+    fs.writeFile(program.output, ttl, function (err) {
+      if (err) {
+        throw err;
+      }
+    });
+  }
+  else {
+    console.log(ttl);
+  }
+}

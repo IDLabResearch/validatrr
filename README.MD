@@ -48,3 +48,8 @@ docker run n3unit -it -i test/test.ttl -o test.ttl -s foaf
 ```
 
 > There's a test file at `test/test.ttl`
+
+## TODO
+
+* Documentation about ./bin/cmd
+* Documentation about ./bin/fetchTurtle
