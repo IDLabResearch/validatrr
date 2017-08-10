@@ -1,0 +1,513 @@
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix rutp:  <http://rdfunit.aksw.org/data/patterns#> .
+@prefix rlog:  <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#> .
+@prefix oslc:  <http://open-services.net/ns/core#> .
+@prefix rutg:  <http://rdfunit.aksw.org/data/generators#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dsp:   <http://dublincore.org/dc-dsp#> .
+@prefix schema: <http://schema.org/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rut:   <http://rdfunit.aksw.org/ns/core#> .
+@prefix rutr:  <http://rdfunit.aksw.org/data/results#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix spin:  <http://spinrdf.org/spin#> .
+@prefix rutt:  <http://rdfunit.aksw.org/data/tests#> .
+@prefix ruts:  <http://rdfunit.aksw.org/data/testsuite#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix : <http://www.ournicecode.org#>.
+@prefix string: <http://www.w3.org/2000/10/swap/string#>.
+@prefix cs: <http://vocab.org/changeset/schema#>.
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix ex: <http://www.example.com/>.
+
+#EXTRA
+{
+    ?mapping <http://www.w3.org/ns/r2rml#subjectMap> ?resource.
+    ?resource rr:template ?template.
+    _:t e:findall (?class {?resource <http://www.w3.org/ns/r2rml#class> ?class} ()).
+    _:tt e:findall (?o {
+      ?mapping <http://www.w3.org/ns/r2rml#predicateObjectMap> ?o.
+      ?o <http://www.w3.org/ns/r2rml#predicate> rdf:type .
+    } ()).
+    _:ttt e:findall (?p {
+      ?mapping <http://www.w3.org/ns/r2rml#predicateObjectMap> ?o.
+      ?o <http://www.w3.org/ns/r2rml#predicateMap> ?p.
+      ?p <http://www.w3.org/ns/r2rml#constant> "http://www.w3.org/1999/02/22-rdf-syntax-ns#type".
+    } ()).
+    :codeNoType rdfs:label ?o.
+} => {
+    :codeNoType rdfs:label ?o.
+    _:out a rlog:Entry;
+        rlog:message "An rr:subjectMap with an rr:template should have a rr:class defined";
+        ex:template "$x is missing an Entity type.";
+        ex:x ?resource;
+        rlog:logLevel rlog:WARN;
+        rlog:hasCode :codeNoType;
+        rlog:resource [
+            rdf:subject ?resource
+        ] .
+}.
+
+#1. rutt:rr-subjectmap-template-missing-class
+{
+    ?mapping <http://www.w3.org/ns/r2rml#subjectMap> ?resource ;
+        <http://www.w3.org/ns/r2rml#predicateObjectMap> ?poMap .
+    ?poMap <http://www.w3.org/ns/r2rml#predicate> ?predicate .
+    ?predicate rdfs:domain ?T1 .
+    ?T1 e:notLabel ?label.
+    ?T1 log:notEqualTo owl:Thing,
+        prov:Entity,
+        rdfs:Resource,
+        rdf:Property,
+        rdfs:Class,
+        rdfs:Datatype.
+    _:t e:findall (?class {?resource <http://www.w3.org/ns/r2rml#class> ?class} ()).
+    _:ttt e:findall (?o {?mapping <http://www.w3.org/ns/r2rml#predicateObjectMap> ?o. ?o <http://www.w3.org/ns/r2rml#predicate> rdf:type .} ()).
+    :codeNoType rdfs:label ?o.
+} => {
+    :codeNoType rdfs:label ?o.
+    :out a rlog:Entry;
+        rlog:message "An rr:subjectMap with at least one predicate should have a rr:class defined";
+        ex:template "$x entity is missing an Entity type.";
+        ex:x ?resource ;
+        rlog:logLevel rlog:WARN;
+        rlog:hasCode :codeNoType;
+        rlog:resource [
+            rdf:subject ?resource
+        ];
+        rut:resultAnnotation _:s1.
+    _:s1 a rut:ResultAnnotation;
+        rdfs:label "Add pom with predicate rdf:type and object a class." ;
+        ex:template "Add type $y to $x" ;
+        ex:x ?resource ;
+        ex:y ?T1 ;
+        cs:subjectOfChange ?resource;
+        cs:addition [
+            rdf:subject ?resource;
+            rdf:predicate rdf:type;
+            rdf:object ?T1
+        ].
+}.
+
+#2. rutt:rr-predicateObjectMap-wrong-domain
+{
+    ?mapping <http://www.w3.org/ns/r2rml#subjectMap> ?resource ;
+        <http://www.w3.org/ns/r2rml#predicateObjectMap> ?poMap .
+    ?poMap :hasPredicate (?predicate ?pMap).
+    ?predicate rdfs:domain ?T1 .
+    ?resource :hasClass ?classTriple.
+    ?classTriple rdf:object ?class.
+    ?T1 e:notLabel ?TTT.
+    ?T1 log:notEqualTo owl:Thing,
+            prov:Entity,
+            rdfs:Resource,
+            rdf:Property,
+            rdfs:Class,
+            rdfs:Datatype.
+    _:x e:findall (?class {?class rdfs:subClassOf ?T1} () ).
+    :codeDomain rdfs:label ?o.
+} => {
+    :codeDomain rdfs:label ?o.
+    _:out a rlog:Entry;
+        rlog:message "the rdfs:domain of the rr:predicate value should be the same (or a superclass) of the rr:class";
+        ex:template "The Entity type $x of the entity does not match the expected Entity type $y of the relation $z.";
+        ex:x ?resource;
+        ex:y ?T1;
+        ex:z ?predicate;
+        rlog:logLevel rlog:ERROR;
+        rlog:hasCode :codeDomain;
+        rlog:resource [
+            rdf:subject ?resource
+        ];
+        rlog:resource ?classTriple;
+        rlog:resource [
+            rdf:subject ?poMap;
+            rdf:predicate <http://www.w3.org/ns/r2rml#predicate>;
+            rdf:object ?predicate
+        ].
+}.
+
+#3. rutt:rr-predicateObjectMap-missing-datatype
+{
+    ?mapping <http://www.w3.org/ns/r2rml#predicateObjectMap> ?poMap .
+    ?poMap :hasPredicate (?predicate ?pMap).
+    ?poMap <http://www.w3.org/ns/r2rml#objectMap> ?resource . # rr:objectMap
+
+    ?predicate :datatype ?D1 .
+
+    ?D1 log:notEqualTo
+        <http://ogp.me/ns/class#string>,
+        <http://ogp.me/ns/class#url>,
+        <http://www.w3.org/2001/XMLSchema#anyURI>,
+        <http://www.w3.org/2001/XMLSchema#string>.
+    _:x e:findall (?something {?resource <http://www.w3.org/ns/r2rml#datatype> ?something .} ()).
+    :codeNoDatatype rdfs:label ?o.
+} => {
+    :codeNoDatatype rdfs:label ?o.
+    _:out a rlog:Entry;
+        rlog:message "The predicate is defined as a datatype but no rr:datatype exists in the rr:objectMap";
+        ex:template "The relation $x expects an attribute of the datatype $y.";
+        ex:x ?predicate;
+        ex:y ?D1;
+        rlog:logLevel rlog:ERROR;
+        rlog:hasCode :codeNoDatatype;
+        rlog:resource [
+            rdf:subject ?poMap;
+            rdf:subject ?pMap;
+            rdf:predicate <http://www.w3.org/ns/r2rml#predicate>;
+            rdf:object ?predicate
+        ];
+        rut:resultAnnotation _:s1, _:s2.
+    _:s1 a rut:ResultAnnotation; # add datatype
+        rdfs:label "Add a datatype";
+        ex:template "Add datatype $y to $x";
+        ex:x ?resource ;
+        ex:y ?D1 ;
+        cs:subjectOfChange ?resource;
+        cs:addition [
+            rdf:subject ?resource;
+            rdf:predicate <http://www.w3.org/ns/r2rml#datatype>;
+            rdf:object ?D1
+        ].
+    _:s2 a rut:ResultAnnotation; # remove predicate
+        rdfs:label "Remove the predicate" ;
+        ex:template "Remove $x" ;
+        ex:x ?predicate ;
+        cs:subjectOfChange ?poMap;
+        cs:removal [
+            rdf:subject ?poMap;
+            rdf:predicate <http://www.w3.org/ns/r2rml#predicate>;
+            rdf:object ?predicate
+        ].
+}.
+
+#4. rutt:rr-predicateObjectMap-incorrect-datatype #TODO this should be consolidated with the next rule
+{
+    ?mappingFrom rr:predicateObjectMap ?poMap.
+    ?poMap :hasPredicate (?predicate ?pMap);
+        rr:objectMap ?objMap.
+    ?objMap rr:datatype ?T2.
+    ?predicate :datatype ?T1.
+    ?T2 log:notEqualTo ?T1.
+    _:x e:findall (?T2 {?T2 rdfs:subClassOf ?T1} ()).
+    :codeDatatype rdfs:label ?o.
+} => {
+    :codeDatatype rdfs:label ?o.
+    _:out_4_d a rlog:Entry;
+        rlog:logLevel rlog:ERROR;
+        rlog:hasCode :codeDatatype;
+        rlog:resource _:mismatchResource_4_d_a;
+        rlog:resource _:mismatchResource_4_d_b;
+        rlog:message "The predicate is defined as a datatype but rr:datatype does not match the definition";
+        ex:template "The relation $x expects the datatype $y. However, data type $z was found.";
+        ex:x ?predicate;
+        ex:y ?T1;
+        ex:z ?T2 ;
+        rut:resultAnnotation _:s1.
+    _:s1 a rut:ResultAnnotation; # change datatype
+        rdfs:label "Change the datatype";
+        ex:template "Change datatype $y to $x";
+        ex:x ?T1 ;
+        ex:y ?T2 ;
+        cs:subjectOfChange ?objMap;
+        cs:removal [
+            rdf:subject ?objMap;
+            rdf:predicate rr:datatype;
+            rdf:object ?T2
+        ] ;
+        cs:addition [
+            rdf:subject ?objMap;
+            rdf:predicate rr:datatype;
+            rdf:object ?T1
+        ] .
+    _:mismatchResource_4_d_a
+        rdf:subject ?pMap;
+        rdf:predicate ?predicate.
+    _:mismatchResource_4_d_b
+        rdf:subject ?objMap;
+        rdf:object ?T2.
+}.
+
+{
+    ?mappingFrom rr:predicateObjectMap ?poMap.
+    ?poMap :hasPredicate (?predicate ?pMap);
+        rr:objectMap ?objMap.
+    ?objMap rr:datatype ?datatype.
+    ?predicate rdfs:range ?bNode.
+    _:x e:findall (?predicate {?predicate :datatype ?D1} ()).
+    ?datatype log:notEqualTo ?bNode.
+    :codeDatatype rdfs:label ?o.
+} => {
+    :codeDatatype rdfs:label ?o.
+    _:out_4_d a rlog:Entry;
+        rlog:logLevel rlog:ERROR;
+        rlog:hasCode :codeDatatype;
+        rlog:resource [
+            rdf:subject ?pMap;
+            rdf:predicate ?predicate
+        ];
+        rlog:resource [
+            rdf:subject ?objMap;
+            rdf:object ?datatype
+        ];
+        rlog:message "The predicate has a range but rr:datatype was found";
+        ex:template "The relation $x expects the range $y. However, datatype $z was found.";
+        ex:x ?predicate;
+        ex:y ?bNode;
+        ex:z ?datatype ;
+        rut:resultAnnotation _:s1.
+    _:s1 a rut:ResultAnnotation; # remove datatype
+        rdfs:label "Remove the datatype";
+        ex:template "Remove datatype $y";
+        ex:x ?bNode ;
+        ex:y ?datatype ;
+        cs:subjectOfChange ?objMap;
+        cs:removal [
+            rdf:subject ?objMap;
+            rdf:predicate rr:datatype;
+            rdf:object ?datatype
+        ] .
+}.
+
+#4. rutt:rr-predicateObjectMap-incorrect-datatype
+{
+    ?mapping <http://www.w3.org/ns/r2rml#predicateObjectMap> ?poMap .
+    ?poMap :hasPredicate ?P1 .
+    ?poMap <http://www.w3.org/ns/r2rml#objectMap> ?resource . # rr:objectMap
+    ?resource <http://www.w3.org/ns/r2rml#datatype> ?datatype .
+
+    ?P1 :datatype ?D1 .
+
+    ?D1 log:notEqualTo
+            <http://ogp.me/ns/class#string>,
+            <http://ogp.me/ns/class#url>,
+            <http://www.w3.org/2001/XMLSchema#anyURI>.
+
+    _:x e:findall (?D1 {?datatype rdfs:subClassOf ?D1} ()).
+    ?D1 log:notEqualTo ?datatype.
+    :codeDatatype rdfs:label ?o.
+} => {
+    :codeDatatype rdfs:label ?o.
+    _:out a rlog:Entry;
+        rlog:message "The predicate is defined as a datatype but rr:datatype does not match the definition";
+        ex:template "The relation $x expects the datatype $y. However, data type $z was found.";
+        ex:x ?P1;
+        ex:y ?D1;
+        ex:z ?datatype;
+        rlog:logLevel rlog:ERROR;
+        rlog:hasCode :codeDatatype;
+        rlog:resource [
+            rdf:subject ?resource;
+            rdf:predicate <http://www.w3.org/ns/r2rml#datatype>;
+            rdf:object ?datatype
+        ];
+        rut:resultAnnotation _:s1, _:s2.
+    _:s1 a rut:ResultAnnotation; # change datatype
+        rdfs:label "Change the datatype";
+        ex:template "Change datatype $y to $x";
+        ex:x ?D1 ;
+        ex:y ?datatype ;
+        cs:subjectOfChange ?resource;
+        cs:removal [
+            rdf:subject ?resource;
+            rdf:predicate <http://www.w3.org/ns/r2rml#datatype>;
+            rdf:object ?datatype
+        ];
+        cs:addition [
+            rdf:subject ?resource;
+            rdf:predicate <http://www.w3.org/ns/r2rml#datatype>;
+            rdf:object ?D1
+        ].
+    _:s2 a rut:ResultAnnotation; # remove predicate
+        rdfs:label "Remove the predicate";
+        ex:template "Remove $x";
+        ex:x ?P1 ;
+        cs:subjectOfChange ?poMap;
+        cs:removal [
+            rdf:subject ?resource;
+            rdf:predicate <http://www.w3.org/ns/r2rml#datatype>;
+            rdf:object ?datatype
+        ];
+        cs:removal [
+            rdf:subject ?poMap;
+            rdf:predicate <http://www.w3.org/ns/r2rml#objectMap>;
+            rdf:object ?resource
+        ];
+        cs:removal [
+            rdf:subject ?poMap;
+            rdf:predicate <http://www.w3.org/ns/r2rml#predicate>;
+            rdf:object ?P1
+        ].
+}.
+
+#5. rutt:rr-predicateObjectMap-constant-should-NOT-be-IRI
+{
+    ?mapping <http://www.w3.org/ns/r2rml#predicateObjectMap> ?poMap .
+    ?poMap <http://www.w3.org/ns/r2rml#predicate> ?P1 .
+    ?poMap <http://www.w3.org/ns/r2rml#objectMap> ?resource . # rr:objectMap
+    ?resource <http://www.w3.org/ns/r2rml#constant> ?constant ;
+        <http://www.w3.org/ns/r2rml#termType> <http://www.w3.org/ns/r2rml#IRI> .
+
+    ?P1 :datatype ?D1.
+
+    ?D1 log:notEqualTo
+        <http://ogp.me/ns/class#string>,
+        <http://ogp.me/ns/class#url>,
+        <http://www.w3.org/2001/XMLSchema#anyURI>.
+    :codeLiteral rdfs:label ?o.
+} => {
+    :codeLiteral rdfs:label ?o.
+    _:out a rlog:Entry;
+        rlog:logLevel rlog:ERROR;
+        rlog:hasCode :codeLiteral;
+        rlog:message "The predicate is defined as a Literal but it is mapped to a constant with rr:termType rr:IRI";
+        ex:template "The object of the relation $x is an entity. However, an attribute is expected.";
+        ex:x ?P1;
+        rlog:resource [
+            rdf:subject ?poMap;
+            rdf:predicate <http://www.w3.org/ns/r2rml#predicate>;
+            rdf:object ?P1
+        ].
+}.
+
+#6. rutt:rr-predicateObjectMap-should-be-IRI
+{
+    ?mapping <http://www.w3.org/ns/r2rml#predicateObjectMap> ?poMap .
+    ?poMap <http://www.w3.org/ns/r2rml#predicate> ?P1 .
+    ?poMap <http://www.w3.org/ns/r2rml#objectMap> ?resource . # rr:objectMap
+    #this construction could be expensive, needs tests
+    ?resource ?ppp ?val .
+    ?ppp list:in (
+            <http://www.w3.org/ns/r2rml#constant>
+            <http://www.w3.org/ns/r2rml#template>
+            <http://www.w3.org/ns/r2rml#column>
+    ).
+    ?P1 :filter :POMisIRI.
+
+    _:x e:findall (?resource {?resource <http://www.w3.org/ns/r2rml#termType> <http://www.w3.org/ns/r2rml#IRI>} ()) .
+    :codeLiteral rdfs:label ?o.
+} => {
+    :codeLiteral rdfs:label ?o.
+    _:out a rlog:Entry;
+        rlog:logLevel rlog:ERROR;
+        rlog:hasCode :codeLiteral;
+        rlog:message "The predicate is defined as an object but it is mapped without the rr:termType rr:IRI";
+        ex:template "The object of the relation $x is an attribute. However, an entity is expected.";
+        ex:x ?P1 ;
+        rlog:resource [
+            rdf:subject ?poMap;
+            rdf:predicate <http://www.w3.org/ns/r2rml#predicate>;
+            rdf:object ?P1
+        ] .
+}.
+
+#7. rutt:rr-produces-disjoint-class-errors
+{
+    ?mapping :subjectMapResourceClass ?T1.
+    ?mapping :subjectMapResourceClass ?T2.
+
+    ?T1 owl:disjointWith ?T2 .
+    :codeDisjoint rdfs:label ?o.
+} => {
+    :codeDisjoint rdfs:label ?o.
+    _:out a rlog:Entry;
+        rlog:logLevel rlog:ERROR;
+        rlog:hasCode :codeDisjoint;
+        rlog:message "A mapping defines classes that are disjoint to each other" ;
+        ex:template "$x and $y are disjoint" ;
+        ex:x ?T1 ;
+        ex:y ?T2 ;
+        rlog:resource [
+            rdf:subject ?mapping;
+            rdf:predicate <http://www.w3.org/ns/r2rml#subjectMap>;
+            rdf:object ?resource
+        ];
+}.
+
+#8. rutt:rr-produces-range-errors
+{
+    ?mappingFrom :joinMap (?predicate ?mappingTo ?joinPoMap ?pMap).
+    ?predicate rdfs:range ?T1.
+    ?mappingTo :subjectMapResourceClass ?T2.
+    _:x e:findall (?T2 {?T2 rdfs:subClassOf ?T1} ()).
+    ?T2 log:notEqualTo ?T1 .
+    :codeRange rdfs:label ?o.
+} => {
+    :codeRange rdfs:label ?o.
+    _:out a rlog:Entry;
+        rlog:logLevel rlog:ERROR;
+        rlog:hasCode :codeRange;
+        rlog:resource [
+            rdf:subject ?joinPoMap;
+            rdf:subject ?pMap;
+            rdf:predicate rdfs:range;
+            rdf:object ?T2
+        ];
+        rlog:message "A mapping wrongly defines the range";
+        ex:template "The Entity type $x of the entity does not match the expected Entity type $y of the relation $z.";
+        ex:x ?T2;
+        ex:y ?T1;
+        ex:z ?predicate ;
+        rut:resultAnnotation _:s1.
+    _:s1 a rut:ResultAnnotation; # remove predicate
+       rdfs:label "Remove the predicate";
+       ex:template "Remove $x";
+       ex:x ?predicate ;
+       cs:subjectOfChange ?resource;
+       cs:removal [
+          rdf:subject ?mappingFrom;
+          rdf:predicate ?predicate;
+          rdf:object ?mappingTo
+       ].
+}.
+
+#9. rutt:rr-language-missing
+{
+    ?poMap <http://www.w3.org/ns/r2rml#predicate> ?P1 ;
+        <http://www.w3.org/ns/r2rml#objectMap> ?resource .
+    ?P1 rdfs:range rdf:langString .
+
+    _:x e:findall(?lang {?resource <http://www.w3.org/ns/r2rml#language> ?lang } ()).
+    :noLanguageCode rdfs:label ?o.
+} => {
+    :noLanguageCode rdfs:label ?o.
+    _:out a rlog:Entry;
+        rlog:logLevel rlog:ERROR;
+        rlog:hasCode :noLanguageCode;
+        rlog:resource [
+            rdf:subject ?P1;
+            rdf:predicate rdfs:range;
+            rdf:object rdf:langString
+        ];
+        rlog:message "A property is defined as rdf:langString but no language is given";
+        ex:template "The relation $x expects the language of the corresponding attribute $y. However, no language was specified.";
+        ex:x ?P1;
+        ex:y rdf:langString .
+}.
+
+#10. rutt:rr-deprecated-property
+{
+    ?poMap <http://www.w3.org/ns/r2rml#predicate> ?P1 ;
+        <http://www.w3.org/ns/r2rml#objectMap> ?resource .
+    ?P1 rdf:type [ rdfs:subClassOf owl:deprecatedProperty ].
+    :deprecatedCode rdfs:label ?o.
+} => {
+    :deprecatedCode rdfs:label ?o.
+    _:out a rlog:Entry;
+        rlog:logLevel rlog:ERROR;
+        rlog:hasCode :deprecatedCode;
+        rlog:resource [
+            rdf:subject ?poMap;
+            rdf:predicate <http://www.w3.org/ns/r2rml#predicate>;
+            rdf:object ?P1
+        ];
+        rlog:message "A property is used but defined as deprecated";
+        ex:template "The relation $x is deprecated.";
+        ex:x ?P1 .
+}.

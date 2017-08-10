@@ -1,0 +1,22 @@
+PREFIX rr: <http://www.w3.org/ns/r2rml#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX rut: <http://rdfunit.aksw.org/ns/core#>
+PREFIX spin: <http://spinrdf.org/spin#>
+
+{
+    ?mapping rr:predicateObjectMap ?s .
+    ?s rr:predicate ?pred.
+    ?s rr:objectMap ?objMap.
+    ?objMap rr:datatype ?d.
+    ?pred rdfs:range ?range.
+    ?d log:notEqualTo ?range.
+}
+=>
+{
+    rut:testCase a rut:datatypeError;
+        spin:violationRoot ?objMap ;
+        spin:violationPath rr:datatype ;
+        spin:violationValue ?d ;
+        rut:missingValue ?range .
+}.

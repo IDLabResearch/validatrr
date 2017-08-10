@@ -1,0 +1,38 @@
+PREFIX ns1: <http://www.ournicecode.org#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX var: <http://eulersharp.sourceforge.net/.well-known/genid/A20UMAyP:cw35THGTmOmoaaHWqI#>
+PREFIX rlog: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#>
+PREFIX rut: <http://rdfunit.aksw.org/ns/core#>
+PREFIX cs: <http://vocab.org/changeset/schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+ns1:codeDatatype rdfs:label "Datatype Mismatch".
+var:sk_15 rdfs:label "Change the datatype".
+var:sk_0 a rlog:Entry.
+var:sk_15 a rut:ResultAnnotation.
+var:sk_0 rlog:logLevel rlog:ERROR.
+var:sk_0 rlog:hasCode ns1:codeDatatype.
+var:sk_0 rlog:resource var:sk_4.
+var:sk_0 rlog:resource var:sk_7.
+var:sk_0 rlog:message "The predicate is defined as a datatype but rr:datatype does not match the definition".
+var:sk_0 <http://www.example.com/template> "The relation $x expects the datatype $y. However, data type $z was found.".
+var:sk_15 <http://www.example.com/template> "Change datatype $y to $x".
+var:sk_0 <http://www.example.com/x> <http://purl.org/tio/ns#to>.
+var:sk_15 <http://www.example.com/x> (<http://purl.org/tio/ns#POI> <http://purl.org/tio/ns#Stop>).
+var:sk_0 <http://www.example.com/y> (<http://purl.org/tio/ns#POI> <http://purl.org/tio/ns#Stop>).
+var:sk_15 <http://www.example.com/y> xsd:int.
+var:sk_0 <http://www.example.com/z> xsd:int.
+var:sk_0 rut:resultAnnotation var:sk_15.
+var:sk_15 cs:subjectOfChange <http://ex.com/objectMap/ObjMap_2>.
+var:sk_15 cs:removal var:sk_24.
+var:sk_24 rdf:subject <http://ex.com/objectMap/ObjMap_2>.
+var:sk_30 rdf:subject <http://ex.com/objectMap/ObjMap_2>.
+var:sk_4 rdf:subject <http://ex.com/predicateMap/PreMap_3>.
+var:sk_7 rdf:subject <http://ex.com/objectMap/ObjMap_2>.
+var:sk_24 rdf:predicate :datatype.
+var:sk_30 rdf:predicate :datatype.
+var:sk_4 rdf:predicate <http://purl.org/tio/ns#to>.
+var:sk_24 rdf:object xsd:int.
+var:sk_30 rdf:object (<http://purl.org/tio/ns#POI> <http://purl.org/tio/ns#Stop>).
+var:sk_7 rdf:object xsd:int.
+var:sk_15 cs:addition var:sk_30.

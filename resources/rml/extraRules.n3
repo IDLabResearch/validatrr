@@ -1,0 +1,342 @@
+@prefix : <http://www.ournicecode.org#>.
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>.
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix rutp:  <http://rdfunit.aksw.org/data/patterns#> .
+@prefix rlog:  <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#> .
+@prefix oslc:  <http://open-services.net/ns/core#> .
+@prefix rutg:  <http://rdfunit.aksw.org/data/generators#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dsp:   <http://dublincore.org/dc-dsp#> .
+@prefix schema: <http://schema.org/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rut:   <http://rdfunit.aksw.org/ns/core#> .
+@prefix rutr:  <http://rdfunit.aksw.org/data/results#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix spin:  <http://spinrdf.org/spin#> .
+@prefix rutt:  <http://rdfunit.aksw.org/data/tests#> .
+@prefix ruts:  <http://rdfunit.aksw.org/data/testsuite#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix : <http://www.ournicecode.org#>.
+@prefix string: <http://www.w3.org/2000/10/swap/string#>.
+
+#rules for the path construction
+# Further improvement should include OWL RL rules (we have those from ORCA)
+{?a rdfs:subclassOf ?b. ?b rdfs:subclassOf ?c.} => {?a rdfs:subclassOf ?c }.
+{?a owl:equivalentClass ?b }=>{?a rdfs:subclassOf ?b. ?b rdfs:subclassOf ?a.}.
+
+#rules for class of resource
+# TODO vars should be the same
+{   
+    ?mapping <http://www.w3.org/ns/r2rml#subjectMap> ?resource.
+    ?resource <http://www.w3.org/ns/r2rml#class> ?class .
+} => {
+    ?resource :hasClass ?classTriple.
+    ?classTriple rdf:subject ?resource;
+        rdf:predicate <http://www.w3.org/ns/r2rml#class>;
+        rdf:object ?class.
+}.
+
+{
+    ?mapping <http://www.w3.org/ns/r2rml#subjectMap> ?resource.
+    ?mapping <http://www.w3.org/ns/r2rml#predicateObjectMap> ?classPoMap .
+    ?classPoMap :hasPredicate (rdf:type ?pMap) ;
+        <http://www.w3.org/ns/r2rml#objectMap> ?l.
+    ?l <http://www.w3.org/ns/r2rml#constant> ?class .
+} => {
+    ?resource :hasClass ?classTriple.
+    ?classTriple rdf:subject ?l;
+        rdf:predicate <http://www.w3.org/ns/r2rml#constant>;
+        rdf:object ?class.
+}.
+
+
+#Predicate is defined as datatype
+{
+    ?poMap :hasPredicate (?predicate ?pMap).
+    ?predicate rdfs:range ?D1 .
+    ?D1 log:uri ?uri.
+#question: do we really need string matching?
+    ?uri string:startsWith "http://www.w3.org/2001/XMLSchema#".
+} => {
+    ?predicate :datatype ?D1.
+}.
+
+{
+    ?poMap :hasPredicate (?predicate ?pMap).
+    ?predicate rdfs:range ?D1 .
+    ?D1 rdf:type [ rdfs:subClassOf rdfs:Datatype ] .
+} => {
+    ?predicate :datatype ?D1.
+}.
+
+{
+    ?poMap :hasPredicate (?predicate ?pMap).
+    ?predicate rdfs:range ?D1 .
+    ?D1 rdf:type [ rdfs:subClassOf owl:DatatypeProperty ] .
+} => {
+    ?predicate :datatype ?D1.
+}.
+
+{
+    ?poMap :hasPredicate (?predicate ?pMap).
+    ?predicate rdfs:range ?D1 .
+    ?D1 log:equalTo rdfs:Literal .
+} => {
+    ?predicate :datatype ?D1.
+}.
+
+{
+    ?poMap :hasPredicate (?predicate ?pMap).
+    ?predicate rdfs:range ?D1 .
+    ?D1 log:equalTo rdf:langString .
+} => {
+    ?predicate :datatype ?D1.
+}.
+
+{
+    ?poMap :hasPredicate (?predicate ?pMap).
+    ?predicate rdfs:range ?D1 .
+    ?D1 rdf:type owl:DatatypeProperty.
+} => {
+    ?predicate :datatype ?D1.
+}.
+
+{
+    ?poMap :hasPredicate (?predicate ?pMap).
+    ?predicate rdfs:range ?D1 .
+    ?D1 rdf:type rdfs:Datatype.
+} => {
+    ?predicate :datatype ?D1.
+}.
+
+{
+    ?poMap :hasPredicate (?predicate ?pMap).
+    ?predicate schema:rangeIncludes ?D1 .
+    ?D1 rdfs:subClassOf schema:DataType .
+    ?D1 log:notEqualTo schema:Text, schema:URL.
+} => {
+    ?predicate :datatype ?D1.
+}.
+
+{
+    ?poMap :hasPredicate (?predicate ?pMap).
+    ?predicate schema:rangeIncludes ?D1 .
+    ?D1 rdf:type schema:DataType .
+    ?D1 log:notEqualTo schema:Text, schema:URL.
+} => {
+    ?predicate :datatype ?D1.
+}.
+
+#I just copied the rules, but there must be a smarter solution
+#This might go away
+{
+    ?predicate rdfs:range ?D1 .
+    ?P1 rdfs:range ?D1 .
+    ?D1 log:uri ?uri.
+    #question: do we really need string matching?
+    ?uri string:startsWith "http://www.w3.org/2001/XMLSchema#".
+} => {
+    {?predicate rdfs:range ?D1 .} :unionVars (?P1).
+}.
+
+{
+    ?predicate rdfs:range ?D1 .
+    ?P1 rdfs:range ?D1 .
+    ?D1 rdf:type [ rdfs:subClassOf rdfs:Datatype ] .
+} => {
+    {?predicate rdfs:range ?D1 .} :unionVars (?P1).
+}.
+
+{
+    ?predicate rdfs:range ?D1 .
+    ?P1 rdfs:range ?D1 .
+    ?D1 rdf:type [ rdfs:subClassOf owl:DatatypeProperty ] .
+} => {
+    {?predicate rdfs:range ?D1 .} :unionVars (?P1).
+}.
+
+{
+    ?predicate rdfs:range ?D1 .
+    ?P1 rdfs:range ?D1 .
+    ?D1 log:equalTo rdfs:Literal, rdf:langString .
+} => {
+    {?predicate rdfs:range ?D1 .} :unionVars (?P1).
+}.
+
+{
+    ?predicate rdfs:range ?D1 .
+    ?P1 rdfs:range ?D1 .
+    ?D1 rdf:type owl:DatatypeProperty.
+} => {
+    {?predicate rdfs:range ?D1 .} :unionVars (?P1).
+}.
+
+{
+    ?predicate rdfs:range ?D1 .
+    ?P1 rdfs:range ?D1 .
+    ?D1 rdf:type rdfs:Datatype.
+} => {
+    {?predicate rdfs:range ?D1 .} :unionVars (?P1).
+}.
+
+{
+    ?predicate rdfs:range ?D1 .
+    ?P1 schema:rangeIncludes ?D1 .
+    ?D1 rdfs:subClassOf schema:DataType .
+    ?D1 log:notEqualTo schema:Text, schema:URL.
+} => {
+    {?predicate rdfs:range ?D1 .} :unionVars (?P1).
+}.
+
+{
+    ?predicate rdfs:range ?D1 .
+    ?P1 schema:rangeIncludes ?D1 .
+    ?D1 rdf:type schema:DataType .
+    ?D1 log:notEqualTo schema:Text, schema:URL.
+} => {
+    {?predicate rdfs:range ?D1 .} :unionVars (?P1).
+}.
+
+{
+    ?poMap <http://www.w3.org/ns/r2rml#predicate> ?P1 .
+    ?P1 schema:rangeIncludes ?D1 .
+    ?D1 rdf:type schema:DataType .
+} => {
+    ?P1 :filter :POMisIRI.
+}.
+
+{
+    ?poMap <http://www.w3.org/ns/r2rml#predicate> ?P1 .
+    ?P1 schema:rangeIncludes ?D1 .
+    ?D1 rdfs:subclassOf schema:DataType .
+} => {
+    ?P1 :filter :POMisIRI.
+}.
+
+{
+    ?poMap <http://www.w3.org/ns/r2rml#predicate> ?P1 .
+    ?P1 rdf:type [ rdfs:subClassOf ?P2].
+    ?P2 list:in (
+        owl:ObjectProperty
+        owl:InverseFunctionalProperty
+        owl:IrreflexiveProperty
+        owl:inverseOf
+        owl:propertyChainAxiom
+        owl:ReflexiveProperty
+        owl:SymmetricProperty
+        owl:TransitiveProperty
+        owl:bottomObjectProperty
+        owl:topObjectProperty)
+} => {
+    ?P1 :filter :POMisIRI.
+}.
+
+{
+    ?poMap <http://www.w3.org/ns/r2rml#predicate> ?P1 .
+    ?P1 rdfs:range ?C1 .
+    ?C1 rdf:type [ rdfs:subClassOf ?C2].
+    (?C1 ?C2) :classIn true.
+    ?C1 log:notEqualTo rdfs:Literal, rdf:langString, rdfs:Datatype, owl:DatatypeProperty.
+    ?C2 log:notIqualTo rdfs:Literal, rdf:langString, rdfs:Datatype, owl:DatatypeProperty.
+    ?D1 log:uri ?uri.
+    ?uri string:notMatches "http://www.w3.org/2001/XMLSchema#".
+} => {
+    ?P1 :filter :POMisIRI.
+}.
+
+{
+    ?poMap <http://www.w3.org/ns/r2rml#predicate> ?P1 .
+    ?P1 rdfs:range <http://www.w3.org/2001/XMLSchema#anyURI> .
+} => {
+    ?P1 :filter :POMisIRI.
+}.
+
+{(?C1 ?C2) :classIn true. }<={ rdfs:Class list:in (?C1 ?C2)}.
+{(?C1 ?C2) :classIn true. }<={ owl:Class list:in (?C1 ?C2)}.
+
+{  ?T1 owl:disjointWith ?T2 .}=>{ ?T2 owl:disjointWith ?T1 .}.
+
+{
+    ?r a owl:AllDisjointClasses ;
+        owl:members ?T1 ;
+        owl:members ?T2 .
+    ?T1 log:notEqualTo ?T2.
+} => {
+    ?T1 owl:disjointWith ?T2
+}.
+
+{
+    ?mapping <http://www.w3.org/ns/r2rml#subjectMap> ?resource .
+    # get the class defined in a normal way
+    ?resource <http://www.w3.org/ns/r2rml#class> ?T1 .
+} => {
+    ?mapping :subjectMapResourceClass ?T1
+}.
+
+{
+    ?mapping <http://www.w3.org/ns/r2rml#predicateObjectMap> ?classPoMap .
+    ?classPoMap <http://www.w3.org/ns/r2rml#predicate> rdf:type ;
+        <http://www.w3.org/ns/r2rml#objectMap> [<http://www.w3.org/ns/r2rml#constant> ?T1 ].
+} => {
+    ?mapping :subjectMapResourceClass ?T1
+}.
+
+{
+    ?mapping <http://www.w3.org/ns/r2rml#predicateObjectMap> ?classPoMap .
+    ?classPoMap <http://www.w3.org/ns/r2rml#predicateMap> [
+        <http://www.w3.org/ns/r2rml#constant> "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+    ].
+    ?classPoMap <http://www.w3.org/ns/r2rml#objectMap> [
+        <http://www.w3.org/ns/r2rml#constant> ?T1
+    ].
+} => {
+    ?mapping :subjectMapResourceClass ?T1
+}.
+
+{
+    ?poMap <http://www.w3.org/ns/r2rml#predicate> ?predicate.
+    ?predicate log:uri ?constant.
+} => {
+    ?poMap <http://www.w3.org/ns/r2rml#predicateMap> _:pMap.
+    _:pMap a <http://www.w3.org/ns/r2rml#PredicateMap> .
+    _:pMap <http://www.w3.org/ns/r2rml#constant> ?constant.
+}.
+
+{
+    ?poMap <http://www.w3.org/ns/r2rml#predicateMap> ?pMap.
+    ?pMap <http://www.w3.org/ns/r2rml#constant> ?predicate.
+    ?predicate log:uri ?constant.
+} => {
+    ?pMap <http://www.w3.org/ns/r2rml#constant> ?constant.
+}.
+
+{
+    ?poMap <http://www.w3.org/ns/r2rml#predicateMap> ?pMap.
+    ?pMap <http://www.w3.org/ns/r2rml#constant> ?constant.
+    ?predicate log:uri ?constant.
+} => {
+    ?poMap :hasPredicate (?predicate ?pMap).
+}.
+
+{
+    ?mappingFrom <http://www.w3.org/ns/r2rml#predicateObjectMap> ?joinPoMap .
+    ?joinPoMap
+        :hasPredicate (?predicate ?pMap);
+        <http://www.w3.org/ns/r2rml#objectMap> [
+            <http://www.w3.org/ns/r2rml#parentTriplesMap> ?mappingTo
+        ] .
+} => {
+    ?mappingFrom :joinMap (?predicate ?mappingTo ?joinPoMap ?pMap) .
+}.

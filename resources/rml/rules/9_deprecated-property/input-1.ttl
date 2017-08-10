@@ -1,0 +1,21 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix transit: <http://vocab.org/transit/terms/> .
+
+<#AirportMapping>
+  rr:subjectMap [
+    rr:template "http://airport.example.com/{id}";
+    rr:class transit:Stop 
+  ];
+  rr:predicateObjectMap [
+    rr:predicate transit:route;
+    rr:objectMap [
+      rml:reference "stop"
+      ]
+    ]
+ .
+
+
+

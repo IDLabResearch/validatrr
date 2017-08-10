@@ -1,0 +1,48 @@
+@prefix : <http://www.ournicecode.org#>.
+@prefix rlog:  <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+:codeNoType a rlog:StatusCode;
+    rdfs:label "Missing Type";
+    rlog:codeId 100.
+
+:mismatchCode a rlog:StatusCode;
+    rdfs:label "mismatch";
+    rlog:codeId 101.
+
+:codeDomain a rlog:StatusCode;
+    rdfs:label "Domain Mismatch";
+    rlog:codeId 102.
+
+
+:codeNoDatatype a rlog:StatusCode;
+    rdfs:label "Missing Datatype";
+    rlog:codeId 103.
+
+:codeDatatype a rlog:StatusCode;
+    rdfs:label "Datatype Mismatch";
+    rlog:codeId 104.
+
+:codeLiteral a rlog:StatusCode;
+    rdfs:label "Literal/Resource Mismatch";
+    rlog:codeId 105.
+
+:codeDisjoint a rlog:StatusCode;
+    rdfs:label "Disjoint";
+    rlog:codeId 106.
+
+:codeRange a rlog:StatusCode;
+    rdfs:label "Range Mismatch";
+    rlog:codeId 107.
+
+:noLanguageCode a rlog:StatusCode;
+    rdfs:label "Missing Language Tag";
+    rlog:codeId 108.
+
+:deprecatedCode a rlog:StatusCode;
+    rdfs:label "Deprecated";
+    rlog:codeId 109.
+
+:mismatchCode_4_d a rlog:StatusCode;
+    rdfs:label "mismatch";
+    rlog:codeId "4_d".
