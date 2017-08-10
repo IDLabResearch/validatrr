@@ -25,6 +25,9 @@
     "fs-extra": "^2.1.2",
     "minimist": "^1.2.0",
     "n3": "^0.10.0",
+    "rdf-ext": "^1.0.0",
+    "rdf-parser-rdfxml": "^0.3.1",
+    "rdf-serializer-ntriples": "^1.0.0",
     "request": "^2.81.0",
     "tmp": "0.0.31"
   }
