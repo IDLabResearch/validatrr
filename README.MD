@@ -53,3 +53,4 @@ docker run n3unit -it -i test/test.ttl -o test.ttl -s foaf
 
 * Documentation about ./bin/cmd
 * Documentation about ./bin/fetchTurtle
+* Separate libs for fetchTurtle and eyeHandler
