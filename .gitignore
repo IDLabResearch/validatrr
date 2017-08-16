@@ -6,3 +6,4 @@ node_modules/
 !/log/.gitkeep
 out-*.ttl
 /resources/ontologies/*.ttl
+/test/bugs/*.output.ttl

@@ -17,6 +17,7 @@ describe('all bugs', function () {
     }
     describe('bugs from files', function () {
       TestHelper.walkFiles(bugFiles, function (inputFile, out) {
+        fs.writeFileSync(path.resolve(inputFile.replace('.mapping.rml.ttl', '.output.ttl')), out, 'utf8');
         console.log(out);
       });
     });

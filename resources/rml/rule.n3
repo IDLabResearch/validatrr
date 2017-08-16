@@ -411,6 +411,7 @@
 {
     ?mapping :subjectMapResourceClass ?T1.
     ?mapping :subjectMapResourceClass ?T2.
+    ?mapping <http://www.w3.org/ns/r2rml#subjectMap> ?resource.
 
     ?T1 owl:disjointWith ?T2 .
     :codeDisjoint rdfs:label ?o.
