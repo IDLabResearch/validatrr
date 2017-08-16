@@ -1,0 +1,80 @@
+#Processed by EYE rel. v17.0407.1501 josd
+#eye --nope --no-qvars "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_www.w3.org_ns_adms_.ttl" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_www.w3.org_ns_r2rml_.ttl" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_semweb.mmlab.be_ns_rml_.ttl" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_www.w3.org_2001_XMLSchema_.ttl" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_purl.org_dc_terms_.ttl" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_xmlns.com_foaf_0.1_.ttl" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_vocab.org_transit_terms_.ttl" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_ewi.mmlab.be_cd_id_identificatie_.ttl" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\tmp\tmp-8744eBMqmO02IY0g" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\extraRules.n3" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\logCodes.ttl" --query "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\rule.n3"
+
+PREFIX var: <http://eulersharp.sourceforge.net/.well-known/genid/1:wCqxCBBzmRsRlRyoAQI0kqxnw#>
+PREFIX wdrs: <http://www.w3.org/2007/05/powder-s#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX vann: <http://purl.org/vocab/vann/>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX schema: <http://schema.org/>
+PREFIX adms: <http://www.w3.org/ns/adms#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX voaf: <http://purl.org/vocommons/voaf#>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xhv: <http://www.w3.org/1999/xhtml/vocab#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX vaem: <http://www.linkedmodel.org/schema/vaem#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://www.w3.org/ns/r2rml#>
+PREFIX cc: <http://creativecommons.org/ns#>
+PREFIX ql: <http://semweb.mmlab.be/ns/ql#>
+PREFIX rml: <http://semweb.mmlab.be/ns/rml#>
+PREFIX dcam: <http://purl.org/dc/dcam/>
+PREFIX wot: <http://xmlns.com/wot/0.1/>
+PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
+PREFIX msg0: <http://web.resource.org/cc/>
+PREFIX transit: <http://vocab.org/transit/terms/>
+PREFIX ns1: <http://www.ournicecode.org#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rutp: <http://rdfunit.aksw.org/data/patterns#>
+PREFIX rlog: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#>
+PREFIX oslc: <http://open-services.net/ns/core#>
+PREFIX rutg: <http://rdfunit.aksw.org/data/generators#>
+PREFIX dsp: <http://dublincore.org/dc-dsp#>
+PREFIX rut: <http://rdfunit.aksw.org/ns/core#>
+PREFIX rutr: <http://rdfunit.aksw.org/data/results#>
+PREFIX spin: <http://spinrdf.org/spin#>
+PREFIX rutt: <http://rdfunit.aksw.org/data/tests#>
+PREFIX ruts: <http://rdfunit.aksw.org/data/testsuite#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX string: <http://www.w3.org/2000/10/swap/string#>
+PREFIX cs: <http://vocab.org/changeset/schema#>
+PREFIX ex: <http://www.example.com/>
+
+ns1:codeRange rdfs:label "Range Mismatch".
+var:sk_19 rdfs:label "Remove the predicate".
+var:sk_3 a rlog:Entry.
+var:sk_19 a rut:ResultAnnotation.
+var:sk_3 rlog:logLevel rlog:ERROR.
+var:sk_3 rlog:hasCode ns1:codeRange.
+var:sk_3 rlog:resource var:sk_7.
+var:sk_7 rdf:subject var:bn_19.
+var:sk_7 rdf:subject var:sk_2.
+var:sk_29 rdf:subject <file:///c:/ben/work/iminds/projects/rml/data%20quality/rmlunit/tmp/tmp-8744ebmqmo02iy0g#ProductIdentificatie>.
+var:sk_7 rdf:predicate rdfs:range.
+var:sk_29 rdf:predicate <http://purl.org/dc/terms/publisher>.
+var:sk_7 rdf:object <http://vocab.org/transit/terms/Stop>.
+var:sk_29 rdf:object <file:///c:/ben/work/iminds/projects/rml/data%20quality/rmlunit/tmp/tmp-8744ebmqmo02iy0g#ProductOwner>.
+var:sk_3 rlog:message "A mapping wrongly defines the range".
+var:sk_3 <http://www.example.com/template> "The Entity type $x of the entity does not match the expected Entity type $y of the relation $z.".
+var:sk_19 <http://www.example.com/template> "Remove $x".
+var:sk_3 <http://www.example.com/x> <http://vocab.org/transit/terms/Stop>.
+var:sk_19 <http://www.example.com/x> <http://purl.org/dc/terms/publisher>.
+var:sk_3 <http://www.example.com/y> <http://purl.org/dc/terms/Agent>.
+var:sk_3 <http://www.example.com/z> <http://purl.org/dc/terms/publisher>.
+var:sk_3 rut:resultAnnotation var:sk_19.
+var:sk_19 cs:subjectOfChange var:sk_26.
+var:sk_19 cs:removal var:sk_29.
+
+#2017-07-14T07:23:11.263Z in=2614 out=24 ent=182 step=882 brake=5 inf=2757723 sec=0.764 inf/sec=3609585
+#ENDS
+

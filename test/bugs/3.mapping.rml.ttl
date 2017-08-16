@@ -1,0 +1,26 @@
+<http://ex.com/triplesMap/TriplesMap_0> a <http://www.w3.org/ns/r2rml#TriplesMap> ;
+	<http://www.w3.org/ns/r2rml#subjectMap> <http://ex.com/subjectMap/SubMap_0> ;
+	<http://www.w3.org/ns/r2rml#predicateObjectMap> <http://ex.com/preObjMap/PredObjMap_116> , <http://ex.com/preObjMap/RefPredObjMap_116> ;
+	<http://semweb.mmlab.be/ns/rml#logicalSource> <http://ex.com/logicalSource/LogicalSource_0> .
+
+<http://ex.com/subjectMap/SubMap_0> a <http://www.w3.org/ns/r2rml#SubjectMap> ;
+	<http://www.w3.org/ns/r2rml#termType> <http://www.w3.org/ns/r2rml#IRI> ;
+	<http://www.w3.org/ns/r2rml#template> "http://example.com/{Name}_{Surname}" .
+
+<http://ex.com/preObjMap/PredObjMap_116> a <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
+	<http://www.w3.org/ns/r2rml#objectMap> <http://ex.com/objectMap/ObjMap_116> ;
+	<http://www.w3.org/ns/r2rml#predicateMap> <http://ex.com/predicateMap/PreMap_115> .
+
+<http://ex.com/objectMap/ObjMap_116> <http://www.w3.org/ns/r2rml#termType> <http://www.w3.org/ns/r2rml#Literal> ;
+	<http://www.w3.org/ns/r2rml#datatype> <http://www.w3.org/2000/01/rdf-schema#Literal> ;
+	<http://semweb.mmlab.be/ns/rml#reference> "Age" .
+
+<http://ex.com/predicateMap/PreMap_115> a <http://www.w3.org/ns/r2rml#PredicateMap> ;
+	<http://www.w3.org/ns/r2rml#constant> <http://xmlns.com/foaf/0.1/age> .
+
+<http://ex.com/preObjMap/RefPredObjMap_116> a <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
+	<http://www.w3.org/ns/r2rml#predicateMap> <http://ex.com/predicateMap/PreMap_115> .
+
+<http://ex.com/logicalSource/LogicalSource_0> a <http://semweb.mmlab.be/ns/rml#LogicalSource> ;
+	<http://semweb.mmlab.be/ns/rml#source> "input_source_5001" ;
+	<http://semweb.mmlab.be/ns/rml#referenceFormulation> <http://semweb.mmlab.be/ns/ql#CSV> .

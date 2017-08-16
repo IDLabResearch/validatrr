@@ -1,0 +1,83 @@
+#Processed by EYE rel. v17.0407.1501 josd
+#eye --nope --no-qvars "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_www.w3.org_ns_r2rml_.ttl" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_xmlns.com_foaf_0.1_.ttl" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_semweb.mmlab.be_ns_rml_.ttl" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_vocab.org_transit_terms_.ttl" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_www.w3.org_2001_XMLSchema_.ttl" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\tmp\tmp-8744MvMoJzznbMgC" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\extraRules.n3" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\logCodes.ttl" --query "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\rule.n3"
+
+PREFIX var: <http://eulersharp.sourceforge.net/.well-known/genid/3K5wUIEw6Ei2Za41iEYDeQUCbTM#>
+PREFIX vaem: <http://www.linkedmodel.org/schema/vaem#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://www.w3.org/ns/r2rml#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX vann: <http://purl.org/vocab/vann/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX cc: <http://creativecommons.org/ns#>
+PREFIX wot: <http://xmlns.com/wot/0.1/>
+PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
+PREFIX ql: <http://semweb.mmlab.be/ns/ql#>
+PREFIX rml: <http://semweb.mmlab.be/ns/rml#>
+PREFIX msg0: <http://web.resource.org/cc/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX transit: <http://vocab.org/transit/terms/>
+PREFIX ns1: <http://www.ournicecode.org#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rutp: <http://rdfunit.aksw.org/data/patterns#>
+PREFIX rlog: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#>
+PREFIX oslc: <http://open-services.net/ns/core#>
+PREFIX rutg: <http://rdfunit.aksw.org/data/generators#>
+PREFIX dsp: <http://dublincore.org/dc-dsp#>
+PREFIX schema: <http://schema.org/>
+PREFIX rut: <http://rdfunit.aksw.org/ns/core#>
+PREFIX rutr: <http://rdfunit.aksw.org/data/results#>
+PREFIX spin: <http://spinrdf.org/spin#>
+PREFIX rutt: <http://rdfunit.aksw.org/data/tests#>
+PREFIX ruts: <http://rdfunit.aksw.org/data/testsuite#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX string: <http://www.w3.org/2000/10/swap/string#>
+PREFIX cs: <http://vocab.org/changeset/schema#>
+PREFIX ex: <http://www.example.com/>
+
+ns1:codeNoDatatype rdfs:label "Missing Datatype".
+var:sk_18 rdfs:label "Add a datatype".
+var:sk_21 rdfs:label "Remove the predicate".
+var:sk_3 a rlog:Entry.
+var:sk_18 a rut:ResultAnnotation.
+var:sk_21 a rut:ResultAnnotation.
+var:sk_3 rlog:message "The predicate is defined as a datatype but no rr:datatype exists in the rr:objectMap".
+var:sk_3 <http://www.example.com/template> "The relation $x expects an attribute of the datatype $y.".
+var:sk_18 <http://www.example.com/template> "Add datatype $y to $x".
+var:sk_21 <http://www.example.com/template> "Remove $x".
+var:sk_3 <http://www.example.com/x> <http://vocab.org/transit/terms/route>.
+var:sk_18 <http://www.example.com/x> var:bn_15.
+var:sk_21 <http://www.example.com/x> <http://vocab.org/transit/terms/route>.
+var:sk_3 <http://www.example.com/y> xsd:int.
+var:sk_18 <http://www.example.com/y> xsd:int.
+var:sk_3 rlog:logLevel rlog:ERROR.
+var:sk_3 rlog:hasCode ns1:codeNoDatatype.
+var:sk_3 rlog:resource var:sk_11.
+var:sk_11 rdf:subject var:bn_14.
+var:sk_11 rdf:subject var:sk_1.
+var:sk_30 rdf:subject var:bn_15.
+var:sk_41 rdf:subject var:bn_14.
+var:sk_11 rdf:predicate :predicate.
+var:sk_30 rdf:predicate :datatype.
+var:sk_41 rdf:predicate :predicate.
+var:sk_11 rdf:object <http://vocab.org/transit/terms/route>.
+var:sk_30 rdf:object xsd:int.
+var:sk_41 rdf:object <http://vocab.org/transit/terms/route>.
+var:sk_3 rut:resultAnnotation var:sk_18.
+var:sk_3 rut:resultAnnotation var:sk_21.
+var:sk_18 cs:subjectOfChange var:bn_15.
+var:sk_21 cs:subjectOfChange var:bn_14.
+var:sk_18 cs:addition var:sk_30.
+var:sk_21 cs:removal var:sk_41.
+
+#2017-07-14T07:23:07.361Z in=1596 out=34 ent=187 step=871 brake=5 inf=1680763 sec=0.811 inf/sec=2072457
+#ENDS
+

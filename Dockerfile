@@ -78,6 +78,6 @@ RUN npm install
 ADD . /usr/local/n3unit
 RUN node gather.js
 
-ENTRYPOINT ["/usr/local/n3unit/bin/validate"]
+ENTRYPOINT ["/usr/local/n3unit/bin/validate_owl"]
 
 

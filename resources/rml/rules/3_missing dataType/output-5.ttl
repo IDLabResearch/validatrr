@@ -1,0 +1,42 @@
+PREFIX ns1: <http://www.ournicecode.org#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX var: <http://eulersharp.sourceforge.net/.well-known/genid/A20UMAyP:cw35THGTmOmoaaHWqI#>
+PREFIX rlog: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#>
+PREFIX rut: <http://rdfunit.aksw.org/ns/core#>
+PREFIX cs: <http://vocab.org/changeset/schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+ns1:codeNoDatatype rdfs:label "Missing Datatype".
+var:sk_16 rdfs:label "Add a datatype".
+var:sk_19 rdfs:label "Remove the predicate".
+var:sk_1 a rlog:Entry.
+var:sk_16 a rut:ResultAnnotation.
+var:sk_19 a rut:ResultAnnotation.
+var:sk_1 rlog:message "The predicate is defined as a datatype but no rr:datatype exists in the rr:objectMap".
+var:sk_1 <http://www.example.com/template> "The relation $x expects an attribute of the datatype $y.".
+var:sk_16 <http://www.example.com/template> "Add datatype $y to $x".
+var:sk_19 <http://www.example.com/template> "Remove $x".
+var:sk_1 <http://www.example.com/x> <http://purl.org/tio/ns#total>.
+var:sk_16 <http://www.example.com/x> <http://ex.com/objectMap/ObjMap_4>.
+var:sk_19 <http://www.example.com/x> <http://purl.org/tio/ns#total>.
+var:sk_1 <http://www.example.com/y> xsd:integer.
+var:sk_16 <http://www.example.com/y> xsd:integer.
+var:sk_1 rlog:logLevel rlog:ERROR.
+var:sk_1 rlog:hasCode ns1:codeNoDatatype.
+var:sk_1 rlog:resource var:sk_9.
+var:sk_9 rdf:subject <http://ex.com/preObjMap/PredObjMap_4>.
+var:sk_9 rdf:subject <http://ex.com/predicateMap/PreMap_3>.
+var:sk_28 rdf:subject <http://ex.com/objectMap/ObjMap_4>.
+var:sk_39 rdf:subject <http://ex.com/preObjMap/PredObjMap_4>.
+var:sk_9 rdf:predicate :predicate.
+var:sk_28 rdf:predicate :datatype.
+var:sk_39 rdf:predicate :predicate.
+var:sk_9 rdf:object <http://purl.org/tio/ns#total>.
+var:sk_28 rdf:object xsd:integer.
+var:sk_39 rdf:object <http://purl.org/tio/ns#total>.
+var:sk_1 rut:resultAnnotation var:sk_16.
+var:sk_1 rut:resultAnnotation var:sk_19.
+var:sk_16 cs:subjectOfChange <http://ex.com/objectMap/ObjMap_4>.
+var:sk_19 cs:subjectOfChange <http://ex.com/preObjMap/PredObjMap_4>.
+var:sk_16 cs:addition var:sk_28.
+var:sk_19 cs:removal var:sk_39.

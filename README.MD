@@ -12,7 +12,7 @@ node gather.js
 
 ## run
 
-`./bin/validate -i [inputfile] -o outputfile -s [comma-delimited schemas, e.g. 'skos,foaf'] --ram [amount of RAM, e.g. 2g, 512m] -r [reasoning profile, rdfs and/or owl]`
+`./bin/validate_owl -i [inputfile] -o outputfile -s [comma-delimited schemas, e.g. 'skos,foaf'] --ram [amount of RAM, e.g. 2g, 512m] -r [reasoning profile, rdfs and/or owl]`
 
 `--ram` and `-r` are optional.
 
@@ -48,3 +48,9 @@ docker run n3unit -it -i test/test.ttl -o test.ttl -s foaf
 ```
 
 > There's a test file at `test/test.ttl`
+
+## TODO
+
+* Documentation about ./bin/cmd
+* Documentation about ./bin/fetchTurtle
+* Separate libs for fetchTurtle and eyeHandler

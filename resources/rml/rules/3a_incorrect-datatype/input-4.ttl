@@ -1,0 +1,34 @@
+<http://ex.com/triplesMap/TriplesMap_0> a <http://www.w3.org/ns/r2rml#TriplesMap> ;
+        <http://www.w3.org/ns/r2rml#predicateObjectMap> <http://ex.com/preObjMap/PredObjMap_2> , <http://ex.com/preObjMap/RefPredObjMap_2> , <http://ex.com/preObjMap/PredObjMap_cn_0> , <http://ex.com/preObjMap/RefPredObjMap_cn_0> ;
+        <http://semweb.mmlab.be/ns/rml#logicalSource> <http://ex.com/logicalSource/LogicalSource_0> ;
+        <http://www.w3.org/ns/r2rml#subjectMap> <http://ex.com/subjectMap/SubMap_0> .
+
+<http://ex.com/preObjMap/PredObjMap_2> a <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
+        <http://www.w3.org/ns/r2rml#predicateMap> <http://ex.com/predicateMap/PreMap_3> ;
+        <http://www.w3.org/ns/r2rml#objectMap> <http://ex.com/objectMap/ObjMap_2> .
+
+<http://ex.com/predicateMap/PreMap_3> a <http://www.w3.org/ns/r2rml#PredicateMap> ;
+        <http://www.w3.org/ns/r2rml#constant> <http://purl.org/tio/ns#to> .
+
+<http://ex.com/logicalSource/LogicalSource_0> a <http://semweb.mmlab.be/ns/rml#LogicalSource> .
+
+<http://ex.com/subjectMap/SubMap_0> a <http://www.w3.org/ns/r2rml#SubjectMap> .
+
+<http://ex.com/preObjMap/RefPredObjMap_2> a <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
+        <http://www.w3.org/ns/r2rml#predicateMap> <http://ex.com/predicateMap/PreMap_3> ;
+        <http://www.w3.org/ns/r2rml#objectMap> <http://ex.com/objectMap/RefObjMap_2> , <http://ex.com/objectMap/Class_2> .
+
+<http://ex.com/preObjMap/PredObjMap_cn_0> a <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
+        <http://www.w3.org/ns/r2rml#predicateMap> <http://ex.com/predicateMap/PreMap_ce_0> ;
+        <http://www.w3.org/ns/r2rml#objectMap> <http://ex.com/objectMap/ObjMap_cn_0> .
+
+<http://ex.com/predicateMap/PreMap_ce_0> a <http://www.w3.org/ns/r2rml#PredicateMap> ;
+        <http://www.w3.org/ns/r2rml#constant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> .
+
+<http://ex.com/preObjMap/RefPredObjMap_cn_0> a <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
+        <http://www.w3.org/ns/r2rml#predicateMap> <http://ex.com/predicateMap/PreMap_ce_0> ;
+        <http://www.w3.org/ns/r2rml#objectMap> <http://ex.com/objectMap/Class_cn_0> , <http://ex.com/objectMap/RefObjMap_cn_0> .
+
+<http://ex.com/objectMap/RefObjMap_2> a <http://www.w3.org/ns/r2rml#ObjectMap> .
+
+<http://ex.com/objectMap/RefObjMap_cn_0> a <http://www.w3.org/ns/r2rml#ObjectMap> .
