@@ -63,10 +63,10 @@ var:sk_2 rlog:resource var:sk_10.
 var:sk_18 rlog:resource var:sk_26.
 var:sk_10 rdf:subject <http://example.com/#SubjectMap>.
 var:sk_26 rdf:subject <http://example.com/#OM>.
-var:sk_10 rdf:predicate :subjectMap.
-var:sk_26 rdf:predicate :subjectMap.
-var:sk_10 rdf:object var:sk_15.
-var:sk_26 rdf:object var:sk_31.
+var:sk_10 rdf:predicate :class.
+var:sk_26 rdf:predicate :constant.
+var:sk_10 rdf:object <http://purl.org/tio/ns#SeatOrSeatCategory>.
+var:sk_26 rdf:object "http://purl.org/tio/ns#SeatingLayout".
 
 #ENDS 0.382 [sec] IO=2029/23 TC=349 TP=1715 BC=0 BP=0 PM=0 CM=0 FM=0 AM=0
 

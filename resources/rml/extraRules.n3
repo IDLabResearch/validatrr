@@ -282,15 +282,19 @@
     # get the class defined in a normal way
     ?resource <http://www.w3.org/ns/r2rml#class> ?T1 .
 } => {
-    ?mapping :subjectMapResourceClass ?T1
+    ?mapping :subjectMapResourceClass ?T1 .
+    ?T1 :parentTriple (?resource <http://www.w3.org/ns/r2rml#class> ?T1) .
 }.
 
 {
     ?mapping <http://www.w3.org/ns/r2rml#predicateObjectMap> ?classPoMap .
     ?classPoMap <http://www.w3.org/ns/r2rml#predicate> rdf:type ;
-        <http://www.w3.org/ns/r2rml#objectMap> [<http://www.w3.org/ns/r2rml#constant> ?T1 ].
+        <http://www.w3.org/ns/r2rml#objectMap> ?oMap .
+    ?oMap <http://www.w3.org/ns/r2rml#constant> ?T1String .
+    ?T1 log:uri ?T1String .
 } => {
-    ?mapping :subjectMapResourceClass ?T1
+    ?mapping :subjectMapResourceClass ?T1 .
+    ?T1 :parentTriple (?oMap <http://www.w3.org/ns/r2rml#constant> ?T1String) .
 }.
 
 {

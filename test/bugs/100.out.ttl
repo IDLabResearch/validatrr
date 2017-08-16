@@ -61,12 +61,12 @@ var:sk_2 <http://www.example.com/y> <http://purl.org/tio/ns#SeatingLayout>.
 var:sk_18 <http://www.example.com/y> <http://purl.org/tio/ns#SeatOrSeatCategory>.
 var:sk_2 rlog:resource var:sk_10.
 var:sk_18 rlog:resource var:sk_26.
-var:sk_10 rdf:subject <http://example.com/#AirportMapping>.
-var:sk_26 rdf:subject <http://example.com/#AirportMapping>.
-var:sk_10 rdf:predicate :subjectMap.
-var:sk_26 rdf:predicate :subjectMap.
-var:sk_10 rdf:object <http://example.com/#SubjectMap>.
-var:sk_26 rdf:object <http://example.com/#SubjectMap>.
+var:sk_10 rdf:subject <http://example.com/#SubjectMap>.
+var:sk_26 rdf:subject <http://example.com/#SubjectMap>.
+var:sk_10 rdf:predicate :class.
+var:sk_26 rdf:predicate :class.
+var:sk_10 rdf:object <http://purl.org/tio/ns#SeatOrSeatCategory>.
+var:sk_26 rdf:object <http://purl.org/tio/ns#SeatingLayout>.
 
 #ENDS 0.382 [sec] IO=2029/23 TC=349 TP=1715 BC=0 BP=0 PM=0 CM=0 FM=0 AM=0
 

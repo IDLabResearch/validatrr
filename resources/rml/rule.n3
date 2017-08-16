@@ -413,6 +413,8 @@
     ?mapping :subjectMapResourceClass ?T2.
     ?mapping <http://www.w3.org/ns/r2rml#subjectMap> ?resource.
 
+    ?T1 :parentTriple (?s1 ?p1 ?o1) .
+
     ?T1 owl:disjointWith ?T2 .
     :codeDisjoint rdfs:label ?o.
 } => {
@@ -425,9 +427,9 @@
         ex:x ?T1 ;
         ex:y ?T2 ;
         rlog:resource [
-            rdf:subject ?mapping;
-            rdf:predicate <http://www.w3.org/ns/r2rml#subjectMap>;
-            rdf:object ?resource
+            rdf:subject ?s1;
+            rdf:predicate ?p1;
+            rdf:object ?o1
         ];
 }.
 
