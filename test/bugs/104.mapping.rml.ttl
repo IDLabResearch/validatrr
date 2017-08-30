@@ -4,12 +4,13 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://www.example.com/> .
 @prefix transit: <http://vocab.org/transit/terms/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 
 @base <http://example.com/> .
 
 <#Parent> a rr:TriplesMap;
   rr:subjectMap <#SubjectMap>;
- 1rr:predicateObjectMap <#POM2>.
+  rr:predicateObjectMap <#POM2>.
 
 <#SubjectMap> a rr:SubjectMap;
   rr:template "http://parent.example.com/{id}".
