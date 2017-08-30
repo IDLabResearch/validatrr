@@ -44,16 +44,13 @@ PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX string: <http://www.w3.org/2000/10/swap/string#>
 PREFIX cs: <http://vocab.org/changeset/schema#>
 
+ns1:duplicateLanguageCode rdfs:label "Duplicate Language Tag".
 var:sk_2 a rlog:Entry.
-var:sk_18 a rlog:Entry.
 var:sk_2 rlog:logLevel rlog:ERROR.
-var:sk_18 rlog:logLevel rlog:ERROR.
 var:sk_2 rlog:hasCode ns1:duplicateLanguageCode.
-var:sk_18 rlog:hasCode ns1:duplicateLanguageCode.
 var:sk_2 rlog:message "A language code is used twice.".
-var:sk_18 rlog:message "A language code is used twice.".
 var:sk_2 rlog:resource var:sk_10.
-var:sk_18 rlog:resource var:sk_26.
+var:sk_2 rlog:resource var:sk_26.
 var:sk_10 rdf:subject <http://example.com/#OM1>.
 var:sk_26 rdf:subject <http://example.com/#OM2>.
 

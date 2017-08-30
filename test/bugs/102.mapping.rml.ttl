@@ -12,7 +12,8 @@
   rr:predicateObjectMap <#POM1>, <#POM2>.
 
 <#SubjectMap> a rr:SubjectMap;
-  rr:template "http://airport.example.com/{id}".
+  rr:template "http://airport.example.com/{id}";
+  rr:class <http://purl.org/tio/ns#SeatOrSeatCategory>.
 
 <#POM1> a rr:PredicateObjectMap;
   rr:predicate ex:test;

@@ -43,6 +43,11 @@
     rdfs:label "Deprecated";
     rlog:codeId 109.
 
+:duplicateLanguageCode a rlog:StatusCode;
+    rdfs:label "Duplicate Language Tag";
+    rdfs:comment "A literal value should contain at most one literal for a certain language. (ONELANG)";
+    rlog:codeId 110.
+
 :mismatchCode_4_d a rlog:StatusCode;
     rdfs:label "mismatch";
     rlog:codeId "4_d".

@@ -287,6 +287,14 @@
 }.
 
 {
+    ?mapping <http://www.w3.org/ns/r2rml#predicateObjectMap> ?poMap .
+    ?poMap <http://www.w3.org/ns/r2rml#predicate> ?predicate ;
+        <http://www.w3.org/ns/r2rml#objectMap> ?oMap .
+} => {
+    ?mapping :objectMap (?predicate ?oMap)
+} .
+
+{
     ?mapping <http://www.w3.org/ns/r2rml#predicateObjectMap> ?classPoMap .
     ?classPoMap <http://www.w3.org/ns/r2rml#predicate> rdf:type ;
         <http://www.w3.org/ns/r2rml#objectMap> ?oMap .

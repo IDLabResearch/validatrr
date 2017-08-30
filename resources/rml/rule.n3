@@ -494,7 +494,32 @@
         ex:y rdf:langString .
 }.
 
-#10. rutt:rr-deprecated-property
+#10. rutt:rr-produces-disjoint-class-errors
+{
+    ?mapping :objectMap (?p1 ?O1).
+    ?mapping :objectMap (?p2 ?O2).
+    ?O1 log:notEqualTo ?O2.
+    ?01 rr:language ?lang1.
+    ?02 rr:language ?lang2.
+    ?p1 log:equalTo ?p2 .
+    ?lang1 log:equalTo ?lang2 .
+
+    :duplicateLanguageCode rdfs:label ?o.
+} => {
+    :duplicateLanguageCode rdfs:label ?o.
+    _:out a rlog:Entry;
+        rlog:logLevel rlog:ERROR;
+        rlog:hasCode :duplicateLanguageCode;
+        rlog:message "A language code is used twice." ;
+        rlog:resource [
+            rdf:subject ?O1
+        ];
+        rlog:resource [
+            rdf:subject ?O2
+        ]
+}.
+
+#4_d. rutt:rr-deprecated-property
 {
     ?poMap <http://www.w3.org/ns/r2rml#predicate> ?P1 ;
         <http://www.w3.org/ns/r2rml#objectMap> ?resource .
