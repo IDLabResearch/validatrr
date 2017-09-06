@@ -4,8 +4,11 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://www.example.com/> .
 @prefix transit: <http://vocab.org/transit/terms/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
 
 @base <http://example.com/> .
+
+ex:test owl:propertyDisjointWith ex:test2 .
 
 <#AirportMapping> a rr:TriplesMap;
   rr:subjectMap <#SubjectMap>;

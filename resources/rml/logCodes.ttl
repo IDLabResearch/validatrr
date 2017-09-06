@@ -28,8 +28,13 @@
     rlog:codeId 105.
 
 :codeDisjoint a rlog:StatusCode;
-    rdfs:label "Disjoint";
+    rdfs:label "Disjoint Class";
     rlog:codeId 106.
+
+:codeDisjointPredicate a rlog:StatusCode;
+    rdfs:label "Disjoint Predicate";
+    rdfs:comment "Disjoint property constraint. (OWLDISJP)";
+    rlog:codeId 111.
 
 :codeRange a rlog:StatusCode;
     rdfs:label "Range Mismatch";

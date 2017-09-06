@@ -44,7 +44,7 @@ PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX string: <http://www.w3.org/2000/10/swap/string#>
 PREFIX cs: <http://vocab.org/changeset/schema#>
 
-ns1:codeDisjoint rdfs:label "Disjoint".
+ns1:codeDisjoint rdfs:label "Disjoint Class".
 var:sk_2 a rlog:Entry.
 var:sk_18 a rlog:Entry.
 var:sk_2 rlog:logLevel rlog:ERROR.

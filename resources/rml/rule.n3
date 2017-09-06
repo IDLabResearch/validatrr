@@ -433,6 +433,28 @@
         ];
 }.
 
+#7. rutt:rr-produces-disjoint-predicate-errors
+{
+    ?mapping :poMap (?p1 ?poMap1).
+    ?mapping :poMap (?p2 ?poMap2).
+    ?poMap1 log:notEqualTo ?poMap2 .
+
+    ?p1 owl:propertyDisjointWith ?p2 .
+    :codeDisjointPredicate rdfs:label ?o.
+} => {
+    :codeDisjointPredicate rdfs:label ?o.
+    _:out a rlog:Entry;
+        rlog:logLevel rlog:ERROR;
+        rlog:hasCode :codeDisjointPredicate;
+        rlog:message "A mapping uses predicates that are disjoint to each other" ;
+        ex:template "$x and $y are disjoint predicates" ;
+        ex:x ?p1 ;
+        ex:y ?p2 ;
+        rlog:resource [
+            rdf:subject ?poMap1
+        ].
+}.
+
 #8. rutt:rr-produces-range-errors
 {
     ?mappingFrom :joinMap (?predicate ?mappingTo ?joinPoMap ?pMap).
@@ -494,7 +516,7 @@
         ex:y rdf:langString .
 }.
 
-#10. rutt:rr-produces-disjoint-class-errors
+#10. rutt:rr-produces-duplicateLanguageCode-errors
 {
     ?mapping :objectMap (?p1 ?O1).
     ?mapping :objectMap (?p2 ?O2).
