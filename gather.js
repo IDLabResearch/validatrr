@@ -56,7 +56,7 @@ function parse(files, parseType, outPath) {
       break;
   }
   return new Promise(function (fulfill, reject) {
-    const parser = spawn(eyePath, args);
+    const parser = spawn(eyePath, args, {shell: true});
     parser.on('error', function (data) {
       errLog += data;
     });

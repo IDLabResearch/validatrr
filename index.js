@@ -99,10 +99,10 @@ function eye(files = [], query = null) {
   return new Promise(function (fulfill, reject) {
     let child;
     if (type === 'pvm') {
-      child = spawn(swiplPath, args);
+      child = spawn(swiplPath, args, {shell: true});
     }
     else {
-      child = spawn(eyePath, args);
+      child = spawn(eyePath, args, {shell: true});
     }
     let output = '';
     let errorLog = '';
