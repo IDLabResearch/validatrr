@@ -88,7 +88,7 @@ function checkMap(validator, inputPath, shouldPath, outPath = null, done) {
   });
 }
 
-describe.skip('all bugs', function () {
+describe('all bugs', function () {
   const basePath = path.resolve(__dirname, './bugs');
   fs.readdir(basePath, function (err, files) {
     const bugFiles = [];
