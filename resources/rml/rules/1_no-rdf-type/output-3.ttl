@@ -1,3 +1,0 @@
-PREFIX rlog: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#>
-
-_:sk0 rlog:message "A rr.subjectMap with an rr:template should have a rr:class defined" .

@@ -1,3 +1,0 @@
-PREFIX rlog: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#>
-
-rlog:todo a rlog:TODO .

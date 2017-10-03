@@ -1,3 +1,4 @@
+#errors: 1
 @prefix rr: <http://www.w3.org/ns/r2rml#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rml: <http://semweb.mmlab.be/ns/rml#> .
