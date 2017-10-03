@@ -1,4 +1,4 @@
-
+#errors: 1
 <http://ex.com/triplesMap/TriplesMap_0> a <http://www.w3.org/ns/r2rml#TriplesMap> ;
         <http://semweb.mmlab.be/ns/rml#logicalSource> <http://ex.com/logicalSource/LogicalSource_0> ;
         <http://www.w3.org/ns/r2rml#subjectMap> <http://ex.com/subjectMap/SubMap_0> ;

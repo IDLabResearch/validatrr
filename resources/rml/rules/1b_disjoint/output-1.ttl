@@ -1,5 +1,3 @@
-"C:\Program Files (x86)\JetBrains\WebStorm 2016.2\bin\runnerw.exe" "C:\Program Files\nodejs\node.exe" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\bin\cmd" ../resources/rules/1b_disjoint/input-1.ttl
---nope --no-qvars "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_www.w3.org_ns_r2rml_.ttl" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_xmlns.com_foaf_0.1_.ttl" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_semweb.mmlab.be_ns_rml_.ttl" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_www.w3.org_2001_XMLSchema_.ttl" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_vocab.org_transit_terms_.ttl" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_purl.org_tio_ns_.ttl" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\tmp\tmp-9812TnWfoJBEGsH7" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\extraRules.n3" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\logCodes.ttl" --query "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\rule.n3"
 #Processed by EYE rel. v17.0407.1501 josd
 #eye --nope --no-qvars "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_www.w3.org_ns_r2rml_.ttl" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_xmlns.com_foaf_0.1_.ttl" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_semweb.mmlab.be_ns_rml_.ttl" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_www.w3.org_2001_XMLSchema_.ttl" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_vocab.org_transit_terms_.ttl" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_purl.org_tio_ns_.ttl" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\tmp\tmp-9812TnWfoJBEGsH7" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\extraRules.n3" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\logCodes.ttl" --query "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\rule.n3"
 
@@ -46,7 +44,7 @@ PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX string: <http://www.w3.org/2000/10/swap/string#>
 PREFIX cs: <http://vocab.org/changeset/schema#>
 
-ns1:codeDisjoint rdfs:label "Disjoint".
+ns1:codeDisjoint rdfs:label "Disjoint Class".
 var:sk_2 a rlog:Entry.
 var:sk_18 a rlog:Entry.
 var:sk_2 rlog:logLevel rlog:ERROR.
@@ -63,12 +61,12 @@ var:sk_2 <http://www.example.com/y> <http://purl.org/tio/ns#SeatingLayout>.
 var:sk_18 <http://www.example.com/y> <http://purl.org/tio/ns#SeatOrSeatCategory>.
 var:sk_2 rlog:resource var:sk_10.
 var:sk_18 rlog:resource var:sk_26.
-var:sk_10 rdf:subject <file:///c:/ben/work/iminds/projects/rml/data%20quality/rmlunit/tmp/tmp-9812tnwfojbegsh7#AirportMapping>.
-var:sk_26 rdf:subject <file:///c:/ben/work/iminds/projects/rml/data%20quality/rmlunit/tmp/tmp-9812tnwfojbegsh7#AirportMapping>.
-var:sk_10 rdf:predicate :subjectMap.
-var:sk_26 rdf:predicate :subjectMap.
-var:sk_10 rdf:object var:sk_15.
-var:sk_26 rdf:object var:sk_31.
+var:sk_10 rdf:subject <http://www.example.com/#AirportMapping>.
+var:sk_26 rdf:subject <http://www.example.com/#AirportMapping>.
+var:sk_10 rdf:predicate :class.
+var:sk_26 rdf:predicate :class.
+var:sk_10 rdf:object <http://purl.org/tio/ns#SeatingLayout>.
+var:sk_26 rdf:object <http://purl.org/tio/ns#SeatOrSeatCategory>.
 
 #2017-07-14T09:21:44.701Z in=2027 out=23 ent=350 step=1719 brake=4 inf=2111439 sec=0.982 inf/sec=2150142
 #ENDS
