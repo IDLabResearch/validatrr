@@ -1,0 +1,26 @@
+@prefix mf:      <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdfut:   <http://www.example.com/rdfunit-tests#> .
+@prefix fnot:    <http://www.example.com/fno-tests#> .
+@prefix fnos:    <http://www.example.com/fnos#> .
+@prefix :        <http://example.com/constraints#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+
+<>
+	a mf:Manifest ;
+	rdfs:label "Original RDFUnit tests" ;
+	 mf:entries (
+       <invfunc_correct>
+     ) ;
+  .
+
+  <invfunc_correct>
+    rdf:type rdfut:Correct ;
+    rdfs:label "Test of INVFUNC" ;
+    fnot:function fnos:rdfunit_owl ;
+    mf:action ( <INVFUNC_Correct.ttl> <ontology.ttl> ) ;
+    mf:result [
+        :count 0
+      ] ;
+  .
