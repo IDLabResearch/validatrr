@@ -247,12 +247,12 @@ SpecTester.prototype._compareResultFiles = function (actual, expected, callback)
             if (error) {
               TestHelper.compareTtl(fs.readFileSync(actual, 'utf8'), fs.readFileSync(expected, 'utf8'), function (err) {
                 if (err) {
-                  callback(err, false, '');
+                  return callback(err, false, '');
                 }
-                callback(null, true, '');
+                return callback(null, true, '');
               })
             } else {
-              callback(error, /^matched\s*$/.test(stdout), stdout);
+              return callback(error, /^matched\s*$/.test(stdout), stdout);
             }
           });
       }
