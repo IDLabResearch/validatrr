@@ -150,6 +150,7 @@ SpecTester.prototype._parseManifest = function (manifestContents, callback) {
           test[propertyMatch[1]] = self._isArray(testStore, triple.object) ? self._retrieveArray(testStore, triple.object) : triple.object;
         }
       });
+      test.skipped = test.skipped === '"true"^^http://www.w3.org/2001/XMLSchema#boolean';
       (!test.skipped ? tests : skipped).push(test);
     });
     return callback(null, manifest);
@@ -178,17 +179,15 @@ SpecTester.prototype._retrieveArray = function (store, itemHead) {
 // Performs the test by parsing the specified document
 SpecTester.prototype._performTest = function (test, actionStream, callback) {
   // Try to parse the specified document
-  // TODO this is specific
   var resultFile = path.join(this._testFolder, test.id + '-result.ttl'), self = this;
-  switch (test.function) {
-    case "http://www.example.com/fnos#rdfunit_owl":
-      let validator = TestHelper.createProfileValidator('owl', 'count');
-      validator.validateByOntologies(actionStream, null, null, function (err, out) {
-        fs.writeFile(resultFile, out, 'utf8', function (err) {
-          self._verifyResult(test, resultFile, test.result && path.join(self._testFolder, test.result), callback);
-        });
-      });
+  if (!this._functions[test.function]) {
+    throw new Error('Cannot perform unsupported ' + test.function);
   }
+  this._functions[test.function](actionStream, function(err, out) {
+    fs.writeFile(resultFile, out, 'utf8', function (err) {
+      self._verifyResult(test, resultFile, test.result && path.join(self._testFolder, test.result), callback);
+    });
+  });
 };
 
 // Verifies and reports the test result

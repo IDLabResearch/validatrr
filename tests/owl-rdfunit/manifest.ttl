@@ -35,26 +35,8 @@
      ) ;
   .
 
-  <invfunc_correct> fnot:skipped "true" .
-  <invfunc_wrong> fnot:skipped "true" .
-  <owlcardt_correct> fnot:skipped "true" .
-  <owlcardt_wrong_exact> fnot:skipped "true" .
-  <owlcardt_wrong_max> fnot:skipped "true" .
-  <owlcardt_wrong_min> fnot:skipped "true" .
-  <owldisjc_correct> fnot:skipped "true" .
-  <owldisjc_wrong> fnot:skipped "true" .
-  <owlqcardt_correct> fnot:skipped "true" .
-  <owlqcardt_wrong_exact> fnot:skipped "true" .
-  <owlqcardt_wrong_max> fnot:skipped "true" .
-  <owlqcardt_wrong_min> fnot:skipped "true" .
-  <rdflangstring_correct> fnot:skipped "true" .
-  <rdflangstring_wrong> fnot:skipped "true" .
-  <rdfsrang_lit_correct> fnot:skipped "true" .
-  <rdfsrang_lit_wrong> fnot:skipped "true" .
-  <rdfsrange_wrong> fnot:skipped "true" .
-  <rdfsranged_correct> fnot:skipped "true" .
-  <rdfsranged_wrong> fnot:skipped "true" .
-  <rdfsrange_correct> fnot:skipped "true" .
+  # <invfunc_correct> fnot:skipped false .
+  # <invfunc_wrong> fnot:skipped true .
 
   <invfunc_correct>
     rdf:type rdfut:Correct ;
