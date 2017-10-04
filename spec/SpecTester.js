@@ -268,79 +268,83 @@ SpecTester.prototype._compareResultFiles = function (actual, expected, callback)
 
 // Generate an EARL report with the given test results
 SpecTester.prototype._generateEarlReport = function (tests, callback) {
-  // TODO this is specific
   // Create the report file
-  var reportFile = path.join(this._reportFolder, 'n3js-earl-report-' + this._name + '.ttl'),
-    report = new N3.Writer(fs.createWriteStream(reportFile), { prefixes: prefixes }),
-    date = '"' + new Date().toISOString() + '"^^' + prefixes.xsd + 'dateTime',
-    homepage = 'https://github.com/RubenVerborgh/N3.js', app = homepage + '#n3js',
-    developer = 'http://ruben.verborgh.org/#me', manifest = this._manifest + '#';
-
-  report.addPrefix('manifest', manifest);
-  report.addTriple('', prefixes.foaf + 'primaryTopic', app);
-  report.addTriple('', prefixes.dc + 'issued', date);
-  report.addTriple('', prefixes.foaf + 'maker', developer);
-
-  report.addTriple(app, prefixes.rdf  + 'type', prefixes.earl + 'Software');
-  report.addTriple(app, prefixes.rdf  + 'type', prefixes.earl + 'TestSubject');
-  report.addTriple(app, prefixes.rdf  + 'type', prefixes.doap + 'Project');
-  report.addTriple(app, prefixes.doap + 'name', '"N3.js"');
-  report.addTriple(app, prefixes.doap + 'homepage', homepage);
-  report.addTriple(app, prefixes.doap + 'license', 'http://opensource.org/licenses/MIT');
-  report.addTriple(app, prefixes.doap + 'programming-language', '"JavaScript"');
-  report.addTriple(app, prefixes.doap + 'implements', 'http://www.w3.org/TR/turtle/');
-  report.addTriple(app, prefixes.doap + 'implements', 'http://www.w3.org/TR/trig/');
-  report.addTriple(app, prefixes.doap + 'implements', 'http://www.w3.org/TR/n-triples/');
-  report.addTriple(app, prefixes.doap + 'implements', 'http://www.w3.org/TR/n-quads/');
-  report.addTriple(app, prefixes.doap + 'category', 'http://dbpedia.org/resource/Resource_Description_Framework');
-  report.addTriple(app, prefixes.doap + 'download-page', 'https://npmjs.org/package/n3');
-  report.addTriple(app, prefixes.doap + 'bug-database', homepage + '/issues');
-  report.addTriple(app, prefixes.doap + 'blog', 'http://ruben.verborgh.org/blog/');
-  report.addTriple(app, prefixes.doap + 'developer', developer);
-  report.addTriple(app, prefixes.doap + 'maintainer', developer);
-  report.addTriple(app, prefixes.doap + 'documenter', developer);
-  report.addTriple(app, prefixes.doap + 'maker', developer);
-  report.addTriple(app, prefixes.dc   + 'title', '"N3.js"');
-  report.addTriple(app, prefixes.dc   + 'description', '"N3.js is an asynchronous, streaming RDF parser for JavaScript."@en');
-  report.addTriple(app, prefixes.doap + 'description', '"N3.js is an asynchronous, streaming RDF parser for JavaScript."@en');
-  report.addTriple(app, prefixes.dc   + 'creator', developer);
-
-  report.addTriple(developer, prefixes.rdf  + 'type', prefixes.foaf + 'Person');
-  report.addTriple(developer, prefixes.rdf  + 'type', prefixes.earl + 'Assertor');
-  report.addTriple(developer, prefixes.foaf + 'name', '"Ruben Verborgh"');
-  report.addTriple(developer, prefixes.foaf + 'homepage', 'http://ruben.verborgh.org/');
-  report.addTriple(developer, prefixes.foaf + 'primaryTopicOf', 'http://ruben.verborgh.org/profile/');
-  report.addTriple(developer, prefixes.rdfs + 'isDefinedBy', 'http://ruben.verborgh.org/profile/');
-
-  tests.forEach(function (test, id) {
-    var testUrl = manifest + test.id;
-    report.addTriple(testUrl, prefixes.rdf + 'type', prefixes.earl + 'TestCriterion');
-    report.addTriple(testUrl, prefixes.rdf + 'type', prefixes.earl + 'TestCase');
-    report.addTriple(testUrl, prefixes.dc  + 'title', test.name);
-    report.addTriple(testUrl, prefixes.dc  + 'description', test.comment);
-    if (Array.isArray(test.action)) {
-      test.action.forEach(function (action) {
-        report.addTriple(testUrl, prefixes.mf + 'action', url.resolve(manifest, action));
-      });
-    } else {
-      report.addTriple(testUrl, prefixes.mf + 'action', url.resolve(manifest, test.action));
+  var date = '"' + new Date().toISOString() + '"^^' + prefixes.xsd + 'dateTime',
+    app = 'https://github.com/RubenVerborgh/N3.js#n3js', appName = 'n3js',
+    assertor = 'http://ruben.verborgh.org/#me', manifest = this._manifest + '#';
+  if (this._report) {
+    if (this._report.app) {
+      app = this._report.app;
     }
-    if (test.result)
-      report.addTriple(testUrl, prefixes.mf + 'result', url.resolve(manifest, test.result));
-    report.addTriple(testUrl, prefixes.earl + 'assertions', '_:assertions' + id);
-    report.addTriple('_:assertions' + id, prefixes.rdf + 'first', '_:assertion' + id);
-    report.addTriple('_:assertions' + id, prefixes.rdf + 'rest', prefixes.rdf + 'nil');
-    report.addTriple('_:assertion' + id, prefixes.rdf + 'type', prefixes.earl + 'Assertion');
-    report.addTriple('_:assertion' + id, prefixes.earl + 'assertedBy', developer);
-    report.addTriple('_:assertion' + id, prefixes.earl + 'test', manifest + test.id);
-    report.addTriple('_:assertion' + id, prefixes.earl + 'subject', app);
-    report.addTriple('_:assertion' + id, prefixes.earl + 'mode', prefixes.earl + 'automatic');
-    report.addTriple('_:assertion' + id, prefixes.earl + 'result', '_:result' + id);
-    report.addTriple('_:result' + id, prefixes.rdf + 'type', prefixes.earl + 'TestResult');
-    report.addTriple('_:result' + id, prefixes.earl + 'outcome', prefixes.earl + (test.success ? 'passed' : 'failed'));
-    report.addTriple('_:result' + id, prefixes.dc + 'date', date);
-  });
-  report.end(function () { callback(null, tests); });
+    if (this._report.appName) {
+      appName = this._report.appName;
+    }
+    if (this._report.assertor) {
+      assertor = this._report.assertor;
+    }
+  }
+  var reportFile = path.join(this._reportFolder, appName + '-earl-report-' + this._name + '.ttl'),
+    report = new N3.Writer(fs.createWriteStream(reportFile), {prefixes: prefixes});
+  if (this._report) {
+    if (this._report.extra) {
+      var extraFiles = [].concat(this._report.extra);
+      async.mapSeries(extraFiles,
+        function (file, done) {
+          fs.readFile(file, 'utf8', done);
+        },
+        function (error, extraContents) {
+          async.eachSeries(extraContents, function (extraContent, done) {
+            new N3.Parser({format: 'text/turtle'}).parse(extraContent, function (error, triple) {
+              // Store triples until there are no more
+              if (error) return callback(error);
+              if (triple) return report.addTriple(triple.subject, triple.predicate, triple.object);
+              done();
+            });
+          }, addTests);
+        });
+    } else {
+      addTests();
+    }
+  } else {
+    addTests();
+  }
+
+  function addTests() {
+
+    report.addTriple(assertor, prefixes.rdf + 'type', prefixes.earl + 'Assertor');
+
+    tests.forEach(function (test, id) {
+      var testUrl = manifest + test.id;
+      report.addTriple(testUrl, prefixes.rdf + 'type', prefixes.earl + 'TestCriterion');
+      report.addTriple(testUrl, prefixes.rdf + 'type', prefixes.earl + 'TestCase');
+      report.addTriple(testUrl, prefixes.dc + 'title', test.name);
+      report.addTriple(testUrl, prefixes.dc + 'description', test.comment);
+      if (Array.isArray(test.action)) {
+        test.action.forEach(function (action) {
+          report.addTriple(testUrl, prefixes.mf + 'action', url.resolve(manifest, action));
+        });
+      } else {
+        report.addTriple(testUrl, prefixes.mf + 'action', url.resolve(manifest, test.action));
+      }
+      if (test.result)
+        report.addTriple(testUrl, prefixes.mf + 'result', url.resolve(manifest, test.result));
+      report.addTriple(testUrl, prefixes.earl + 'assertions', '_:assertions' + id);
+      report.addTriple('_:assertions' + id, prefixes.rdf + 'first', '_:assertion' + id);
+      report.addTriple('_:assertions' + id, prefixes.rdf + 'rest', prefixes.rdf + 'nil');
+      report.addTriple('_:assertion' + id, prefixes.rdf + 'type', prefixes.earl + 'Assertion');
+      report.addTriple('_:assertion' + id, prefixes.earl + 'assertedBy', assertor);
+      report.addTriple('_:assertion' + id, prefixes.earl + 'test', manifest + test.id);
+      report.addTriple('_:assertion' + id, prefixes.earl + 'subject', app);
+      report.addTriple('_:assertion' + id, prefixes.earl + 'mode', prefixes.earl + 'automatic');
+      report.addTriple('_:assertion' + id, prefixes.earl + 'result', '_:result' + id);
+      report.addTriple('_:result' + id, prefixes.rdf + 'type', prefixes.earl + 'TestResult');
+      report.addTriple('_:result' + id, prefixes.earl + 'outcome', prefixes.earl + (test.success ? 'passed' : 'failed'));
+      report.addTriple('_:result' + id, prefixes.dc + 'date', date);
+    });
+    report.end(function () {
+      callback(null, tests);
+    });
+  }
 };
 
 module.exports = SpecTester;
