@@ -12,15 +12,25 @@
 	rdfs:label "Original RDFUnit tests" ;
 	 mf:entries (
        <invfunc_correct>
+       <invfunc_wrong>
      ) ;
   .
 
   <invfunc_correct>
     rdf:type rdfut:Correct ;
-    rdfs:label "Test of INVFUNC" ;
+    mf:name "Test of INVFUNC" ;
+    rdfs:comment "Should work for good INVFUNC" ;
     fnot:function fnos:rdfunit_owl ;
     mf:action ( <INVFUNC_Correct.ttl> <ontology.ttl> ) ;
-    mf:result [
-        :count 0
-      ] ;
+    mf:result <output_correct.ttl> ;
   .
+
+  <invfunc_wrong>
+      rdf:type rdfut:Wrong ;
+      mf:name "Test of INVFUNC" ;
+      rdfs:comment "Shouldn't work for bad INVFUNC" ;
+      fnot:function fnos:rdfunit_owl ;
+      mf:action ( <INVFUNC_Wrong.ttl> <ontology.ttl> ) ;
+      mf:result <output_wrong_1.ttl> ;
+    .
+# TODO fnot:skipped

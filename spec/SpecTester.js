@@ -7,6 +7,7 @@ var N3 = require('n3'),
   exec = require('child_process').exec,
   async = require('async');
 require('colors');
+const TestHelper = require("../lib/TestHelper");
 
 // How many test cases may run in parallel?
 var workers = 1;
@@ -104,7 +105,16 @@ SpecTester.prototype.run = function () {
 // Fetches and caches the specified file, or retrieves it from disk
 SpecTester.prototype._fetch = function (filename, callback) {
   if (!filename) return callback(null, null);
-  var localFile = path.resolve(this._testFolder, filename), self = this;
+  // TODO generalize: load into a graph (array?) either local, remote, or blank node
+  var self = this;
+  if (Array.isArray(filename)) {
+    return async.mapLimit(filename, workers, function (file, callback) {
+      self._fetch(file, callback);
+    }, function (err, contents) {
+      callback(err, contents.join("\n"));
+    });
+  }
+  var localFile = path.resolve(this._testFolder, filename);
   fs.exists(localFile, function (exists) {
     if (exists)
       fs.readFile(localFile, 'utf8', callback);
@@ -119,6 +129,7 @@ SpecTester.prototype._fetch = function (filename, callback) {
 SpecTester.prototype._parseManifest = function (manifestContents, callback) {
   // Parse the manifest into triples
   var manifest = {}, testStore = new N3.Store(), self = this;
+  // TODO maybe also additional contents?
   new N3.Parser({ format: 'text/turtle' }).parse(manifestContents, function (error, triple) {
     // Store triples until there are no more
     if (error)  return callback(error);
@@ -129,25 +140,36 @@ SpecTester.prototype._parseManifest = function (manifestContents, callback) {
       skipped = manifest.skipped = [],
       itemHead = testStore.getObjects('', prefixes.mf + 'entries')[0];
     // Loop through all test items
-    while (itemHead && itemHead !== nil) {
-      // Find and store the item's properties
-      var itemValue = testStore.getObjects(itemHead, first)[0],
-        itemTriples = testStore.getTriples(itemValue, null, null),
+    let listItems = self._retrieveArray(testStore, itemHead);
+    listItems.forEach(function (itemValue) {
+      var itemTriples = testStore.getTriples(itemValue, null, null),
         test = { id: itemValue.replace(/^#/, '') };
       itemTriples.forEach(function (triple) {
         var propertyMatch = triple.predicate.match(/#(.+)/);
-        if (propertyMatch)
-          test[propertyMatch[1]] = triple.object;
+        if (propertyMatch) {
+          test[propertyMatch[1]] = self._isArray(testStore, triple.object) ? self._retrieveArray(testStore, triple.object) : triple.object;
+        }
       });
-      test.negative = /Negative/.test(test.type);
-      test.skipped = self._skipNegative && test.negative;
       (!test.skipped ? tests : skipped).push(test);
-
-      // Find the next test item
-      itemHead = testStore.getTriples(itemHead, rest, null)[0].object;
-    }
+    });
     return callback(null, manifest);
   });
+};
+
+SpecTester.prototype._isArray = function (store, itemHead) {
+  return store.getObjects(itemHead, first).length !== 0;
+};
+
+SpecTester.prototype._retrieveArray = function (store, itemHead) {
+  var listItems = [];
+  while (itemHead && itemHead !== nil) {
+    // Find the next item in the list
+    listItems.push(store.getObjects(itemHead, first)[0]);
+
+    // Find the next test item
+    itemHead = store.getTriples(itemHead, rest, null)[0].object;
+  }
+  return listItems;
 };
 
 
@@ -156,20 +178,17 @@ SpecTester.prototype._parseManifest = function (manifestContents, callback) {
 // Performs the test by parsing the specified document
 SpecTester.prototype._performTest = function (test, actionStream, callback) {
   // Try to parse the specified document
-  var resultFile = path.join(this._testFolder, test.action.replace(/\.\w+$/, '-result.nq')),
-    resultWriter = new N3.Writer(fs.createWriteStream(resultFile), { format: 'N-Quads' }),
-    config = { format: this._name, documentIRI: url.resolve(this._manifest, test.action) },
-    parser = new N3.Parser(config), self = this;
-  parser.parse(actionStream, function (error, triple) {
-    if (error)  test.error = error;
-    if (triple) resultWriter.addTriple(triple);
-    // Verify the result after it has been written
-    else
-      resultWriter.end(function () {
-        self._verifyResult(test, resultFile,
-          test.result && path.join(self._testFolder, test.result), callback);
+  // TODO this is specific
+  var resultFile = path.join(this._testFolder, test.id + '-result.ttl'), self = this;
+  switch (test.function) {
+    case "http://www.example.com/fnos#rdfunit_owl":
+      let validator = TestHelper.createProfileValidator('owl', 'count');
+      validator.validateByOntologies(actionStream, null, null, function (err, out) {
+        fs.writeFile(resultFile, out, 'utf8', function (err) {
+          self._verifyResult(test, resultFile, test.result && path.join(self._testFolder, test.result), callback);
+        });
       });
-  });
+  }
 };
 
 // Verifies and reports the test result
@@ -224,7 +243,18 @@ SpecTester.prototype._compareResultFiles = function (actual, expected, callback)
           fs.writeFileSync(expected += '.trig', quadsToTrig(results.expectedContents));
         }
         exec('sparql -d ' + expected + ' --compare ' + actual,
-          function (error, stdout) { callback(error, /^matched\s*$/.test(stdout), stdout); });
+          function (error, stdout) {
+            if (error) {
+              TestHelper.compareTtl(fs.readFileSync(actual, 'utf8'), fs.readFileSync(expected, 'utf8'), function (err) {
+                if (err) {
+                  callback(err, false, '');
+                }
+                callback(null, true, '');
+              })
+            } else {
+              callback(error, /^matched\s*$/.test(stdout), stdout);
+            }
+          });
       }
       function quadsToTrig(nquad) {
         return nquad.replace(/^([^\s]+)\s+([^\s]+)\s+(.+)\s+([^\s"]+)\s*\.$/mg, '$4 { $1 $2 $3 }');
@@ -238,6 +268,7 @@ SpecTester.prototype._compareResultFiles = function (actual, expected, callback)
 
 // Generate an EARL report with the given test results
 SpecTester.prototype._generateEarlReport = function (tests, callback) {
+  // TODO this is specific
   // Create the report file
   var reportFile = path.join(this._reportFolder, 'n3js-earl-report-' + this._name + '.ttl'),
     report = new N3.Writer(fs.createWriteStream(reportFile), { prefixes: prefixes }),
@@ -287,7 +318,13 @@ SpecTester.prototype._generateEarlReport = function (tests, callback) {
     report.addTriple(testUrl, prefixes.rdf + 'type', prefixes.earl + 'TestCase');
     report.addTriple(testUrl, prefixes.dc  + 'title', test.name);
     report.addTriple(testUrl, prefixes.dc  + 'description', test.comment);
-    report.addTriple(testUrl, prefixes.mf  + 'action', url.resolve(manifest, test.action));
+    if (Array.isArray(test.action)) {
+      test.action.forEach(function (action) {
+        report.addTriple(testUrl, prefixes.mf + 'action', url.resolve(manifest, action));
+      });
+    } else {
+      report.addTriple(testUrl, prefixes.mf + 'action', url.resolve(manifest, test.action));
+    }
     if (test.result)
       report.addTriple(testUrl, prefixes.mf + 'result', url.resolve(manifest, test.result));
     report.addTriple(testUrl, prefixes.earl + 'assertions', '_:assertions' + id);
