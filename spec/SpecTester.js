@@ -65,6 +65,7 @@ SpecTester.prototype.run = function () {
         async.mapLimit(manifest.tests, workers,
           // 1.2.1 Execute an individual test
           function (test, callback) {
+          // TODO test.action: how to fetch depends on test case
             async.series({
                 actionStream: self._fetch.bind(self, test.action),
                 resultStream: self._fetch.bind(self, test.result),
@@ -129,31 +130,59 @@ SpecTester.prototype._fetch = function (filename, callback) {
 SpecTester.prototype._parseManifest = function (manifestContents, callback) {
   // Parse the manifest into triples
   var manifest = {}, testStore = new N3.Store(), self = this;
-  // TODO maybe also additional contents?
-  new N3.Parser({ format: 'text/turtle' }).parse(manifestContents, function (error, triple) {
-    // Store triples until there are no more
-    if (error)  return callback(error);
-    if (triple) return testStore.addTriple(triple.subject, triple.predicate, triple.object);
-
+  self._loadManifest(manifestContents, self._manifest, testStore, function (err) {
+    if (err) {
+      throw err;
+    }
     // Once all triples are there, get the first item of the test list
     var tests = manifest.tests = [],
       skipped = manifest.skipped = [],
-      itemHead = testStore.getObjects('', prefixes.mf + 'entries')[0];
+      itemHeads = testStore.getObjects(null, prefixes.mf + 'entries');
     // Loop through all test items
-    let listItems = self._retrieveArray(testStore, itemHead);
-    listItems.forEach(function (itemValue) {
-      var itemTriples = testStore.getTriples(itemValue, null, null),
-        test = { id: itemValue.replace(/^#/, '') };
-      itemTriples.forEach(function (triple) {
-        var propertyMatch = triple.predicate.match(/#(.+)/);
-        if (propertyMatch) {
-          test[propertyMatch[1]] = self._isArray(testStore, triple.object) ? self._retrieveArray(testStore, triple.object) : triple.object;
-        }
+    itemHeads.forEach(function (itemHead) {
+      let listItems = self._retrieveArray(testStore, itemHead);
+      listItems.forEach(function (itemValue) {
+        var itemTriples = testStore.getTriples(itemValue, null, null),
+          test = {id: itemValue.replace(/^#/, '')};
+        itemTriples.forEach(function (triple) {
+          var propertyMatch = triple.predicate.match(/#(.+)/);
+          if (propertyMatch) {
+            test[propertyMatch[1]] = self._isArray(testStore, triple.object) ? self._retrieveArray(testStore, triple.object) : triple.object;
+          }
+        });
+        test.skipped = test.skipped === '"true"^^http://www.w3.org/2001/XMLSchema#boolean';
+        (!test.skipped ? tests : skipped).push(test);
       });
-      test.skipped = test.skipped === '"true"^^http://www.w3.org/2001/XMLSchema#boolean';
-      (!test.skipped ? tests : skipped).push(test);
     });
     return callback(null, manifest);
+  });
+};
+
+SpecTester.prototype._loadManifest = function (manifestContents, filePath, store, callback) {
+  var alreadyLoaded = store.getSubjects(prefixes.rdf + 'type', prefixes.mf + 'Manifest'), self = this;
+// TODO maybe also additional contents?
+  new N3.Parser({format: 'text/turtle'}).parse(manifestContents, function (error, triple) {
+    // Store triples until there are no more
+    if (error) return callback(error);
+    if (triple) return store.addTriple(triple.subject ? triple.subject : filePath, triple.predicate, triple.object);
+    var allManifests = store.getTriples(null, prefixes.mf + 'include', null);
+    allManifests = allManifests.filter(function (el) {
+      if (!path.isAbsolute(el.object)) {
+        el.object = path.resolve(path.dirname(el.subject), el.object);
+      }
+      return alreadyLoaded.indexOf(el.object) < 0;
+    });
+    if (allManifests.length > 0) {
+      var newManifestPath = path.resolve(path.dirname(filePath), allManifests[0].object);
+      self._fetch(newManifestPath, function (err, body) {
+        if (err) {
+          return callback(err);
+        }
+        self._loadManifest(body, newManifestPath, store, callback);
+      });
+    } else {
+      callback();
+    }
   });
 };
 
