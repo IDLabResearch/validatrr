@@ -1,0 +1,3 @@
+PREFIX : <http://example.com/constraints#>
+
+:errorCount :count 6 .
