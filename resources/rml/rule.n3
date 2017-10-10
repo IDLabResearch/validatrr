@@ -459,6 +459,28 @@
         ];
 }.
 
+#7. rutt:rr-produces-irreflexivePredicate-errors
+{
+    ?mappingFrom :joinMap (?predicate ?mappingTo ?joinPoMap ?pMap) .
+    ?mappingFrom log:equalTo ?mappingTo .
+
+    ?predicate a owl:IrreflexiveObjectProperty .
+
+    :irreflexivePredicate rdfs:label ?o.
+} => {
+    :irreflexivePredicate rdfs:label ?o.
+    _:out a rlog:Entry;
+        rlog:logLevel rlog:ERROR;
+        rlog:hasCode :irreflexivePredicate;
+        rlog:message "A double mapping irreflexively connects classes that are asymmetrical to each other" ;
+        ex:template "$x and $y are irreflexive" ;
+        ex:x ?mappingFrom ;
+        ex:y ?mappingTo ;
+        rlog:resource [
+            rdf:subject ?joinPoMap
+        ] .
+}.
+
 #7. rutt:rr-produces-disjoint-predicate-errors
 {
     ?mapping :poMap (?p1 ?poMap1).
