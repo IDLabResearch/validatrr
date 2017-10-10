@@ -44,16 +44,29 @@ PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX string: <http://www.w3.org/2000/10/swap/string#>
 PREFIX cs: <http://vocab.org/changeset/schema#>
 
-var:sk_2 a rlog:Entry.
-var:sk_18 a rlog:Entry.
-var:sk_2 rlog:logLevel rlog:ERROR.
-var:sk_18 rlog:logLevel rlog:ERROR.
-var:sk_2 rlog:hasCode ns1:asymmetricPredicate.
-var:sk_18 rlog:hasCode ns1:asymmetricPredicate.
-var:sk_2 rlog:resource var:sk_10.
-var:sk_18 rlog:resource var:sk_26.
-var:sk_10 rdf:subject <http://example.com/#POM1>.
-var:sk_26 rdf:subject <http://example.com/#POM2>.
+ns1:asymmetricPredicate rdfs:label "Asymmetric Predicates".
+var:sk_4 a rlog:Entry.
+var:sk_20 a rlog:Entry.
+var:sk_4 rlog:logLevel rlog:ERROR.
+var:sk_20 rlog:logLevel rlog:ERROR.
+var:sk_4 rlog:hasCode ns1:asymmetricPredicate.
+var:sk_20 rlog:hasCode ns1:asymmetricPredicate.
+var:sk_4 rlog:message "A mapping symmetrically connects classes that are asymmetrical to each other".
+var:sk_20 rlog:message "A mapping symmetrically connects classes that are asymmetrical to each other".
+var:sk_4 <http://www.example.com/template> "$x and $y are asymmetric".
+var:sk_20 <http://www.example.com/template> "$x and $y are asymmetric".
+var:sk_4 <http://www.example.com/x> <http://example.com/#Parent>.
+var:sk_20 <http://www.example.com/x> <http://example.com/#Child>.
+var:sk_4 <http://www.example.com/y> <http://example.com/#Child>.
+var:sk_20 <http://www.example.com/y> <http://example.com/#Parent>.
+var:sk_4 rlog:resource var:sk_12.
+var:sk_4 rlog:resource var:sk_16.
+var:sk_20 rlog:resource var:sk_28.
+var:sk_20 rlog:resource var:sk_32.
+var:sk_12 rdf:subject <http://example.com/#POM1>.
+var:sk_16 rdf:subject <http://example.com/#POM2>.
+var:sk_28 rdf:subject <http://example.com/#POM2>.
+var:sk_32 rdf:subject <http://example.com/#POM1>.
 
 #ENDS 0.382 [sec] IO=2029/23 TC=349 TP=1715 BC=0 BP=0 PM=0 CM=0 FM=0 AM=0
 

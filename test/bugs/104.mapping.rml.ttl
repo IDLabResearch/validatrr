@@ -4,19 +4,20 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://www.example.com/> .
 @prefix transit: <http://vocab.org/transit/terms/> .
-@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix test: <http://users.ugent.be/~bjdmeest/testontology.ttl#> .
 
 @base <http://example.com/> .
 
 <#Parent> a rr:TriplesMap;
   rr:subjectMap <#SubjectMap>;
-  rr:predicateObjectMap <#POM2>.
+  rr:predicateObjectMap <#POM1>.
 
 <#SubjectMap> a rr:SubjectMap;
-  rr:template "http://parent.example.com/{id}".
+  rr:template "http://parent.example.com/{id}";
+  rr:class ex:Person .
 
 <#POM1> a rr:PredicateObjectMap;
-  rr:predicate dbo:child;
+  rr:predicate test:child;
   rr:objectMap <#OM1>.
 
 <#OM1> a rr:ReferencingObjectMap;
@@ -27,10 +28,11 @@
   rr:predicateObjectMap <#POM2>.
 
 <#SubjectMap1> a rr:SubjectMap;
-  rr:template "http://parent.example.com/{id}".
+  rr:template "http://parent.example.com/{id}";
+  rr:class ex:Person .
 
 <#POM2> a rr:PredicateObjectMap;
-  rr:predicate dbo:child;
+  rr:predicate test:child;
   rr:objectMap <#OM2>.
 
 <#OM2> a rr:ReferencingObjectMap;

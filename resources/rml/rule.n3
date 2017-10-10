@@ -433,6 +433,32 @@
         ];
 }.
 
+#7. rutt:rr-produces-asymmetricPredicate-errors
+{
+    ?mappingFrom :joinMap (?predicate ?mappingTo ?joinPoMap ?pMap) .
+    ?mappingTo :joinMap (?predicate ?mappingFrom ?joinPoMap2 ?pMap2) .
+    ?mappingFrom log:notEqualTo ?mappingTo .
+
+    ?predicate a owl:AsymmetricObjectProperty .
+
+    :asymmetricPredicate rdfs:label ?o.
+} => {
+    :asymmetricPredicate rdfs:label ?o.
+    _:out a rlog:Entry;
+        rlog:logLevel rlog:ERROR;
+        rlog:hasCode :asymmetricPredicate;
+        rlog:message "A mapping symmetrically connects classes that are asymmetrical to each other" ;
+        ex:template "$x and $y are asymmetric" ;
+        ex:x ?mappingFrom ;
+        ex:y ?mappingTo ;
+        rlog:resource [
+            rdf:subject ?joinPoMap
+        ],
+        [
+            rdf:subject ?joinPoMap2
+        ];
+}.
+
 #7. rutt:rr-produces-disjoint-predicate-errors
 {
     ?mapping :poMap (?p1 ?poMap1).

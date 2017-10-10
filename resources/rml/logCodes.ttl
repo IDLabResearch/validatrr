@@ -36,6 +36,11 @@
     rdfs:comment "Disjoint property constraint. (OWLDISJP)";
     rlog:codeId 111.
 
+:asymmetricPredicate a rlog:StatusCode;
+    rdfs:label "Asymmetric Predicates";
+    rdfs:comment "Asymmetric property constraint. (OWL-ASYMP)";
+    rlog:codeId "112".
+
 :codeRange a rlog:StatusCode;
     rdfs:label "Range Mismatch";
     rlog:codeId 107.
