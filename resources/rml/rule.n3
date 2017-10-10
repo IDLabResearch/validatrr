@@ -25,6 +25,7 @@
 @prefix cs: <http://vocab.org/changeset/schema#>.
 @prefix rr: <http://www.w3.org/ns/r2rml#>.
 @prefix ex: <http://www.example.com/>.
+@prefix test: <http://users.ugent.be/~bjdmeest/testontology.ttl#> .
 
 #EXTRA
 {
@@ -479,6 +480,31 @@
         rlog:resource [
             rdf:subject ?joinPoMap
         ] .
+}.
+
+#7. rutt:rr-produces-irreflexivePredicate-errors
+{
+    ?mapping :subjectMapResourceClass ?T1 .
+    ?T1 :parentTriple (?sMap ?o2 ?p2) .
+    ?T1 test:typedep ?T2 .
+    _:x e:findall (?mapping {?mapping :subjectMapResourceClass ?T2} ()).
+
+    :typeDependency rdfs:label ?o.
+} => {
+    :typeDependency rdfs:label ?o.
+    _:out a rlog:Entry;
+        rlog:logLevel rlog:ERROR;
+        rlog:hasCode :typeDependency;
+        rlog:message "A type dependency is not defined in the mapping" ;
+        ex:template "$x is not added as class because of $y" ;
+        ex:x ?T2 ;
+        ex:y ?T1 ;
+        rlog:resource [
+            rdf:subject ?mapping
+        ] ;
+        rlog:resource [
+            rdf:subject ?sMap
+        ] ;
 }.
 
 #7. rutt:rr-produces-disjoint-predicate-errors

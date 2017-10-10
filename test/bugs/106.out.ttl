@@ -43,10 +43,16 @@ PREFIX ruts: <http://rdfunit.aksw.org/data/testsuite#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX string: <http://www.w3.org/2000/10/swap/string#>
 PREFIX cs: <http://vocab.org/changeset/schema#>
+PREFIX ns2: <http://users.ugent.be/~bjdmeest/testontology.ttl#>
 
+ns1:typeDependency rdfs:label "Type Dependency".
 var:sk_2 a rlog:Entry.
 var:sk_2 rlog:logLevel rlog:ERROR.
 var:sk_2 rlog:hasCode ns1:typeDependency.
+var:sk_2 rlog:message "A type dependency is not defined in the mapping".
+var:sk_2 <http://www.example.com/template> "$x is not added as class because of $y".
+var:sk_2 <http://www.example.com/x> <http://xmlns.com/foaf/0.1/Person>.
+var:sk_2 <http://www.example.com/y> ns2:Person.
 var:sk_2 rlog:resource var:sk_10.
 var:sk_2 rlog:resource var:sk_11.
 var:sk_10 rdf:subject <http://example.com/#SubjectMap>.

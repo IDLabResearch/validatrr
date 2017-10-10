@@ -1,5 +1,7 @@
 @prefix : <http://users.ugent.be/~bjdmeest/testontology.ttl#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
 :child a owl:AsymmetricObjectProperty .
 :child a owl:IrreflexiveObjectProperty .
+:Person :typedep foaf:Person .

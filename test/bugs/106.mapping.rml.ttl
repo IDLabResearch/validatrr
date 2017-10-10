@@ -4,6 +4,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://www.example.com/> .
 @prefix transit: <http://vocab.org/transit/terms/> .
+@prefix test: <http://users.ugent.be/~bjdmeest/testontology.ttl#> .
 
 @base <http://example.com/> .
 
@@ -12,6 +13,6 @@
 
 <#SubjectMap> a rr:SubjectMap;
   rr:template "http://example.com/{id}";
-  rr:class foaf:Person.
+  rr:class test:Person.
 
-# you also expect dbo:Person because of foaf:Person
+# you also expect foaf:Person because of test:Person

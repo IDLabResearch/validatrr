@@ -46,6 +46,12 @@
     rdfs:comment "Asymmetric property constraint. (OWL-ASYMP)";
     rlog:codeId "112".
 
+:typeDependency a rlog:StatusCode;
+    rdfs:label "Type Dependency";
+    rdfs:comment "Type dependency:  The type of a resource may imply the attribution of another type. (TYPEDEP)";
+    rlog:codeId "114".
+
+
 :codeRange a rlog:StatusCode;
     rdfs:label "Range Mismatch";
     rlog:codeId 107.
