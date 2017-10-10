@@ -482,7 +482,7 @@
         ] .
 }.
 
-#7. rutt:rr-produces-irreflexivePredicate-errors
+#7. rutt:rr-produces-typeDependency-errors
 {
     ?mapping :subjectMapResourceClass ?T1 .
     ?T1 :parentTriple (?sMap ?o2 ?p2) .
@@ -498,6 +498,31 @@
         rlog:message "A type dependency is not defined in the mapping" ;
         ex:template "$x is not added as class because of $y" ;
         ex:x ?T2 ;
+        ex:y ?T1 ;
+        rlog:resource [
+            rdf:subject ?mapping
+        ] ;
+        rlog:resource [
+            rdf:subject ?sMap
+        ] ;
+}.
+
+#7. rutt:rr-produces-typePropertyDependency-errors
+{
+    ?mapping :subjectMapResourceClass ?T1 .
+    ?T1 :parentTriple (?sMap ?o2 ?p2) .
+    ?T1 test:typrodep ?p .
+    _:x e:findall (?mapping {?mapping :poMap (?p ?poMap)} ()).
+
+    :typePropertyDependency rdfs:label ?o.
+} => {
+    :typePropertyDependency rdfs:label ?o.
+    _:out a rlog:Entry;
+        rlog:logLevel rlog:ERROR;
+        rlog:hasCode :typePropertyDependency;
+        rlog:message "A type predicate dependency is not defined in the mapping" ;
+        ex:template "predicate $x is not added as class because of $y" ;
+        ex:x ?p ;
         ex:y ?T1 ;
         rlog:resource [
             rdf:subject ?mapping

@@ -51,6 +51,10 @@
     rdfs:comment "Type dependency:  The type of a resource may imply the attribution of another type. (TYPEDEP)";
     rlog:codeId "114".
 
+:typePropertyDependency a rlog:StatusCode;
+    rdfs:label "Type Property Dependency";
+    rdfs:comment "A resource of a specific type should have a certain property. (TYPRO-DEP)";
+    rlog:codeId "115".
 
 :codeRange a rlog:StatusCode;
     rdfs:label "Range Mismatch";

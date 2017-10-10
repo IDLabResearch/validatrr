@@ -5,3 +5,4 @@
 :child a owl:AsymmetricObjectProperty .
 :child a owl:IrreflexiveObjectProperty .
 :Person :typedep foaf:Person .
+:Person2 :typrodep foaf:name .
