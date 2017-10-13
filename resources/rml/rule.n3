@@ -464,6 +464,8 @@
 {
     ?mappingFrom :joinMap (?predicate ?mappingTo ?joinPoMap ?pMap) .
     ?mappingFrom log:equalTo ?mappingTo .
+    ?mappingFrom :subjectMapResourceClass ?T1 .
+    ?T1 :parentTriple (?parentTriple ?parentClass ?T1) .
 
     ?predicate a owl:IrreflexiveObjectProperty .
 
@@ -479,7 +481,12 @@
         ex:y ?mappingTo ;
         rlog:resource [
             rdf:subject ?joinPoMap
-        ] .
+        ] ;
+        rlog:resource [
+            rdf:subject ?parentTriple ;
+            rdf:predicate ?parentClass ;
+            rdf:object ?T1
+        ]
 }.
 
 #7. rutt:rr-produces-typeDependency-errors
