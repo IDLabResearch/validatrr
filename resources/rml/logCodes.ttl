@@ -29,6 +29,7 @@
 
 :codeDisjoint a rlog:StatusCode;
     rdfs:label "Disjoint Class";
+    rdfs:comment "Disjoint classs constraint. (OWL-DISJC)";
     rlog:codeId 106.
 
 :codeDisjointPredicate a rlog:StatusCode;

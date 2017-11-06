@@ -38,7 +38,7 @@
 
 #rules for class of resource
 # TODO vars should be the same
-{   
+{
     ?mapping <http://www.w3.org/ns/r2rml#subjectMap> ?resource.
     ?resource <http://www.w3.org/ns/r2rml#class> ?class .
 } => {
