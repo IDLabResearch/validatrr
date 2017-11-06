@@ -51,3 +51,15 @@
       rdfcv:contextClass (:targetedNode ?shape);
       rdfcv:classes ?datatype .
 } .
+
+{
+  ?shape a sh:NodeShape ;
+    sh:disjoint ?property ;
+} => {
+  _:constraint a rdfcv:SimpleConstraint ;
+    :constraintType :FunctionalProperties ;
+    dcterms:title "A.1 Functional Properties" ;
+    rdfcv:constrainingElement :functional-properties ;
+    rdfcv:leftProperties ( ?property ) ;
+    rdfcv:contextClass (:targetedNode ?shape) .
+} .
