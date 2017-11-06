@@ -569,6 +569,7 @@
     _:x e:findall (?T2 {?T2 rdfs:subClassOf ?T1} ()).
     ?T2 log:notEqualTo ?T1 .
     :codeRange rdfs:label ?o.
+    ?joinPoMap <http://www.w3.org/ns/r2rml#objectMap> ?oMap .
 } => {
     :codeRange rdfs:label ?o.
     _:out a rlog:Entry;
@@ -577,6 +578,7 @@
         rlog:resource [
             rdf:subject ?joinPoMap;
             rdf:subject ?pMap;
+            rdf:subject ?oMap ;
             rdf:predicate rdfs:range;
             rdf:object ?T2
         ];

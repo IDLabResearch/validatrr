@@ -58,6 +58,7 @@
 
 :codeRange a rlog:StatusCode;
     rdfs:label "Range Mismatch";
+    rdfs:comment "A range mismatch. (RDFS-RANGE)";
     rlog:codeId 107.
 
 :noLanguageCode a rlog:StatusCode;
