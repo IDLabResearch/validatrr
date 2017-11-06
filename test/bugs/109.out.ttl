@@ -1,0 +1,61 @@
+#Processed by EYE rel. v17.0407.1501 josd
+#eye --nope --no-qvars C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\rml\extraRules.n3 C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_www.w3.org_ns_r2rml_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_xmlns.com_foaf_0.1_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_semweb.mmlab.be_ns_rml_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_www.w3.org_2001_XMLSchema_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_vocab.org_transit_terms_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_www.w3.org_1999_02_22-rdf-syntax-ns_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_www.w3.org_2000_01_rdf-schema_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\tmp\tmp-12536wNiCSFl8D6gu C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\rml\logCodes.ttl --query C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\rml\rule.n3
+
+PREFIX var: <http://eulersharp.sourceforge.net/.well-known/genid/X7nR0DgVilbQAh1BPXMWIhDcLYA#>
+PREFIX : <http://www.ournicecode.org#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rutp: <http://rdfunit.aksw.org/data/patterns#>
+PREFIX rlog: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#>
+PREFIX oslc: <http://open-services.net/ns/core#>
+PREFIX rutg: <http://rdfunit.aksw.org/data/generators#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dsp: <http://dublincore.org/dc-dsp#>
+PREFIX schema: <http://schema.org/>
+PREFIX rut: <http://rdfunit.aksw.org/ns/core#>
+PREFIX rutr: <http://rdfunit.aksw.org/data/results#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX spin: <http://spinrdf.org/spin#>
+PREFIX rutt: <http://rdfunit.aksw.org/data/tests#>
+PREFIX ruts: <http://rdfunit.aksw.org/data/testsuite#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX string: <http://www.w3.org/2000/10/swap/string#>
+PREFIX vaem: <http://www.linkedmodel.org/schema/vaem#>
+PREFIX ns1: <http://www.w3.org/ns/r2rml#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX vann: <http://purl.org/vocab/vann/>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX cc: <http://creativecommons.org/ns#>
+PREFIX wot: <http://xmlns.com/wot/0.1/>
+PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
+PREFIX ql: <http://semweb.mmlab.be/ns/ql#>
+PREFIX rml: <http://semweb.mmlab.be/ns/rml#>
+PREFIX msg0: <http://web.resource.org/cc/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX ex: <http://www.example.com/>
+PREFIX transit: <http://vocab.org/transit/terms/>
+PREFIX cs: <http://vocab.org/changeset/schema#>
+PREFIX test: <http://users.ugent.be/~bjdmeest/testontology.ttl#>
+
+:cardcode rdfs:label "Cardinality".
+var:sk_3 a rlog:Entry.
+var:sk_3 rlog:logLevel rlog:ERROR.
+var:sk_3 rlog:hasCode :cardcode.
+var:sk_3 rlog:message "An OWL cardinality constraint has failed".
+var:sk_3 rlog:resource var:sk_8.
+var:sk_3 rlog:resource var:sk_13.
+var:sk_8 rdf:predicate <http://xmlns.com/foaf/0.1/gender>.
+var:sk_13 rdf:predicate <http://xmlns.com/foaf/0.1/gender>.
+var:sk_8 rdf:object var:bn_22.
+var:sk_13 rdf:object var:bn_23.
+
+#2017-11-06T15:15:10.171Z in=1835 out=11 ent=172 step=709 brake=4 inf=1887117 sec=0.468 inf/sec=4032301
+#ENDS
+

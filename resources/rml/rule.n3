@@ -649,6 +649,31 @@
         ]
 }.
 
+#10. cardinality mismatch
+{
+    ?mapping :objectMap (?p1 ?O1).
+    ?mapping :objectMap (?p2 ?O2).
+    ?O1 log:notEqualTo ?O2.
+    ?p1 log:equalTo ?p2 .
+    ?p1 a owl:FunctionalProperty.
+
+    :cardcode rdfs:label ?o.
+} => {
+    :cardcode rdfs:label ?o.
+    _:out a rlog:Entry;
+        rlog:logLevel rlog:ERROR;
+        rlog:hasCode :cardcode;
+        rlog:message "An OWL cardinality constraint has failed" ;
+        rlog:resource [
+            rdf:predicate ?p1 ;
+            rdf:object ?O1
+        ];
+        rlog:resource [
+            rdf:predicate ?p2 ;
+            rdf:object ?O2
+        ]
+}.
+
 #4_d. rutt:rr-deprecated-property
 {
     ?poMap <http://www.w3.org/ns/r2rml#predicate> ?P1 ;
