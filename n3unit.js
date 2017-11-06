@@ -9,8 +9,8 @@ let data = [
 //   'tests/shacl/core/node/class-003.ttl',
 //   'tests/shacl/core/node/closed-001.ttl', // TODO
 //   'tests/shacl/core/node/closed-002.ttl', // TODO
-//   'tests/shacl/core/node/datatype-001.ttl', // TODO
-//   'tests/shacl/core/node/datatype-002.ttl', // TODO
+//   'tests/shacl/core/node/datatype-001.ttl', // TODO can't parse non-integer values, doesn't automatically assing xsd:integer to numbers
+  // 'tests/shacl/core/node/datatype-002.ttl',
 //   'tests/shacl/core/node/disjoint-001.ttl', // TODO
 //   'tests/shacl/core/node/equals-001.ttl', // TODO
 //   'tests/shacl/core/node/hasValue-001.ttl', // TODO

@@ -39,3 +39,15 @@
     rdfcv:contextClass (:targetedNode ?shape);
     rdfcv:classes ?class .
 } .
+
+{
+  ?shape a sh:NodeShape ;
+    sh:datatype ?datatype ;
+} => {
+  _:constraint a rdfcv:SimpleConstraint ;
+      :constraintType :Subsumption ;
+      dcterms:title "A.4 Subsumption" ;
+      rdfcv:constrainingElement :sub-class ;
+      rdfcv:contextClass (:targetedNode ?shape);
+      rdfcv:classes ?datatype .
+} .
