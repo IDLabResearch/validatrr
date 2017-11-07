@@ -666,11 +666,11 @@
         rlog:message "An OWL cardinality constraint has failed" ;
         rlog:resource [
             rdf:predicate ?p1 ;
-            rdf:object ?O1
+            rdf:subject ?O1
         ];
         rlog:resource [
             rdf:predicate ?p2 ;
-            rdf:object ?O2
+            rdf:subject ?O2
         ]
 }.
 
