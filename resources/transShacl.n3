@@ -7,11 +7,20 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix sht: <http://www.w3.org/ns/shacl-test#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
 
 @prefix rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#> .
 @prefix : <http://example.com/constraints#> .
 @prefix dcterms: <http://purl.org/dc/terms#> .
 
+
+{
+  ?shape a sh:NodeShape ;
+    a rdfs:Class .
+  ?x a ?shape .
+} => {
+  ?x a (:targetedNode ?shape).
+} .
 
 {
   ?shape a sh:NodeShape ;
@@ -63,3 +72,46 @@
     rdfcv:leftProperties ( ?property ) ;
     rdfcv:contextClass (:targetedNode ?shape) .
 } .
+
+{
+  ?shape a sh:NodeShape ;
+    sh:in ?list .
+  ?x list:in ?list.
+} => {
+  ?x :included :trueValue .
+} .
+
+{
+  ?shape a sh:NodeShape ;
+    sh:in ?list .
+} => {
+  _:constraint a rdfcv:SimpleConstraint ;
+    :constraintType :ValueRestrictions ;
+    dcterms:title "A.24 Value Restrictions" ;
+    rdfcv:constrainingElement :value_restriction ;
+    rdfcv:contextClass  (:targetedNode ?shape);
+    rdfcv:leftProperties :included;
+    rdfcv:classes :trueValue.
+} .
+
+## ALTERNATIVE
+
+#{
+#  ?shape a sh:NodeShape ;
+#    sh:in ?list .
+#  ?x list:in ?list.
+#} => {
+#  ?x a (:included ?shape).
+#} .
+
+#{
+#  ?shape a sh:NodeShape ;
+#    sh:in ?list .
+#} => {
+#  _:constraint a rdfcv:SimpleConstraint ;
+#    :constraintType :Subsumption ;
+#    dcterms:title "A.4 Subsumption" ;
+#    rdfcv:constrainingElement :sub-class ;
+#    rdfcv:contextClass  (:targetedNode ?shape);
+#    rdfcv:classes (:included ?shape).
+#} .

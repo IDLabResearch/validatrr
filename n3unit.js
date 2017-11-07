@@ -13,8 +13,8 @@ let data = [
 //   'tests/shacl/core/node/datatype-002.ttl',
 //   'tests/shacl/core/node/disjoint-001.ttl',
 //   'tests/shacl/core/node/equals-001.ttl', // TODO
-//   'tests/shacl/core/node/hasValue-001.ttl', // TODO
-//   'tests/shacl/core/node/in-001.ttl', // TODO
+//   'tests/shacl/core/node/hasValue-001.ttl', // TODO A.73
+//   'tests/shacl/core/node/in-001.ttl',
 //   'tests/shacl/core/node/languageIn-001.ttl', // TODO
 //   'tests/shacl/core/node/maxExclusive-001.ttl', // TODO
 //   'tests/shacl/core/node/maxInclusive-001.ttl', // TODO
