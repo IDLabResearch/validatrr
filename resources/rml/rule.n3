@@ -658,7 +658,9 @@
 {
     ?mapping :objectMap (?p1 ?O1).
     ?mapping :objectMap (?p2 ?O2).
-    ?O1 log:notEqualTo ?O2.
+    ?O1 rr:constant ?o1 .
+    ?O2 rr:constant ?o2 .
+    ?o1 log:notEqualTo ?o2.
     ?p1 log:equalTo ?p2 .
     ?p1 a owl:FunctionalProperty.
 
@@ -669,6 +671,31 @@
         rlog:logLevel rlog:ERROR;
         rlog:hasCode :cardcode;
         rlog:message "An OWL cardinality constraint has failed" ;
+        rlog:resource [
+            rdf:predicate ?p1 ;
+            rdf:subject ?O1
+        ];
+        rlog:resource [
+            rdf:predicate ?p2 ;
+            rdf:subject ?O2
+        ]
+}.
+
+#10. cardinality mismatch
+{
+    ?mapping :objectMap (?p1 ?O1).
+    ?mapping :objectMap (?p2 ?O2).
+    ?O1 log:notEqualTo ?O2.
+    ?p1 log:equalTo ?p2 .
+    ?p1 a owl:FunctionalProperty.
+
+    :cardcode rdfs:label ?o.
+} => {
+    :cardcode rdfs:label ?o.
+    _:out a rlog:Entry;
+        rlog:logLevel rlog:WARNING;
+        rlog:hasCode :cardcode;
+        rlog:message "An OWL cardinality constraint possibly has failed" ;
         rlog:resource [
             rdf:predicate ?p1 ;
             rdf:subject ?O1
