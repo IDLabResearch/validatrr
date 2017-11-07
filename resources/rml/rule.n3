@@ -565,10 +565,12 @@
 {
     ?mappingFrom :joinMap (?predicate ?mappingTo ?joinPoMap ?pMap).
     ?predicate rdfs:range ?T1.
+    ?mappingFrom :subjectMapResourceClass ?T0.
     ?mappingTo :subjectMapResourceClass ?T2.
     _:x e:findall (?T2 {?T2 rdfs:subClassOf ?T1} ()).
     ?T2 log:notEqualTo ?T1 .
     :codeRange rdfs:label ?o.
+    ?T0 :parentTriple (?sMap ?o2 ?p2) .
     ?joinPoMap <http://www.w3.org/ns/r2rml#objectMap> ?oMap .
 } => {
     :codeRange rdfs:label ?o.
@@ -581,6 +583,9 @@
             rdf:subject ?oMap ;
             rdf:predicate rdfs:range;
             rdf:object ?T2
+        ];
+        rlog:resource [
+          rdf:subject ?sMap
         ];
         rlog:message "A mapping wrongly defines the range";
         ex:template "The Entity type $x of the entity does not match the expected Entity type $y of the relation $z.";

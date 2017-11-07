@@ -1,0 +1,56 @@
+<http://ex.com/triplesMap/TriplesMap_0> a <http://www.w3.org/ns/r2rml#TriplesMap> ;
+	<http://www.w3.org/ns/r2rml#subjectMap> <http://ex.com/subjectMap/SubMap_0> ;
+	<http://www.w3.org/ns/r2rml#predicateObjectMap> <http://ex.com/preObjMap/PredObjMap_88> , <http://ex.com/preObjMap/RefPredObjMap_88> , <http://ex.com/preObjMap/RefPredObjMap_cn_0> ;
+	<http://semweb.mmlab.be/ns/rml#logicalSource> <http://ex.com/logicalSource/LogicalSource_0> .
+
+<http://ex.com/subjectMap/SubMap_0> a <http://www.w3.org/ns/r2rml#SubjectMap> ;
+	<http://www.w3.org/ns/r2rml#termType> <http://www.w3.org/ns/r2rml#IRI> ;
+	<http://www.w3.org/ns/r2rml#template> "http://example.com/{Name}_{Surname}" .
+
+<http://ex.com/preObjMap/PredObjMap_88> a <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
+	<http://www.w3.org/ns/r2rml#predicateMap> <http://ex.com/predicateMap/PreMap_89> .
+
+<http://ex.com/predicateMap/PreMap_89> a <http://www.w3.org/ns/r2rml#PredicateMap> ;
+	<http://www.w3.org/ns/r2rml#constant> <http://xmlns.com/foaf/0.1/page> .
+
+<http://ex.com/preObjMap/RefPredObjMap_88> a <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
+	<http://www.w3.org/ns/r2rml#predicateMap> <http://ex.com/predicateMap/PreMap_89> ;
+	<http://www.w3.org/ns/r2rml#objectMap> <http://ex.com/objectMap/RefObjMap_88> .
+
+<http://ex.com/objectMap/RefObjMap_88> a <http://www.w3.org/ns/r2rml#ObjectMap> ;
+	<http://www.w3.org/ns/r2rml#parentTriplesMap> <http://ex.com/triplesMap/TriplesMap_88> .
+
+<http://ex.com/triplesMap/TriplesMap_88> a <http://www.w3.org/ns/r2rml#TriplesMap> , <http://www.w3.org/ns/r2rml#ParentTriplesMap> ;
+	<http://www.w3.org/ns/r2rml#subjectMap> <http://ex.com/subjectMap/SubMap_88> ;
+	<http://www.w3.org/ns/r2rml#predicateObjectMap> <http://ex.com/preObjMap/RefPredObjMap_cn_88> ;
+	<http://semweb.mmlab.be/ns/rml#logicalSource> <http://ex.com/logicalSource/LogicalSource_88> .
+
+<http://ex.com/subjectMap/SubMap_88> a <http://www.w3.org/ns/r2rml#SubjectMap> ;
+	<http://www.w3.org/ns/r2rml#termType> <http://www.w3.org/ns/r2rml#IRI> ;
+	<http://www.w3.org/ns/r2rml#template> "{Age}" .
+
+<http://ex.com/logicalSource/LogicalSource_88> a <http://semweb.mmlab.be/ns/rml#LogicalSource> ;
+	<http://semweb.mmlab.be/ns/rml#referenceFormulation> <http://semweb.mmlab.be/ns/ql#CSV> ;
+	<http://semweb.mmlab.be/ns/rml#source> "input_source_5001" .
+
+<http://ex.com/logicalSource/LogicalSource_0> a <http://semweb.mmlab.be/ns/rml#LogicalSource> ;
+	<http://semweb.mmlab.be/ns/rml#referenceFormulation> <http://semweb.mmlab.be/ns/ql#CSV> ;
+	<http://semweb.mmlab.be/ns/rml#source> "input_source_5001" .
+
+<http://ex.com/preObjMap/RefPredObjMap_cn_0> a <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
+	<http://www.w3.org/ns/r2rml#predicateMap> <http://ex.com/predicateMap/PreMap_ce_0> ;
+	<http://www.w3.org/ns/r2rml#objectMap> <http://ex.com/objectMap/Class_cn_0> .
+
+<http://ex.com/objectMap/Class_cn_0> <http://www.w3.org/ns/r2rml#constant> <http://linkedgeodata.org/ontology/Food> .
+
+<http://ex.com/predicateMap/PreMap_ce_0> a <http://www.w3.org/ns/r2rml#PredicateMap> ;
+	<http://www.w3.org/ns/r2rml#constant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> .
+
+<http://ex.com/preObjMap/RefPredObjMap_cn_88> a <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
+	<http://www.w3.org/ns/r2rml#predicateMap> <http://ex.com/predicateMap/PreMap_ce_88> ;
+	<http://www.w3.org/ns/r2rml#objectMap> <http://ex.com/objectMap/Class_cn_88> .
+
+<http://ex.com/objectMap/Class_cn_88> <http://www.w3.org/ns/r2rml#constant> <http://xmlns.com/foaf/0.1/Project> .
+
+<http://ex.com/predicateMap/PreMap_ce_88> a <http://www.w3.org/ns/r2rml#PredicateMap> ;
+	<http://www.w3.org/ns/r2rml#constant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> .

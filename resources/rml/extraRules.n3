@@ -323,7 +323,8 @@
         <http://www.w3.org/ns/r2rml#constant> ?T1
     ].
 } => {
-    ?mapping :subjectMapResourceClass ?T1
+    ?mapping :subjectMapResourceClass ?T1 .
+    ?T1 :parentTriple (?oMap <http://www.w3.org/ns/r2rml#constant> ?T1) .
 }.
 
 {
@@ -341,6 +342,12 @@
     ?predicate log:uri ?constant.
 } => {
     ?pMap <http://www.w3.org/ns/r2rml#constant> ?constant.
+}.
+
+{
+    ?poMap <http://www.w3.org/ns/r2rml#predicate> ?predicate.
+} => {
+    ?poMap :hasPredicate (?predicate _:pMap).
 }.
 
 {

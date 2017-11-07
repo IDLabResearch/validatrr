@@ -5,7 +5,7 @@ const fs = require('fs'),
   TestHelper = require('../lib/TestHelper');
 
 describe('individual bugs', function () {
-  this.timeout(3000);
+  this.timeout(8000);
   const basePath = path.resolve(__dirname, './bugs');
   const patternMap = '%s.mapping.rml.ttl';
   const outMap = '%s.out.ttl';
@@ -13,6 +13,10 @@ describe('individual bugs', function () {
   const rmlValidator = TestHelper.createRMLValidator();
   it('should fix #3', function (done) {
     let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 3, basePath);
+    checkMap(rmlValidator, paths[0], paths[1], paths[2], done);
+  });
+  it('should fix #6', function (done) {
+    let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 6, basePath);
     checkMap(rmlValidator, paths[0], paths[1], paths[2], done);
   });
   it('should fix #8', function (done) {
