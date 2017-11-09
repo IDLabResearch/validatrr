@@ -52,7 +52,7 @@ var:sk_4 rlog:resource var:sk_16.
 var:sk_8 rdf:subject <http://ex.com/preObjMap/RefPredObjMap_88>.
 var:sk_8 rdf:subject <http://ex.com/predicateMap/PreMap_89>.
 var:sk_8 rdf:subject <http://ex.com/objectMap/RefObjMap_88>.
-var:sk_16 rdf:subject var:sk_2.
+var:sk_16 rdf:subject <http://ex.com/objectMap/Class_cn_88>.
 var:sk_35 rdf:subject <http://ex.com/triplesMap/TriplesMap_0>.
 var:sk_8 rdf:predicate rdfs:range.
 var:sk_35 rdf:predicate <http://xmlns.com/foaf/0.1/page>.

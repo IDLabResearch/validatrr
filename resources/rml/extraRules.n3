@@ -316,12 +316,10 @@
 
 {
     ?mapping <http://www.w3.org/ns/r2rml#predicateObjectMap> ?classPoMap .
-    ?classPoMap <http://www.w3.org/ns/r2rml#predicateMap> [
-        <http://www.w3.org/ns/r2rml#constant> "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
-    ].
-    ?classPoMap <http://www.w3.org/ns/r2rml#objectMap> [
-        <http://www.w3.org/ns/r2rml#constant> ?T1
-    ].
+    ?classPoMap <http://www.w3.org/ns/r2rml#predicateMap> ?pMap .
+    ?pMap <http://www.w3.org/ns/r2rml#constant> rdf:type .
+    ?classPoMap <http://www.w3.org/ns/r2rml#objectMap> ?oMap .
+    ?oMap <http://www.w3.org/ns/r2rml#constant> ?T1 .
 } => {
     ?mapping :subjectMapResourceClass ?T1 .
     ?T1 :parentTriple (?oMap <http://www.w3.org/ns/r2rml#constant> ?T1) .

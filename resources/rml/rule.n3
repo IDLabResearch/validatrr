@@ -31,16 +31,7 @@
 {
     ?mapping <http://www.w3.org/ns/r2rml#subjectMap> ?resource.
     ?resource rr:template ?template.
-    _:t e:findall (?class {?resource <http://www.w3.org/ns/r2rml#class> ?class} ()).
-    _:tt e:findall (?o {
-      ?mapping <http://www.w3.org/ns/r2rml#predicateObjectMap> ?o.
-      ?o <http://www.w3.org/ns/r2rml#predicate> rdf:type .
-    } ()).
-    _:ttt e:findall (?p {
-      ?mapping <http://www.w3.org/ns/r2rml#predicateObjectMap> ?o.
-      ?o <http://www.w3.org/ns/r2rml#predicateMap> ?p.
-      ?p <http://www.w3.org/ns/r2rml#constant> "http://www.w3.org/1999/02/22-rdf-syntax-ns#type".
-    } ()).
+    _:t e:findall (1 {?mapping :subjectMapResourceClass ?class} ()).
     :codeNoType rdfs:label ?o.
 } => {
     :codeNoType rdfs:label ?o.
@@ -68,8 +59,7 @@
         rdf:Property,
         rdfs:Class,
         rdfs:Datatype.
-    _:t e:findall (?class {?resource <http://www.w3.org/ns/r2rml#class> ?class} ()).
-    _:ttt e:findall (?o {?mapping <http://www.w3.org/ns/r2rml#predicateObjectMap> ?o. ?o <http://www.w3.org/ns/r2rml#predicate> rdf:type .} ()).
+    _:t e:findall (1 {?mapping :subjectMapResourceClass ?class } ()).
     :codeNoType rdfs:label ?o.
 } => {
     :codeNoType rdfs:label ?o.
@@ -565,12 +555,12 @@
 {
     ?mappingFrom :joinMap (?predicate ?mappingTo ?joinPoMap ?pMap).
     ?predicate rdfs:range ?T1.
-    ?mappingFrom :subjectMapResourceClass ?T0.
+
     ?mappingTo :subjectMapResourceClass ?T2.
     _:x e:findall (?T2 {?T2 rdfs:subClassOf ?T1} ()).
     ?T2 log:notEqualTo ?T1 .
     :codeRange rdfs:label ?o.
-    ?T0 :parentTriple (?sMap ?o2 ?p2) .
+    ?T2 :parentTriple (?sMap ?o2 ?p2) .
     ?joinPoMap <http://www.w3.org/ns/r2rml#objectMap> ?oMap .
 } => {
     :codeRange rdfs:label ?o.
