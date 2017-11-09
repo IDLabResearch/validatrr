@@ -293,7 +293,7 @@
     ?poMap <http://www.w3.org/ns/r2rml#predicate> ?predicate ;
         <http://www.w3.org/ns/r2rml#objectMap> ?oMap .
 } => {
-    ?mapping :objectMap (?predicate ?oMap)
+    ?mapping :objectMap (?predicate ?oMap ?poMap)
 } .
 
 {

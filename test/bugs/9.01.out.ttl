@@ -57,14 +57,18 @@ var:sk_5 rlog:resource var:sk_10.
 var:sk_5 rlog:resource var:sk_15.
 var:sk_20 rlog:resource var:sk_25.
 var:sk_20 rlog:resource var:sk_30.
+var:sk_20 rlog:resource var:sk_35.
 var:sk_10 rdf:predicate <http://xmlns.com/foaf/0.1/gender>.
 var:sk_15 rdf:predicate <http://xmlns.com/foaf/0.1/gender>.
 var:sk_25 rdf:predicate <http://xmlns.com/foaf/0.1/gender>.
 var:sk_30 rdf:predicate <http://xmlns.com/foaf/0.1/gender>.
-var:sk_10 rdf:subject var:bn_22.
-var:sk_15 rdf:subject var:bn_23.
-var:sk_25 rdf:subject var:bn_22.
-var:sk_30 rdf:subject var:bn_23.
+var:sk_35 rdf:predicate <http://xmlns.com/foaf/0.1/gender>.
+var:sk_10 rdf:subject <http://example.com/#OM1>.
+var:sk_15 rdf:subject <http://example.com/#OM2>.
+var:sk_25 rdf:subject <http://example.com/#OM1>.
+var:sk_30 rdf:subject <http://example.com/#OM2>.
+var:sk_35 rdf:subject <http://example.com/#POM1>.
+var:sk_35 rdf:subject <http://example.com/#POM2>.
 
 #2017-11-07T16:13:55.549Z in=1837 out=21 ent=185 step=731 brake=4 inf=1908388 sec=0.327 inf/sec=5836049
 #ENDS

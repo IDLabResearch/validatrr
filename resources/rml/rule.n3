@@ -621,8 +621,8 @@
 
 #10. rutt:rr-produces-duplicateLanguageCode-errors
 {
-    ?mapping :objectMap (?p1 ?O1).
-    ?mapping :objectMap (?p2 ?O2).
+    ?mapping :objectMap (?p1 ?O1 ?oMap1).
+    ?mapping :objectMap (?p2 ?O2 ?oMap2).
     ?O1 log:notEqualTo ?O2.
     ?01 rr:language ?lang1.
     ?02 rr:language ?lang2.
@@ -646,8 +646,8 @@
 
 #10. cardinality mismatch
 {
-    ?mapping :objectMap (?p1 ?O1).
-    ?mapping :objectMap (?p2 ?O2).
+    ?mapping :objectMap (?p1 ?O1 ?oMap1).
+    ?mapping :objectMap (?p2 ?O2 ?oMap2).
     ?O1 rr:constant ?o1 .
     ?O2 rr:constant ?o2 .
     ?o1 log:notEqualTo ?o2.
@@ -673,8 +673,8 @@
 
 #10. cardinality mismatch
 {
-    ?mapping :objectMap (?p1 ?O1).
-    ?mapping :objectMap (?p2 ?O2).
+    ?mapping :objectMap (?p1 ?O1 ?oMap1).
+    ?mapping :objectMap (?p2 ?O2 ?oMap2).
     ?O1 log:notEqualTo ?O2.
     ?p1 log:equalTo ?p2 .
     ?p1 a owl:FunctionalProperty.
@@ -693,6 +693,11 @@
         rlog:resource [
             rdf:predicate ?p2 ;
             rdf:subject ?O2
+        ];
+        rlog:resource [
+            rdf:predicate ?p2 ;
+            rdf:subject ?oMap1 ;
+            rdf:subject ?oMap2
         ]
 }.
 

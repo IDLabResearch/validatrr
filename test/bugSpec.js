@@ -31,6 +31,10 @@ describe('individual bugs', function () {
     let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 8, basePath);
     checkMap(rmlValidator, paths[0], paths[1], paths[2], done);
   });
+  it('should fix #9.01', function (done) {
+    let paths = TestHelper.createPaths([patternMap, outMap, returnMap], '9.01', basePath);
+    checkMap(rmlValidator, paths[0], paths[1], paths[2], done);
+  });
   it('should fix #19', function (done) {
     let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 19, basePath);
     checkMap(rmlValidator, paths[0], paths[1], paths[2], done);
@@ -65,10 +69,6 @@ describe('individual bugs', function () {
   });
   it('should fix #107', function (done) {
     let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 107, basePath);
-    checkMap(rmlValidator, paths[0], paths[1], paths[2], done);
-  });
-  it('should fix #109', function (done) {
-    let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 109, basePath);
     checkMap(rmlValidator, paths[0], paths[1], paths[2], done);
   });
 });

@@ -21,14 +21,16 @@
 
 <#POM1> a rr:PredicateObjectMap;
   rr:predicate foaf:gender;
-  rr:objectMap [
+  rr:objectMap <#OM1> .
+
+<#OM1>
     rr:constant "male" ;
-    rr:datatype rdfs:Literal
-  ].
+    rr:datatype rdfs:Literal .
 
 <#POM2> a rr:PredicateObjectMap;
   rr:predicate foaf:gender;
-  rr:objectMap [
+  rr:objectMap <#OM2> .
+
+<#OM2>
     rr:constant "female" ;
-    rr:datatype rdfs:Literal
-  ].
+    rr:datatype rdfs:Literal .
