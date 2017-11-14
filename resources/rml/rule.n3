@@ -473,6 +473,10 @@
             rdf:subject ?joinPoMap
         ] ;
         rlog:resource [
+            rdf:subject ?pMap ;
+            rdf:predicate ?predicate
+        ] ;
+        rlog:resource [
             rdf:subject ?parentTriple ;
             rdf:predicate ?parentClass ;
             rdf:object ?T1

@@ -1,0 +1,67 @@
+#Processed by EYE rel. v17.0407.1501 josd
+#eye --nope --no-qvars C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\rml\extraRules.n3 C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_www.w3.org_ns_r2rml_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_xmlns.com_foaf_0.1_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_semweb.mmlab.be_ns_rml_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_vocab.org_transit_terms_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_www.w3.org_2001_XMLSchema_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_users.ugent.be_~bjdmeest_testontology.ttl_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\tmp\tmp-7140R6dzRTJuAKK5 C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\rml\logCodes.ttl --query C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\rml\rule.n3
+
+PREFIX var: <http://eulersharp.sourceforge.net/.well-known/genid/1ijcVoafwzv5YW7:i968a_lReQU#>
+PREFIX : <http://www.ournicecode.org#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rutp: <http://rdfunit.aksw.org/data/patterns#>
+PREFIX rlog: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#>
+PREFIX oslc: <http://open-services.net/ns/core#>
+PREFIX rutg: <http://rdfunit.aksw.org/data/generators#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dsp: <http://dublincore.org/dc-dsp#>
+PREFIX schema: <http://schema.org/>
+PREFIX rut: <http://rdfunit.aksw.org/ns/core#>
+PREFIX rutr: <http://rdfunit.aksw.org/data/results#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX spin: <http://spinrdf.org/spin#>
+PREFIX rutt: <http://rdfunit.aksw.org/data/tests#>
+PREFIX ruts: <http://rdfunit.aksw.org/data/testsuite#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX string: <http://www.w3.org/2000/10/swap/string#>
+PREFIX vaem: <http://www.linkedmodel.org/schema/vaem#>
+PREFIX ns1: <http://www.w3.org/ns/r2rml#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX vann: <http://purl.org/vocab/vann/>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX cc: <http://creativecommons.org/ns#>
+PREFIX wot: <http://xmlns.com/wot/0.1/>
+PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
+PREFIX ql: <http://semweb.mmlab.be/ns/ql#>
+PREFIX rml: <http://semweb.mmlab.be/ns/rml#>
+PREFIX msg0: <http://web.resource.org/cc/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX ns2: <http://users.ugent.be/~bjdmeest/testontology.ttl#>
+PREFIX ex: <http://www.example.com/>
+PREFIX transit: <http://vocab.org/transit/terms/>
+PREFIX cs: <http://vocab.org/changeset/schema#>
+
+:irreflexivePredicate rdfs:label "Irreflexive Predicates".
+var:sk_1 a rlog:Entry.
+var:sk_1 rlog:logLevel rlog:ERROR.
+var:sk_1 rlog:hasCode :irreflexivePredicate.
+var:sk_1 rlog:message "A double mapping irreflexively connects classes that are asymmetrical to each other".
+var:sk_1 <http://www.example.com/template> "$x and $y are irreflexive".
+var:sk_1 <http://www.example.com/x> <http://example.com/#Parent>.
+var:sk_1 <http://www.example.com/y> <http://example.com/#Parent>.
+var:sk_1 rlog:resource var:sk_9.
+var:sk_1 rlog:resource var:sk_13.
+var:sk_1 rlog:resource var:sk_18.
+var:sk_9 rdf:subject <http://example.com/#POM3>.
+var:sk_13 rdf:subject <http://example.com/#PM3>.
+var:sk_18 rdf:subject <http://example.com/#SubjectMap>.
+var:sk_13 rdf:predicate ns2:child.
+var:sk_18 rdf:predicate ns1:class.
+var:sk_18 rdf:object <http://www.example.com/Person>.
+
+#2017-11-14T11:48:05.141Z in=1648 out=17 ent=168 step=679 brake=4 inf=1732322 sec=0.358 inf/sec=4838888
+#ENDS
+
