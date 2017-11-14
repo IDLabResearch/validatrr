@@ -298,6 +298,15 @@
 
 {
     ?mapping <http://www.w3.org/ns/r2rml#predicateObjectMap> ?poMap .
+    ?poMap <http://www.w3.org/ns/r2rml#predicateMap> ?pMap ;
+        <http://www.w3.org/ns/r2rml#objectMap> ?oMap .
+    ?pMap <http://www.w3.org/ns/r2rml#constant> ?predicate .
+} => {
+    ?mapping :objectMap (?predicate ?oMap ?poMap)
+} .
+
+{
+    ?mapping <http://www.w3.org/ns/r2rml#predicateObjectMap> ?poMap .
     ?poMap <http://www.w3.org/ns/r2rml#predicate> ?predicate .
 } => {
     ?mapping :poMap (?predicate ?poMap)

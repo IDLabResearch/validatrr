@@ -55,8 +55,12 @@ describe('individual bugs', function () {
     let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 101, basePath);
     checkMap(rmlValidator, paths[0], paths[1], paths[2], done);
   });
-  it('should fix #102', function (done) {
-    let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 102, basePath);
+  it('should fix #one-lang.01', function (done) {
+    let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 'one-lang.01', basePath);
+    checkMap(rmlValidator, paths[0], paths[1], paths[2], done);
+  });
+  it('should fix #one-lang.02', function (done) {
+    let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 'one-lang.02', basePath);
     checkMap(rmlValidator, paths[0], paths[1], paths[2], done);
   });
   it('should fix #owl-disjp.01', function (done) {
