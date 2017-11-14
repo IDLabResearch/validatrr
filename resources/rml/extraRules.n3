@@ -304,6 +304,14 @@
 } .
 
 {
+    ?mapping <http://www.w3.org/ns/r2rml#predicateObjectMap> ?poMap .
+    ?poMap <http://www.w3.org/ns/r2rml#predicateMap> ?pMap .
+    ?pMap <http://www.w3.org/ns/r2rml#constant> ?predicate .
+} => {
+    ?mapping :poMap (?predicate ?poMap)
+} .
+
+{
     ?mapping <http://www.w3.org/ns/r2rml#predicateObjectMap> ?classPoMap .
     ?classPoMap <http://www.w3.org/ns/r2rml#predicate> rdf:type ;
         <http://www.w3.org/ns/r2rml#objectMap> ?oMap .

@@ -551,7 +551,8 @@
         ex:x ?p1 ;
         ex:y ?p2 ;
         rlog:resource [
-            rdf:subject ?poMap1
+            rdf:subject ?poMap1 ;
+            rdf:predicate ?p1
         ].
 }.
 

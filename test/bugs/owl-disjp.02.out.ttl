@@ -1,0 +1,73 @@
+#Processed by EYE rel. v17.0407.1501 josd
+#eye --nope --no-qvars C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\rml\extraRules.n3 C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_www.w3.org_ns_r2rml_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_xmlns.com_foaf_0.1_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_semweb.mmlab.be_ns_rml_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_www.w3.org_2001_XMLSchema_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_vocab.org_transit_terms_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_www.w3.org_2002_07_owl_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_purl.org_tio_ns_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\tmp\tmp-2672eilQUfUGizEr C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\rml\logCodes.ttl --query C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\rml\rule.n3
+
+PREFIX var: <http://eulersharp.sourceforge.net/.well-known/genid/eDPdk0yWKU2n3UMmpYCvnjm_OV8#>
+PREFIX : <http://www.ournicecode.org#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rutp: <http://rdfunit.aksw.org/data/patterns#>
+PREFIX rlog: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#>
+PREFIX oslc: <http://open-services.net/ns/core#>
+PREFIX rutg: <http://rdfunit.aksw.org/data/generators#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dsp: <http://dublincore.org/dc-dsp#>
+PREFIX schema: <http://schema.org/>
+PREFIX rut: <http://rdfunit.aksw.org/ns/core#>
+PREFIX rutr: <http://rdfunit.aksw.org/data/results#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX spin: <http://spinrdf.org/spin#>
+PREFIX rutt: <http://rdfunit.aksw.org/data/tests#>
+PREFIX ruts: <http://rdfunit.aksw.org/data/testsuite#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX string: <http://www.w3.org/2000/10/swap/string#>
+PREFIX vaem: <http://www.linkedmodel.org/schema/vaem#>
+PREFIX ns1: <http://www.w3.org/ns/r2rml#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX vann: <http://purl.org/vocab/vann/>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX cc: <http://creativecommons.org/ns#>
+PREFIX wot: <http://xmlns.com/wot/0.1/>
+PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
+PREFIX ql: <http://semweb.mmlab.be/ns/ql#>
+PREFIX rml: <http://semweb.mmlab.be/ns/rml#>
+PREFIX msg0: <http://web.resource.org/cc/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX grddl: <http://www.w3.org/2003/g/data-view#>
+PREFIX gr: <http://purl.org/goodrelations/v1#>
+PREFIX ex: <http://www.example.com/>
+PREFIX transit: <http://vocab.org/transit/terms/>
+PREFIX cs: <http://vocab.org/changeset/schema#>
+PREFIX test: <http://users.ugent.be/~bjdmeest/testontology.ttl#>
+
+:codeDisjointPredicate rdfs:label "Disjoint Predicate".
+var:sk_1 a rlog:Entry.
+var:sk_14 a rlog:Entry.
+var:sk_1 rlog:logLevel rlog:ERROR.
+var:sk_14 rlog:logLevel rlog:ERROR.
+var:sk_1 rlog:hasCode :codeDisjointPredicate.
+var:sk_14 rlog:hasCode :codeDisjointPredicate.
+var:sk_1 rlog:message "A mapping uses predicates that are disjoint to each other".
+var:sk_14 rlog:message "A mapping uses predicates that are disjoint to each other".
+var:sk_1 <http://www.example.com/template> "$x and $y are disjoint predicates".
+var:sk_14 <http://www.example.com/template> "$x and $y are disjoint predicates".
+var:sk_1 <http://www.example.com/x> <http://www.example.com/test>.
+var:sk_14 <http://www.example.com/x> <http://www.example.com/test2>.
+var:sk_1 <http://www.example.com/y> <http://www.example.com/test2>.
+var:sk_14 <http://www.example.com/y> <http://www.example.com/test>.
+var:sk_1 rlog:resource var:sk_9.
+var:sk_14 rlog:resource var:sk_22.
+var:sk_9 rdf:subject <http://example.com/#POM1>.
+var:sk_22 rdf:subject <http://example.com/#POM2>.
+var:sk_9 rdf:predicate <http://www.example.com/test>.
+var:sk_22 rdf:predicate <http://www.example.com/test2>.
+
+#2017-11-14T11:58:00.086Z in=2537 out=21 ent=388 step=1888 brake=4 inf=2660048 sec=0.405 inf/sec=6568020
+#ENDS
+
