@@ -47,12 +47,16 @@ describe('individual bugs', function () {
     let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 19, basePath);
     checkMap(rmlValidator, paths[0], paths[1], paths[2], done);
   });
-  it('should fix #100', function (done) {
-    let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 100, basePath);
+  it('should fix #owl-disjc.01', function (done) {
+    let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 'owl-disjc.01', basePath);
     checkMap(rmlValidator, paths[0], paths[1], paths[2], done);
   });
-  it('should fix #101', function (done) {
-    let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 101, basePath);
+  it('should fix #owl-disjc.02', function (done) {
+    let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 'owl-disjc.02', basePath);
+    checkMap(rmlValidator, paths[0], paths[1], paths[2], done);
+  });
+  it('should fix #owl-disjc.03', function (done) {
+    let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 'owl-disjc.03', basePath);
     checkMap(rmlValidator, paths[0], paths[1], paths[2], done);
   });
   it('should fix #one-lang.01', function (done) {
