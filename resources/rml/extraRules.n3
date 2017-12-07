@@ -30,6 +30,7 @@
 @prefix list: <http://www.w3.org/2000/10/swap/list#>.
 @prefix : <http://www.ournicecode.org#>.
 @prefix string: <http://www.w3.org/2000/10/swap/string#>.
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
 
 #rules for the path construction
 # Further improvement should include OWL RL rules (we have those from ORCA)
@@ -306,21 +307,6 @@
 } .
 
 {
-    ?mapping <http://www.w3.org/ns/r2rml#predicateObjectMap> ?poMap .
-    ?poMap <http://www.w3.org/ns/r2rml#predicate> ?predicate .
-} => {
-    ?mapping :poMap (?predicate ?poMap)
-} .
-
-{
-    ?mapping <http://www.w3.org/ns/r2rml#predicateObjectMap> ?poMap .
-    ?poMap <http://www.w3.org/ns/r2rml#predicateMap> ?pMap .
-    ?pMap <http://www.w3.org/ns/r2rml#constant> ?predicate .
-} => {
-    ?mapping :poMap (?predicate ?poMap)
-} .
-
-{
     ?mapping <http://www.w3.org/ns/r2rml#predicateObjectMap> ?classPoMap .
     ?classPoMap <http://www.w3.org/ns/r2rml#predicate> rdf:type ;
         <http://www.w3.org/ns/r2rml#objectMap> ?oMap .
@@ -343,15 +329,6 @@
 }.
 
 {
-    ?poMap <http://www.w3.org/ns/r2rml#predicate> ?predicate.
-    ?predicate log:uri ?constant.
-} => {
-    ?poMap <http://www.w3.org/ns/r2rml#predicateMap> _:pMap.
-    _:pMap a <http://www.w3.org/ns/r2rml#PredicateMap> .
-    _:pMap <http://www.w3.org/ns/r2rml#constant> ?constant.
-}.
-
-{
     ?poMap <http://www.w3.org/ns/r2rml#predicateMap> ?pMap.
     ?pMap <http://www.w3.org/ns/r2rml#constant> ?predicate.
     ?predicate log:uri ?constant.
@@ -362,7 +339,7 @@
 {
     ?poMap <http://www.w3.org/ns/r2rml#predicate> ?predicate.
 } => {
-    ?poMap :hasPredicate (?predicate _:pMap).
+    ?poMap :hasPredicate (?predicate rr:predicate).
 }.
 
 {

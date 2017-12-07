@@ -513,7 +513,7 @@
     ?mapping :subjectMapResourceClass ?T1 .
     ?T1 :parentTriple (?sMap ?o2 ?p2) .
     ?T1 test:typrodep ?p .
-    _:x e:findall (?mapping {?mapping :poMap (?p ?poMap)} ()).
+    _:x e:findall (?mapping {?mapping rr:predicateObjectMap ?poMap. ?poMap :hasPredicate (?p ?pMap)} ()).
 
     :typePropertyDependency rdfs:label ?o.
 } => {
@@ -535,9 +535,11 @@
 
 #7. rutt:rr-produces-disjoint-predicate-errors
 {
-    ?mapping :poMap (?p1 ?poMap1).
-    ?mapping :poMap (?p2 ?poMap2).
+    ?mapping rr:predicateObjectMap ?poMap1.
+    ?mapping rr:predicateObjectMap ?poMap2.
     ?poMap1 log:notEqualTo ?poMap2 .
+    ?poMap1 :hasPredicate (?p1 ?pMap1).
+    ?poMap2 :hasPredicate (?p2 ?pMap2).
 
     ?p1 owl:propertyDisjointWith ?p2 .
     :codeDisjointPredicate rdfs:label ?o.
@@ -552,6 +554,7 @@
         ex:y ?p2 ;
         rlog:resource [
             rdf:subject ?poMap1 ;
+            rdf:subject ?pMap1 ;
             rdf:predicate ?p1
         ].
 }.
