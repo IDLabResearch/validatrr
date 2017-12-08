@@ -340,6 +340,13 @@
 }.
 
 {
+    ?poMap <http://www.w3.org/ns/r2rml#predicateMap> ?pMap.
+    ?pMap <http://www.w3.org/ns/r2rml#constant> ?predicate.
+} => {
+    ?poMap :hasPredicate (?predicate ?pMap).
+}.
+
+{
     ?mappingFrom <http://www.w3.org/ns/r2rml#predicateObjectMap> ?joinPoMap .
     ?joinPoMap
         :hasPredicate (?predicate ?pMap);

@@ -119,8 +119,8 @@
         rlog:resource ?classTriple;
         rlog:resource [
             rdf:subject ?poMap;
-            rdf:predicate <http://www.w3.org/ns/r2rml#predicate>;
-            rdf:object ?predicate
+            rdf:subject ?pMap;
+            rdf:predicate ?predicate
         ].
 }.
 

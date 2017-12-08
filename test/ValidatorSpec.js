@@ -1,4 +1,4 @@
-/* global describe, it */
+/* global describe, it, run */
 
 /**
  * Created by bjdmeest on 2/11/2015.
@@ -8,12 +8,12 @@ const expect = require('chai').expect,
   path = require('path'),
   TestHelper = require('../lib/TestHelper');
 
-const dbMappingsPath = path.resolve(__dirname, '../resources/rml/dbpedia-mappings-en.ttl');
+const dbMappingsPath = path.resolve(__dirname, '../resources/dbpedia_artist.rml.ttl');
 
-describe.skip('Validator', function () {
+describe('Validator', function () {
   this.timeout(60000);
   const validator = TestHelper.createRMLValidator();
-  describe('validate', function () {
+  describe.skip('validate RML validator', function () {
     it('should work', function (done) {
       fs.readFile(dbMappingsPath, 'utf8', function (err, ttl) {
         expect(err).to.be.null;
@@ -25,6 +25,20 @@ describe.skip('Validator', function () {
           done();
         });
       });
+    });
+  });
+
+  describe('validate profile', function () {
+    const validator = TestHelper.createProfileValidator('rml-rdfunit', 'rdfunit');
+    const basePath = path.resolve(__dirname, '../resources/rml/rules');
+    TestHelper.fetchNestedFiles(basePath, function (err, bugFiles) {
+      describe('rml-rdfunit test cases', function () {
+        TestHelper.walkFiles(bugFiles, function (inputFile, out) {
+          console.log(out);
+          fs.writeFileSync(inputFile.replace(/input-(\d+).ttl$/, 'out-$1.ttl'), out, 'utf8');
+        }, validator);
+      });
+      run();
     });
   });
 });

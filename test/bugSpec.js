@@ -4,6 +4,8 @@ const fs = require('fs'),
   path = require('path'),
   TestHelper = require('../lib/TestHelper');
 
+let checkMap = TestHelper.checkMap;
+
 describe('individual bugs', function () {
   this.timeout(8000);
   const basePath = path.resolve(__dirname, './bugs');
@@ -88,33 +90,6 @@ describe('individual bugs', function () {
     checkMap(rmlValidator, paths[0], paths[1], paths[2], done);
   });
 });
-
-function checkMap(validator, inputPath, shouldPath, outPath = null, done) {
-  fs.readFile(inputPath, 'utf8', function (err, ttl) {
-    if (err) {
-      throw err;
-    }
-    validator.validate(ttl, null, function (err, out) {
-      if (err) {
-        throw err;
-      }
-      if (outPath) {
-        fs.writeFileSync(outPath, out, 'utf8');
-      }
-      fs.readFile(shouldPath, 'utf8', function (err, base) {
-        if (err) {
-          if (err.code === 'ENOENT') {
-            fs.writeFileSync(shouldPath, '', 'utf8');
-            base = '<a> <b> <c> .';
-          } else {
-            throw err;
-          }
-        }
-        TestHelper.compareTtl(out, base, done);
-      });
-    });
-  });
-}
 
 describe('all bugs', function () {
   const basePath = path.resolve(__dirname, './bugs');
