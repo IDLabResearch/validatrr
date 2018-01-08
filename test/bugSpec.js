@@ -41,6 +41,10 @@ describe('individual bugs', function () {
     let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 'owl-card.01', basePath);
     checkMap(rmlValidator, paths[0], paths[1], paths[2], done);
   });
+  it('should fix #owl-card.02', function (done) {
+    let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 'owl-card.02', basePath);
+    checkMap(rmlValidator, paths[0], paths[1], paths[2], done);
+  });
   it('should fix #owl-disjc.01', function (done) {
     let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 'owl-disjc.01', basePath);
     checkMap(rmlValidator, paths[0], paths[1], paths[2], done);

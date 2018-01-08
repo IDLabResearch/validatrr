@@ -692,6 +692,10 @@
         rlog:resource [
             rdf:predicate ?p2 ;
             rdf:subject ?O2
+        ];
+        rlog:resource [
+            rdf:subject ?oMap1 ;
+            rdf:subject ?oMap2
         ]
 }.
 
@@ -702,6 +706,7 @@
     ?O1 log:notEqualTo ?O2.
     ?p1 log:equalTo ?p2 .
     ?p1 a owl:FunctionalProperty.
+    _:t e:findall (1 {?O1 rr:constant ?o1} ()).
 
     :cardcode rdfs:label ?o.
 } => {
@@ -717,11 +722,6 @@
         rlog:resource [
             rdf:predicate ?p2 ;
             rdf:subject ?O2
-        ];
-        rlog:resource [
-            rdf:predicate ?p2 ;
-            rdf:subject ?oMap1 ;
-            rdf:subject ?oMap2
         ]
 }.
 
