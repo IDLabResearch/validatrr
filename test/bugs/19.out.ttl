@@ -1,0 +1,72 @@
+#Processed by EYE rel. v17.0407.1501 josd
+#eye --nope --no-qvars C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\rml\extraRules.n3 C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_www.w3.org_ns_r2rml_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_semweb.mmlab.be_ns_rml_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_vocab.org_transit_terms_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_www.w3.org_1999_02_22-rdf-syntax-ns_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_www.w3.org_2001_XMLSchema_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\tmp\tmp-1848SI1sJO0yZggX C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\rml\logCodes.ttl --query C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\rml\rule.n3
+
+PREFIX var: <http://eulersharp.sourceforge.net/.well-known/genid/5_UKxz4wGa:M56H6DTE5U6ygJV4#>
+PREFIX : <http://www.ournicecode.org#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rutp: <http://rdfunit.aksw.org/data/patterns#>
+PREFIX rlog: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#>
+PREFIX oslc: <http://open-services.net/ns/core#>
+PREFIX rutg: <http://rdfunit.aksw.org/data/generators#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dsp: <http://dublincore.org/dc-dsp#>
+PREFIX schema: <http://schema.org/>
+PREFIX rut: <http://rdfunit.aksw.org/ns/core#>
+PREFIX rutr: <http://rdfunit.aksw.org/data/results#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX spin: <http://spinrdf.org/spin#>
+PREFIX rutt: <http://rdfunit.aksw.org/data/tests#>
+PREFIX ruts: <http://rdfunit.aksw.org/data/testsuite#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX string: <http://www.w3.org/2000/10/swap/string#>
+PREFIX vaem: <http://www.linkedmodel.org/schema/vaem#>
+PREFIX ns1: <http://www.w3.org/ns/r2rml#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX vann: <http://purl.org/vocab/vann/>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX cc: <http://creativecommons.org/ns#>
+PREFIX ql: <http://semweb.mmlab.be/ns/ql#>
+PREFIX rml: <http://semweb.mmlab.be/ns/rml#>
+PREFIX msg0: <http://web.resource.org/cc/>
+PREFIX status: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX cs: <http://vocab.org/changeset/schema#>
+PREFIX ex: <http://www.example.com/>
+
+:codeDatatype rdfs:label "Datatype Mismatch".
+var:sk_21 rdfs:label "Remove the datatype".
+var:sk_2 a rlog:Entry.
+var:sk_21 a rut:ResultAnnotation.
+var:sk_2 rlog:logLevel rlog:ERROR.
+var:sk_2 rlog:hasCode :codeDatatype.
+var:sk_2 rlog:resource var:sk_6.
+var:sk_2 rlog:resource var:sk_11.
+var:sk_6 rdf:subject <http://ex.com/predicateMap/PreMap_95>.
+var:sk_11 rdf:subject <http://ex.com/objectMap/ObjMap_96>.
+var:sk_30 rdf:subject <http://ex.com/objectMap/ObjMap_96>.
+var:sk_6 rdf:predicate <http://vocab.org/transit/terms/route>.
+var:sk_30 rdf:predicate ns1:datatype.
+var:sk_11 rdf:object xsd:int.
+var:sk_30 rdf:object xsd:int.
+var:sk_2 rlog:message "The predicate has a range but rr:datatype was found".
+var:sk_2 <http://www.example.com/template> "The relation $x expects the range $y. However, datatype $z was found.".
+var:sk_21 <http://www.example.com/template> "Remove datatype $y".
+var:sk_2 <http://www.example.com/x> <http://vocab.org/transit/terms/route>.
+var:sk_21 <http://www.example.com/x> <http://vocab.org/transit/terms/Route>.
+var:sk_2 <http://www.example.com/y> <http://vocab.org/transit/terms/Route>.
+var:sk_21 <http://www.example.com/y> xsd:int.
+var:sk_2 <http://www.example.com/z> xsd:int.
+var:sk_2 rut:resultAnnotation var:sk_21.
+var:sk_21 cs:subjectOfChange <http://ex.com/objectMap/ObjMap_96>.
+var:sk_21 cs:removal var:sk_30.
+
+#2017-09-27T14:52:58.918Z in=1098 out=26 ent=157 step=645 brake=5 inf=1281426 sec=0.546 inf/sec=2346934
+#ENDS

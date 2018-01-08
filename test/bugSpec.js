@@ -13,20 +13,24 @@ describe('individual bugs', function () {
   const outMap = '%s.out.ttl';
   const returnMap = '%s.test-output.ttl';
   const rmlValidator = TestHelper.createRMLValidator();
-  it('should fix #3', function (done) {
-    let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 3, basePath);
+  it('should fix #rr-type.01', function (done) {
+    let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 'rr-type.01', basePath);
     checkMap(rmlValidator, paths[0], paths[1], paths[2], done);
   });
-  it('should fix #6', function (done) {
-    let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 6, basePath);
+  it('should fix #rdfs-range.01', function (done) {
+    let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 'rdfs-range.01', basePath);
     checkMap(rmlValidator, paths[0], paths[1], paths[2], done);
   });
-  it('should fix #7.01', function (done) {
-    let paths = TestHelper.createPaths([patternMap, outMap, returnMap], '7.01', basePath);
+  it('should fix #rdfs-range.02', function (done) {
+    let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 'rdfs-range.02', basePath);
     checkMap(rmlValidator, paths[0], paths[1], paths[2], done);
   });
-  it('should fix #7.02', function (done) {
-    let paths = TestHelper.createPaths([patternMap, outMap, returnMap], '7.02', basePath);
+  it('should fix #rdfs-range.03', function (done) {
+    let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 'rdfs-range.03', basePath);
+    checkMap(rmlValidator, paths[0], paths[1], paths[2], done);
+  });
+  it('should fix #rdfs-range.04', function (done) {
+    let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 'rdfs-range.04', basePath);
     checkMap(rmlValidator, paths[0], paths[1], paths[2], done);
   });
   it('should fix #8', function (done) {
@@ -77,8 +81,12 @@ describe('individual bugs', function () {
     let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 'owl-disjp.02', basePath);
     checkMap(rmlValidator, paths[0], paths[1], paths[2], done);
   });
-  it('should fix #104', function (done) {
-    let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 104, basePath);
+  it('should fix #owl-asymp.01', function (done) {
+    let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 'owl-asymp.01', basePath);
+    checkMap(rmlValidator, paths[0], paths[1], paths[2], done);
+  });
+  it('should fix #owl-asymp.02', function (done) {
+    let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 'owl-asymp.02', basePath);
     checkMap(rmlValidator, paths[0], paths[1], paths[2], done);
   });
   it('should fix #106', function (done) {

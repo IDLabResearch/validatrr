@@ -50,6 +50,14 @@
 }.
 
 {
+    ?poMap <http://www.w3.org/ns/r2rml#objectMap> ?oMap .
+    ?oMap <http://www.w3.org/ns/r2rml#constant> ?uriString.
+    ?uri log:uri ?uriString.
+} => {
+    ?oMap <http://www.w3.org/ns/r2rml#constant> ?uri.
+}.
+
+{
     ?mapping <http://www.w3.org/ns/r2rml#subjectMap> ?resource.
     ?mapping <http://www.w3.org/ns/r2rml#predicateObjectMap> ?classPoMap .
     ?classPoMap :hasPredicate (rdf:type ?pMap) ;
@@ -310,33 +318,16 @@
     ?mapping <http://www.w3.org/ns/r2rml#predicateObjectMap> ?classPoMap .
     ?classPoMap :hasPredicate (rdf:type ?pMap);
         <http://www.w3.org/ns/r2rml#objectMap> ?oMap .
-    ?oMap <http://www.w3.org/ns/r2rml#constant> ?T1String .
-    ?T1 log:uri ?T1String .
+    ?oMap <http://www.w3.org/ns/r2rml#constant> ?T1 .
 } => {
     ?mapping :subjectMapResourceClass ?T1 .
-    ?T1 :parentTriple (?oMap <http://www.w3.org/ns/r2rml#constant> ?T1String) .
-}.
-
-{
-    ?poMap <http://www.w3.org/ns/r2rml#predicateMap> ?pMap.
-    ?pMap <http://www.w3.org/ns/r2rml#constant> ?predicate.
-    ?predicate log:uri ?constant.
-} => {
-    ?pMap <http://www.w3.org/ns/r2rml#constant> ?constant.
+    ?T1 :parentTriple (?oMap <http://www.w3.org/ns/r2rml#constant> ?T1) .
 }.
 
 {
     ?poMap <http://www.w3.org/ns/r2rml#predicate> ?predicate.
 } => {
     ?poMap :hasPredicate (?predicate rr:predicate).
-}.
-
-{
-    ?poMap <http://www.w3.org/ns/r2rml#predicateMap> ?pMap.
-    ?pMap <http://www.w3.org/ns/r2rml#constant> ?constant.
-    ?predicate log:uri ?constant.
-} => {
-    ?poMap :hasPredicate (?predicate ?pMap).
 }.
 
 {
