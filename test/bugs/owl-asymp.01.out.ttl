@@ -1,16 +1,36 @@
-#Processed by EYE-Spring16.0628.0910 josd
-#eye --nope --no-qvars /RMLUnit/resources/ontologies/http_www.w3.org_ns_r2rml_.ttl /RMLUnit/resources/ontologies/http_xmlns.com_foaf_0.1_.ttl /RMLUnit/resources/ontologies/http_semweb.mmlab.be_ns_rml_.ttl /RMLUnit/resources/ontologies/http_www.w3.org_2001_XMLSchema_.ttl /RMLUnit/resources/ontologies/http_vocab.org_transit_terms_.ttl /RMLUnit/resources/ontologies/http_purl.org_tio_ns_.ttl /RMLUnit/tmp/tmp-26CI5cMZruhcxo /RMLUnit/resources/extraRules.n3 /RMLUnit/resources/logCodes.ttl --query /RMLUnit/resources/rule.n3
+#Processed by EYE rel. v17.0407.1501 josd
+#eye --nope --no-qvars C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\rml\extraRules.n3 C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_www.w3.org_ns_r2rml_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_xmlns.com_foaf_0.1_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_semweb.mmlab.be_ns_rml_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_www.w3.org_2001_XMLSchema_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_vocab.org_transit_terms_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_users.ugent.be_~bjdmeest_testontology.ttl_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\tmp\tmp-17052pfYvGSpuWWev C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\rml\logCodes.ttl --query C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\rml\rule.n3
 
-PREFIX var: <http://eulersharp.sourceforge.net/.well-known/genid/VFKmIqiJSLmJccTD30UyJpRqWoQ#>
-PREFIX vaem: <http://www.linkedmodel.org/schema/vaem#>
-PREFIX dc: <http://purl.org/dc/elements/1.1/>
-PREFIX : <http://www.w3.org/ns/r2rml#>
+PREFIX var: <http://eulersharp.sourceforge.net/.well-known/genid/CTQgggFzf1hAEHh8texoQHwcqsA#>
+PREFIX : <http://www.ournicecode.org#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX vann: <http://purl.org/vocab/vann/>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rutp: <http://rdfunit.aksw.org/data/patterns#>
+PREFIX rlog: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#>
+PREFIX oslc: <http://open-services.net/ns/core#>
+PREFIX rutg: <http://rdfunit.aksw.org/data/generators#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dsp: <http://dublincore.org/dc-dsp#>
+PREFIX schema: <http://schema.org/>
+PREFIX rut: <http://rdfunit.aksw.org/ns/core#>
+PREFIX rutr: <http://rdfunit.aksw.org/data/results#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX spin: <http://spinrdf.org/spin#>
+PREFIX rutt: <http://rdfunit.aksw.org/data/tests#>
+PREFIX ruts: <http://rdfunit.aksw.org/data/testsuite#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX string: <http://www.w3.org/2000/10/swap/string#>
+PREFIX rr: <http://www.w3.org/ns/r2rml#>
+PREFIX vaem: <http://www.linkedmodel.org/schema/vaem#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX vann: <http://purl.org/vocab/vann/>
 PREFIX xml: <http://www.w3.org/XML/1998/namespace>
 PREFIX cc: <http://creativecommons.org/ns#>
 PREFIX wot: <http://xmlns.com/wot/0.1/>
@@ -18,55 +38,52 @@ PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
 PREFIX ql: <http://semweb.mmlab.be/ns/ql#>
 PREFIX rml: <http://semweb.mmlab.be/ns/rml#>
 PREFIX msg0: <http://web.resource.org/cc/>
-PREFIX dct: <http://purl.org/dc/terms/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX gr: <http://purl.org/goodrelations/v1#>
+PREFIX ns1: <http://users.ugent.be/~bjdmeest/testontology.ttl#>
 PREFIX ex: <http://www.example.com/>
 PREFIX transit: <http://vocab.org/transit/terms/>
-PREFIX ns1: <http://www.ournicecode.org#>
-PREFIX log: <http://www.w3.org/2000/10/swap/log#>
-PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
-PREFIX list: <http://www.w3.org/2000/10/swap/list#>
-PREFIX prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>
-PREFIX prov: <http://www.w3.org/ns/prov#>
-PREFIX rutp: <http://rdfunit.aksw.org/data/patterns#>
-PREFIX rlog: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#>
-PREFIX oslc: <http://open-services.net/ns/core#>
-PREFIX rutg: <http://rdfunit.aksw.org/data/generators#>
-PREFIX dsp: <http://dublincore.org/dc-dsp#>
-PREFIX schema: <http://schema.org/>
-PREFIX rut: <http://rdfunit.aksw.org/ns/core#>
-PREFIX rutr: <http://rdfunit.aksw.org/data/results#>
-PREFIX spin: <http://spinrdf.org/spin#>
-PREFIX rutt: <http://rdfunit.aksw.org/data/tests#>
-PREFIX ruts: <http://rdfunit.aksw.org/data/testsuite#>
-PREFIX sh: <http://www.w3.org/ns/shacl#>
-PREFIX string: <http://www.w3.org/2000/10/swap/string#>
 PREFIX cs: <http://vocab.org/changeset/schema#>
 
-ns1:asymmetricPredicate rdfs:label "Asymmetric Predicates".
-var:sk_4 a rlog:Entry.
-var:sk_20 a rlog:Entry.
-var:sk_4 rlog:logLevel rlog:ERROR.
-var:sk_20 rlog:logLevel rlog:ERROR.
-var:sk_4 rlog:hasCode ns1:asymmetricPredicate.
-var:sk_20 rlog:hasCode ns1:asymmetricPredicate.
-var:sk_4 rlog:message "A mapping symmetrically connects classes that are asymmetrical to each other".
-var:sk_20 rlog:message "A mapping symmetrically connects classes that are asymmetrical to each other".
-var:sk_4 <http://www.example.com/template> "$x and $y are asymmetric".
-var:sk_20 <http://www.example.com/template> "$x and $y are asymmetric".
-var:sk_4 <http://www.example.com/x> <http://example.com/#Parent>.
-var:sk_20 <http://www.example.com/x> <http://example.com/#Child>.
-var:sk_4 <http://www.example.com/y> <http://example.com/#Child>.
-var:sk_20 <http://www.example.com/y> <http://example.com/#Parent>.
-var:sk_4 rlog:resource var:sk_12.
-var:sk_4 rlog:resource var:sk_16.
-var:sk_20 rlog:resource var:sk_28.
-var:sk_20 rlog:resource var:sk_32.
-var:sk_12 rdf:subject <http://example.com/#POM1>.
-var:sk_16 rdf:subject <http://example.com/#POM2>.
-var:sk_28 rdf:subject <http://example.com/#POM2>.
-var:sk_32 rdf:subject <http://example.com/#POM1>.
+:asymmetricPredicate rdfs:label "Asymmetric Predicates".
+var:sk_2 a rlog:Entry.
+var:sk_34 a rlog:Entry.
+var:sk_2 rlog:logLevel rlog:ERROR.
+var:sk_34 rlog:logLevel rlog:ERROR.
+var:sk_2 rlog:hasCode :asymmetricPredicate.
+var:sk_34 rlog:hasCode :asymmetricPredicate.
+var:sk_2 rlog:message "A mapping symmetrically connects classes that are asymmetrical to each other".
+var:sk_34 rlog:message "A mapping symmetrically connects classes that are asymmetrical to each other".
+var:sk_2 <http://www.example.com/template> "$x and $y are asymmetric".
+var:sk_34 <http://www.example.com/template> "$x and $y are asymmetric".
+var:sk_2 <http://www.example.com/x> <http://example.com/#Parent>.
+var:sk_34 <http://www.example.com/x> <http://example.com/#Child>.
+var:sk_2 <http://www.example.com/y> <http://example.com/#Child>.
+var:sk_34 <http://www.example.com/y> <http://example.com/#Parent>.
+var:sk_2 rlog:resource var:sk_10.
+var:sk_2 rlog:resource var:sk_14.
+var:sk_2 rlog:resource var:sk_18.
+var:sk_2 rlog:resource var:sk_22.
+var:sk_2 rlog:resource var:sk_26.
+var:sk_2 rlog:resource var:sk_30.
+var:sk_34 rlog:resource var:sk_42.
+var:sk_34 rlog:resource var:sk_46.
+var:sk_34 rlog:resource var:sk_50.
+var:sk_34 rlog:resource var:sk_54.
+var:sk_34 rlog:resource var:sk_58.
+var:sk_34 rlog:resource var:sk_62.
+var:sk_10 rdf:subject <http://example.com/#POM1>.
+var:sk_14 rdf:subject <http://example.com/#POM2>.
+var:sk_18 rdf:subject rr:predicate.
+var:sk_22 rdf:subject <http://example.com/#OM1>.
+var:sk_26 rdf:subject rr:predicate.
+var:sk_30 rdf:subject <http://example.com/#OM2>.
+var:sk_42 rdf:subject <http://example.com/#POM2>.
+var:sk_46 rdf:subject <http://example.com/#POM1>.
+var:sk_50 rdf:subject rr:predicate.
+var:sk_54 rdf:subject <http://example.com/#OM2>.
+var:sk_58 rdf:subject rr:predicate.
+var:sk_62 rdf:subject <http://example.com/#OM1>.
 
-#ENDS 0.382 [sec] IO=2029/23 TC=349 TP=1715 BC=0 BP=0 PM=0 CM=0 FM=0 AM=0
+#2018-01-08T13:12:47.864Z in=1655 out=39 ent=200 step=703 brake=4 inf=1751286 sec=0.343 inf/sec=5105790
+#ENDS
 

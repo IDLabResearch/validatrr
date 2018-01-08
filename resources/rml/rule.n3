@@ -432,6 +432,9 @@
 
     ?predicate a owl:AsymmetricObjectProperty .
 
+    ?joinPoMap rr:objectMap ?oMap1 .
+    ?joinPoMap2 rr:objectMap ?oMap2 .
+
     :asymmetricPredicate rdfs:label ?o.
 } => {
     :asymmetricPredicate rdfs:label ?o.
@@ -447,6 +450,18 @@
         ],
         [
             rdf:subject ?joinPoMap2
+        ],
+        [
+            rdf:subject ?pMap
+        ],
+        [
+            rdf:subject ?oMap1
+        ],
+        [
+            rdf:subject ?pMap2
+        ],
+        [
+            rdf:subject ?oMap2
         ];
 }.
 
