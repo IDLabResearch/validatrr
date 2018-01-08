@@ -673,6 +673,7 @@
     ?mapping :objectMap (?p2 ?O2 ?oMap2).
     ?O1 rr:constant ?o1 .
     ?O2 rr:constant ?o2 .
+    ?O1 log:notEqualTo ?O2.
     ?o1 log:notEqualTo ?o2.
     ?p1 log:equalTo ?p2 .
     ?p1 a owl:FunctionalProperty.
