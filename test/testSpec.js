@@ -1,3 +1,5 @@
+/* global describe, run, it */
+
 var expect = require("chai").expect;
 const Validator = require('../lib/Validator');
 var path = require("path");
@@ -15,7 +17,17 @@ console.log('Running the tests');
 
 describe("RDFUnit Validator", function () {
   describe("OWL Profile", function () {
-    var profile = 'owl';
+    var profile = 'owl-rdfunit';
+    var basePath = path.resolve(__dirname, '../tests/', profile);
+    var ontologyPath = path.resolve(basePath, 'ontology.ttl');
+    testProfile(profile, basePath, ontologyPath, function () {
+      run();
+      console.log('done!');
+    });
+  });
+
+  describe("RMLRDFUnit Profile", function () {
+    var profile = 'rml-rdfunit';
     var basePath = path.resolve(__dirname, profile);
     var ontologyPath = path.resolve(basePath, 'ontology.ttl');
     testProfile(profile, basePath, ontologyPath, function () {
