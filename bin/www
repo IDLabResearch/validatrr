@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 const app = require('../app');
-const debug = require('debug')('RMLUnit:server');
+const debug = require('debug')('N3Unit:server');
 const http = require('http');
 
 /**

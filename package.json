@@ -4,9 +4,10 @@
   "description": "RDF Validation by reasoning, using N3 and EYE",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env DEBUG=RMLUnit:server node ./bin/www",
+    "start": "cross-env DEBUG=N3Unit:server node ./bin/www",
+    "start:dev": "cross-env NODE_ENV=development DEBUG=N3Unit:* ./node_modules/.bin/nodemon ./bin/www",
     "test": "mocha -R spec --delay",
-    "forever": "cross-env DEBUG=RMLUnit:server forever ./bin/www"
+    "forever": "cross-env DEBUG=N3Unit:server forever ./bin/www"
   },
   "keywords": [
     "RDF",
@@ -19,7 +20,8 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "eslint": "^3.19.0",
-    "mocha": "^3.5.0"
+    "mocha": "^3.5.0",
+    "nodemon": "^1.12.1"
   },
   "dependencies": {
     "async": "^2.5.0",
@@ -28,17 +30,19 @@
     "commander": "^2.11.0",
     "cookie-parser": "^1.4.3",
     "cross-env": "^5.0.5",
-    "debug": "^3.0.0",
+    "debug": "^3.0.1",
     "express": "^4.15.4",
     "forever": "^0.15.3",
     "fs-extra": "^2.1.2",
     "minimist": "^1.2.0",
     "morgan": "^1.8.2",
     "n3": "^0.10.0",
+    "pug": "^2.0.0-rc.4",
     "rdf-ext": "^0.3.0",
     "rdf-parser-rdfxml": "^0.3.1",
     "rdf-serializer-ntriples": "^0.3.0",
     "request": "^2.81.0",
+    "shacl": "github:TopQuadrant/shacl-js",
     "tmp": "0.0.31"
   }
 }
