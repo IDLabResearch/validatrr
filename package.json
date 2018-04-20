@@ -4,6 +4,7 @@
   "description": "RDF Validation by reasoning, using N3 and EYE",
   "main": "index.js",
   "scripts": {
+    "install": "node gather.js",
     "start": "cross-env DEBUG=N3Unit:server node ./bin/www",
     "start:dev": "cross-env NODE_ENV=development DEBUG=N3Unit:* ./node_modules/.bin/nodemon ./bin/www",
     "test": "mocha -R spec --delay",
