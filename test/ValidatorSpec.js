@@ -8,12 +8,12 @@ const expect = require('chai').expect,
   path = require('path'),
   TestHelper = require('../lib/TestHelper');
 
-const dbMappingsPath = path.resolve(__dirname, '../resources/dbpedia_artist.rml.ttl');
+const dbMappingsPath = path.resolve(__dirname, '../resources/Mapping_en_Infobox_artist.ttl');
 
 describe('Validator', function () {
   this.timeout(60000);
   const validator = TestHelper.createRMLValidator();
-  describe.skip('validate RML validator', function () {
+  describe('validate RML validator', function () {
     it('should work', function (done) {
       fs.readFile(dbMappingsPath, 'utf8', function (err, ttl) {
         expect(err).to.be.null;
