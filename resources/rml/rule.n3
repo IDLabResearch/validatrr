@@ -155,9 +155,7 @@
             rdf:object ?predicate
         ];
         rlog:resource [
-            rdf:subject ?mapping;
-            rdf:predicate ?poMap;
-            rdf:object ?resource
+            rdf:subject ?resource
         ];
         rut:resultAnnotation _:s1, _:s2.
     _:s1 a rut:ResultAnnotation; # add datatype
