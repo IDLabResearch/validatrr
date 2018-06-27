@@ -55,7 +55,7 @@ Docker does the installation for you, so you only need to do
 
 ```
 docker build -f cmd.Dockerfile -t n3unit-rml .
-docker run n3unit-rml -it -i [path to rml file] > output.ttl
+docker run -it -v [absolute path to local resources folder]:/usr/local/n3unite/resources n3unit-rml [path to rml file] > output.ttl
 ```
 
 Make sure the path to rml file is within the root folder of this project
