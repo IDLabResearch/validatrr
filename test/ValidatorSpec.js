@@ -13,6 +13,7 @@ const dbMappingsPath = path.resolve(__dirname, '../resources/Mapping_en_Infobox_
 describe('Validator', function () {
   this.timeout(60000);
   const validator = TestHelper.createRMLValidator();
+  validator.removeReasoningParam('--nope');
   describe('validate RML validator', function () {
     it('should work', function (done) {
       fs.readFile(dbMappingsPath, 'utf8', function (err, ttl) {
@@ -28,7 +29,7 @@ describe('Validator', function () {
     });
   });
 
-  describe('validate profile', function () {
+  describe.skip('validate profile', function () {
     const validator = TestHelper.createProfileValidator('rml-rdfunit', 'rdfunit');
     const basePath = path.resolve(__dirname, '../resources/rml/rules');
     TestHelper.fetchNestedFiles(basePath, function (err, bugFiles) {
