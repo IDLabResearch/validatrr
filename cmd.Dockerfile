@@ -22,9 +22,9 @@ RUN set -ex \
     C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8 \
     56730D5401028683275BD23C23EFEFE93C4CFFFE \
   ; do \
-    gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "$key" || \
-    gpg --keyserver pgp.mit.edu --recv-keys "$key" || \
-    gpg --keyserver keyserver.pgp.com --recv-keys "$key" ; \
+    gpg --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-keys "$key" || \
+    gpg --keyserver hkp://pgp.mit.edu:80 --recv-keys "$key" || \
+    gpg --keyserver hkp://keyserver.pgp.com:80 --recv-keys "$key" ; \
   done
 
 ENV NPM_CONFIG_LOGLEVEL info
@@ -44,9 +44,9 @@ RUN set -ex \
   && for key in \
     6A010C5166006599AA17F08146C2130DFD2497F5 \
   ; do \
-    gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "$key" || \
-    gpg --keyserver pgp.mit.edu --recv-keys "$key" || \
-    gpg --keyserver keyserver.pgp.com --recv-keys "$key" ; \
+    gpg --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-keys "$key" || \
+    gpg --keyserver hkp://pgp.mit.edu:80 --recv-keys "$key" || \
+    gpg --keyserver hkp://keyserver.pgp.com:80 --recv-keys "$key" ; \
   done \
   && curl -fSL -o yarn.js "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-legacy-$YARN_VERSION.js" \
   && curl -fSL -o yarn.js.asc "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-legacy-$YARN_VERSION.js.asc" \
@@ -70,6 +70,8 @@ RUN wget -O "eye.zip" "https://downloads.sourceforge.net/project/eulersharp/eule
 RUN unzip "eye.zip" -d "./"
 RUN eye/install.sh
 
+RUN apt-get install -y git
+
 # install the actual n3unit
 RUN mkdir "/usr/local/n3unit"
 ADD package.json /usr/local/n3unit/package.json
@@ -77,6 +79,8 @@ WORKDIR "/usr/local/n3unit"
 RUN npm install
 ADD . /usr/local/n3unit
 
-ENTRYPOINT ["/usr/local/n3unit/bin/cmd"]
+VOLUME ["./resources"]
+
+ENTRYPOINT ["./bin/cmd"]
 
 
