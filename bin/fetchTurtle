@@ -21,12 +21,14 @@ if (program.prefix && program.url) {
 }
 
 if (program.prefix) {
-  fetcher.fetchByPrefix(program.prefix, handleOutput);
+  return fetcher.fetchByPrefix(program.prefix, handleOutput);
 }
 
 if (program.url) {
-  fetcher.fetchByUrl(program.url, handleOutput);
+  return fetcher.fetchByUrl(program.url, handleOutput);
 }
+
+program.help();
 
 function handleOutput(err, ttl) {
   if (err) {
