@@ -1,0 +1,24 @@
+#errors: 1
+<http://ex.com/triplesMap/TriplesMap_0> a <http://www.w3.org/ns/r2rml#TriplesMap> ;
+        <http://semweb.mmlab.be/ns/rml#logicalSource> <http://ex.com/logicalSource/LogicalSource_0> ;
+        <http://www.w3.org/ns/r2rml#subjectMap> <http://ex.com/subjectMap/SubMap_0> ;
+        <http://www.w3.org/ns/r2rml#predicateObjectMap> <http://ex.com/preObjMap/RefPredObjMap_cn_0> , <http://ex.com/preObjMap/PredObjMap_cn_0> .
+
+<http://ex.com/logicalSource/LogicalSource_0> a <http://semweb.mmlab.be/ns/rml#LogicalSource> ;
+        <http://semweb.mmlab.be/ns/rml#source> "input_source_5001" ;
+        <http://semweb.mmlab.be/ns/rml#referenceFormulation> <http://semweb.mmlab.be/ns/ql#CSV> .
+
+<http://ex.com/subjectMap/SubMap_0> a <http://www.w3.org/ns/r2rml#SubjectMap> ;
+        <http://www.w3.org/ns/r2rml#template> "http://www.example.com/{_id}" .
+
+<http://ex.com/preObjMap/RefPredObjMap_cn_0> a <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
+        <http://www.w3.org/ns/r2rml#objectMap> <http://ex.com/objectMap/Class_cn_0> ;
+        <http://www.w3.org/ns/r2rml#predicateMap> <http://ex.com/predicateMap/PreMap_ce_0> .
+
+<http://ex.com/objectMap/Class_cn_0> <http://www.w3.org/ns/r2rml#constant> <http://www.example.com/t> .
+
+<http://ex.com/predicateMap/PreMap_ce_0> a <http://www.w3.org/ns/r2rml#PredicateMap> ;
+        <http://www.w3.org/ns/r2rml#constant> "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" .
+
+<http://ex.com/preObjMap/PredObjMap_cn_0> a <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
+        <http://www.w3.org/ns/r2rml#predicateMap> <http://ex.com/predicateMap/PreMap_ce_0> .

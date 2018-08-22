@@ -1,0 +1,85 @@
+@prefix : <http://www.ournicecode.org#>.
+@prefix rlog:  <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+:codeNoType a rlog:StatusCode;
+    rdfs:label "Missing Type";
+    rlog:codeId 100.
+
+:mismatchCode a rlog:StatusCode;
+    rdfs:label "mismatch";
+    rlog:codeId 101.
+
+:codeDomain a rlog:StatusCode;
+    rdfs:label "Domain Mismatch";
+    rlog:codeId 102.
+
+
+:codeNoDatatype a rlog:StatusCode;
+    rdfs:label "Missing Datatype";
+    rlog:codeId 103.
+
+:codeDatatype a rlog:StatusCode;
+    rdfs:label "Datatype Mismatch";
+    rlog:codeId 104.
+
+:codeLiteral a rlog:StatusCode;
+    rdfs:label "Literal/Resource Mismatch";
+    rlog:codeId 105.
+
+:codeDisjoint a rlog:StatusCode;
+    rdfs:label "Disjoint Class";
+    rdfs:comment "Disjoint classs constraint. (OWL-DISJC)";
+    rlog:codeId 106.
+
+:codeDisjointPredicate a rlog:StatusCode;
+    rdfs:label "Disjoint Predicate";
+    rdfs:comment "Disjoint property constraint. (OWLDISJP)";
+    rlog:codeId 111.
+
+:irreflexivePredicate a rlog:StatusCode;
+    rdfs:label "Irreflexive Predicates";
+    rdfs:comment "Irreflexive property constraint. (OWL-IRREFL)";
+    rlog:codeId "113".
+
+:asymmetricPredicate a rlog:StatusCode;
+    rdfs:label "Asymmetric Predicates";
+    rdfs:comment "Asymmetric property constraint. (OWL-ASYMP)";
+    rlog:codeId "112".
+
+:typeDependency a rlog:StatusCode;
+    rdfs:label "Type Dependency";
+    rdfs:comment "Type dependency:  The type of a resource may imply the attribution of another type. (TYPEDEP)";
+    rlog:codeId "114".
+
+:typePropertyDependency a rlog:StatusCode;
+    rdfs:label "Type Property Dependency";
+    rdfs:comment "A resource of a specific type should have a certain property. (TYPRO-DEP)";
+    rlog:codeId "115".
+
+:codeRange a rlog:StatusCode;
+    rdfs:label "Range Mismatch";
+    rdfs:comment "A range mismatch. (RDFS-RANGE)";
+    rlog:codeId 107.
+
+:noLanguageCode a rlog:StatusCode;
+    rdfs:label "Missing Language Tag";
+    rlog:codeId 108.
+
+:deprecatedCode a rlog:StatusCode;
+    rdfs:label "Deprecated";
+    rlog:codeId 109.
+
+:duplicateLanguageCode a rlog:StatusCode;
+    rdfs:label "Duplicate Language Tag";
+    rdfs:comment "A literal value should contain at most one literal for a certain language. (ONELANG)";
+    rlog:codeId 110.
+
+:cardcode a rlog:StatusCode;
+    rdfs:label "Cardinality";
+    rdfs:comment "Cardinality mismatch. (OWL-CARD)";
+    rlog:codeId "111".
+
+:mismatchCode_4_d a rlog:StatusCode;
+    rdfs:label "mismatch";
+    rlog:codeId "4_d".

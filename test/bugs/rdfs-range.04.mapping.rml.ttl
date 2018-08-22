@@ -1,0 +1,45 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix transit: <http://vocab.org/transit/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+@base <http://example.com/> .
+
+<#ProductIdentificatie>
+    rr:subjectMap <#SubjectMap1>;
+    rr:predicateObjectMap <#POM1>.
+
+<#SubjectMap1> a rr:SubjectMap;
+  rr:template "http://ewi.mmlab.be/cd/id/identificatie/beveren_{/GeefProductResponse/product/productId}";
+  rr:class adms:Identifier.
+
+<#POM1> a rr:PredicateObjectMap;
+  rr:predicateMap <#PM1>;
+  rr:objectMap <#OM1>.
+
+<#PM1> a rr:PredicateMap;
+  rr:constant dcterms:publisher.
+
+<#OM1> a rr:ObjectMap;
+  rr:parentTriplesMap <#ProductOwner>.
+
+<#ProductOwner>
+    rr:subjectMap <#SubjectMap2> ;
+      rr:predicateObjectMap <#POM2> .
+
+<#SubjectMap2> a rr:SubjectMap;
+  rr:template "http://ewi.mmlab.be/cd/id/identificatie/beveren_{/GeefProductResponse/product/productOwner}" .
+
+<#POM2> a rr:PredicateObjectMap;
+  rr:predicateMap <#PM2>;
+  rr:objectMap <#OM2>.
+
+<#PM2> a rr:PredicateMap;
+  rr:constant rdf:type.
+
+<#OM2> a rr:ObjectMap;
+  rr:constant transit:Stop.

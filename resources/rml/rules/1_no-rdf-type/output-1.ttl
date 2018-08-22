@@ -1,0 +1,15 @@
+PREFIX ns1: <http://www.ournicecode.org#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX var: <http://eulersharp.sourceforge.net/.well-known/genid/A20UMAyP:cw35THGTmOmoaaHWqI#>
+PREFIX rlog: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+ns1:codeNoType rdfs:label "Missing Type".
+var:sk_2 a rlog:Entry.
+var:sk_2 rlog:message "An rr:subjectMap with an rr:template should have a rr:class defined".
+var:sk_2 <http://www.example.com/template> "$x is missing an Entity type.".
+var:sk_2 <http://www.example.com/x> var:bn_11.
+var:sk_2 rlog:logLevel rlog:WARN.
+var:sk_2 rlog:hasCode ns1:codeNoType.
+var:sk_2 rlog:resource var:sk_9.
+var:sk_9 rdf:subject var:bn_11.

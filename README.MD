@@ -12,7 +12,7 @@ node gather.js
 
 ## run
 
-`./bin/validate -i [inputfile] -o outputfile -s [comma-delimited schemas, e.g. 'skos,foaf'] --ram [amount of RAM, e.g. 2g, 512m] -r [reasoning profile, rdfs and/or owl]`
+`./bin/validate_owl -i [inputfile] -o outputfile -s [comma-delimited schemas, e.g. 'skos,foaf'] --ram [amount of RAM, e.g. 2g, 512m] -r [reasoning profile, rdfs and/or owl]`
 
 `--ram` and `-r` are optional.
 
@@ -38,7 +38,7 @@ The testing goes as follows:
         3. put the stderr output in `tmp/tmp-CONSTRAINT_err.n3`
         4. check: if it should be correct, you should receive 0 violations, and otherwise you should receive more than 0
 
-## docker
+## Docker - Validate
 
 Docker does the installation for you, so you only need to do
 
@@ -48,3 +48,22 @@ docker run n3unit -it -i test/test.ttl -o test.ttl -s foaf
 ```
 
 > There's a test file at `test/test.ttl`
+
+## Docker - RML Validate
+
+Docker does the installation for you, so you only need to do
+
+```
+docker build -f cmd.Dockerfile -t n3unit-rml .
+docker run -it -v [absolute path to local resources folder]:/usr/local/n3unit/resources n3unit-rml [path to rml file] > output.ttl
+```
+
+Make sure the path to rml file is within the root folder of this project
+
+
+## TODO
+
+* Documentation about ./bin/cmd
+* Documentation about ./bin/fetchTurtle
+* Separate libs for fetchTurtle and eyeHandler
+* Constraint generator (from generic to anything and vice versa)

@@ -1,0 +1,24 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://www.example.com/> .
+@prefix transit: <http://vocab.org/transit/terms/> .
+@prefix test: <http://users.ugent.be/~bjdmeest/testontology.ttl#> .
+
+@base <http://example.com/> .
+
+<#Parent> a rr:TriplesMap;
+  rr:subjectMap <#SubjectMap>;
+  rr:predicateObjectMap <#POM3>.
+
+<#SubjectMap> a rr:SubjectMap;
+  rr:template "http://parent.example.com/{id}";
+  rr:class ex:Person .
+
+<#POM3> a rr:PredicateObjectMap;
+  rr:predicate test:child;
+  rr:objectMap <#OM3>.
+
+<#OM3> a rr:ReferencingObjectMap;
+  rr:parentTriplesMap <#Parent>.

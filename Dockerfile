@@ -1,10 +1,10 @@
 FROM ubuntu:14.04
 
-RUN apt-get -y update
-RUN apt-get -y install curl
-RUN apt-get -y install unzip
-RUN apt-get -y install wget
-RUN apt-get -y install software-properties-common
+RUN apt-get update -y
+RUN apt-get install -y curl
+RUN apt-get install -y unzip
+RUN apt-get install -y wget
+RUN apt-get install -y software-properties-common
 
 # installing nodejs
 RUN groupadd --gid 1000 node \
@@ -55,17 +55,17 @@ RUN set -ex \
   && mv yarn.js /usr/local/bin/yarn \
   && chmod +x /usr/local/bin/yarn
 
-# installing prolog
+# install prolog
 RUN apt-get -y update && apt-get -y install libgmp-dev && apt-get -y install swi-prolog
 
-# install cturtle
+# install CTurtle
 RUN sudo apt-get -y install flex
 RUN wget -O "cturtle.zip" "https://github.com/melgi/cturtle/archive/v1.0.5.zip"
 RUN unzip "cturtle.zip" -d "./"
 RUN rm "cturtle.zip"
 RUN cd "./cturtle-1.0.5" && make install
 
-# install eye
+# install EYE
 RUN wget -O "eye.zip" "https://downloads.sourceforge.net/project/eulersharp/eulersharp/EYE-Summer16/eye.zip"
 RUN unzip "eye.zip" -d "./"
 RUN eye/install.sh
@@ -78,6 +78,6 @@ RUN npm install
 ADD . /usr/local/n3unit
 RUN node gather.js
 
-ENTRYPOINT ["/usr/local/n3unit/bin/validate"]
+ENTRYPOINT ["/usr/local/n3unit/bin/validate_owl"]
 
 

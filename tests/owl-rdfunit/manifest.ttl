@@ -1,0 +1,228 @@
+@prefix mf:      <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdfut:   <http://www.example.com/rdfunit-tests#> .
+@prefix fnot:    <http://www.example.com/fno-tests#> .
+@prefix fnos:    <http://www.example.com/fnos#> .
+@prefix :        <http://example.com/constraints#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<>
+  a mf:Manifest ;
+  rdfs:label "Original RDFUnit tests" ;
+  mf:entries (
+    <invfunc_correct>
+    <invfunc_wrong>
+    <owlcardt_correct>
+    <owlcardt_wrong_exact>
+    <owlcardt_wrong_max>
+    <owlcardt_wrong_min>
+    <owldisjc_correct>
+    <owldisjc_wrong>
+    <owlqcardt_correct>
+    <owlqcardt_wrong_exact>
+    <owlqcardt_wrong_max>
+    <owlqcardt_wrong_min>
+    <rdflangstring_correct>
+    <rdflangstring_wrong>
+    <rdfsrange-miss_wrong>
+    <rdfsranged_correct>
+    <rdfsranged_wrong>
+    <rdfsrange_correct>
+    <rdfsrange_wrong>
+    <rdfsrang_lit_correct>
+    <rdfsrang_lit_wrong>
+  ) ;
+  .
+
+  # <invfunc_correct> fnot:skipped false .
+  # <invfunc_wrong> fnot:skipped true .
+
+  <invfunc_correct>
+    rdf:type rdfut:Correct ;
+    mf:name "Test of INVFUNC" ;
+    rdfs:comment "invfunc_correct" ;
+    fnot:function fnos:rdfunit_owl ;
+    mf:action ( <invfunc_correct.ttl> <ontology.ttl> ) ;
+    mf:result <output_correct.ttl> ;
+  .
+
+  <invfunc_wrong>
+    rdf:type rdfut:Wrong ;
+    mf:name "Test of INVFUNC" ;
+    rdfs:comment "invfunc_wrong" ;
+    fnot:function fnos:rdfunit_owl ;
+    mf:action ( <invfunc_wrong.ttl> <ontology.ttl> ) ;
+    mf:result <output_wrong_2.ttl> ;
+  .
+
+  <owlcardt_correct>
+    rdf:type rdfut:Correct ;
+    mf:name "Test of OWLCARDT" ;
+    rdfs:comment "owlcardt_correct" ;
+    fnot:function fnos:rdfunit_owl ;
+    mf:action ( <owlcardt_correct.ttl> <ontology.ttl> ) ;
+    mf:result <output_correct.ttl> ;
+  .
+
+  <owlcardt_wrong_exact>
+    rdf:type rdfut:Wrong ;
+    mf:name "Test of OWLCARDT" ;
+    rdfs:comment "owlcardt_wrong_exact" ;
+    fnot:function fnos:rdfunit_owl ;
+    mf:action ( <owlcardt_wrong_exact.ttl> <ontology.ttl> ) ;
+    mf:result <output_wrong_6.ttl> ;
+  .
+
+  <owlcardt_wrong_max>
+    rdf:type rdfut:Wrong ;
+    mf:name "Test of OWLCARDT" ;
+    rdfs:comment "owlcardt_wrong_max" ;
+    fnot:function fnos:rdfunit_owl ;
+    mf:action ( <owlcardt_wrong_max.ttl> <ontology.ttl> ) ;
+    mf:result <output_wrong_2.ttl> ;
+  .
+
+  <owlcardt_wrong_min>
+    rdf:type rdfut:Wrong ;
+    mf:name "Test of OWLCARDT" ;
+    rdfs:comment "owlcardt_wrong_min" ;
+    fnot:function fnos:rdfunit_owl ;
+    mf:action ( <owlcardt_wrong_min.ttl> <ontology.ttl> ) ;
+    mf:result <output_wrong_2.ttl> ;
+  .
+
+  <owldisjc_correct>
+    rdf:type rdfut:Correct ;
+    mf:name "Test of OWLDISJC" ;
+    rdfs:comment "owldisjc_correct" ;
+    fnot:function fnos:rdfunit_owl ;
+    mf:action ( <owldisjc_correct.ttl> <ontology.ttl> ) ;
+    mf:result <output_correct.ttl> ;
+  .
+
+  <owldisjc_wrong>
+    rdf:type rdfut:Wrong ;
+    mf:name "Test of OWLDISJC" ;
+    rdfs:comment "owldisjc_wrong" ;
+    fnot:function fnos:rdfunit_owl ;
+    mf:action ( <owldisjc_wrong.ttl> <ontology.ttl> ) ;
+    mf:result <output_wrong_6.ttl> ;
+  .
+
+  <owlqcardt_correct>
+    rdf:type rdfut:Correct ;
+    mf:name "Test of OWLQCARDT" ;
+    rdfs:comment "owlqcardt_correct" ;
+    fnot:function fnos:rdfunit_owl ;
+    mf:action ( <owlqcardt_correct.ttl> <ontology.ttl> ) ;
+    mf:result <output_correct.ttl> ;
+  .
+
+  <owlqcardt_wrong_exact>
+    rdf:type rdfut:Wrong ;
+    mf:name "Test of OWLQCARDT" ;
+    rdfs:comment "owlqcardt_wrong_exact" ;
+    fnot:function fnos:rdfunit_owl ;
+    mf:action ( <owlqcardt_wrong_exact.ttl> <ontology.ttl> ) ;
+    mf:result <output_wrong_6.ttl> ;
+  .
+
+  <owlqcardt_wrong_max>
+    rdf:type rdfut:Wrong ;
+    mf:name "Test of OWLQCARDT" ;
+    rdfs:comment "owlqcardt_wrong_max" ;
+    fnot:function fnos:rdfunit_owl ;
+    mf:action ( <owlqcardt_wrong_max.ttl> <ontology.ttl> ) ;
+    mf:result <output_wrong_2.ttl> ;
+  .
+
+  <owlqcardt_wrong_min>
+    rdf:type rdfut:Wrong ;
+    mf:name "Test of OWLQCARDT" ;
+    rdfs:comment "owlqcardt_wrong_min" ;
+    fnot:function fnos:rdfunit_owl ;
+    mf:action ( <owlqcardt_wrong_min.ttl> <ontology.ttl> ) ;
+    mf:result <output_wrong_2.ttl> ;
+  .
+
+  <rdflangstring_correct>
+    rdf:type rdfut:Correct ;
+    mf:name "Test of RDFLANGSTRING" ;
+    rdfs:comment "rdflangstring_correct" ;
+    fnot:function fnos:rdfunit_owl ;
+    mf:action ( <rdflangstring_correct.ttl> <ontology.ttl> ) ;
+    mf:result <output_correct.ttl> ;
+  .
+
+  <rdflangstring_wrong>
+    rdf:type rdfut:Wrong ;
+    mf:name "Test of RDFLANGSTRING" ;
+    rdfs:comment "rdflangstring_wrong" ;
+    fnot:function fnos:rdfunit_owl ;
+    mf:action ( <rdflangstring_wrong.ttl> <ontology.ttl> ) ;
+    mf:result <output_wrong_2.ttl> ;
+  .
+
+  <rdfsrange-miss_wrong>
+    rdf:type rdfut:Wrong ;
+    mf:name "Test of RDFSRANGE-MISS" ;
+    rdfs:comment "rdfsrange-miss_wrong" ;
+    fnot:function fnos:rdfunit_owl ;
+    mf:action ( <rdfsrange-miss_wrong.ttl> <ontology.ttl> ) ;
+    mf:result <output_wrong_1.ttl> ;
+  .
+
+  <rdfsranged_correct>
+    rdf:type rdfut:Correct ;
+    mf:name "Test of RDFSRANGED" ;
+    rdfs:comment "rdfsranged_correct" ;
+    fnot:function fnos:rdfunit_owl ;
+    mf:action ( <rdfsranged_correct.ttl> <ontology.ttl> ) ;
+    mf:result <output_correct.ttl> ;
+  .
+
+  <rdfsranged_wrong>
+    rdf:type rdfut:Wrong ;
+    mf:name "Test of RDFSRANGED" ;
+    rdfs:comment "rdfsranged_wrong" ;
+    fnot:function fnos:rdfunit_owl ;
+    mf:action ( <rdfsranged_wrong.ttl> <ontology.ttl> ) ;
+    mf:result <output_wrong_2.ttl> ;
+  .
+
+  <rdfsrange_correct>
+    rdf:type rdfut:Correct ;
+    mf:name "Test of RDFSRANGE" ;
+    rdfs:comment "rdfsrange_correct" ;
+    fnot:function fnos:rdfunit_owl ;
+    mf:action ( <rdfsrange_correct.ttl> <ontology.ttl> ) ;
+    mf:result <output_correct.ttl> ;
+  .
+
+  <rdfsrange_wrong>
+    rdf:type rdfut:Wrong ;
+    mf:name "Test of RDFSRANGE" ;
+    rdfs:comment "rdfsrange_wrong" ;
+    fnot:function fnos:rdfunit_owl ;
+    mf:action ( <rdfsrange_wrong.ttl> <ontology.ttl> ) ;
+    mf:result <output_wrong_1.ttl> ;
+  .
+
+
+  <rdfsrang_lit_correct>
+    rdf:type rdfut:Correct ;
+    mf:name "Test of RDFSRANG_LIT" ;
+    rdfs:comment "rdfsrang_lit_correct" ;
+    fnot:function fnos:rdfunit_owl ;
+    mf:action ( <rdfsrang_lit_correct.ttl> <ontology.ttl> ) ;
+    mf:result <output_correct.ttl> ;
+  .
+
+  <rdfsrang_lit_wrong>
+    rdf:type rdfut:Wrong ;
+    mf:name "Test of RDFSRANG_LIT" ;
+    rdfs:comment "rdfsrang_lit_wrong" ;
+    fnot:function fnos:rdfunit_owl ;
+    mf:action ( <rdfsrang_lit_wrong.ttl> <ontology.ttl> ) ;
+    mf:result <output_wrong_3.ttl> ;
+  .

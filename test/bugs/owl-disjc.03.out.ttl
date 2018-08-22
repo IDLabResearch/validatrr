@@ -1,0 +1,73 @@
+#Processed by EYE rel. v17.0407.1501 josd
+#eye --nope --no-qvars C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\rml\extraRules.n3 C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_www.w3.org_ns_r2rml_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_xmlns.com_foaf_0.1_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_semweb.mmlab.be_ns_rml_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_www.w3.org_2001_XMLSchema_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_vocab.org_transit_terms_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_www.w3.org_1999_02_22-rdf-syntax-ns_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_purl.org_tio_ns_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\tmp\tmp-1876EF4JyMJCIjwD C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\rml\logCodes.ttl --query C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\rml\rule.n3
+
+PREFIX var: <http://eulersharp.sourceforge.net/.well-known/genid/W9kgHsqbVKPDY0uUkCeQb0fupfc#>
+PREFIX : <http://www.ournicecode.org#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rutp: <http://rdfunit.aksw.org/data/patterns#>
+PREFIX rlog: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#>
+PREFIX oslc: <http://open-services.net/ns/core#>
+PREFIX rutg: <http://rdfunit.aksw.org/data/generators#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dsp: <http://dublincore.org/dc-dsp#>
+PREFIX schema: <http://schema.org/>
+PREFIX rut: <http://rdfunit.aksw.org/ns/core#>
+PREFIX rutr: <http://rdfunit.aksw.org/data/results#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX spin: <http://spinrdf.org/spin#>
+PREFIX rutt: <http://rdfunit.aksw.org/data/tests#>
+PREFIX ruts: <http://rdfunit.aksw.org/data/testsuite#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX string: <http://www.w3.org/2000/10/swap/string#>
+PREFIX rr: <http://www.w3.org/ns/r2rml#>
+PREFIX vaem: <http://www.linkedmodel.org/schema/vaem#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX vann: <http://purl.org/vocab/vann/>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX cc: <http://creativecommons.org/ns#>
+PREFIX wot: <http://xmlns.com/wot/0.1/>
+PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
+PREFIX ql: <http://semweb.mmlab.be/ns/ql#>
+PREFIX rml: <http://semweb.mmlab.be/ns/rml#>
+PREFIX msg0: <http://web.resource.org/cc/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX gr: <http://purl.org/goodrelations/v1#>
+PREFIX ex: <http://www.example.com/>
+PREFIX transit: <http://vocab.org/transit/terms/>
+PREFIX cs: <http://vocab.org/changeset/schema#>
+PREFIX test: <http://users.ugent.be/~bjdmeest/testontology.ttl#>
+
+:codeDisjoint rdfs:label "Disjoint Class".
+var:sk_2 a rlog:Entry.
+var:sk_16 a rlog:Entry.
+var:sk_2 rlog:logLevel rlog:ERROR.
+var:sk_16 rlog:logLevel rlog:ERROR.
+var:sk_2 rlog:hasCode :codeDisjoint.
+var:sk_16 rlog:hasCode :codeDisjoint.
+var:sk_2 rlog:message "A mapping defines classes that are disjoint to each other".
+var:sk_16 rlog:message "A mapping defines classes that are disjoint to each other".
+var:sk_2 <http://www.example.com/template> "$x and $y are disjoint".
+var:sk_16 <http://www.example.com/template> "$x and $y are disjoint".
+var:sk_2 <http://www.example.com/x> <http://purl.org/tio/ns#SeatOrSeatCategory>.
+var:sk_16 <http://www.example.com/x> <http://purl.org/tio/ns#SeatingLayout>.
+var:sk_2 <http://www.example.com/y> <http://purl.org/tio/ns#SeatingLayout>.
+var:sk_16 <http://www.example.com/y> <http://purl.org/tio/ns#SeatOrSeatCategory>.
+var:sk_2 rlog:resource var:sk_10.
+var:sk_16 rlog:resource var:sk_24.
+var:sk_10 rdf:subject <http://example.com/#SubjectMap>.
+var:sk_24 rdf:subject <http://example.com/#OM>.
+var:sk_10 rdf:predicate rr:class.
+var:sk_24 rdf:predicate rr:constant.
+var:sk_10 rdf:object <http://purl.org/tio/ns#SeatOrSeatCategory>.
+var:sk_24 rdf:object "http://purl.org/tio/ns#SeatingLayout".
+
+#2017-12-07T15:27:46.212Z in=2177 out=23 ent=353 step=1719 brake=4 inf=2291342 sec=0.468 inf/sec=4896030
+#ENDS

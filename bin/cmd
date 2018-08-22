@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+
+/**
+ * Created by bjdmeest on 2/11/2015.
+ */
+const fs = require('fs'),
+  path = require('path'),
+  TestHelper = require('../lib/TestHelper');
+
+const validator = TestHelper.createRMLValidator();
+
+const inputFile = process.argv[2];
+
+fs.readFile(path.resolve(__dirname, inputFile), 'utf8', function (err, ttl) {
+  if (err) {
+    throw err;
+  }
+  const t0 = new Date();
+  validator.validateStream(ttl, null, function (err, child) {
+    if (err) {
+      throw err;
+    }
+    child.stdout.on('data', (data) => {
+      console.log('' + data);
+    });
+
+    child.stderr.on('data', (data) => {
+      console.error('' + data);
+    });
+
+    child.on('close', (code) => {
+      console.error(`child process exited with code ${code}`);
+      console.log('# Time - total: ' + ((new Date()).getTime() - t0.getTime()));
+    });
+  });
+});

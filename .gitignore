@@ -1,2 +1,10 @@
 .idea/
 node_modules/
+/tmp/*
+!/tmp/.gitkeep
+/log/*
+!/log/.gitkeep
+out-*.ttl
+/resources/ontologies/*.ttl
+/test/bugs/*.test-output.ttl
+/tests/*/*-result.ttl

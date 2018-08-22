@@ -1,0 +1,18 @@
+#errors: 0
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<#AirportMapping>
+  rr:subjectMap [
+    rr:template "http://airport.example.com/{id}";
+  ];
+  rr:predicateObjectMap [
+    rr:predicate rdf:type;
+    rr:objectMap [
+      rml:reference "column1";
+      rr:termType rr:IRI
+    ]
+  ].

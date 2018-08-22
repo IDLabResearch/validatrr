@@ -1,0 +1,56 @@
+#Processed by EYE rel. v17.0407.1501 josd
+#eye --nope --no-qvars "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_www.w3.org_ns_r2rml_.ttl" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_semweb.mmlab.be_ns_rml_.ttl" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_www.w3.org_2000_01_rdf-schema_.ttl" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_xmlns.com_foaf_0.1_.ttl" "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\ontologies\http_semweb.mmlab.be_ns_ql_.ttl" C:\Users\BJDMEE~1.WIL\AppData\Local\Temp\tmp-776458taUfjYt1dA --query "C:\Ben\Work\iMinds\Projects\RML\Data Quality\RMLUnit\resources\rule.n3"
+
+PREFIX var: <http://eulersharp.sourceforge.net/.well-known/genid/td9LwwatF8rncBDSbw00M:RrHqg#>
+PREFIX vaem: <http://www.linkedmodel.org/schema/vaem#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://www.w3.org/ns/r2rml#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX vann: <http://purl.org/vocab/vann/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX cc: <http://creativecommons.org/ns#>
+PREFIX ql: <http://semweb.mmlab.be/ns/ql#>
+PREFIX rml: <http://semweb.mmlab.be/ns/rml#>
+PREFIX wot: <http://xmlns.com/wot/0.1/>
+PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rutp: <http://rdfunit.aksw.org/data/patterns#>
+PREFIX rlog: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#>
+PREFIX oslc: <http://open-services.net/ns/core#>
+PREFIX rutg: <http://rdfunit.aksw.org/data/generators#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dsp: <http://dublincore.org/dc-dsp#>
+PREFIX schema: <http://schema.org/>
+PREFIX rut: <http://rdfunit.aksw.org/ns/core#>
+PREFIX rutr: <http://rdfunit.aksw.org/data/results#>
+PREFIX spin: <http://spinrdf.org/spin#>
+PREFIX rutt: <http://rdfunit.aksw.org/data/tests#>
+PREFIX ruts: <http://rdfunit.aksw.org/data/testsuite#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX ns1: <http://www.ournicecode.org#>
+PREFIX string: <http://www.w3.org/2000/10/swap/string#>
+PREFIX cs: <http://vocab.org/changeset/schema#>
+PREFIX ex: <http://www.example.com/>
+
+ns1:codeNoType rdfs:label "Missing Type".
+var:sk_2 a rlog:Entry.
+var:sk_2 rlog:message "An rr:subjectMap with an rr:template should have a rr:class defined".
+var:sk_2 <http://www.example.com/template> "$x is missing an Entity type.".
+var:sk_2 <http://www.example.com/x> <http://ex.com/subjectMap/SubMap_0>.
+var:sk_2 rlog:logLevel rlog:WARN.
+var:sk_2 rlog:hasCode ns1:codeNoType.
+var:sk_2 rlog:resource var:sk_9.
+var:sk_9 rdf:subject <http://ex.com/subjectMap/SubMap_0>.
+
+#2017-07-10T15:47:46.259Z in=1164 out=8 ent=8 step=1 brake=2 inf=926628 sec=0.530 inf/sec=1748355
+#ENDS
+
+
+# Time - total: 955
