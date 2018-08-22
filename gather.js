@@ -24,7 +24,7 @@ rules.forEach(function (file) {
   }
 });
 
-const eyePath = os.platform() === 'win32' ? "C:/Program Files/eye/bin/eye.cmd" : '/opt/eye/bin/eye.sh';
+const eyePath = os.platform() === 'win32' ? '"C:/Program Files/eye/bin/eye.cmd"' : '/opt/eye/bin/eye.sh';
 
 let start = new Date();
 parse(files, 'pvm', path.resolve(__dirname, 'dist', 'n3unit')).then(function (outPath) {

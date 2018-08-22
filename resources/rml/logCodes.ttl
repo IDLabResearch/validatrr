@@ -29,6 +29,7 @@
 
 :codeDisjoint a rlog:StatusCode;
     rdfs:label "Disjoint Class";
+    rdfs:comment "Disjoint classs constraint. (OWL-DISJC)";
     rlog:codeId 106.
 
 :codeDisjointPredicate a rlog:StatusCode;
@@ -58,6 +59,7 @@
 
 :codeRange a rlog:StatusCode;
     rdfs:label "Range Mismatch";
+    rdfs:comment "A range mismatch. (RDFS-RANGE)";
     rlog:codeId 107.
 
 :noLanguageCode a rlog:StatusCode;
@@ -72,6 +74,11 @@
     rdfs:label "Duplicate Language Tag";
     rdfs:comment "A literal value should contain at most one literal for a certain language. (ONELANG)";
     rlog:codeId 110.
+
+:cardcode a rlog:StatusCode;
+    rdfs:label "Cardinality";
+    rdfs:comment "Cardinality mismatch. (OWL-CARD)";
+    rlog:codeId "111".
 
 :mismatchCode_4_d a rlog:StatusCode;
     rdfs:label "mismatch";

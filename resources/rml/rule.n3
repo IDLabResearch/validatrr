@@ -31,16 +31,7 @@
 {
     ?mapping <http://www.w3.org/ns/r2rml#subjectMap> ?resource.
     ?resource rr:template ?template.
-    _:t e:findall (?class {?resource <http://www.w3.org/ns/r2rml#class> ?class} ()).
-    _:tt e:findall (?o {
-      ?mapping <http://www.w3.org/ns/r2rml#predicateObjectMap> ?o.
-      ?o <http://www.w3.org/ns/r2rml#predicate> rdf:type .
-    } ()).
-    _:ttt e:findall (?p {
-      ?mapping <http://www.w3.org/ns/r2rml#predicateObjectMap> ?o.
-      ?o <http://www.w3.org/ns/r2rml#predicateMap> ?p.
-      ?p <http://www.w3.org/ns/r2rml#constant> "http://www.w3.org/1999/02/22-rdf-syntax-ns#type".
-    } ()).
+    _:t e:findall (1 {?mapping :subjectMapResourceClass ?class} ()).
     :codeNoType rdfs:label ?o.
 } => {
     :codeNoType rdfs:label ?o.
@@ -68,8 +59,7 @@
         rdf:Property,
         rdfs:Class,
         rdfs:Datatype.
-    _:t e:findall (?class {?resource <http://www.w3.org/ns/r2rml#class> ?class} ()).
-    _:ttt e:findall (?o {?mapping <http://www.w3.org/ns/r2rml#predicateObjectMap> ?o. ?o <http://www.w3.org/ns/r2rml#predicate> rdf:type .} ()).
+    _:t e:findall (1 {?mapping :subjectMapResourceClass ?class } ()).
     :codeNoType rdfs:label ?o.
 } => {
     :codeNoType rdfs:label ?o.
@@ -129,8 +119,8 @@
         rlog:resource ?classTriple;
         rlog:resource [
             rdf:subject ?poMap;
-            rdf:predicate <http://www.w3.org/ns/r2rml#predicate>;
-            rdf:object ?predicate
+            rdf:subject ?pMap;
+            rdf:predicate ?predicate
         ].
 }.
 
@@ -163,6 +153,9 @@
             rdf:subject ?pMap;
             rdf:predicate <http://www.w3.org/ns/r2rml#predicate>;
             rdf:object ?predicate
+        ];
+        rlog:resource [
+            rdf:subject ?resource
         ];
         rut:resultAnnotation _:s1, _:s2.
     _:s1 a rut:ResultAnnotation; # add datatype
@@ -442,6 +435,9 @@
 
     ?predicate a owl:AsymmetricObjectProperty .
 
+    ?joinPoMap rr:objectMap ?oMap1 .
+    ?joinPoMap2 rr:objectMap ?oMap2 .
+
     :asymmetricPredicate rdfs:label ?o.
 } => {
     :asymmetricPredicate rdfs:label ?o.
@@ -457,6 +453,18 @@
         ],
         [
             rdf:subject ?joinPoMap2
+        ],
+        [
+            rdf:subject ?pMap
+        ],
+        [
+            rdf:subject ?oMap1
+        ],
+        [
+            rdf:subject ?pMap2
+        ],
+        [
+            rdf:subject ?oMap2
         ];
 }.
 
@@ -481,6 +489,10 @@
         ex:y ?mappingTo ;
         rlog:resource [
             rdf:subject ?joinPoMap
+        ] ;
+        rlog:resource [
+            rdf:subject ?pMap ;
+            rdf:predicate ?predicate
         ] ;
         rlog:resource [
             rdf:subject ?parentTriple ;
@@ -519,7 +531,7 @@
     ?mapping :subjectMapResourceClass ?T1 .
     ?T1 :parentTriple (?sMap ?o2 ?p2) .
     ?T1 test:typrodep ?p .
-    _:x e:findall (?mapping {?mapping :poMap (?p ?poMap)} ()).
+    _:x e:findall (?mapping {?mapping rr:predicateObjectMap ?poMap. ?poMap :hasPredicate (?p ?pMap)} ()).
 
     :typePropertyDependency rdfs:label ?o.
 } => {
@@ -541,9 +553,11 @@
 
 #7. rutt:rr-produces-disjoint-predicate-errors
 {
-    ?mapping :poMap (?p1 ?poMap1).
-    ?mapping :poMap (?p2 ?poMap2).
+    ?mapping rr:predicateObjectMap ?poMap1.
+    ?mapping rr:predicateObjectMap ?poMap2.
     ?poMap1 log:notEqualTo ?poMap2 .
+    ?poMap1 :hasPredicate (?p1 ?pMap1).
+    ?poMap2 :hasPredicate (?p2 ?pMap2).
 
     ?p1 owl:propertyDisjointWith ?p2 .
     :codeDisjointPredicate rdfs:label ?o.
@@ -557,7 +571,9 @@
         ex:x ?p1 ;
         ex:y ?p2 ;
         rlog:resource [
-            rdf:subject ?poMap1
+            rdf:subject ?poMap1 ;
+            rdf:subject ?pMap1 ;
+            rdf:predicate ?p1
         ].
 }.
 
@@ -565,10 +581,13 @@
 {
     ?mappingFrom :joinMap (?predicate ?mappingTo ?joinPoMap ?pMap).
     ?predicate rdfs:range ?T1.
+
     ?mappingTo :subjectMapResourceClass ?T2.
     _:x e:findall (?T2 {?T2 rdfs:subClassOf ?T1} ()).
     ?T2 log:notEqualTo ?T1 .
     :codeRange rdfs:label ?o.
+    ?T2 :parentTriple (?sMap ?o2 ?p2) .
+    ?joinPoMap <http://www.w3.org/ns/r2rml#objectMap> ?oMap .
 } => {
     :codeRange rdfs:label ?o.
     _:out a rlog:Entry;
@@ -577,8 +596,12 @@
         rlog:resource [
             rdf:subject ?joinPoMap;
             rdf:subject ?pMap;
+            rdf:subject ?oMap ;
             rdf:predicate rdfs:range;
             rdf:object ?T2
+        ];
+        rlog:resource [
+          rdf:subject ?sMap
         ];
         rlog:message "A mapping wrongly defines the range";
         ex:template "The Entity type $x of the entity does not match the expected Entity type $y of the relation $z.";
@@ -624,8 +647,8 @@
 
 #10. rutt:rr-produces-duplicateLanguageCode-errors
 {
-    ?mapping :objectMap (?p1 ?O1).
-    ?mapping :objectMap (?p2 ?O2).
+    ?mapping :objectMap (?p1 ?O1 ?oMap1).
+    ?mapping :objectMap (?p2 ?O2 ?oMap2).
     ?O1 log:notEqualTo ?O2.
     ?01 rr:language ?lang1.
     ?02 rr:language ?lang2.
@@ -643,6 +666,64 @@
             rdf:subject ?O1
         ];
         rlog:resource [
+            rdf:subject ?O2
+        ]
+}.
+
+#10. cardinality mismatch
+{
+    ?mapping :objectMap (?p1 ?O1 ?oMap1).
+    ?mapping :objectMap (?p2 ?O2 ?oMap2).
+    ?O1 rr:constant ?o1 .
+    ?O2 rr:constant ?o2 .
+    ?O1 log:notEqualTo ?O2.
+    ?o1 log:notEqualTo ?o2.
+    ?p1 log:equalTo ?p2 .
+    ?p1 a owl:FunctionalProperty.
+
+    :cardcode rdfs:label ?o.
+} => {
+    :cardcode rdfs:label ?o.
+    _:out a rlog:Entry;
+        rlog:logLevel rlog:ERROR;
+        rlog:hasCode :cardcode;
+        rlog:message "An OWL cardinality constraint has failed" ;
+        rlog:resource [
+            rdf:predicate ?p1 ;
+            rdf:subject ?O1
+        ];
+        rlog:resource [
+            rdf:predicate ?p2 ;
+            rdf:subject ?O2
+        ];
+        rlog:resource [
+            rdf:subject ?oMap1 ;
+            rdf:subject ?oMap2
+        ]
+}.
+
+#10. cardinality mismatch
+{
+    ?mapping :objectMap (?p1 ?O1 ?oMap1).
+    ?mapping :objectMap (?p2 ?O2 ?oMap2).
+    ?O1 log:notEqualTo ?O2.
+    ?p1 log:equalTo ?p2 .
+    ?p1 a owl:FunctionalProperty.
+    _:t e:findall (1 {?O1 rr:constant ?o1} ()).
+
+    :cardcode rdfs:label ?o.
+} => {
+    :cardcode rdfs:label ?o.
+    _:out a rlog:Entry;
+        rlog:logLevel rlog:WARNING;
+        rlog:hasCode :cardcode;
+        rlog:message "An OWL cardinality constraint possibly has failed" ;
+        rlog:resource [
+            rdf:predicate ?p1 ;
+            rdf:subject ?O1
+        ];
+        rlog:resource [
+            rdf:predicate ?p2 ;
             rdf:subject ?O2
         ]
 }.

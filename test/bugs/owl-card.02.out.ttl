@@ -1,0 +1,128 @@
+#Processed by EYE rel. v17.0407.1501 josd
+#eye --nope --no-qvars C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\rml\extraRules.n3 C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_www.w3.org_ns_r2rml_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_xmlns.com_foaf_0.1_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_semweb.mmlab.be_ns_rml_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_www.w3.org_2001_XMLSchema_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_vocab.org_transit_terms_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_www.w3.org_1999_02_22-rdf-syntax-ns_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_www.w3.org_2000_01_rdf-schema_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\tmp\tmp-14432yFUVsFvzg3kd C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\rml\logCodes.ttl --query C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\rml\rule.n3
+
+PREFIX var: <http://eulersharp.sourceforge.net/.well-known/genid/xHHy4E358H6ihFG:yrMui8RImLw#>
+PREFIX : <http://www.ournicecode.org#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rutp: <http://rdfunit.aksw.org/data/patterns#>
+PREFIX rlog: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#>
+PREFIX oslc: <http://open-services.net/ns/core#>
+PREFIX rutg: <http://rdfunit.aksw.org/data/generators#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dsp: <http://dublincore.org/dc-dsp#>
+PREFIX schema: <http://schema.org/>
+PREFIX rut: <http://rdfunit.aksw.org/ns/core#>
+PREFIX rutr: <http://rdfunit.aksw.org/data/results#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX spin: <http://spinrdf.org/spin#>
+PREFIX rutt: <http://rdfunit.aksw.org/data/tests#>
+PREFIX ruts: <http://rdfunit.aksw.org/data/testsuite#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX string: <http://www.w3.org/2000/10/swap/string#>
+PREFIX rr: <http://www.w3.org/ns/r2rml#>
+PREFIX vaem: <http://www.linkedmodel.org/schema/vaem#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX vann: <http://purl.org/vocab/vann/>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX cc: <http://creativecommons.org/ns#>
+PREFIX wot: <http://xmlns.com/wot/0.1/>
+PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
+PREFIX ql: <http://semweb.mmlab.be/ns/ql#>
+PREFIX rml: <http://semweb.mmlab.be/ns/rml#>
+PREFIX msg0: <http://web.resource.org/cc/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX ex: <http://www.example.com/>
+PREFIX transit: <http://vocab.org/transit/terms/>
+PREFIX cs: <http://vocab.org/changeset/schema#>
+PREFIX test: <http://users.ugent.be/~bjdmeest/testontology.ttl#>
+
+:codeNoDatatype rdfs:label "Missing Datatype".
+var:sk_17 rdfs:label "Add a datatype".
+var:sk_20 rdfs:label "Remove the predicate".
+var:sk_62 rdfs:label "Add a datatype".
+var:sk_65 rdfs:label "Remove the predicate".
+:cardcode rdfs:label "Cardinality".
+var:sk_2 a rlog:Entry.
+var:sk_17 a rut:ResultAnnotation.
+var:sk_20 a rut:ResultAnnotation.
+var:sk_47 a rlog:Entry.
+var:sk_62 a rut:ResultAnnotation.
+var:sk_65 a rut:ResultAnnotation.
+var:sk_92 a rlog:Entry.
+var:sk_2 rlog:message "The predicate is defined as a datatype but no rr:datatype exists in the rr:objectMap".
+var:sk_47 rlog:message "The predicate is defined as a datatype but no rr:datatype exists in the rr:objectMap".
+var:sk_92 rlog:message "An OWL cardinality constraint possibly has failed".
+var:sk_2 <http://www.example.com/template> "The relation $x expects an attribute of the datatype $y.".
+var:sk_17 <http://www.example.com/template> "Add datatype $y to $x".
+var:sk_20 <http://www.example.com/template> "Remove $x".
+var:sk_47 <http://www.example.com/template> "The relation $x expects an attribute of the datatype $y.".
+var:sk_62 <http://www.example.com/template> "Add datatype $y to $x".
+var:sk_65 <http://www.example.com/template> "Remove $x".
+var:sk_2 <http://www.example.com/x> <http://xmlns.com/foaf/0.1/gender>.
+var:sk_17 <http://www.example.com/x> <http://example.com/#OM1>.
+var:sk_20 <http://www.example.com/x> <http://xmlns.com/foaf/0.1/gender>.
+var:sk_47 <http://www.example.com/x> <http://xmlns.com/foaf/0.1/gender>.
+var:sk_62 <http://www.example.com/x> <http://example.com/#OM2>.
+var:sk_65 <http://www.example.com/x> <http://xmlns.com/foaf/0.1/gender>.
+var:sk_2 <http://www.example.com/y> rdfs:Literal.
+var:sk_17 <http://www.example.com/y> rdfs:Literal.
+var:sk_47 <http://www.example.com/y> rdfs:Literal.
+var:sk_62 <http://www.example.com/y> rdfs:Literal.
+var:sk_2 rlog:logLevel rlog:ERROR.
+var:sk_47 rlog:logLevel rlog:ERROR.
+var:sk_92 rlog:logLevel rlog:WARNING.
+var:sk_2 rlog:hasCode :codeNoDatatype.
+var:sk_47 rlog:hasCode :codeNoDatatype.
+var:sk_92 rlog:hasCode :cardcode.
+var:sk_2 rlog:resource var:sk_10.
+var:sk_47 rlog:resource var:sk_55.
+var:sk_92 rlog:resource var:sk_97.
+var:sk_92 rlog:resource var:sk_102.
+var:sk_10 rdf:subject <http://example.com/#POM1>.
+var:sk_10 rdf:subject rr:predicate.
+var:sk_29 rdf:subject <http://example.com/#OM1>.
+var:sk_40 rdf:subject <http://example.com/#POM1>.
+var:sk_55 rdf:subject <http://example.com/#POM2>.
+var:sk_55 rdf:subject rr:predicate.
+var:sk_74 rdf:subject <http://example.com/#OM2>.
+var:sk_85 rdf:subject <http://example.com/#POM2>.
+var:sk_97 rdf:subject <http://example.com/#OM1>.
+var:sk_102 rdf:subject <http://example.com/#OM2>.
+var:sk_10 rdf:predicate rr:predicate.
+var:sk_29 rdf:predicate rr:datatype.
+var:sk_40 rdf:predicate rr:predicate.
+var:sk_55 rdf:predicate rr:predicate.
+var:sk_74 rdf:predicate rr:datatype.
+var:sk_85 rdf:predicate rr:predicate.
+var:sk_97 rdf:predicate <http://xmlns.com/foaf/0.1/gender>.
+var:sk_102 rdf:predicate <http://xmlns.com/foaf/0.1/gender>.
+var:sk_10 rdf:object <http://xmlns.com/foaf/0.1/gender>.
+var:sk_29 rdf:object rdfs:Literal.
+var:sk_40 rdf:object <http://xmlns.com/foaf/0.1/gender>.
+var:sk_55 rdf:object <http://xmlns.com/foaf/0.1/gender>.
+var:sk_74 rdf:object rdfs:Literal.
+var:sk_85 rdf:object <http://xmlns.com/foaf/0.1/gender>.
+var:sk_2 rut:resultAnnotation var:sk_17.
+var:sk_2 rut:resultAnnotation var:sk_20.
+var:sk_47 rut:resultAnnotation var:sk_62.
+var:sk_47 rut:resultAnnotation var:sk_65.
+var:sk_17 cs:subjectOfChange <http://example.com/#OM1>.
+var:sk_20 cs:subjectOfChange <http://example.com/#POM1>.
+var:sk_62 cs:subjectOfChange <http://example.com/#OM2>.
+var:sk_65 cs:subjectOfChange <http://example.com/#POM2>.
+var:sk_17 cs:addition var:sk_29.
+var:sk_62 cs:addition var:sk_74.
+var:sk_20 cs:removal var:sk_40.
+var:sk_65 cs:removal var:sk_85.
+
+#2018-01-08T13:52:42.915Z in=1831 out=78 ent=232 step=886 brake=5 inf=1988239 sec=0.374 inf/sec=5316147
+#ENDS
+

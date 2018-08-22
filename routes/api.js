@@ -2,6 +2,7 @@
  * Created by bjdmeest on 29/10/2015.
  */
 const express = require('express');
+const debug = require('debug')('N3Unit:api');
 const router = express.Router();
 const fs = require('fs'),
   path = require('path'),
@@ -17,13 +18,16 @@ if (!fs.existsSync(logDir)) {
 
 /* GET home page. */
 router.post('/validate', function (req, res, next) {
+  debug('Got a call!');
   const logName = logDir + '/' + createSlug((new Date()).toISOString());
   if (req.body.mapping) {
     fs.writeFile(logName + '_mapping.ttl', req.body.mapping, function (writeErr) {
       if (writeErr) {
         throw writeErr;
       }
+      debug('Stored the mapping');
       validator.validate(req.body.mapping, null, function (err, ttl) {
+        debug('Validated');
         if (err) {
           return fs.writeFile(logName + '_output.ttl', err.message, function (writeErr) {
             if (writeErr) {

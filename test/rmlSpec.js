@@ -5,7 +5,7 @@ const fs = require('fs'),
   TestHelper = require('../lib/TestHelper');
 const ValidationFactory = require('../lib/ValidationFactory');
 
-describe('individual bugs', function () {
+describe('individual bugs (no ontology)', function () {
   this.timeout(3000);
   const basePath = path.resolve(__dirname, './bugs');
   const patternMap = '%s.mapping.rml.ttl';

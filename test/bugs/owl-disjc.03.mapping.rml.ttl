@@ -4,12 +4,22 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://www.example.com/> .
 @prefix transit: <http://vocab.org/transit/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 
 @base <http://example.com/> .
 
 <#AirportMapping> a rr:TriplesMap;
-  rr:subjectMap <#SubjectMap>.
+  rr:subjectMap <#SubjectMap>;
+  rr:predicateObjectMap <#POM>.
 
 <#SubjectMap> a rr:SubjectMap;
   rr:template "http://airport.example.com/{id}";
-  rr:class <http://purl.org/tio/ns#SeatOrSeatCategory>, <http://purl.org/tio/ns#SeatingLayout>.
+  rr:class <http://purl.org/tio/ns#SeatOrSeatCategory>.
+
+<#POM> a rr:PredicateObjectMap;
+  rr:predicate rdf:type;
+  rr:objectMap <#OM>.
+
+<#OM> a rr:ObjectMap;
+  rr:constant "http://purl.org/tio/ns#SeatingLayout";
+  rr:termType rr:IRI.
