@@ -7,5 +7,4 @@ node_modules/
 out-*.ttl
 /resources/ontologies/*.ttl
 /test/bugs/*.test-output.ttl
-reports/
 /tests/*/*-result.ttl

@@ -1,0 +1,235 @@
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix ex: <http://datashapes.org/sh/tests/core/node/class-001.test#> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sht: <http://www.w3.org/ns/shacl-test#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#> .
+@prefix math: <http://www.w3.org/2000/10/swap/math#> .
+@prefix log: <http://www.w3.org/2000/10/swap/log#> .
+
+@prefix rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#> .
+@prefix : <http://example.com/constraints#> .
+@prefix dcterms: <http://purl.org/dc/terms#> .
+
+
+{
+  ?shape a sh:NodeShape ;
+    a rdfs:Class .
+  ?x a ?shape .
+} => {
+  ?x a (:targetedNode ?shape).
+} .
+
+{
+  ?shape a sh:NodeShape ;
+    sh:targetNode ?x .
+} => {
+  ?x a (:targetedNode ?shape).
+} .
+
+{
+  ?shape a sh:NodeShape ;
+    sh:targetClass ?class .
+  ?x a ?class .
+} => {
+  ?x a (:targetedNode ?shape).
+} .
+
+{
+  ?shape a sh:NodeShape ;
+    sh:class ?class .
+} => {
+  _:constraint a rdfcv:SimpleConstraint ;
+    :constraintType :Subsumption ;
+    dcterms:title "A.4 Subsumption" ;
+    rdfcv:constrainingElement :sub-class ;
+    rdfcv:contextClass (:targetedNode ?shape);
+    rdfcv:classes ?class .
+} .
+
+{
+  ?shape a sh:NodeShape ;
+    sh:datatype ?datatype ;
+} => {
+  _:constraint a rdfcv:SimpleConstraint ;
+      :constraintType :Subsumption ;
+      dcterms:title "A.4 Subsumption" ;
+      rdfcv:constrainingElement :sub-class ;
+      rdfcv:contextClass (:targetedNode ?shape);
+      rdfcv:classes ?datatype .
+} .
+
+{
+  ?shape a sh:NodeShape ;
+    sh:disjoint ?property ;
+} => {
+  _:constraint a rdfcv:SimpleConstraint ;
+    :constraintType :FunctionalProperties ;
+    dcterms:title "A.1 Functional Properties" ;
+    rdfcv:constrainingElement :functional-properties ;
+    rdfcv:leftProperties ( ?property ) ;
+    rdfcv:contextClass (:targetedNode ?shape) .
+} .
+
+{
+  ?shape a sh:NodeShape ;
+    sh:in ?list .
+  ?x list:in ?list.
+} => {
+  ?x :included :trueValue .
+} .
+
+{
+  ?shape a sh:NodeShape ;
+    sh:in ?list .
+} => {
+  _:constraint a rdfcv:SimpleConstraint ;
+    :constraintType :ValueRestrictions ;
+    dcterms:title "A.24 Value Restrictions" ;
+    rdfcv:constrainingElement :value_restriction ;
+    rdfcv:contextClass  (:targetedNode ?shape);
+    rdfcv:leftProperties :included;
+    rdfcv:classes :trueValue.
+} .
+
+## ALTERNATIVE
+
+#{
+#  ?shape a sh:NodeShape ;
+#    sh:in ?list .
+#  ?x list:in ?list.
+#} => {
+#  ?x a (:included ?shape).
+#} .
+
+#{
+#  ?shape a sh:NodeShape ;
+#    sh:in ?list .
+#} => {
+#  _:constraint a rdfcv:SimpleConstraint ;
+#    :constraintType :Subsumption ;
+#    dcterms:title "A.4 Subsumption" ;
+#    rdfcv:constrainingElement :sub-class ;
+#    rdfcv:contextClass  (:targetedNode ?shape);
+#    rdfcv:classes (:included ?shape).
+#} .
+
+{
+  ?shape a sh:NodeShape ;
+    sh:or (
+      [
+        sh:property [
+          sh:path ?p1 ;
+          sh:minCount 1 ;
+        ] ;
+        sh:property [
+          sh:path ?p2 ;
+          sh:minCount 1 ;
+        ] ;
+      ]
+      [
+        sh:property [
+          sh:path ?p3 ;
+          sh:minCount 1 ;
+        ] ;
+      ]
+    ) .
+  ?p1 log:notEqualTo ?p2.
+  ?x a (:targetedNode ?shape).
+  _:x e:findall ( 1 {?x ?p1 ?o} ?list1).
+  ?list1 e:length ?l1.
+  ?l1 math:lessThan 1.
+  _:x e:findall ( 1 {?x ?p2 ?o} ?list2).
+  ?list2 e:length ?l2.
+  ?l2 math:lessThan 1.
+  _:x e:findall ( 1 {?x ?p3 ?o} ?list3).
+  ?list3 e:length ?l3.
+  ?l3 math:lessThan 1.
+} => {
+  _:x a :constraintViolation;
+    :violatedConstraint ?constraint;
+    :class ?Class;
+    :instance ?x;
+    :property ?p1, ?p2, ?p3.
+} .
+
+{
+  ?shape a sh:NodeShape ;
+    sh:or (
+      [
+        sh:property [
+          sh:path ?p1 ;
+          sh:minCount 1 ;
+        ] ;
+        sh:property [
+          sh:path ?p2 ;
+          sh:minCount 1 ;
+        ] ;
+      ]
+      [
+        sh:property [
+          sh:path ?p3 ;
+          sh:minCount 1 ;
+        ] ;
+      ]
+    ) .
+  ?x a (:targetedNode ?shape).
+  _:x e:findall ( 1 {?x ?p1 ?o} ?list1).
+  ?list1 e:length ?l1.
+  ?l1 math:lessThan 1.
+  _:x e:findall ( 1 {?x ?p2 ?o} ?list2).
+  ?list2 e:length ?l2.
+  ?l2 math:greaterThan 0.
+  _:x e:findall ( 1 {?x ?p3 ?o} ?list3).
+  ?list3 e:length ?l3.
+  ?l3 math:lessThan 1.
+} => {
+  _:x a :constraintViolation;
+    :violatedConstraint ?constraint;
+    :class ?Class;
+    :instance ?x;
+    :property ?p1, ?p3.
+} .
+
+{
+  ?shape a sh:NodeShape ;
+    sh:or (
+      [
+        sh:property [
+          sh:path ?p1 ;
+          sh:minCount 1 ;
+        ] ;
+        sh:property [
+          sh:path ?p2 ;
+          sh:minCount 1 ;
+        ] ;
+      ]
+      [
+        sh:property [
+          sh:path ?p3 ;
+          sh:minCount 1 ;
+        ] ;
+      ]
+    ) .
+  ?x a (:targetedNode ?shape).
+  _:x e:findall ( 1 {?x ?p1 ?o} ?list1).
+  ?list1 e:length ?l1.
+  ?l1 math:greaterThan 0.
+  _:x e:findall ( 1 {?x ?p2 ?o} ?list2).
+  ?list2 e:length ?l2.
+  ?l2 math:lessThan 1.
+  _:x e:findall ( 1 {?x ?p3 ?o} ?list3).
+  ?list3 e:length ?l3.
+  ?l3 math:lessThan 1.
+} => {
+  _:x a :constraintViolation;
+    :violatedConstraint ?constraint;
+    :class ?Class;
+    :instance ?x;
+    :property ?p2, ?p3.
+} .
