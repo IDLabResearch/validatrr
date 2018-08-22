@@ -1,0 +1,419 @@
+@prefix schema: <http://schema.org/> .
+@prefix dsp:   <http://dublincore.org/dc-dsp#> .
+@prefix rutg:  <http://rdfunit.aksw.org/data/generators#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rlog:  <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rutp:  <http://rdfunit.aksw.org/data/patterns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix oslc:  <http://open-services.net/ns/core#> .
+@prefix rut:   <http://rdfunit.aksw.org/ns/core#> .
+@prefix rutr:  <http://rdfunit.aksw.org/data/results#> .
+@prefix doap:  <http://usefulinc.com/ns/doap#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rutt:  <http://rdfunit.aksw.org/data/tests#> .
+@prefix ruts:  <http://rdfunit.aksw.org/data/testsuite#> .
+@prefix earl:  <http://www.w3.org/ns/earl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A1>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A3>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A4>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A5>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A6>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A7>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A8>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A9>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A10>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A11>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A12>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A13>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A14>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A15>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A16>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A17>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A18>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A19>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A20>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A21>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A22>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A23>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A24>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A25>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A26>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A27>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A28>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A32>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A33>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A34>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A35>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A36>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A37>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A39>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A41>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A48>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A57>
+] .
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A64>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A69>
+] .
+
+[ a                earl:Assertion ;
+  earl:assertedBy  <http://ben.de-meester.org/#me> ;
+  earl:result      [ a             earl:TestResult ;
+                     earl:mode     earl:automatic ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://example.com/Validatrr> ;
+  earl:test        <urn:x-rdfcv-test:/A70>
+] .
