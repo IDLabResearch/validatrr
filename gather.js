@@ -6,13 +6,13 @@ const fs = require("fs");
 let resourcePath = path.resolve(__dirname, 'resources', 'rules', 'reasoning', 'rdfsResource.n3');
 let subclassPath = path.resolve(__dirname, 'resources', 'rules', 'reasoning', 'rdfsSubClassOf.n3');
 
-let files = [{
-  type: 'n3',
-  path: resourcePath
-}, {
-  type: 'n3',
-  path: subclassPath
-}];
+let files = [];//{
+  // type: 'n3',
+  // path: resourcePath
+// }, {
+//   type: 'n3',
+//   path: subclassPath
+// }];
 let rulePath = path.resolve(__dirname, 'resources', 'rules');
 let rules = fs.readdirSync(rulePath);
 rules.forEach(function (file) {
