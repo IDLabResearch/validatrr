@@ -17,14 +17,4 @@ describe('OntologyVault', function () {
       });
     });
   });
-  describe('test', function () {
-    this.timeout(60000);
-    it('should work', function (done) {
-      const owl = fs.readFileSync(path.resolve(__dirname, '../resources/rml/foaf.owl'), 'utf8');
-      vault._owlToTtl(owl, function (err, ttl) {
-        expect(err).to.be.null;
-        return done();
-      });
-    });
-  });
 });

@@ -8,6 +8,9 @@
 @prefix sht: <http://www.w3.org/ns/shacl-test#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#> .
+@prefix math: <http://www.w3.org/2000/10/swap/math#> .
+@prefix log: <http://www.w3.org/2000/10/swap/log#> .
 
 @prefix rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#> .
 @prefix : <http://example.com/constraints#> .
@@ -115,3 +118,118 @@
 #    rdfcv:contextClass  (:targetedNode ?shape);
 #    rdfcv:classes (:included ?shape).
 #} .
+
+{
+  ?shape a sh:NodeShape ;
+    sh:or (
+      [
+        sh:property [
+          sh:path ?p1 ;
+          sh:minCount 1 ;
+        ] ;
+        sh:property [
+          sh:path ?p2 ;
+          sh:minCount 1 ;
+        ] ;
+      ]
+      [
+        sh:property [
+          sh:path ?p3 ;
+          sh:minCount 1 ;
+        ] ;
+      ]
+    ) .
+  ?p1 log:notEqualTo ?p2.
+  ?x a (:targetedNode ?shape).
+  _:x e:findall ( 1 {?x ?p1 ?o} ?list1).
+  ?list1 e:length ?l1.
+  ?l1 math:lessThan 1.
+  _:x e:findall ( 1 {?x ?p2 ?o} ?list2).
+  ?list2 e:length ?l2.
+  ?l2 math:lessThan 1.
+  _:x e:findall ( 1 {?x ?p3 ?o} ?list3).
+  ?list3 e:length ?l3.
+  ?l3 math:lessThan 1.
+} => {
+  _:x a :constraintViolation;
+    :violatedConstraint ?constraint;
+    :class ?Class;
+    :instance ?x;
+    :property ?p1, ?p2, ?p3.
+} .
+
+{
+  ?shape a sh:NodeShape ;
+    sh:or (
+      [
+        sh:property [
+          sh:path ?p1 ;
+          sh:minCount 1 ;
+        ] ;
+        sh:property [
+          sh:path ?p2 ;
+          sh:minCount 1 ;
+        ] ;
+      ]
+      [
+        sh:property [
+          sh:path ?p3 ;
+          sh:minCount 1 ;
+        ] ;
+      ]
+    ) .
+  ?x a (:targetedNode ?shape).
+  _:x e:findall ( 1 {?x ?p1 ?o} ?list1).
+  ?list1 e:length ?l1.
+  ?l1 math:lessThan 1.
+  _:x e:findall ( 1 {?x ?p2 ?o} ?list2).
+  ?list2 e:length ?l2.
+  ?l2 math:greaterThan 0.
+  _:x e:findall ( 1 {?x ?p3 ?o} ?list3).
+  ?list3 e:length ?l3.
+  ?l3 math:lessThan 1.
+} => {
+  _:x a :constraintViolation;
+    :violatedConstraint ?constraint;
+    :class ?Class;
+    :instance ?x;
+    :property ?p1, ?p3.
+} .
+
+{
+  ?shape a sh:NodeShape ;
+    sh:or (
+      [
+        sh:property [
+          sh:path ?p1 ;
+          sh:minCount 1 ;
+        ] ;
+        sh:property [
+          sh:path ?p2 ;
+          sh:minCount 1 ;
+        ] ;
+      ]
+      [
+        sh:property [
+          sh:path ?p3 ;
+          sh:minCount 1 ;
+        ] ;
+      ]
+    ) .
+  ?x a (:targetedNode ?shape).
+  _:x e:findall ( 1 {?x ?p1 ?o} ?list1).
+  ?list1 e:length ?l1.
+  ?l1 math:greaterThan 0.
+  _:x e:findall ( 1 {?x ?p2 ?o} ?list2).
+  ?list2 e:length ?l2.
+  ?l2 math:lessThan 1.
+  _:x e:findall ( 1 {?x ?p3 ?o} ?list3).
+  ?list3 e:length ?l3.
+  ?l3 math:lessThan 1.
+} => {
+  _:x a :constraintViolation;
+    :violatedConstraint ?constraint;
+    :class ?Class;
+    :instance ?x;
+    :property ?p2, ?p3.
+} .

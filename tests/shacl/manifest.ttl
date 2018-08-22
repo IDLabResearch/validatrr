@@ -5,5 +5,5 @@
 <>
 	a mf:Manifest ;
 	mf:include <core/manifest.ttl> ;
-	mf:include <sparql/manifest.ttl> ;
+#	mf:include <sparql/manifest.ttl> ;
 	.

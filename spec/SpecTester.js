@@ -50,7 +50,17 @@ function SpecTester(settings) {
 // # Test suite execution
 
 // Fetches the manifest, executes all tests, and reports results
-SpecTester.prototype.run = function () {
+SpecTester.prototype.run = function (cb) {
+  if (!cb) {
+    cb = function (e, code) {
+      if (e) {
+        console.error('ERROR'.red);
+        console.error((error.stack || error.toString()).red);
+        process.exit(1);
+      }
+      process.exit(code);
+    }
+  }
   var self = this;
   console.log(this._title.bold);
 
@@ -91,16 +101,12 @@ SpecTester.prototype.run = function () {
 
       // 3. Return with the proper exit code
       function (tests) {
-        process.exit(tests.every(function (test) { return test.success; }) ? 0 : 1);
+        cb(null, tests.every(function (test) {
+          return test.success;
+        }) ? 0 : 1);
       },
     ],
-    function (error) {
-      if (error) {
-        console.error('ERROR'.red);
-        console.error((error.stack || error.toString()).red);
-        process.exit(1);
-      }
-    });
+    cb);
 };
 
 // Fetches and caches the specified file, or retrieves it from disk

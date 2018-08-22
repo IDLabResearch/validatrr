@@ -28,7 +28,7 @@ let data = [
 //   'tests/shacl/core/node/nodeKind-001.ttl', // TODO
 //   'tests/shacl/core/node/not-001.ttl', // TODO
 //   'tests/shacl/core/node/not-002.ttl', // TODO
-//   'tests/shacl/core/node/or-001.ttl', // TODO
+  'tests/shacl/core/node/or-001.ttl',
 //   'tests/shacl/core/node/pattern-001.ttl', // TODO
 //   'tests/shacl/core/node/pattern-002.ttl', // TODO
 //   'tests/shacl/core/node/xone-001.ttl', // TODO

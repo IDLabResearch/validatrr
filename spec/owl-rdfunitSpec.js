@@ -2,7 +2,11 @@
 var path = require('path');
 var SpecTester = require('./SpecTester');
 const TestHelper = require("../lib/TestHelper");
-let validator = TestHelper.createProfileValidator('owl', 'count');
+let validator = TestHelper.createProfileValidator('owl');
+validator.opts.extraFiles.push(path.resolve(__dirname, '../resources/rdfs.n3'));
+validator.opts.extraFiles.push(path.resolve(__dirname, '../resources/rules/reasoning/rdfsResource.n3'));
+// validator.opts.extraFiles.push(path.resolve(__dirname, '../resources/rules/reasoning/rdfsSubClassOf.n3'));
+var t0 = new Date();
 new SpecTester({
   name: 'owl-rdfunit',
   title: 'RDFUnit - OWL profile',
@@ -18,4 +22,13 @@ new SpecTester({
       validator.validateByOntologies(actionStream, null, null, cb);
     }
   }
-}).run();
+}).run(function(e, code) {
+  var t1 = new Date();
+  console.log(`time: ${t1.getTime() - t0.getTime()} ms`);
+  if (e) {
+    console.error('ERROR'.red);
+    console.error((error.stack || error.toString()).red);
+    process.exit(1);
+  }
+  process.exit(code);
+});
