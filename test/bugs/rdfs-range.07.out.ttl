@@ -1,0 +1,103 @@
+#Processed by EYE rel. v17.0407.1501 josd
+#eye --nope --no-qvars C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\rml\extraRules.n3 C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_www.w3.org_ns_r2rml_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_xmlns.com_foaf_0.1_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_semweb.mmlab.be_ns_rml_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_semweb.mmlab.be_ns_ql_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\ontologies\http_www.w3.org_2001_XMLSchema_.ttl C:\Ben\Work\iMinds\Projects\Validation\N3Unit\tmp\tmp-12940dvoG1hB5jNv6 C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\rml\logCodes.ttl --query C:\Ben\Work\iMinds\Projects\Validation\N3Unit\resources\rml\rule.n3
+
+PREFIX var: <http://eulersharp.sourceforge.net/.well-known/genid/TYvgQas6u2AxC7_SUtdv4D8RqQU#>
+PREFIX : <http://www.ournicecode.org#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rutp: <http://rdfunit.aksw.org/data/patterns#>
+PREFIX rlog: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#>
+PREFIX oslc: <http://open-services.net/ns/core#>
+PREFIX rutg: <http://rdfunit.aksw.org/data/generators#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dsp: <http://dublincore.org/dc-dsp#>
+PREFIX schema: <http://schema.org/>
+PREFIX rut: <http://rdfunit.aksw.org/ns/core#>
+PREFIX rutr: <http://rdfunit.aksw.org/data/results#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX spin: <http://spinrdf.org/spin#>
+PREFIX rutt: <http://rdfunit.aksw.org/data/tests#>
+PREFIX ruts: <http://rdfunit.aksw.org/data/testsuite#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX string: <http://www.w3.org/2000/10/swap/string#>
+PREFIX rr: <http://www.w3.org/ns/r2rml#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX cc: <http://creativecommons.org/ns#>
+PREFIX vann: <http://purl.org/vocab/vann/>
+PREFIX vaem: <http://www.linkedmodel.org/schema/vaem#>
+PREFIX ql: <http://semweb.mmlab.be/ns/ql#>
+PREFIX rml: <http://semweb.mmlab.be/ns/rml#>
+PREFIX cs: <http://vocab.org/changeset/schema#>
+PREFIX ex: <http://www.example.com/>
+PREFIX test: <http://users.ugent.be/~bjdmeest/testontology.ttl#>
+
+:codeNoType rdfs:label "Missing Type".
+var:sk_17 rdfs:label "Add pom with predicate rdf:type and object a class.".
+:codeDatatype rdfs:label "Datatype Mismatch".
+var:sk_46 rdfs:label "Change the datatype".
+var:sk_1 a rlog:Entry.
+:out a rlog:Entry.
+var:sk_17 a rut:ResultAnnotation.
+var:sk_31 a rlog:Entry.
+var:sk_46 a rut:ResultAnnotation.
+var:sk_1 rlog:message "An rr:subjectMap with an rr:template should have a rr:class defined".
+:out rlog:message "An rr:subjectMap with at least one predicate should have a rr:class defined".
+var:sk_31 rlog:message "The predicate is defined as a datatype but rr:datatype does not match the definition".
+var:sk_1 <http://www.example.com/template> "$x is missing an Entity type.".
+:out <http://www.example.com/template> "$x entity is missing an Entity type.".
+var:sk_17 <http://www.example.com/template> "Add type $y to $x".
+var:sk_31 <http://www.example.com/template> "The relation $x expects the datatype $y. However, data type $z was found.".
+var:sk_46 <http://www.example.com/template> "Change datatype $y to $x".
+var:sk_1 <http://www.example.com/x> var:bn_42.
+:out <http://www.example.com/x> var:bn_42.
+var:sk_17 <http://www.example.com/x> var:bn_42.
+var:sk_31 <http://www.example.com/x> <http://xmlns.com/foaf/0.1/age>.
+var:sk_46 <http://www.example.com/x> rdfs:Literal.
+var:sk_1 rlog:logLevel rlog:WARN.
+:out rlog:logLevel rlog:WARN.
+var:sk_31 rlog:logLevel rlog:ERROR.
+var:sk_1 rlog:hasCode :codeNoType.
+:out rlog:hasCode :codeNoType.
+var:sk_31 rlog:hasCode :codeDatatype.
+var:sk_1 rlog:resource var:sk_8.
+:out rlog:resource var:sk_14.
+var:sk_31 rlog:resource var:sk_35.
+var:sk_31 rlog:resource var:sk_38.
+var:sk_8 rdf:subject var:bn_42.
+var:sk_14 rdf:subject var:bn_42.
+var:sk_25 rdf:subject var:bn_42.
+var:sk_55 rdf:subject <file:///c:/ben/work/iminds/projects/validation/n3unit/tmp/tmp-12940dvog1hb5jnv6#ObjectMap1>.
+var:sk_61 rdf:subject <file:///c:/ben/work/iminds/projects/validation/n3unit/tmp/tmp-12940dvog1hb5jnv6#ObjectMap1>.
+var:sk_35 rdf:subject rr:predicate.
+var:sk_38 rdf:subject <file:///c:/ben/work/iminds/projects/validation/n3unit/tmp/tmp-12940dvog1hb5jnv6#ObjectMap1>.
+:out rut:resultAnnotation var:sk_17.
+var:sk_31 rut:resultAnnotation var:sk_46.
+var:sk_17 <http://www.example.com/y> <http://xmlns.com/foaf/0.1/Agent>.
+var:sk_31 <http://www.example.com/y> rdfs:Literal.
+var:sk_46 <http://www.example.com/y> xsd:float.
+var:sk_17 cs:subjectOfChange var:bn_42.
+var:sk_46 cs:subjectOfChange <file:///c:/ben/work/iminds/projects/validation/n3unit/tmp/tmp-12940dvog1hb5jnv6#ObjectMap1>.
+var:sk_17 cs:addition var:sk_25.
+var:sk_46 cs:addition var:sk_61.
+var:sk_25 rdf:predicate rdf:type.
+var:sk_55 rdf:predicate rr:datatype.
+var:sk_61 rdf:predicate rr:datatype.
+var:sk_35 rdf:predicate <http://xmlns.com/foaf/0.1/age>.
+var:sk_25 rdf:object <http://xmlns.com/foaf/0.1/Agent>.
+var:sk_55 rdf:object xsd:float.
+var:sk_61 rdf:object rdfs:Literal.
+var:sk_38 rdf:object xsd:float.
+var:sk_31 <http://www.example.com/z> xsd:float.
+var:sk_46 cs:removal var:sk_55.
+
+#2018-09-20T11:18:14.141Z in=1138 out=58 ent=66 step=92 brake=5 inf=1472438 sec=0.421 inf/sec=3497477
+#ENDS
+

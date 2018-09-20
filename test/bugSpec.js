@@ -105,6 +105,10 @@ describe('individual bugs', function () {
     let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 'rdfs-range.06', basePath);
     checkMap(rmlValidator, paths[0], paths[1], paths[2], done);
   });
+  it('should fix #rdfs-range.07', function (done) {
+    let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 'rdfs-range.07', basePath);
+    checkMap(rmlValidator, paths[0], paths[1], paths[2], done);
+  });
   it('should fix #rr-type.01', function (done) {
     let paths = TestHelper.createPaths([patternMap, outMap, returnMap], 'rr-type.01', basePath);
     checkMap(rmlValidator, paths[0], paths[1], paths[2], done);
