@@ -7,6 +7,9 @@ const router = express.Router();
 const fs = require('fs'),
   path = require('path'),
   TestHelper = require('../lib/TestHelper');
+const multer = require('multer');
+var storage = multer.memoryStorage();
+var upload = multer({storage: storage});
 
 const validator = TestHelper.createRMLValidator();
 
@@ -17,16 +20,22 @@ if (!fs.existsSync(logDir)) {
 }
 
 /* GET home page. */
-router.post('/validate', function (req, res, next) {
+router.post('/validate', upload.single('mapping'), function (req, res, next) {
   debug('Got a call!');
   const logName = logDir + '/' + createSlug((new Date()).toISOString());
+  let mappingString = '';
   if (req.body.mapping) {
-    fs.writeFile(logName + '_mapping.ttl', req.body.mapping, function (writeErr) {
+    mappingString = req.body.mapping;
+  } else if (req.file) {
+    mappingString = req.file.buffer.toString();
+  }
+  if (mappingString) {
+    fs.writeFile(logName + '_mapping.ttl', mappingString, function (writeErr) {
       if (writeErr) {
         throw writeErr;
       }
       debug('Stored the mapping');
-      validator.validate(req.body.mapping, null, function (err, ttl) {
+      validator.validate(mappingString, null, function (err, ttl) {
         debug('Validated');
         if (err) {
           return fs.writeFile(logName + '_output.ttl', err.message, function (writeErr) {
@@ -46,7 +55,7 @@ router.post('/validate', function (req, res, next) {
     });
   }
   else {
-    return res.end('');
+    res.sendStatus(417);
   }
 });
 
