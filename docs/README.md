@@ -1,6 +1,6 @@
 # Validatrr docs
  
-See the site: https://IDLabResearch.github.io/validatrr
+See the site: https://idlabresearch.github.io/validatrr/
 
 ## Installation
 
