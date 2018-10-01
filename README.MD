@@ -1,6 +1,6 @@
-# N3Unit
+# Validatrr
 
-> TODO find better name
+Validation using rule-based reasoning.
 
 ## installation
 
