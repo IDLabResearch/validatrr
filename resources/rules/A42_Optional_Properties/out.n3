@@ -1,0 +1,45 @@
+#Processed by EYE rel. v17.0407.1501 josd
+#eye data.ttl constraint.ttl rule.n3 ../reasoning/rdfsResource.n3 --query ../query.n3
+
+PREFIX rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms#>
+PREFIX : <http://example.com/constraints#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX math: <http://www.w3.org/2000/10/swap/math#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX func: <http://www.w3.org/2007/rif-builtin-function#>
+PREFIX pred: <http://www.w3.org/2007/rif-builtin-predicate#>
+PREFIX prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>
+PREFIX string: <http://www.w3.org/2000/10/swap/string#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
+
+[] a r:Proof, r:Conjunction;
+  r:component <#lemma1>;
+  r:gives {
+    :errorCount :count 0 .
+  }.
+
+<#lemma1> a r:Inference; 
+  r:gives {
+    :errorCount :count 0 .
+  }; 
+  r:evidence (
+    [ a r:Fact; r:gives {((<file:///c:/ben/work/iminds/projects/validation/n3unit/resources/rules/a42_optional_properties/data.ttl> <file:///c:/ben/work/iminds/projects/validation/n3unit/resources/rules/a42_optional_properties/constraint.ttl> <file:///c:/ben/work/iminds/projects/validation/n3unit/resources/rules/a42_optional_properties/rule.n3> <file:///c:/ben/work/iminds/projects/validation/n3unit/resources/rules/reasoning/rdfsresource.n3>) 2) e:findall (1 {_:sk_0 a :constraintViolation} ())}]
+    [ a r:Fact; r:gives {() e:length 0}]
+  );
+  r:rule <#lemma2>.
+
+<#lemma2> a r:Extraction; 
+  r:gives {
+    {(?x_0_1 2) e:findall (1 {?x_1_1 a :constraintViolation} ?x_2_1).
+      ?x_2_1 e:length ?x_3_1} => {:errorCount :count ?x_3_1}.
+  };
+  r:because [ a r:Parsing; r:source <file:///c:/ben/work/iminds/projects/validation/n3unit/resources/rules/query.n3>].
+
+#2019-02-25T09:19:25.476Z in=13 out=1 ent=1 step=2 brake=5 inf=67934 sec=0.046 inf/sec=1476826
+#ENDS
+

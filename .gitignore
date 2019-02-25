@@ -8,3 +8,4 @@ out-*.ttl
 /resources/ontologies/*.ttl
 /test/bugs/*.test-output.ttl
 /tests/*/*-result.ttl
+_old/

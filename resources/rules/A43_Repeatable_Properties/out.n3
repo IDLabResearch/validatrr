@@ -1,0 +1,212 @@
+#Processed by EYE rel. v17.0407.1501 josd
+#eye data.ttl constraint.ttl rule.n3 ../reasoning/rdfsResource.n3 --query ../query.n3
+
+PREFIX rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms#>
+PREFIX : <http://example.com/constraints#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX math: <http://www.w3.org/2000/10/swap/math#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX func: <http://www.w3.org/2007/rif-builtin-function#>
+PREFIX pred: <http://www.w3.org/2007/rif-builtin-predicate#>
+PREFIX prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>
+PREFIX string: <http://www.w3.org/2000/10/swap/string#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
+
+[] a r:Proof, r:Conjunction;
+  r:component <#lemma1>;
+  r:component <#lemma2>;
+  r:component <#lemma3>;
+  r:component <#lemma4>;
+  r:component <#lemma5>;
+  r:component <#lemma6>;
+  r:component <#lemma7>;
+  r:gives {
+    _:sk_1 a :constraintViolation.
+    _:sk_1 a rdfs:Resource.
+    _:sk_1 :violatedConstraint :example_constraint_A_43.
+    _:sk_1 :class :Publication.
+    _:sk_1 :instance :Jaws.
+    _:sk_1 :property :author.
+    :errorCount :count 1 .
+  }.
+
+<#lemma1> a r:Inference; 
+  r:gives {
+    _:sk_1 a :constraintViolation.
+  }; 
+  r:evidence (
+    <#lemma8>
+    <#lemma8>
+  );
+  r:rule <#lemma9>.
+
+<#lemma2> a r:Inference; 
+  r:gives {
+    _:sk_1 a rdfs:Resource.
+  }; 
+  r:evidence (
+    <#lemma8>
+    <#lemma10>
+  );
+  r:rule <#lemma9>.
+
+<#lemma3> a r:Inference; 
+  r:gives {
+    _:sk_1 :violatedConstraint :example_constraint_A_43.
+  }; 
+  r:evidence (
+    <#lemma8>
+    <#lemma8>
+  );
+  r:rule <#lemma9>.
+
+<#lemma4> a r:Inference; 
+  r:gives {
+    _:sk_1 :class :Publication.
+  }; 
+  r:evidence (
+    <#lemma8>
+    <#lemma8>
+  );
+  r:rule <#lemma9>.
+
+<#lemma5> a r:Inference; 
+  r:gives {
+    _:sk_1 :instance :Jaws.
+  }; 
+  r:evidence (
+    <#lemma8>
+    <#lemma8>
+  );
+  r:rule <#lemma9>.
+
+<#lemma6> a r:Inference; 
+  r:gives {
+    _:sk_1 :property :author.
+  }; 
+  r:evidence (
+    <#lemma8>
+    <#lemma8>
+  );
+  r:rule <#lemma9>.
+
+<#lemma7> a r:Inference; 
+  r:gives {
+    :errorCount :count 1 .
+  }; 
+  r:evidence (
+    [ a r:Fact; r:gives {((<file:///c:/ben/work/iminds/projects/validation/n3unit/resources/rules/a43_repeatable_properties/data.ttl> <file:///c:/ben/work/iminds/projects/validation/n3unit/resources/rules/a43_repeatable_properties/constraint.ttl> <file:///c:/ben/work/iminds/projects/validation/n3unit/resources/rules/a43_repeatable_properties/rule.n3> <file:///c:/ben/work/iminds/projects/validation/n3unit/resources/rules/reasoning/rdfsresource.n3>) 2) e:findall (1 {_:sk_2 a :constraintViolation} (1))}]
+    [ a r:Fact; r:gives {(1) e:length 1}]
+  );
+  r:rule <#lemma11>.
+
+<#lemma8> a r:Inference; 
+  r:gives {
+    _:sk_1 a :constraintViolation.
+    _:sk_1 :violatedConstraint :example_constraint_A_43.
+    _:sk_1 :class :Publication.
+    _:sk_1 :instance :Jaws.
+    _:sk_1 :property :author.
+  }; 
+  r:evidence (
+    <#lemma12>
+    <#lemma13>
+    <#lemma14>
+    <#lemma15>
+    <#lemma16>
+    <#lemma17>
+    [ a r:Fact; r:gives {:author list:in (:author)}]
+    [ a r:Fact; r:gives {((<file:///c:/ben/work/iminds/projects/validation/n3unit/resources/rules/a43_repeatable_properties/data.ttl> <file:///c:/ben/work/iminds/projects/validation/n3unit/resources/rules/a43_repeatable_properties/constraint.ttl> <file:///c:/ben/work/iminds/projects/validation/n3unit/resources/rules/a43_repeatable_properties/rule.n3> <file:///c:/ben/work/iminds/projects/validation/n3unit/resources/rules/reasoning/rdfsresource.n3>) 1) e:findall (1 {:Jaws :author _:sk_0} ())}]
+  );
+  r:rule <#lemma18>.
+
+<#lemma9> a r:Extraction; 
+  r:gives {
+    {?x_0_1 a :constraintViolation.
+      ?x_0_1 ?x_1_1 ?x_2_1} => {?x_0_1 ?x_1_1 ?x_2_1}.
+  };
+  r:because [ a r:Parsing; r:source <file:///c:/ben/work/iminds/projects/validation/n3unit/resources/rules/query.n3>].
+
+<#lemma10> a r:Inference; 
+  r:gives {
+    _:sk_1 a rdfs:Resource.
+  }; 
+  r:evidence (
+    [ a r:Fact; r:gives true]
+  );
+  r:rule <#lemma19>.
+
+<#lemma11> a r:Extraction; 
+  r:gives {
+    {(?x_0_2 2) e:findall (1 {?x_1_2 a :constraintViolation} ?x_2_2).
+      ?x_2_2 e:length ?x_3_2} => {:errorCount :count ?x_3_2}.
+  };
+  r:because [ a r:Parsing; r:source <file:///c:/ben/work/iminds/projects/validation/n3unit/resources/rules/query.n3>].
+
+<#lemma12> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_43 a rdfcv:SimpleConstraint.
+  };
+  r:because [ a r:Parsing; r:source <file:///c:/ben/work/iminds/projects/validation/n3unit/resources/rules/a43_repeatable_properties/constraint.ttl>].
+
+<#lemma13> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_43 :constraintType :RepeatableProperties.
+  };
+  r:because [ a r:Parsing; r:source <file:///c:/ben/work/iminds/projects/validation/n3unit/resources/rules/a43_repeatable_properties/constraint.ttl>].
+
+<#lemma14> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_43 rdfcv:constrainingElement :repeatable_properties.
+  };
+  r:because [ a r:Parsing; r:source <file:///c:/ben/work/iminds/projects/validation/n3unit/resources/rules/a43_repeatable_properties/constraint.ttl>].
+
+<#lemma15> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_43 rdfcv:contextClass :Publication.
+  };
+  r:because [ a r:Parsing; r:source <file:///c:/ben/work/iminds/projects/validation/n3unit/resources/rules/a43_repeatable_properties/constraint.ttl>].
+
+<#lemma16> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_43 rdfcv:leftProperties (:author).
+  };
+  r:because [ a r:Parsing; r:source <file:///c:/ben/work/iminds/projects/validation/n3unit/resources/rules/a43_repeatable_properties/constraint.ttl>].
+
+<#lemma17> a r:Extraction; 
+  r:gives {
+    :Jaws a :Publication.
+  };
+  r:because [ a r:Parsing; r:source <file:///c:/ben/work/iminds/projects/validation/n3unit/resources/rules/a43_repeatable_properties/data.ttl>].
+
+<#lemma18> a r:Extraction; 
+  r:gives {
+    {?x_0_3 a rdfcv:SimpleConstraint.
+      ?x_0_3 :constraintType :RepeatableProperties.
+      ?x_0_3 rdfcv:constrainingElement :repeatable_properties.
+      ?x_0_3 rdfcv:contextClass ?x_1_3.
+      ?x_0_3 rdfcv:leftProperties ?x_2_3.
+      ?x_3_3 a ?x_1_3.
+      ?x_4_3 list:in ?x_2_3.
+      ?x_5_3 e:findall (1 {?x_3_3 ?x_4_3 ?x_6_3} ())} => {_:x_7_3 a :constraintViolation.
+      _:x_7_3 :violatedConstraint ?x_0_3.
+      _:x_7_3 :class ?x_1_3.
+      _:x_7_3 :instance ?x_3_3.
+      _:x_7_3 :property ?x_4_3}.
+  };
+  r:because [ a r:Parsing; r:source <file:///c:/ben/work/iminds/projects/validation/n3unit/resources/rules/a43_repeatable_properties/rule.n3>].
+
+<#lemma19> a r:Extraction; 
+  r:gives {
+    {?x_0_4 a rdfs:Resource} <= true.
+  };
+  r:because [ a r:Parsing; r:source <file:///c:/ben/work/iminds/projects/validation/n3unit/resources/rules/reasoning/rdfsresource.n3>].
+
+#2019-02-25T09:26:14.254Z in=16 out=7 ent=12 step=30 brake=6 inf=98684 sec=0.093 inf/sec=1061118
+#ENDS
+
