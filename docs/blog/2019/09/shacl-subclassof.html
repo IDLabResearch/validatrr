@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SubClassOf ambiguity in SHACL</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/validatrr/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link href="/validatrr/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="/validatrr/css/coming-soon.min.css" rel="stylesheet">
+
+  </head>
+
+  <body style="background-color: #ff9210;">
+    
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/validatrr">Validatrr</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+  
+    <div class="container mt-5">
+    <h3>SubClassOf ambiguity in SHACL</h3>
+    <p class="mb-3"><small class="text-muted">27/09/2019, Ben De Meester</small></p>
+    <p>Please see the example shape and data.</p>
+    <h3>Data</h3>
+    <pre class="pre-scrollable"><code>@prefix : &lt;https://ben.de-meester/#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+
+:me a :Researcher .
+
+:Researcher rdfs:subClassOf foaf:Person .
+</code></pre>
+    <h3>SHACL Shape</h3>
+    <pre class="pre-scrollable"><code>@prefix sh: &lt;http://www.w3.org/ns/shacl#&gt; .
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix : &lt;https://ben.de-meester/#&gt; .
+
+:profile a sh:NodeShape ;
+  sh:targetClass foaf:Person ;
+  sh:property [
+    sh:path rdf:type ;
+    sh:hasValue foaf:Person ;
+    sh:minCount 1
+  ] .</code></pre>
+  
+    <p>
+    This example might seem trivial or unrealistic,
+    but we could for example see such a shape being built on the fly
+    by integrating complementary sub-shapes (taking advantage of SHACL’s RDF model).
+    </p>
+    <p>
+    This example shows how inherent <code>rdfs:subClassOf</code> inference leads to ambiguity:
+    <code>:me</code> is targeted using <code>sh:targetClass foaf:Person</code>, however,
+    a violation occurs saying that <code>:me</code> should have at least the property-object <code>rdf:type-foaf:Person</code>.
+    </p>
+
+    <p class="mt-5">
+      Primary contact: <a href="https://ben.de-meester.org/#me">Ben De Meester</a>.
+    </p>
+    <p class="mb-5">
+      <a href="https://www.ugent.be/en">Ghent University</a> &ndash;
+      <a href="https://www.imec-int.com/en/home">imec</a> &ndash;
+      <a href="http://idlab.technology/">IDLab</a>, <br/>
+      Ghent, Belgium
+    </p>
+    </div>
+
+    <div class="social-icons">
+      <ul class="list-unstyled text-center mb-0">
+        <li class="list-unstyled-item">
+          <a href="https://github.com/IDLabResearch/validatrr">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/coming-soon.min.js"></script>
+
+  </body>
+
+</html>
