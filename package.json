@@ -20,7 +20,7 @@
   "license": "MIT",
   "devDependencies": {
     "chai": "^3.5.0",
-    "eslint": "^3.19.0",
+    "eslint": "^4.18.2",
     "mocha": "^3.5.3",
     "nodemon": "^1.18.9"
   },
